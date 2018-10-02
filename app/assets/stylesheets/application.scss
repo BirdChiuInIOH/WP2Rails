@@ -1,0 +1,142 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+#header {
+  width: 1170px;
+  height: 70px;
+  margin: 20px auto;
+  background-color: #2c2b2b;
+  text-align: center;
+}
+
+#logo {
+  float: left;
+  position: relative;
+  top: 15px;
+  left: 5px;
+}
+
+#logo img {
+  width: 70px;
+  height: auto;
+}
+
+#header .keyword {
+  padding-top: 25px;
+}
+
+#header .keyword a.stable {
+  color: white;
+}
+
+#header .keyword a.stable:hover {
+  text-decoration: none;
+}
+
+#header .keyword a {
+  color: #7b7b7b;
+}
+
+#header .keyword a:hover {
+  color: white;
+}
+
+.clearfix {
+  clear: both;
+}
+
+
+#bs-example-navbar-collapse-1 a:hover {
+  color: red;
+}
+
+nav {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+nav li.nav-item1 {
+  background-color: red;
+  margin-right: 1px;
+}
+
+nav li.nav-item1 a.nav-link1 {
+  color: white;
+}
+
+nav li.nav-item1 a.nav-link1:hover {
+  color: black;
+}
+
+nav li.nav-item2 {
+  background-color: #000;
+}
+
+nav li.nav-item2 a.nav-link2 {
+  color: white;
+}
+
+
+footer {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #f3f1f1;
+}
+
+footer img {
+  width: 160px;
+  height: auto;
+  position: static;
+  margin: 0;
+  padding: 30px 0 0 0;
+
+}
+
+footer p {
+  padding-left: 80px;
+  font-size: 16px;
+  color: #7b7b7b;
+}
+
+footer form {
+  padding-left: 80px;
+  width: 100%;
+}
+
+footer button {
+  margin-left: -15px;
+  background-color: #DCDCDC;
+}
+
+h5 {
+  font-weight: bold;
+  margin-top: 35px;
+}
+
+.list-unstyled li {
+  line-height: 23px;
+}
+
+.list-unstyled a {
+  color: black;
+  text-decoration: none;
+}
+
+.list-unstyled a:hover {
+  color: #c90b0bbe;
+}
