@@ -1,0 +1,99 @@
+.container
+  nav class="navbar navbar-expand-lg navbar-light bg-light mw-100"
+    button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"
+      span class="navbar-toggler-icon"
+    #navbar.collapse.navbar-collapse
+      ul.navbar-nav
+        li.nav-item
+          = link_to '講座影片', '#', class: 'nav-link'
+        li.nav-item
+          = link_to '臺灣各校系學群總覽', '#', class: 'nav-link'
+        li.nav-item
+          = link_to '升大學全攻略', '#', class: 'nav-link'
+        li.nav-item
+          = link_to '港澳僑外陸生專區', '#', class: 'nav-link'
+        li.nav-item
+          = link_to '臺灣碩博校系總覽', '#', class: 'nav-link'
+        li.nav-item
+          = link_to '講座影片', '#', class: 'nav-link'
+        li.nav-item.dropdown
+          a.nav-link.dropdown-toggle href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" 海外留學
+          .dropdown-menu
+            = link_to '海外各校系總覽', '#', class: 'dropdown-item'
+            = link_to '海外升學指南', '#', class: 'dropdown-item'
+        li.nav-item
+          = link_to '最新文章', '#', class: 'nav-link'
+        li.nav-item.dropdown
+          a.nav-link.dropdown-toggle href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" 關於IOH
+          .dropdown-menu
+            = link_to 'IOH 創辦初衷', '#', class: 'dropdown-item'
+            = link_to 'IOH 團隊', '#', class: 'dropdown-item'
+            = link_to '紀錄片：志氣 為人才而戰', '#', class: 'dropdown-item'
+            = link_to '贊助IOH', '#', class: 'dropdown-item'
+            = link_to '參與IOH：成為講者/團隊', '#', class: 'dropdown-item'
+            = link_to '聯絡我們', '#', class: 'dropdown-item'
+            = link_to '媒體報導', '#', class: 'dropdown-item'
+            = link_to '最新活動', '#', class: 'dropdown-item'
+
+    / div.container
+    /   /! Brand and toggle get grouped for better mobile display
+    /   .navbar-header
+    /     button.navbar-toggle.collapsed aria-expanded="false" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button"
+    /       span.sr-only Toggle navigation
+    /       span.icon-bar
+    /       span.icon-bar
+    /       span.icon-bar
+    /   /! Collect the nav links, forms, and other content for toggling
+    /   #bs-example-navbar-collapse-1.collapse.navbar-collapse
+    /     ul.nav.navbar-nav
+    /       li
+    /         a href="#"  講座影片
+    /       li.nav-item1
+    /         a.nav-link1 href="#"
+    /           | 台灣各校系學群總覽
+    /           span.sr-only. (current)
+    /       li.nav-item2
+    /         a.nav-link2 href="#"
+    /           | 升大學全攻略
+    /           span.sr-only (current)
+    /       li
+    /         a href="#"  港澳僑外陸生專區
+    /       li
+    /         a href="#"  臺灣碩博校系總覽
+    /       li.dropdown
+    /         a.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button"
+    /           | 海外留學
+    /           span.caret
+    /         ul.dropdown-menu
+    /           li
+    /             a href="#"  海外各校系總覽
+    /           li
+    /             a href="#"  海外升學指南
+    /       li
+    /         a href="#" 最新文章
+    /       li.dropdown
+    /         a.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button"
+    /           | 關於IOH
+    /           span.caret
+    /         ul.dropdown-menu
+    /           li
+    /             a href="#"  IOH 創辦初衷
+    /           li
+    /             a href="#"  IOH 團隊
+    /           li
+    /             a href="#"  紀錄片：志氣 為人才而戰
+    /           li
+    /             a href="#"  贊助IOH
+    /           li
+    /             a href="#"  參與IOH：成為講者/團隊
+    /           li
+    /             a href="#"  聯絡我們
+    /           li
+    /             a href="#"  媒體報導
+    /           li
+    /             a href="#"  最新活動
+    /       li
+    /         a href="#" 全職招募
+    /     form.navbar-form.navbar-left
+    /       .form-group
+    /         input.form-control placeholder="Search IOH 開放個人經驗平台" type="text"

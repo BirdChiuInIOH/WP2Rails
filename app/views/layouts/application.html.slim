@@ -1,15 +1,17 @@
 doctype html
 html
   head
-    title MyappIoh
+    title IOH 開放個人經驗平台IOH 開放個人經驗平台
     = csrf_meta_tags
     = csp_meta_tag
     meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    link rel="shortcut icon" href="https://ioh.tw/wp-content/themes/roots/assets/img/ioh-favicon.ico"
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
   body
-    = render "/pages/header"
-    = render "/pages/navbar"
-    = yield
-    = render "/pages/footer"
+    = render "/shared/header"
+    = render "/shared/navbar"
+    main
+      = yield
+    = render "/shared/footer"

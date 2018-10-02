@@ -1,0 +1,30 @@
+.header-nav-links {
+  color: white;
+  font-size :14px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+  .list-inline-item {
+    color: #eee;
+
+    &:after {
+      content: '、';
+    }
+
+    &:last-child {
+      &:after {
+        content: '';
+      }
+    }
+
+    a {
+      color: gray;
+
+      &:hover {
+        color: white;
+      }
+    }
+
+  }
+}
