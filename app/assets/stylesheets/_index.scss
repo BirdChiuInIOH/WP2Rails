@@ -1,0 +1,45 @@
+.nav-pills-ioh {
+  margin: 40px 0;
+  a {
+    color: #c33838;
+    font-size: 18px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .nav-pills-item {
+    border: 1px solid #c33838;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .nav-pills-item-bg {
+    border: 1px solid #c33838;
+    background-color: #c33838;
+    color: white;
+    &:hover {
+      color: #c33838;
+      background: white;
+    }
+  }
+}
+
+.school {
+  font-size: 14px;
+  a {
+    color: #c33838;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.introduce {
+  font-size: 14px;
+  margin-top: 10px;
+  padding-bottom: 60px;
+}

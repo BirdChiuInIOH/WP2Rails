@@ -1,0 +1,39 @@
+.navbar-ioh {
+  font-size: 14px;
+  a {
+    color: gray;
+
+    &:hover {
+      color: red;
+    }
+  }
+}
+
+.nav-danger-item {
+  a {
+    color: white;
+
+    &:hover {
+      color: black;
+    }
+  }
+}
+
+.nav-dark-item {
+  a {
+    color: white;
+  }
+}
+
+.form-ioh {
+  padding-right: 14px;
+  padding-left: 14px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  padding: 4px 6px;
+  font-size: 14px;
+  line-height: 20px;
+  width: 230px;
+  text-align: start;
+  outline: 0;
+}

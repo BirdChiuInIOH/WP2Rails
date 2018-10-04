@@ -1,22 +1,60 @@
 footer
   .container
-      .row.no-gutters.bg-lightgray
+      .row.no-gutters.bg-lightgray.px-5.py-4
         .col-12
           .row
-            .col-4
-              = image_tag 'https://ioh.tw/assets/ioh_logo.png', class: 'img-fluid', width: 160
-            .col-2
+            .col-md-4.col-12
+              =link_to '#'
+                = image_tag 'https://ioh.tw/assets/ioh_logo.png', class: 'img-fluid', width: 160
+              p style="color: gray;"
+                | "當每個人都說起故事，我們可以改變世界。"
+              form class="form-inline"
+              .input-group
+                input type="text" class="form-control" placeholder="輸入電子郵件" aria-label="Recipient's username" aria-describedby="basic-addon2"
+                .input-group-append
+                  button class="btn btn-outline-outline-secondary" type="button" style="font-size: 14px;" 收到最新消息
+            .col-md-2.col-6.text-center
               h5 About
-            .col-2
+              ul.list-footer-item
+                li
+                  =link_to '創辦初衷', '#'
+                li
+                  =link_to '團隊成員', '#'
+                li
+                  =link_to '紀錄片：志氣', '#'
+                li
+                  =link_to '媒體報導', '#'
+            .col-md-2.col-6.text-center
               h5 Join
-            .col-2
+              ul.list-footer-item
+                li
+                  =link_to '成為實習生', '#'
+                li
+                  =link_to '成為全職', '#'
+                li
+                  =link_to '成為講者', '#'
+            .col-md-2.col-6.text-center
               h5 Follow
-            .col-2
+              ul.list-footer-item
+                li
+                  =link_to '聯絡 IOH', '#'
+                li
+                  =link_to '贊助 IOH', '#'
+                li
+                  =link_to '使用 IOH', '#'
+                li
+                  =link_to '追蹤 IOH', '#'
+            .col-md-2.col-6.text-center
               h5 More
+              ul.list-footer-item
+                li
+                  =link_to '講座影片', '#'
+                li
+                  =link_to '最新文章', '#'
+                li
+                  =link_to '最新活動', '#'
           .row
-            .col-12
-          .row
-            .col-12.text-center
+            .col-12.text-center style="font-size: 12px"
               | © 2018 IOH 開放個人經驗平台
 
 
