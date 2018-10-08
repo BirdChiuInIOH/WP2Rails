@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+    include DataLoader
+
     before_action :set_speakers, only: [:index, :talks]
 
     # https://ioh.tw/
@@ -55,7 +57,7 @@ class PagesController < ApplicationController
     end
 
     def press
-      @press = YAML.load(File.read(Rails.root.join('app', 'datas', 'press.yml')))
+      @press = load_press_data
     end
 
     private
