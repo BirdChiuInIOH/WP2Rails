@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get '/guides', to: 'pages#guides'
   get '/keyword_first', to: 'pages#keyword_first'
   get '/taiwan_departments', to: 'pages#taiwan_departments'
+  get '/contact_us', to: 'pages#contact_us'
 end

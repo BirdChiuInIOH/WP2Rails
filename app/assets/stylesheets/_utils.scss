@@ -57,3 +57,60 @@
     }
   }
 }
+
+/**
+ * spacing
+ */
+@each $spacing in (5, 10, 15, 20, 30, 40, 50, 60) {
+  .mt-#{$spacing}px {
+    margin-top: #{$spacing}px !important;
+  }
+
+  .mb-#{$spacing}px {
+    margin-bottom: #{$spacing}px !important;
+  }
+
+  .mr-#{$spacing}px {
+    margin-right: #{$spacing}px !important;
+  }
+
+  .ml-#{$spacing}px {
+    margin-left: #{$spacing}px !important;
+  }
+
+  .mx-#{$spacing}px {
+    margin-left: #{$spacing}px !important;
+    margin-right: #{$spacing}px !important;
+  }
+
+  .my-#{$spacing}px {
+    margin-top: #{$spacing}px !important;
+    margin-bottom: #{$spacing}px !important;
+  }
+
+  .pt-#{$spacing}px {
+    padding-top: #{$spacing}px !important;
+  }
+
+  .pb-#{$spacing}px {
+    padding-bottom: #{$spacing}px !important;
+  }
+
+  .pr-#{$spacing}px {
+    padding-right: #{$spacing}px !important;
+  }
+
+  .pl-#{$spacing}px {
+    padding-left: #{$spacing}px !important;
+  }
+
+  .px-#{$spacing}px {
+    padding-left: #{$spacing}px !important;
+    padding-right: #{$spacing}px !important;
+  }
+
+  .py-#{$spacing}px {
+    padding-top: #{$spacing}px !important;
+    padding-bottom: #{$spacing}px !important;
+  }
+}
