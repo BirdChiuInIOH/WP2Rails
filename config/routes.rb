@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get '/keyword_first', to: 'pages#keyword_first'
   get '/taiwan_departments', to: 'pages#taiwan_departments'
   get '/contact_us', to: 'pages#contact_us'
+  get '/媒體報導', to: 'pages#press', as: :press
 end

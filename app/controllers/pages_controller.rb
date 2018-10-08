@@ -54,6 +54,10 @@ class PagesController < ApplicationController
       # 依照地區瀏覽
     end
 
+    def press
+      @press = YAML.load(File.read(Rails.root.join('app', 'datas', 'press.yml')))
+    end
+
     private
       def set_speakers
         @speakers = [

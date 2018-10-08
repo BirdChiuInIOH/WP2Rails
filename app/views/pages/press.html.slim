@@ -1,0 +1,19 @@
+.container
+  = render '/shared/image'
+
+  h1.my-10px style="font-size: 1.5em;" 媒體報導
+
+  - @press.each do |press|
+    h4.my-10px style="font-size: 1.2em;" = press['title']
+    - if press['image_url'].present?
+      p.my-10px = image_tag press['image_url'], width: 795
+    - press['infos']&.each do |info|
+      p.my-10px = info
+    - if press['links'].present?
+      .row
+        .col-auto.pr-0
+          | 報導連結 —>&nbsp;
+        .col.pl-0
+          - press['links'].each do |link|
+            p.mb-10px = link_to link['title'], link['url'], target: '_blank', class: 'link-major'
+    p.mb-40px
