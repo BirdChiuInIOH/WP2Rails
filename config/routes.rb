@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get '/talks', to: 'pages#talks'
   get '/guides', to: 'pages#guides'
   get '/keyword_first', to: 'pages#keyword_first'
+  get '/taiwan_departments', to: 'pages#taiwan_departments'
 end

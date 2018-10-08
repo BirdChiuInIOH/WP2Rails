@@ -1,7 +1,8 @@
 .nav-pills-ioh {
   margin: 40px 0;
+
   a {
-    color: #c33838;
+    color: color(major);
     font-size: 18px;
 
     &:hover {
@@ -10,7 +11,7 @@
   }
 
   .nav-pills-item {
-    border: 1px solid #c33838;
+    border: 1px solid color(major);
 
     &:hover {
       text-decoration: underline;
@@ -18,11 +19,12 @@
   }
 
   .nav-pills-item-bg {
-    border: 1px solid #c33838;
-    background-color: #c33838;
+    border: 1px solid color(major);
+    background-color: color(major);
     color: white;
+
     &:hover {
-      color: #c33838;
+      color: color(major);
       background: white;
     }
   }
@@ -31,7 +33,7 @@
 .school {
   font-size: 14px;
   a {
-    color: #c33838;
+    color: color(major);
     &:hover {
       text-decoration: underline;
     }

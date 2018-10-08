@@ -50,9 +50,10 @@
   font-size: 17.5px;
   font-weight: bold;
   a {
-    color: #c33838;
+    color: color(major);
+
     &:hover {
-      color: #c33838;
+      color: color(major);
     }
   }
 }
