@@ -111,4 +111,13 @@ class PagesController < ApplicationController
         }
       ]
     end
+
+    def talks
+    end
+
+    def guides
+    end
+
+    def keyword_first
+    end
 end

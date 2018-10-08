@@ -11,6 +11,10 @@
   .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
   }
+
+  li {
+    padding: 0 5px;
+  }
 }
 
 .nav-danger-item {
@@ -41,3 +45,31 @@
   text-align: start;
   outline: 0;
 }
+
+
+/**
+ * navbar-share
+ */
+ 
+ .nav-share {
+   margin: 20px 0 10px;
+   background-color: #ececec;
+   box-shadow: 0 3px 3px rgba(0, 0, 0, .1);
+   a {
+     color: #575757;
+     font-size: 14px;
+   }
+   li {
+    padding: 3px;
+    &:hover {
+      background: #e0e0e0;
+    }
+   }
+   li.active {
+     background-color: #c10d23;
+
+     a {
+       color: white;
+     }
+   }
+ }
