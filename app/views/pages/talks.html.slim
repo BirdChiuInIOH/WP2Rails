@@ -1,6 +1,6 @@
-.container.my-5
+.container.my-3.my-md-5
   .row.no-gutters
-    .col-3.nav-talks
+    .col-md-3.nav-talks
       form data-target="talks-filter"
         ul.nav.flex-column
           - @talks_filter&.each do |filter_items|
@@ -25,10 +25,10 @@
                           .form-group.custom-control.custom-checkbox.ml-3.my-5px
                             input.custom-control-input type="checkbox" id="#{filter_items_deep[:value]}"
                             label.custom-control-label for="#{filter_items_deep[:value]}" = filter_items_deep[:title]
-      div.mt-3
+      div.mb-md-0.my-3
         button.btn.btn-sm.btn-danger.mr-2 type="submit" style="min-width: 70px;" Submit
         button.btn.btn-sm.btn-outline-secondary type="reset" data-reset="talks-filter" style="min-width: 70px;" Reset
-    .col-9
+    .col-md-9
       = render "shared/image"
       h1.mt-10px.mb-30px style="font-size: 1.5em;line-height: 40px;"  Talks
       - @speakers.in_groups_of(4, false) do |group|
@@ -45,5 +45,6 @@
                 li
                   = link_to speaker[:education], speaker[:education_url]
                 li
-                  = link_to speaker[:major], speaker[:major_url]
-                p.introduce = speaker[:introduce]
+                  = link_to talk[:major], talk[:major_url]
+                p.introduce.pb-4.pb-md-60px = talk[:introduce]
+

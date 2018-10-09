@@ -26,5 +26,5 @@
             li
               = link_to speaker[:education], speaker[:education_url]
             li
-              = link_to speaker[:major], speaker[:major_url]
-          p.introduce = speaker[:introduce]
+              = link_to talk[:major], talk[:major_url]
+          p.introduce.pb-4.pb-md-60px = talk[:introduce]
