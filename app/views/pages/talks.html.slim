@@ -1,6 +1,49 @@
-.container
+.container.my-5
   .row.no-gutters
-    .col-3
-      = render "shared/sidebar"
+    .col-3.nav-talks
+      form data-target="talks-filter"
+        ul.nav.flex-column
+          - @talks_filter&.each do |filter_items|
+            li.nav-item
+              / Schools, Majors, Degrees
+              a.nav-link.nav-link-head.collapsed data-toggle="collapse" href="##{filter_items[:value]}" aria-controls="schools" aria-expanded="false" aria-label="Toggle Schools" role="button" = filter_items[:title]
+              .collapse data-collapsible="true" id="#{filter_items[:value]}"
+                ul.nav.flex-column
+                  - filter_items[:filter_items]&.each do |filter_items_deep|
+                      li.nav-item
+                        - if filter_items_deep[:filter_items].present?
+                          a.nav-link.collapsed.px-2 data-toggle="collapse" href="##{filter_items_deep[:value]}" = filter_items_deep[:title]
+                          .collapse data-collapsible="true" id="#{filter_items_deep[:value]}"
+                            ul.nav.flex-column.mr-4
+                              - filter_items_deep[:filter_items]&.each do |filter_items_deep_deep|
+                                li.nav-item
+                                  .form-group.custom-control.custom-checkbox.ml-3.my-5px
+                                    input.custom-control-input type="checkbox" id="#{filter_items_deep_deep[:value]}"
+                                    label.custom-control-label for="#{filter_items_deep_deep[:value]}" = filter_items_deep_deep[:title]
+                        / If there is no deeper options, show checkbox
+                        - else
+                          .form-group.custom-control.custom-checkbox.ml-3.my-5px
+                            input.custom-control-input type="checkbox" id="#{filter_items_deep[:value]}"
+                            label.custom-control-label for="#{filter_items_deep[:value]}" = filter_items_deep[:title]
+      div.mt-3
+        button.btn.btn-sm.btn-danger.mr-2 type="submit" style="min-width: 70px;" Submit
+        button.btn.btn-sm.btn-outline-secondary type="reset" data-reset="talks-filter" style="min-width: 70px;" Reset
     .col-9
       = render "shared/image"
+      h1.mt-10px.mb-30px style="font-size: 1.5em;line-height: 40px;"  Talks
+      - @speakers.in_groups_of(4, false) do |group|
+        .row
+          - group.each_with_index do |speaker|
+            .col-md-3.col-12
+              = link_to '#'
+                = image_tag speaker[:avatar_url], class: 'mw-100'
+              h4.head-danger
+                = link_to speaker[:name], speaker[:url]
+              ul.list-inline.d-inline.m-0.school
+                li
+                  = link_to speaker[:state], speaker[:state_url]
+                li
+                  = link_to speaker[:education], speaker[:education_url]
+                li
+                  = link_to speaker[:major], speaker[:major_url]
+                p.introduce = speaker[:introduce]

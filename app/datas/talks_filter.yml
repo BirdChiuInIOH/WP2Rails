@@ -1,0 +1,257 @@
+- title: Schools 學校
+  value: schools
+  filter_items:
+  - title: America 美洲
+    value: america
+    filter_items:
+    - title: All American Universities 美洲所有大學
+      value: all_american_universities
+    - title: Academy of Art University (AAU) 舊金山藝術大學
+      value: AAU
+    - title: Boston University 波士頓大學
+      value: boston_university
+    - title: Brandeis University 布蘭迪斯大學
+      value: brandeis_university
+    - title: Carnegie Mellon University (CMU) 卡內基美隆大學
+      value: CMU
+    - title: College for Creative Studies 創意研究學院
+      value: college_for_creative_studies
+    - title: Columbia College Chicago 美國芝加哥哥倫比亞學院
+      value: columbia_college_chicago
+    - title: Cornell University 康乃爾大學
+      value: cornell_university
+    - title: Denver University 丹佛大學
+      value: denver_university
+    - title: DePaul University 帝博大學
+      value: depaul_university
+    - title: Draper University 崔普大學
+      value: draper_university
+    - title: Duke University 杜克大學
+      value: duke_university
+    - title: Georgia Institute of Technology 喬治亞理工學院
+      value: georgia_institute_of_technology
+    - title: Harvard University 哈佛大學
+      value: harvard_university
+    - title: Indiana University-Purdue University Indianapolis 印第安納大學與普渡大學印第安納波利斯聯合分校
+      value: indiana_university_purdue_university_indianapolis
+    - title: Massachusetts Institute of Technology (MIT) 麻省理工學院
+      value: MIT
+    - title: Memorial University of Newfoundland 紐芬蘭大學
+      value: memorial_university_of_newfoundland
+    - title: New York University (NYU) 紐約大學
+      value: NYU
+    - title: Northern Illinois University 北伊利諾大學
+      value: northern_illinois_university
+    - title: Northwestern University 西北大學
+      value: northwestern_university
+    - title: Parsons The New School of Design 帕森設計學院
+      value: parsons_the_new_school_of_design
+    - title: Pennsylvania State University 賓州州立大學
+      value: pennsylvania_state_university
+    - title: Princeton University 普林斯頓大學
+      value: princeton_university
+    - title: Rhode Island School of Design (RISD) 羅德島設計學院
+      value: RISD
+    - title: Santa Clara University 聖塔克拉拉大學
+      value: santa_clara_university
+    # ...
+  - title: Asia 亞洲
+    value: Asia
+    filter_items:
+    - title: All Asian Universities 亞洲所有大學
+      value: all_asian_university
+    - title: University of Malaya 馬來亞大學
+      value: university_of_malaya
+    - title: 中國西北農林科技大學
+      value: 中國西北農林科技大學
+    - title: 北京中醫藥大學
+      value: 北京中醫藥大學
+    - title: 日本早稻田大學
+      value: 日本早稻田大學
+    - title: 日本明治學院大學
+      value: 日本明治學院大學
+    - title: 日本東北大學
+      value: 日本東北大學
+    - title: 澳門大學
+      value: 澳門大學
+    - title: 華中師範大學
+      value: 華中師範大學
+    - title: 香港中文大學
+      value: 香港中文大學
+    - title: 香港城市大學
+      value: 香港城市大學
+    - title: 香港大學
+      value: 香港大學
+    - title: 香港教育大學
+      value: 香港教育大學
+    - title: 香港理工大學
+      value: 香港理工大學
+  - title: Europe 歐洲
+    value: Europe
+    filter_items:
+    - title: All European Universities 歐洲所有大學
+      value: all_european_universities
+    - title: BarcelonaTech 西班牙加泰隆尼亞理工大學
+      value: barcelonaTech
+    - title: Bournemouth University 伯恩茅斯大學
+      value: bournemouth_university
+    - title: Chemnitz University of Technology 德國開姆尼茨工業大學
+      value: chemnitz_university_of_technology
+    - title: Delft University of Technology 荷蘭台夫特科技大學
+      value: delft_university_of_technology
+  - title: Oceania 大洋洲
+    value: Oceania
+    filter_items:
+    - title: All Oceania Universities 大洋洲所有大學
+      value: all_oceania_universities
+    - title: The University of Newcastle 澳洲新堡大學
+      value: the_university_of_newcastle
+    - title: University of Tasmania 澳洲塔斯馬尼亞大學
+      value: university_of_tasmania
+  - title: Taiwan 臺灣
+    value: Taiwan
+    filter_items:
+    - title: All Taiwanese Universities 台灣所有大學
+      value: all_taiwanese_universities
+    - title: University Entrance Committee for Overseas Chinese Students 海外聯合招生委員會
+      value: university_entrance_committee_for_overseas_chinese_students
+    - title: 世新大學
+      value: 世新大學
+    - title: 中原大學
+      value: 中原大學
+    - title: 中國文化大學
+      value: 中國文化大學
+    - title: 中國科技大學
+      value: 中國科技大學
+    - title: 中國醫藥大學
+      value: 中國醫藥大學
+    - title: 中央大學
+      value: 中央大學
+    - title: 中央大學附屬中壢高級中學
+      value: 中央大學附屬中壢高級中學
+    - title: 中央警察大學
+      value: 中央警察大學
+- title: Majors 領域
+  value: majors
+  filter_items:
+  - title: Business ＆ Management 商業管理
+    value: business_management
+    filter_items:
+    - title: Accounting and Finance 會計與金融
+      value: accounting_and_finance
+    - title: Accounting Information 會計資訊
+      value: accounting_information
+    - title: Accounting 會計
+      value: accounting
+    - title: Actuarial Science 精算科學
+      value: actuarial_science
+    - title: Agribusiness Management 農企業管理
+      value: agribusiness_management
+  - title: Design 設計藝術
+    value: design
+    filter_items:
+      - title: Advertising 廣告
+        value: advertising
+      - title: Architecture and Interior Design 空間設計
+        value: architecture_and_interior_design
+      - title: Architecture and Landscape Design 建築與景觀
+        value: architecture_and_landscape_design
+      - title: Architecture 建築
+        value: architecture
+      - title: Art Education 藝術教育
+        value: art_education
+      - title: Art History 藝術史
+        value: art_history
+      - title: Arts and Design 藝術與設計
+        value: arts_and_design
+      - title: Calligraphy and Painting Arts 書畫藝術
+        value: calligraphy_and_painting_arts
+  - title: Engineering 工程科技
+    value: engineering
+    filter_items:
+      - title: Aeronautics and Astronautics 航空太空工程
+        value: aeronautics_and_astronautics
+      - title: Aerospace and Systems Engineering 航太與系統工程
+        value: aerospace_and_systems_engineering
+      - title: Animal Science and Technology 動物科學技術
+        value: animal_science_and_technology
+      - title: Applied Material and Optoelectronic Engineering 應用材料及光電工程
+        value: applied_material_and_optoelectronic_engineering
+      - title: Automatic Control Engineering 自動控制工程
+        value: automatic_control_engineering
+      - title: Bio-Industrial Mechatronics
+        value: bio_industrial_mechatronics
+  - title: Humanity ＆ Social Science - 人文社會科學
+    value: humanity_social_science
+    filter_items:
+      - title: Adult and Continuing Education 社會教育
+        value: adult_and_continuing_education
+      - title: Agricultural Economics 農業經濟學
+        value: agricultural_economics
+      - title: Anthropology 人類學
+        value: anthropology
+      - title: Applied Chinese 應用華語文
+        value: applied_chinese
+      - title: Applied Foreign Languages 應用外語
+        value: applied_foreign_languages
+      - title: Applied Japanese 應用日語
+        value: applied_japanese
+      - title: Applied Philosophy 應用哲學
+        value: applied_philosophy
+      - title: Arabic Language and Culture 阿拉伯語文學
+        value: arabic_language_and_culture
+  - title: Innovation 創新學科
+    value: innovation
+    filter_items:
+      - title: Aging Long-Term Care 高齡長期照護
+        value: aging_long_term_care
+      - title: Agricultural and Consumer Economics 農業消費者經濟學
+        value: agricultural_and_consumer_economics
+      - title: Agronomy 農藝學
+        value: agronomy
+      - title: Animal Science 動物科學與畜產
+        value: animal_science
+      - title: Animal Vaccine Technology 動物疫苗科技
+        value: animal_vaccine_technology
+      - title: Applied Chemistry 應用化學
+        value: applied_chemistry
+      - title: Applied Mathematics 應用數學
+        value: applied_mathematics
+  - title: Science 理論科學
+    value: science
+    filter_items:
+      - title: Agricultural Chemistry 農業化學
+        value: agricultural_chemistry
+      - title: Applied Psychology 應用心理學
+        value: applied_psychology
+      - title: Astrophysical Science 天文物理學
+        value: astrophysical_science
+      - title: Atmosphere Science 大氣科學
+        value: atmosphere_science
+      - title: Chemistry 化學
+        value: chemistry
+      - title: Counseling and Clinical Psychology 諮商與臨床心理學
+        value: counseling_and_clinical_psychology
+- title: Degrees 學位
+  value: degrees
+  filter_items:
+  - title: Alumni 校友
+    value: Alumni
+  - title: Associate Degree 副學士
+    value: associate_degree
+  - title: Bachelor 學士
+    value: Bachelor
+  - title: Exchange and Visiting Students 交換學生
+    value: exchange_and_visiting_students
+  - title: Extension Education 推廣教育
+    value: extension_education
+  - title: Master 碩士
+    value: master
+  - title: Non-Degree Program 無學位學程
+    value: non-degree_program
+  - title: PhD 博士
+    value: phd
+  - title: Professors' Sharing 教授經驗談
+    value: professors_sharing
+  - title: Senior High School 高級中學
+    value: senior_high_school

@@ -8,6 +8,7 @@ class PagesController < ApplicationController
     end
 
     def talks
+      @talks_filter = load_talks_filter
     end
 
     def guides

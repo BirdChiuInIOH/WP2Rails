@@ -46,30 +46,110 @@
   outline: 0;
 }
 
-
 /**
  * navbar-share
  */
- 
- .nav-share {
-   margin: 20px 0 10px;
-   background-color: #ececec;
-   box-shadow: 0 3px 3px rgba(0, 0, 0, .1);
-   a {
-     color: #575757;
-     font-size: 14px;
-   }
-   li {
+
+.nav-share {
+  margin: 20px 0 10px;
+  background-color: #ececec;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  a {
+    color: #575757;
+    font-size: 14px;
+  }
+  li {
     padding: 3px;
     &:hover {
       background: #e0e0e0;
     }
-   }
-   li.active {
-     background-color: #c10d23;
+  }
+  li.active {
+    background-color: #c10d23;
 
-     a {
-       color: white;
-     }
-   }
- }
+    a {
+      color: white;
+    }
+  }
+}
+
+.nav-talks {
+  .nav-link {
+    color: color(black);
+    font-weight: 600;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+
+    &.nav-link-head {
+      color: color(major);
+      font-size: 16px;
+      line-height: 24px;
+      color: #cf0007;
+      padding-left: 0;
+      padding-bottom: 0;
+    }
+
+    // Triangle
+    &:after {
+      content: '';
+      display: inline-flex;
+      align-items: center;
+      width: 0;
+      height: 0;
+      margin-left: 0.3em;
+      border-top: 4px solid transparent;
+      border-right: 0;
+      border-bottom: 4px solid transparent;
+      border-left: 9px solid;
+      transition: transform 0.4s;
+    }
+
+    &:not(.collapsed) {
+      &:after {
+        transform: rotate(90deg);
+      }
+    } // End of Triangle
+  } // /.nav-link
+
+  .custom-control-label {
+    user-select: none;
+    cursor: pointer;
+
+    &::before {
+      border-radius: 0;
+      border: 1px solid color(black);
+      background-color: white;
+      width: 12px;
+      height: 12px;
+      left: -20px;
+    }
+
+    &::after {
+      width: 12px;
+      height: 12px;
+      left: -20px;
+    }
+
+    &:focus {
+      outline: 0;
+      box-shadow: none;
+    }
+  } // /.custom-control-label
+
+  .custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: none;
+  }
+
+  .custom-control-input:checked ~ .custom-control-label,
+  .custom-checkbox .custom-control-input:checked ~ .custom-control-label {
+    &::after {
+      background-color: color(major);
+      background-image: none;
+    }
+
+    &::before {
+      background-color: white;
+    }
+  }
+}

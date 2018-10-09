@@ -18,3 +18,13 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require_tree .
+
+$(document).on('turbolinks:load', function() {
+  // Reset talks filter form
+  $('[data-reset="talks-filter"]').on('click', function() {
+    const talksFilterForm = $('[data-target="talks-filter"]');
+    if (talksFilterForm) {
+      talksFilterForm[0].reset();
+    }
+  });
+});
