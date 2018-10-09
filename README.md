@@ -20,7 +20,7 @@
 
 ### Low Priority
 
-* [ ] `XD`[關於 IOH - IOH 創辦初衷](https://ioh.tw/about/)
+* [x] `XD`[關於 IOH - IOH 創辦初衷](https://ioh.tw/about/)
 * [ ] `XD`[港澳僑外陸生專區](https://ioh.tw/overseas1/)
 * [ ] `XD`[台灣碩博校系總攬](https://ioh.tw/master-phd-experience-sharing/)
 * [ ] `XD`[海外留學-海外各校系總攬](https://ioh.tw/howtoapply-usa/)
