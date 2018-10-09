@@ -7,6 +7,10 @@ module DataLoader
     load_data_from_yaml('talks_filter.yml')
   end
 
+  def load_talks_data
+    load_data_from_yaml('talks.yml')
+  end
+
   private
 
     def load_data_from_yaml(filename)

@@ -12,7 +12,7 @@
 ### High Priority
 
 * [ ] `XD`[首頁](https://ioh.tw)
-* [ ] `XD`[講座影片/講者列表](https://ioh.tw/talks/)
+* [X] `XD`[講座影片/講者列表](https://ioh.tw/talks/)
 * [ ] `XD`[台灣各校系學群總覽](https://ioh.tw/department_guide/)
 * [ ] `XD`[升大學全攻略](https://ioh.tw/升大學全攻略/)
 * [ ] `XD`[關於講者](https://ioh.tw/talks/香港教育大學英語教育系-彭于榛-barbie-peng-ov-study-bde-hk/)

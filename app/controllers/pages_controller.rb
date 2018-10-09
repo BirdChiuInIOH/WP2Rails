@@ -1,14 +1,14 @@
 class PagesController < ApplicationController
     include DataLoader
 
-    before_action :set_speakers, only: [:index, :talks]
-
     # https://ioh.tw/
     def index
+      @talks = load_talks_data
     end
 
     def talks
       @talks_filter = load_talks_filter
+      @talks = load_talks_data
     end
 
     def guides
