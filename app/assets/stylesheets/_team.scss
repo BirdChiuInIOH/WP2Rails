@@ -1,0 +1,69 @@
+.block-team {
+  .avatar-title {
+    color: red;
+    margin-bottom: 10px;
+  }
+
+  .avatar-container {
+    position: relative;
+    text-align: center;
+
+    a {
+      text-decoration: none;
+    }
+
+    .talk-overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.5);
+      transition: all 200ms ease-in-out;
+      opacity: 0;
+
+      h4 {
+        font-weight: 900;
+        color: white;
+        margin-bottom: 0;
+      }
+    }
+
+    .avatar-container-overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      border: 2px solid #ff0000;
+      font-size: 13px;
+
+      .specialist {
+        color: white;
+        background-color: red;
+        width: 40%;
+        margin-bottom: 2px;
+      }
+
+      .event_specialist {
+        color: white;
+        background-color: black;
+        width: 40%;
+      }
+    }
+
+    &:hover {
+      .talk-overlay {
+        opacity: 1;
+      }
+    }
+  }
+
+  .avatar-name {
+    font-size: 13px;
+    text-align: center;
+  }
+}

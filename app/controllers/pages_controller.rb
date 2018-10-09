@@ -61,6 +61,10 @@ class PagesController < ApplicationController
       @press = load_press_data
     end
 
+    def team
+      @teams = load_team_data
+    end
+
     private
       def set_speakers
         @speakers = [

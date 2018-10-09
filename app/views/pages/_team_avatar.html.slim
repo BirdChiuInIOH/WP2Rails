@@ -1,0 +1,22 @@
+- link_style = ['cursor: default;', 'text-decoration: none;'] unless data[:talk_url].present?
+.col-md-2.col-sm-4.mb-10px
+  - if data[:job_title].present?
+    h6.avatar-title
+      - data[:job_title].each do |job_title|
+        div = job_title
+  = link_to data[:talk_url] || 'javascript:;', style: link_style, target: '_blank' do
+    .avatar-container
+      = image_tag data[:avatar_url], class: 'img-fluid' if data[:avatar_url].present?
+      - if data[:talk_url].present?
+        .talk-overlay
+          h4
+            div WATCH
+            div MY
+            div TALK
+      - if data[:specialist].present? || data[:event_specialist].present?
+        .avatar-container-overlay
+          - if data[:specialist].present?
+            .specialist = data[:specialist]
+          - if data[:event_specialist].present?
+            .event_specialist = data[:event_specialist]
+  .avatar-name = data[:name]

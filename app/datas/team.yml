@@ -1,0 +1,106 @@
+executive_team:
+  - name: 莊智超 Chih-Chao Chuang
+    job_title: [創辦人, Founder]
+    avatar_url: https://ioh.tw/assets/Team-PageProfile-Chih-Chao-Chuang-%E8%8E%8A%E6%99%BA%E8%B6%85-LOW-RES.jpg
+  - name: 李佳潔 Jessica Lee
+    job_title: [總經理, General Manager]
+    avatar_url: https://ioh.tw/assets/Team-PageProfile-Jessica-Lee-李佳潔-LOW-RES-e1463710580559.jpg
+    talk_url: https://ioh.tw/talks/jessica-lee-%E6%9D%8E%E4%BD%B3%E6%BD%94/
+  - name: 莊智越 Lulu Chuang
+    job_title: [專案經理, Project Manager]
+    avatar_url: https://ioh.tw/assets/Team-PageProfile-Lulu-Chaung-%E8%8E%8A%E6%99%BA%E8%B6%8A-LOW-RES-e1464245204531.jpg
+  - name: 黃佳雯 Julia Huang
+    job_title: [行銷總監, Marketing Director]
+    avatar_url: https://ioh.tw/assets/Julia%E7%AC%AC%E4%B9%9D%E5%B1%86%E5%A4%A7%E9%A0%AD%E8%B2%BC170803Julia01-e1502959991838.jpg
+  - name: 馬郁聰 Connie Ma
+    job_title: [產品經理, Product Manager]
+    avatar_url: https://ioh.tw/assets/Core170803Connie-e1503039798258.png
+    talk_url: https://ioh.tw/talks/%E6%9D%9C%E5%85%8B%E5%A4%A7%E5%AD%B8-duke-university-%E9%A6%AC%E9%83%81%E8%81%B0-connie-ma-ov-study-mde-us/
+editorial_team:
+  - name: 林立麗 Lily Lin
+    avatar_url: https://ioh.tw/assets/Team-PageProfile-Lily-Lin-林立麗-LOW-RES-e1464245056683.jpg
+    talk_url: https://ioh.tw/talks/lily-lin-%E6%9E%97%E7%AB%8B%E9%BA%97/
+    specialist: 專員
+  - name: 陳彥妏 Yen-Wen Chen
+    avatar_url: https://ioh.tw/assets/Team-PageProfile8-陳彥妏-e1488953872323.jpg
+    talk_url: https://ioh.tw/talks/%E5%8F%B0%E7%81%A3%E5%A4%A7%E5%AD%B8%E6%B3%95%E5%BE%8B%E7%B3%BB-%E9%99%B3%E5%BD%A5%E5%A6%8F-yen-wen-chen-tw-study-ntu-bde/
+  - name: 羅竟祐 Yoyo Lo
+    avatar_url: https://ioh.tw/assets/Team-PageProfile8-YoYo-羅竟祐-e1488955252673.jpg
+    talk_url: https://ioh.tw/talks/%E5%8F%B0%E7%81%A3%E5%A4%A7%E5%AD%B8%E5%93%B2%E5%AD%B8%E7%B3%BB-%E7%BE%85%E7%AB%9F%E7%A5%90-leo-lo-tw-study-ntu-bde/
+  - name: 施靜樺 Jenny Shih
+    avatar_url: https://ioh.tw/assets/未命名-e1513146559673.png
+    talk_url: https://ioh.tw/talks/%e5%8f%b0%e7%81%a3%e5%a4%a7%e5%ad%b8%e5%a4%96%e6%96%87%e7%b3%bb-%e6%96%bd%e9%9d%9c%e6%a8%ba-jenny-shih-tw-study-ntu-bde/
+marketing_team:
+  - name: 辛丞鈞 Victor Hsin
+    avatar_url: https://ioh.tw/assets/Team-PageProfile-Victor-Hsin-辛丞鈞-LOW-RES-e1488958743447.jpg
+    talk_url: https://ioh.tw/talks/%E5%8F%B0%E5%A4%A7%E6%87%89%E5%8A%9B%E6%89%80-%E8%BE%9B%E4%B8%9E%E9%88%9E-victor-hsin-twtalks/
+    specialist: 專員
+  - name: 郭巧文 Vicky Kou
+    avatar_url: https://ioh.tw/assets/Julia第九屆大頭貼170803郭巧文02-e1502959366427.jpg
+    talk_url: https://ioh.tw/talks/%e5%8f%b0%e5%8c%97%e5%a4%a7%e5%ad%b8%e4%bc%81%e7%ae%a1%e7%b3%bb-%e9%83%ad%e5%b7%a7%e6%96%87-vicky-kuo-tw-study-ntpu-bde/
+  - name: 梁祐瑜 Caroline Liang
+    avatar_url: https://ioh.tw/assets/Julia第九屆大頭貼170803梁祐瑜02-e1502959771780.jpg
+    talk_url: https://ioh.tw/talks/%e5%8f%b0%e5%a4%a7%e5%9c%8b%e9%9a%9b%e4%bc%81%e6%a5%ad%e5%ad%b8%e7%b3%bb-%e6%a2%81%e7%a5%90%e7%91%9c-caroline-liang-tw-study-ntu-bde/
+  - name: 劉學梅 Hsueh-Mei Liu
+    avatar_url: https://ioh.tw/assets/Julia第九屆大頭貼170803劉學梅02-e1502959939993.jpg
+    talk_url: https://ioh.tw/talks/%e6%9d%b1%e5%90%b3%e5%a4%a7%e5%ad%b8%e4%bc%81%e6%a5%ad%e7%ae%a1%e7%90%86%e7%b3%bb-%e5%8a%89%e5%ad%b8%e6%a2%85-hsueh-mei-liu-tw-study-scu-bde/
+event_team:
+  - name: 廖于欣 Felicia Liao
+    avatar_url: https://ioh.tw/assets/Team-PageProfile-Felicia-Liao-廖于欣-LOW-RES-e1464245972436.jpg
+    talk_url: https://ioh.tw/talks/felicia-liao-%E5%BB%96%E4%BA%8E%E6%AC%A3/
+    specialist: 專員
+  - name: 劉大維 David Liu
+    avatar_url: https://ioh.tw/assets/Team-PageProfile6-David-劉大維-e1489047436164.jpg
+    talk_url: https://ioh.tw/talks/%e7%9c%9f%e7%90%86%e8%b3%87%e5%b7%a5%e7%b3%bb-%e5%8a%89%e5%a4%a7%e7%b6%ad-liu-ta-wei-tw-study-au-bde/
+    specialist: 專員
+  - name: 陳振輝 Zhen Huei Chen
+    avatar_url: https://ioh.tw/assets/Julia第九屆大頭貼170803陳振輝01-e1502959705651.jpg
+    talk_url: https://ioh.tw/talks/%e6%b7%a1%e6%b1%9f%e8%b3%87%e7%ae%a1%e7%b3%bb-%e9%99%b3%e6%8c%af%e8%bc%9d-zhen-huei-chen-tw-study-tku-bde/
+  - name: 李芳儒 Fang-Ju Li
+    avatar_url: https://ioh.tw/assets/Julia第九屆大頭貼170803李芳儒02-e1502959845596.jpg
+    talk_url: https://ioh.tw/talks/%e6%88%90%e5%8a%9f%e5%a4%a7%e5%ad%b8%e7%b6%93%e6%bf%9f%e7%b3%bb-%e6%9d%8e%e8%8a%b3%e5%84%92-fang-ju-li-tw-study-ncku-bde/
+product_team:
+  - name: 李孟蓉 Jacy Lee
+    avatar_url: https://ioh.tw/assets/Team-PageProfileCore-Jacy-李孟蓉-e1488950234473.jpg
+    talk_url: https://ioh.tw/talks/%E5%8F%B0%E5%8C%97%E5%A4%A7%E5%AD%B8%E7%B6%93%E6%BF%9F%E7%B3%BB-%E6%9D%8E%E5%AD%9F%E8%93%89-jacy-lee-twtalks-ntpu/
+    specialist: 專員
+  - name: 李欣怡 Irene Li
+    avatar_url: https://ioh.tw/assets/Team-PageProfile6-Irene-李欣怡-e1489049525550.jpg
+    talk_url: https://ioh.tw/talks/%e4%b8%ad%e5%8e%9f%e5%9c%8b%e8%b2%bf%e7%b3%bb-%e6%9d%8e%e6%ac%a3%e6%80%a1-irene-li-tw-talks-cycu-bde/
+    specialist: 專員
+  - name: 林泳秀 Young-Hsiu Lin
+    avatar_url: https://ioh.tw/assets/Julia第九屆大頭貼170803林泳秀01-e1502959819905.jpg
+    talk_url: https://ioh.tw/talks/%e4%b8%ad%e8%88%88%e8%b2%a1%e9%87%91%e7%b3%bb-%e6%9e%97%e6%b3%b3%e7%a7%80-young-hsiu-lin-tw-study-nchu-bde/
+  - name: 何瑜萱 Yu-Hsuan Ho
+    avatar_url: https://ioh.tw/assets/Julia第九屆大頭貼170803何瑜萱01-e1502959963638.jpg
+    talk_url: https://ioh.tw/talks/%e6%94%bf%e6%b2%bb%e5%a4%a7%e5%ad%b8%e5%a4%96%e4%ba%a4%e7%b3%bb-%e4%bd%95%e7%91%9c%e8%90%b1-yu-hsuan-ho-tw-study-nccu-bde/
+  - name: 蘇紫雯 Zi-Wen Su
+    avatar_url: https://ioh.tw/assets/Julia第九屆大頭貼170803蘇紫雯01-e1502959739294.jpg
+    talk_url: https://ioh.tw/talks/%e5%b8%ab%e5%a4%a7%e7%a4%be%e6%9c%83%e6%95%99%e8%82%b2%e5%ad%b8%e7%b3%bb-%e8%98%87%e7%b4%ab%e9%9b%af-zi-wen-su-tw-study-ntnu-bde/
+creative_content:
+  - name: 謝任堯 Ray Hsieh
+    avatar_url: https://ioh.tw/assets/Team-PageProfilecore-Ray-謝任堯-e1489043911115.jpg
+    talk_url: https://ioh.tw/talks/%e5%8c%97%e9%86%ab%e9%86%ab%e7%ae%a1%e7%b3%bb-%e8%ac%9d%e4%bb%bb%e5%a0%af-ray-hsieh-tw-study-tmu-bde/
+    specialist: 專員
+    event_specialist: ＋產品組
+  - name: 馮子聰 Victor Skelet Fung
+    avatar_url: https://ioh.tw/assets/Julia%E7%AC%AC%E4%B9%9D%E5%B1%86%E5%A4%A7%E9%A0%AD%E8%B2%BC170803%E9%A6%AE%E5%AD%90%E8%81%B001-e1502959447934.jpg
+it_team:
+  - name: 丘爲屹 Wei-Yi Chiu
+    avatar_url: https://ioh.tw/assets/rsz_31image.jpg
+    specialist: 全端
+  - name: 李愈尹 Yuyi Lee
+    avatar_url: https://ioh.tw/assets/Team-PageProfile8-UE-李愈尹-e1488957573915.jpg
+    talk_url: https://ioh.tw/talks/%E8%BC%94%E5%A4%A7%E8%B3%87%E7%AE%A1%E7%B3%BB-%E6%9D%8E%E6%84%88%E5%B0%B9-yuyi-lee-tw-study-fju-bde/
+  - name: 張葳凡 Wei-Fan Chang
+    avatar_url: https://ioh.tw/assets/Julia第九屆大頭貼170803張葳凡01-e1502959910206.jpg
+    talk_url: https://ioh.tw/talks/%e5%8f%b0%e5%a4%a7%e6%9d%90%e6%96%99%e7%a7%91%e5%ad%b8%e8%88%87%e5%b7%a5%e7%a8%8b%e5%ad%b8%e7%b3%bb-%e5%bc%b5%e8%91%b3%e5%87%a1-wei-fan-chang-tw-study-ntu-bde/
+service_team:
+  - name: 潘怡格 Anny Pan
+    avatar_url: https://ioh.tw/assets/Team-PageProfilecore-潘怡格-e1489046392256.jpg
+    talk_url: https://ioh.tw/talks/%e9%ab%98%e9%86%ab%e5%bf%83%e7%90%86%e7%b3%bb-%e6%bd%98%e6%80%a1%e6%a0%bc-i-ko-pan-tw-study-kmu-bde/
+    specialist: 專員
+    event_specialist: ＋編輯組
+  - name: 施辰靜 Chenjing Shih
+    avatar_url: https://ioh.tw/assets/Julia第九屆大頭貼170803施辰靜02-e1502959869123.jpg
+    talk_url: https://ioh.tw/talks/%e6%88%90%e5%8a%9f%e5%a4%a7%e5%ad%b8%e7%b6%93%e6%bf%9f%e5%ad%b8%e7%b3%bb-%e6%96%bd%e8%be%b0%e9%9d%9c-chenjing-shih-tw-study-ncku-bde/

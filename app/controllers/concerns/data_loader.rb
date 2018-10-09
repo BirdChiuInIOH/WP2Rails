@@ -11,9 +11,21 @@ module DataLoader
     load_data_from_yaml('talks.yml')
   end
 
+  def load_team_data
+    load_data_from_yaml('team.yml')
+  end
+
   private
 
     def load_data_from_yaml(filename)
-      YAML.load(File.read(Rails.root.join('app', 'datas', filename))).map(&:with_indifferent_access)
+      data = YAML.load(File.read(Rails.root.join('app', 'datas', filename)))
+
+      if data.is_a? Array
+        data.map(&:with_indifferent_access)
+      elsif data.is_a? Hash
+        data.with_indifferent_access
+      else
+        data
+      end
     end
 end

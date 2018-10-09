@@ -27,7 +27,7 @@
 * [ ] `XD`[全職招募](https://ioh.tw/全職招募/)
 * [ ] [教授分享](https://ioh.tw/?qmt%5Bdegree%5D%5B%5D=532&guide=1)
 * [ ] [在申請香港的大學前，你必須思考的 5 件事](https://ioh.tw/ioharticles-香港讀大學-申請香港的大學/)
-* [ ] [團隊介紹](https://ioh.tw/team/)
+* [x] [團隊介紹](https://ioh.tw/team/)
 * [ ] [紀錄片](https://ioh.tw/志氣：為人才而戰/)
 * [ ] [贊助IOH](https://ioh.tw/贊助我們/)
 * [ ] [參與 IOH：成為講者/團隊](https://ioh.tw/joinioh/)
