@@ -1,0 +1,336 @@
+- name: 建築與設計
+  departments:
+    - name: 工業設計學系
+    - name: 空間設計學系
+    - name: 建築學系
+    - name: 造型藝術學系
+    - name: 媒體設計學系
+    - name: 媒體設計科技學系
+    - name: 視覺傳達學系
+    - name: 數位內容設計學系
+    - name: 服裝設計學系
+    - name: 商業設計學系
+    - name: 景觀建築學系
+    - name: 建築與景觀學系
+    - name: 產品與室內設計學系
+- name: 社會與心理
+  departments:
+    - name: 人文社會學系
+    - name: 人類學系
+    - name: 心理學系
+    - name: 社會工作學系
+    - name: 社會學系
+    - name: 社會政策與社會工作學系
+    - name: 健康心理學系
+    - name: 應用哲學系
+    - name: 醫學社會學與社會工作學系
+    - name: 諮商與臨床心理學系
+    - name: 社會福利與社會工作學系
+    - name: 族群關係與文化學系
+    - name: 民族事務與發展學系
+    - name: 民族社會工作學士學位學程
+    - name: 犯罪防治學系
+    - name: 生死學系
+    - name: 區域與社會發展學系
+    - name: 輔導與諮商學系
+- name: 大眾傳播
+  departments:
+    - name: 口語傳播學系
+    - name: 大眾傳播學系
+    - name: 生物產業傳播暨發展學系
+    - name: 傳播藝術學系
+    - name: 廣播電視學系
+    - name: 資訊傳播工程學系
+    - name: 傳播學系
+    - name: 公共關係暨廣告學系
+    - name: 新聞與大眾傳播學程
+    - name: 圖文傳播藝術學系
+- name: 外語
+  departments:
+    - name: 日本語文學系
+    - name: 外國語文學系
+    - name: 西班牙語文學系
+    - name: 阿拉伯語文學系
+    - name: 俄國語文學系
+    - name: 英文學系
+    - name: 德國文化學系
+    - name: 歐洲語文學系
+    - name: 翻譯學系
+    - name: 應用日語學系
+    - name: 應用外語學系
+    - name: 應用英語學系
+    - name: 英語教學系
+    - name: 法文系
+    - name: 歐洲文化與旅遊學士學位學程
+    - name: 外語教學系
+- name: 文史哲
+  departments:
+    - name: 中國文學系
+    - name: 台灣文學系
+    - name: 文化創意產業經營學系
+    - name: 圖書資訊學系
+    - name: 哲學系
+    - name: 生物產業傳播暨發展學系
+    - name: 應用哲學系
+    - name: 歷史學系
+    - name: 社會與區域發展學系
+    - name: 東南亞學系
+    - name: 民族語言與傳播學系
+    - name: 台灣文化學系
+    - name: 客家語文暨社會科學學系
+    - name: 華文文學系
+    - name: 藝術史學系
+    - name: 台灣語文與傳播學系
+    - name: 海洋文創設計產業學士學位學程
+- name: 教育
+  departments:
+    - name: 教育政策與行政學系
+    - name: 國際文教與比較教育學系
+    - name: 教育科技學系
+    - name: 教育經營與管理學系
+    - name: 英語教學系
+    - name: 教育行政與管理學系
+    - name: 幼兒教育學系
+    - name: 教育與潛能開發學系
+    - name: 特殊教育學系
+    - name: 外語教學系
+    - name: 社會教育學系
+    - name: 公共事務與公民教育學系
+    - name: 工業教育與技術學系
+- name: 法政
+  departments:
+    - name: 公共行政學系
+    - name: 外交學系
+    - name: 不動產與城鄉環境學系
+    - name: 政治經濟學系
+    - name: 法律學系
+    - name: 政治學系
+    - name: 農業經濟學系
+    - name: 科技工程與管理學系
+    - name: 外交與國際關係學系全英語學士班
+    - name: 國際事務與企業學系
+    - name: 海洋法政學士學位學程
+- name: 管理
+  departments:
+    - name: 人文社會學系
+    - name: 土地管理與開發學系
+    - name: 人力資源暨公共關係學系
+    - name: 公共行政學系
+    - name: 工業工程與管理學系
+    - name: 工業與資訊管理學系
+    - name: 企業管理學系
+    - name: 行銷學系
+    - name: 資訊管理學系
+    - name: 健康產業管理學系
+    - name: 科技管理學院學士班
+    - name: 航運管理學系
+    - name: 國際企業學系
+    - name: 科技工程與管理學系
+    - name: 運動競技學系
+    - name: 餐旅管理學系
+    - name: 醫務管理暨醫療資訊學系
+    - name: 醫務管理學系
+    - name: 觀光旅遊學系
+    - name: 觀光休閒與餐旅管理學系
+    - name: 觀光與餐飲管理學系
+    - name: 交通管理科學系
+    - name: 營建管理學系
+    - name: 運輸科技與物流管理學系
+    - name: 休閒遊憩規劃與管理學系
+    - name: 國際觀光管理學系
+    - name: 經營管理學系
+    - name: 管理學系
+    - name: 金融與國際企業學系
+    - name: 運輸管理學系
+    - name: 管理科學與財金國際學士學位學程
+    - name: 科技管理學位學程
+    - name: 行銷與流通管理學系
+    - name: 商船學系
+    - name: 海洋觀光管理學士學位學程
+    - name: 運輸與物流學系
+- name: 藝術
+  departments:
+    - name: 美術與文創學系
+    - name: 藝術創意產業學系
+    - name: 藝術與設計學系
+    - name: 美術產業學系
+    - name: 劇場藝術學系
+- name: 財經
+  departments:
+    - name: 財務金融學系
+    - name: 財政學系
+    - name: 計量財務金融學系
+    - name: 國際企業學系
+    - name: 會計資訊學系
+    - name: 統計學系
+    - name: 會計學系
+    - name: 經濟學系
+    - name: 農業經濟學系
+    - name: 財務工程與精算數學系
+    - name: 金融與國際企業學系
+    - name:  管理科學與財金國際學士學位學程
+- name: 資訊
+  departments:
+    - name: 媒體設計學系
+    - name: 媒體設計科技學系
+    - name: 數位內容設計學系
+    - name: 資訊工程學系
+    - name: 資訊管理學系
+    - name: 科技工程與管理學系
+    - name: 圖書資訊學系
+    - name: 生物產業機電工程學系
+    - name: 資訊傳播工程學系
+    - name: 教育科技學系
+    - name: 生物資訊學系
+- name: 工程
+  departments:
+    - name: 土木工程學系
+    - name: 工業工程與管理學系
+    - name: 工業與資訊管理學系
+    - name: 化學工程學系
+    - name: 生物工程學系
+    - name: 生物產業機電工程學系
+    - name: 生醫工程學系
+    - name: 生醫工程與環境科學系
+    - name: 應用材料與光電工程學系
+    - name: 空間設計學系
+    - name: 光電工程學系
+    - name: 材料科學與工程學系
+    - name: 建築學系
+    - name: 科技管理學系
+    - name: 科技工程與管理學系
+    - name: 航運管理學系
+    - name: 電機工程學系
+    - name: 測量與空間資訊學系
+    - name: 機械工程學系
+    - name: 機械與自動化工程學系
+    - name: 機械與機電工程學系
+    - name: 交通管理科學系
+    - name: 資源工程學系
+    - name: 電子工程學系
+    - name: 生物醫學系
+    - name: 能源工程學系
+    - name: 營建管理學系
+    - name: 運輸科技與物流管理學系
+    - name: 生醫科學與工程學系
+    - name: 光機電與材料學士學位學程
+    - name: 工商業設計學系
+    - name: 商船學系
+    - name: 河海工程學系
+    - name: 航空太空工程學系
+    - name: 水利及海洋工程學系
+    - name: 工程科學系
+    - name: 系統及船舶機電工程學系
+    - name: 航太與系統工程學系
+    - name: 水利工程與資源保育學系
+    - name: 自動控制工程學系
+    - name: 光電與材料科技學系
+    - name: 通訊與導航工程學系
+    - name: 輪機工程學系
+    - name: 系統工程暨造船學系
+    - name: 機電工程學系
+- name: 數理化
+  departments:
+    - name: 生化科技學系
+    - name: 化學系
+    - name: 醫藥暨應用化學系
+    - name: 農業化學系
+    - name: 應用化學系
+    - name: 物理系
+    - name: 統計系
+    - name: 數學系
+    - name: 巨量資料管理學系
+    - name: 理學院學士班
+    - name: 應用數學系
+- name: 地球與環境
+  departments:
+    - name: 地理學系
+    - name: 地質科學系
+    - name: 地球科學系
+    - name: 海洋科學系
+    - name: 大氣科學系
+    - name: 生物工程學系
+    - name: 資源工程學系
+    - name: 海洋環境資訊學系
+- name: 醫藥衛生
+  departments:
+    - name: 口腔衛生學系
+    - name: 公共衛生學系
+    - name: 職業安全與衛生學系
+    - name: 呼吸治療學系
+    - name: 物理治療學系
+    - name: 職能治療學系
+    - name: 醫務管理學系
+    - name: 醫學影像暨放射科學系
+    - name: 醫務管理暨醫療資訊學系
+    - name: 醫學系
+    - name: 牙醫學系
+    - name: 藥學系
+    - name: 護理學系
+    - name: 運動醫學系
+    - name: 保健營養學系
+    - name: 香粧品學系
+    - name: 獸醫學系
+    - name: 醫學檢驗暨生物技術學系
+    - name: 物理治療暨輔助科技學系
+    - name: 高齡健康管理學系
+    - name: 醫學影像暨放射科學系
+    - name: 語言治療與聽力學系
+    - name: 中醫學系
+    - name: 營養學系
+- name: 生物資源
+  departments:
+    - name: 水產養殖學系
+    - name: 昆蟲學系
+    - name: 生物產業傳播暨發展學系
+    - name: 海洋科學系
+    - name: 農業經濟學系
+    - name: 動物科學技術學系
+    - name: 農藝學系
+    - name: 森林環境暨資源學系
+    - name: 園藝暨景觀學系
+    - name: 獸醫學系
+    - name: 植物病理與微生物學系
+    - name: 食品暨應用生物科技學系
+    - name: 食品科學系
+    - name: 自然資源與環境學系
+    - name: 海洋觀光管理學士學位學程
+    - name: 環境生物與漁業科學學系
+    - name: 生物技術與動物科學系
+- name: 生命科學
+  departments:
+    - name: 生命科學系
+    - name: 生化科技學系
+    - name: 生物工程學系
+    - name: 生物科技學系
+    - name: 生物產業科技學系
+    - name: 生物產業傳播暨發展學系
+    - name: 生物資源學系
+    - name: 生物產業機電工程學系
+    - name: 生物醫學暨環境生物學系
+    - name: 生醫工程學系
+    - name: 醫藥暨應用化學系
+    - name: 生醫工程與環境科學系
+    - name: 微生物學系
+    - name: 農業化學系
+    - name: 植物病理與微生物學系
+    - name: 昆蟲學系
+    - name: 生物資訊學系
+    - name: 生物醫學系
+    - name: 生物科技與產業科學系
+    - name: 自然生物科技學系
+- name: 遊憩與運動
+  departments:
+    - name: 運動競技學系
+    - name: 餐旅管理學系
+    - name: 觀光與餐飲管理學系
+    - name: 觀光與會展學系
+    - name: 觀光暨休閒遊憩學系
+    - name: 休閒遊憩規劃與管理學系
+    - name: 休閒產業與健康促進學系
+    - name: 國際觀光管理學系
+    - name: 體育與運動科學學系
+    - name: 健康產業發展學士學位學程
+    - name: 海洋觀光管理學士學位學程
+    - name: 運動與健康促進學士學位學程
+    - name: 運動學系

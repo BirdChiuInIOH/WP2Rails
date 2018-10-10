@@ -38,9 +38,10 @@
   }
 }
 
-.link-major {
+.link-major-reverse {
   color: black;
   font-size: 14px;
+  display: inline-block;
 
   &:hover {
     color: color(major);

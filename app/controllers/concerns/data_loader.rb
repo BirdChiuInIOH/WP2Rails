@@ -15,6 +15,14 @@ module DataLoader
     load_data_from_yaml('team.yml')
   end
 
+  def load_18_colleges
+    load_data_from_yaml('18_colleges.yml')
+  end
+
+  def load_taiwan_schools
+    load_data_from_yaml('taiwan_schools.yml')
+  end
+
   private
 
     def load_data_from_yaml(filename)
