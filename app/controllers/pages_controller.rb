@@ -106,9 +106,18 @@ class PagesController < ApplicationController
 
     def press
       @press = load_press
+      @talks = load_talks
     end
 
     def teams
       @teams = load_teams
+    end
+
+    def events
+      @talks = load_talks
+    end
+
+    def about
+      @talks = load_talks
     end
 end
