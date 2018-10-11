@@ -29,6 +29,7 @@
     background-color: black;
   }
 }
+
 .link-major {
   color: color(major);
 
@@ -46,6 +47,15 @@
   &:hover {
     color: color(major);
     text-decoration: none;
+  }
+}
+
+.link-minor-underline {
+  color: red;
+
+  &:hover {
+    color: red;
+    text-decoration: underline;
   }
 }
 

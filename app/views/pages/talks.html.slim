@@ -30,7 +30,7 @@
         button.btn.btn-sm.btn-outline-secondary type="reset" data-reset="talks-filter" style="min-width: 70px;" Reset
     .col-md-9
       = render "shared/banners"
-      h1.mt-10px.mb-30px style="font-size: 1.5em;line-height: 40px;" Talks
+      h1.my-4 Talks
       - @talks.in_groups_of(4, false) do |group|
         .row
           - group.each do |talk|

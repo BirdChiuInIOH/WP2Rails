@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   get '/申請香港的大學', to: 'pages#post_link'
   get '/teams', to: 'pages#teams'
   get '/贊助我們', to: 'pages#sponsor', as: :sponsor
+  get '/overseas', to: 'pages#overseas'
 end

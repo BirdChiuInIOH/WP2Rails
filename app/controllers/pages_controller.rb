@@ -16,6 +16,10 @@ class PagesController < ApplicationController
     end
 
     # https://ioh.tw/升大學全攻略/
+    def overseas
+      @talks = load_talks
+    end
+
     def guides
       @lecturers = load_lecturers
     end
@@ -23,7 +27,7 @@ class PagesController < ApplicationController
     # https://ioh.tw/升大學全攻略-考試準備-學測指南/?src=navigate_180921_1
     def reciprocal
     end
-      
+
     # https://ioh.tw/news/
     def news
       @news = load_news

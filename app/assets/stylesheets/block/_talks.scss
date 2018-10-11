@@ -1,21 +1,7 @@
 .block-talks-show {
-  h1,
-  h2,
-  h3 {
-    line-height: 40px;
-    color: color(dark);
-  }
+  color: color(dark);
 
-  h1,
-  h2 {
-    font-size: 1.35rem;
-  }
-
-  h3 {
-    font-size: 1.2rem;
-  }
-
-  h4 {
+  h5 {
     color: #993300;
     font-size: 14px;
   }
@@ -32,7 +18,8 @@ $custom-gutter-width: 10px; // 將欄距改成 10px
     margin-left: -($custom-gutter-width / 2);
     margin-right: -($custom-gutter-width / 2);
   }
-  .col {
+
+  .col-md {
     padding-left: $custom-gutter-width / 2;
     padding-right: $custom-gutter-width / 2;
   }

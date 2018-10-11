@@ -6,13 +6,13 @@
       #navbar.collapse.navbar-collapse
         ul.navbar-nav
           li.nav-item
-            = link_to '講座影片', '/talks', class: 'nav-link'
+            = link_to '講座影片', talks_path, class: 'nav-link'
           li.nav-item.nav-danger-item.pr-0
             = link_to '臺灣各校系學群總覽', taiwan_departments_path, class: 'nav-link', style: 'background-color: red;'
           li.nav-item.nav-dark-item.pr-0
             = link_to '升大學全攻略', guides_path, class: 'nav-link', style: 'background-color: black;'
           li.nav-item
-            = link_to '港澳僑外陸生專區', '#', class: 'nav-link'
+            = link_to '港澳僑外陸生專區', overseas_path, class: 'nav-link'
           li.nav-item
             = link_to '臺灣碩博校系總覽', '#', class: 'nav-link'
           li.nav-item.dropdown

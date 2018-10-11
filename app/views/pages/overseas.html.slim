@@ -1,0 +1,65 @@
+div(class="container my-3 block-overseas")
+  = render '/shared/banners'
+  h1(class="my-4") 港澳僑外陸生專區
+  div(class="my-4") = link_to '大馬來台升學看過來 >>', 'https://goo.gl/kgV2dy', target: '_blank', class: 'link-minor-underline font-weight-bold', style: 'font-size: 32px;'
+  = link_to 'https://goo.gl/kgV2dy', target: '_blank' do
+    = image_tag 'https://storage.googleapis.com/ioh-assets/大馬來台升學.jpg', class: 'img-fluid'
+
+  section
+    h2(class="my-4") 馬來西亞僑生
+    - @talks.in_groups_of(4, false) do |group|
+        div(class="row")
+          - group.each do |talk|
+            div(class="col-md-3 col-12")
+              = link_to talks_show_path do
+                = image_tag talk[:avatar_url], class: 'img-fluid'
+              h4(class="head-danger")
+                = link_to talk[:name], talks_show_path
+              ul(class="list-inline d-inline m-0 school")
+                li
+                  = link_to talk[:state], talk[:state_url]
+                li
+                  = link_to talk[:education], talk[:education_url]
+                li
+                  = link_to talk[:major], talk[:major_url]
+                p(class="introduce pb-4 pb-md-60px") = talk[:introduce]
+  hr
+  section
+    h2(class="my-4") 香港僑生（廣東話講座）
+    - @talks.in_groups_of(4, false) do |group|
+        div(class="row")
+          - group.each do |talk|
+            div(class="col-md-3 col-12")
+              = link_to talks_show_path do
+                = image_tag talk[:avatar_url], class: 'img-fluid'
+              h4(class="head-danger")
+                = link_to talk[:name], talks_show_path
+              ul(class="list-inline d-inline m-0 school")
+                li
+                  = link_to talk[:state], talk[:state_url]
+                li
+                  = link_to talk[:education], talk[:education_url]
+                li
+                  = link_to talk[:major], talk[:major_url]
+                p(class="introduce pb-4 pb-md-60px") = talk[:introduce]
+  hr
+  section
+    h2(class="my-4") 澳門僑生
+    - @talks.in_groups_of(4, false) do |group|
+        div(class="row")
+          - group.each do |talk|
+            div(class="col-md-3 col-12")
+              = link_to talks_show_path do
+                = image_tag talk[:avatar_url], class: 'img-fluid'
+              h4(class="head-danger")
+                = link_to talk[:name], talks_show_path
+              ul(class="list-inline d-inline m-0 school")
+                li
+                  = link_to talk[:state], talk[:state_url]
+                li
+                  = link_to talk[:education], talk[:education_url]
+                li
+                  = link_to talk[:major], talk[:major_url]
+                p(class="introduce pb-4 pb-md-60px") = talk[:introduce]
+  = render '/shared/show_more_talks', talks: @talks
+

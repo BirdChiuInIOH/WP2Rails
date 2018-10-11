@@ -55,9 +55,10 @@
 ### Low Priority
 
 * [x] `XD`[關於 IOH - IOH 創辦初衷](https://ioh.tw/about/)
-* [ ] `XD`[港澳僑外陸生專區](https://ioh.tw/overseas1/)
+* [x] `XD`[港澳僑外陸生專區](https://ioh.tw/overseas1/)
 * [ ] `XD`[台灣碩博校系總攬](https://ioh.tw/master-phd-experience-sharing/)
-* [ ] `XD`[海外留學-海外各校系總攬](https://ioh.tw/howtoapply-usa/)
+* [ ] `XD`[海外留學-海外各校系總攬](https://ioh.tw/study-abroad-experience-sharing/)
+* [ ] `XD`[海外留學-海外升學指南](https://ioh.tw/howtoapply-usa/)
 * [ ] `XD`[全職招募](https://ioh.tw/全職招募/)
 * [ ] [教授分享](https://ioh.tw/?qmt%5Bdegree%5D%5B%5D=532&guide=1)
 * [ ] [在申請香港的大學前，你必須思考的 5 件事](https://ioh.tw/ioharticles-香港讀大學-申請香港的大學/)

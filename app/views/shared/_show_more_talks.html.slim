@@ -1,7 +1,10 @@
-div.block-show-more-talks
-  h2 觀看更多
-  .row
+div(class="block-show-more-talks")
+  h3(class="my-3") 觀看更多
+  div(class="row")
     - talks.first(5).each do |talk|
-      .col = link_to 'javascript:;' do
+      div(class="col-md col-sm-12") = link_to 'javascript:;' do
         = image_tag talk[:avatar_url], class: 'img-fluid'
-        .title-overlay = talk[:name]
+        div(class="title-overlay")
+          = talk[:major]
+          br
+          = talk[:name]
