@@ -23,6 +23,14 @@ module DataLoader
     load_yaml_file('taiwan_schools')
   end
 
+  def load_lecturers
+    load_yaml_file('lecturers')
+  end
+
+  def load_news
+    load_yaml_file('news')
+  end
+
   private
 
     def load_yaml_file(filename)

@@ -1,8 +1,10 @@
 .navbar-ioh {
+  margin-bottom: 20px;
   font-size: 14px;
+  
   a {
     color: gray;
-
+    
     &:hover {
       color: red;
     }
@@ -54,16 +56,20 @@
   margin: 20px 0 10px;
   background-color: #ececec;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  
   a {
     color: #575757;
     font-size: 14px;
   }
+  
   li {
     padding: 3px;
+    
     &:hover {
       background: #e0e0e0;
     }
   }
+  
   li.active {
     background-color: #c10d23;
 
@@ -74,6 +80,7 @@
 }
 
 .nav-talks {
+  
   .nav-link {
     color: color(dark);
     font-weight: 600;
@@ -106,6 +113,7 @@
     }
 
     &:not(.collapsed) {
+      
       &:after {
         transform: rotate(90deg);
       }

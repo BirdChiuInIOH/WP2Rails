@@ -1,6 +1,6 @@
-= render "/shared/carousel"
 .container
-  h3.text-center style="color: #c33838; font-weight: bold;" 由下方選擇瀏覽方式
+  = render "/shared/carousel"
+  h3.text-center.font-weight-bold style="color: #c33838;"  由下方選擇瀏覽方式
 
 
   nav.nav.nav-justified.nav-pills-ioh.flex-column.flex-sm-row
@@ -11,7 +11,7 @@
 
   hr
 
-  h5.my-4 style="font-weight: bold;" 推薦講座
+  h5.my-4.font-weight-bold 推薦講座
   - @talks.in_groups_of(4, false) do |group|
     .row
       - group.each do |talk|

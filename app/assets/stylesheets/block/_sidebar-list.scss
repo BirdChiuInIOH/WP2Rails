@@ -1,0 +1,29 @@
+.block-sidebar-list {
+  section {
+    ul {
+      padding-left: 20px;
+    }
+    
+    h3 {
+      font-size: 17px;
+      font-weight: bold;
+      margin: 10px 10px 10px 0;
+      line-height: 40px;
+    }
+  
+    li {
+      font-size: 14px;
+      list-style-type: none;
+      line-height: 25px;
+      
+      a {
+        color: color(major);
+      
+        &:hover {
+          color: red;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

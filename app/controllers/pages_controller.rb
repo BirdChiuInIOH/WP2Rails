@@ -15,10 +15,23 @@ class PagesController < ApplicationController
       @talks = load_talks
     end
 
+    # https://ioh.tw/升大學全攻略/
     def guides
+      @lecturers = load_lecturers
     end
 
-    def keyword_first
+    # https://ioh.tw/升大學全攻略-考試準備-學測指南/?src=navigate_180921_1
+    def reciprocal
+    end
+      
+    # https://ioh.tw/news/
+    def news
+      @news = load_news
+    end
+
+    def post_link
+      @news = load_news
+      @lecturers = load_lecturers
     end
 
     # https://ioh.tw/department_guide
@@ -94,7 +107,4 @@ class PagesController < ApplicationController
     def teams
       @teams = load_teams
     end
-
-    private
-
 end
