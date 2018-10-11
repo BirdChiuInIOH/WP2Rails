@@ -1,4 +1,4 @@
-.container.my-3.my-md-5
+.container.my-3
   .row
     .col-md-3.nav-talks
       form data-target="talks-filter"
@@ -35,8 +35,8 @@
         .row
           - group.each do |talk|
             .col-md-3.col-12
-              = link_to talks_show_path
-                = image_tag talk[:avatar_url], class: 'mw-100'
+              = link_to talks_show_path do
+                = image_tag talk[:avatar_url], class: 'img-fluid'
               h4.head-danger
                 = link_to talk[:name], talks_show_path
               ul.list-inline.d-inline.m-0.school

@@ -12,7 +12,7 @@ class PagesController < ApplicationController
     end
 
     def talks_show
-      @talks = load_talks_data
+      @talks = load_talks
     end
 
     def guides

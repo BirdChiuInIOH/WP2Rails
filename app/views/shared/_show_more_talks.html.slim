@@ -1,8 +1,7 @@
 div.block-show-more-talks
   h2 觀看更多
   .row
-    - talks.slice(0, 5).each do |talk|
-      .col
-        = link_to 'javascript:;'
-          = image_tag talk[:avatar_url], class: 'mw-100'
-          .title-overlay = talk[:name]
+    - talks.first(5).each do |talk|
+      .col = link_to 'javascript:;' do
+        = image_tag talk[:avatar_url], class: 'img-fluid'
+        .title-overlay = talk[:name]
