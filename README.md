@@ -68,6 +68,6 @@
 * [ ] [參與 IOH：成為講者/團隊](https://ioh.tw/joinioh/)
 * [x] [聯絡我們](https://ioh.tw/contactus/)
 * [x] [媒體報導](https://ioh.tw/媒體報導/)
-* [ ] [IOH現場講座](https://ioh.tw/ioh現場講座/)
+* [x] [IOH現場講座](https://ioh.tw/ioh現場講座/)
 * [ ] [備審面試](https://ioh.tw/升大學全攻略-備審面試)
 * [ ] [考試準備](https://ioh.tw/升大學全攻略-考試準備)
