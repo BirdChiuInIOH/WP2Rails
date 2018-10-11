@@ -14,7 +14,7 @@
   h5.my-4 style="font-weight: bold;"  推薦講座
   - @talks.in_groups_of(4, false) do |group|
     .row
-      - group.each_with_index do |talk|
+      - group.each do |talk|
         .col-md-3.col-12
           = link_to '#'
             = image_tag talk[:avatar_url], class: 'mw-100'

@@ -8,9 +8,13 @@
 @import "nav";
 @import "image";
 @import "grid";
-
+@import "index";
+@import "lecturers";
+@import "keyword_first";
+@import "banner";
 @import "block/pages";
 @import "block/teams";
+@import "block/talks";
 
 body {
   display: flex;

@@ -1,0 +1,69 @@
+.block-talks-show {
+  h1,
+  h2,
+  h3 {
+    line-height: 40px;
+    color: color(dark);
+  }
+
+  h1,
+  h2 {
+    font-size: 1.35rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  h4 {
+    color: #993300;
+    font-size: 14px;
+  }
+
+  p {
+    color: #666666;
+    line-height: 1.8;
+  }
+} // /.block-talks-show
+
+$custom-gutter-width: 10px; // 將欄距改成 20px
+.block-show-more-talks {
+  // customer gutters
+  .row {
+    margin-left: -($custom-gutter-width / 2);
+    margin-right: -($custom-gutter-width / 2);
+  }
+  .col {
+    padding-left: $custom-gutter-width / 2;
+    padding-right: $custom-gutter-width / 2;
+  }
+
+  a {
+    position: relative;
+    display: inline-block;
+    padding: 5px;
+    font-size: 12px;
+    text-align: center;
+    color: white;
+
+    // move to a component
+    .title-overlay {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 5px;
+      margin: 0 5px 5px;
+      text-shadow: #000 0.1em 0.1em 0.2em
+    }
+
+    &:hover {
+      background-color: #eee;
+
+      .title-overlay {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+    } // /.title-overlay
+  } // /a
+} // /.block-show-more-talks

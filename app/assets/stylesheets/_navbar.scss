@@ -75,7 +75,7 @@
 
 .nav-talks {
   .nav-link {
-    color: color(black);
+    color: color(dark);
     font-weight: 600;
     line-height: 20px;
     display: flex;
@@ -118,7 +118,7 @@
 
     &::before {
       border-radius: 0;
-      border: 1px solid color(black);
+      border: 1px solid color(dark);
       background-color: white;
       width: 12px;
       height: 12px;

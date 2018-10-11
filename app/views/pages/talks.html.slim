@@ -33,7 +33,7 @@
       h1.mt-10px.mb-30px style="font-size: 1.5em;line-height: 40px;"  Talks
       - @talks.in_groups_of(4, false) do |group|
         .row
-          - group.each_with_index do |talk|
+          - group.each do |talk|
             .col-md-3.col-12
               = link_to talks_show_path
                 = image_tag talk[:avatar_url], class: 'mw-100'
