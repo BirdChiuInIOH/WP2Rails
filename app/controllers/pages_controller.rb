@@ -3,12 +3,12 @@ class PagesController < ApplicationController
 
     # https://ioh.tw/
     def index
-      @talks = load_talks_data
+      @talks = load_talks
     end
 
     def talks
       @talks_filter = load_talks_filter
-      @talks = load_talks_data
+      @talks = load_talks
     end
 
     def guides
@@ -84,11 +84,11 @@ class PagesController < ApplicationController
     end
 
     def press
-      @press = load_press_data
+      @press = load_press
     end
 
-    def team
-      @teams = load_team_data
+    def teams
+      @teams = load_teams
     end
 
     private

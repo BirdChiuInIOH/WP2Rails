@@ -9,5 +9,5 @@ Rails.application.routes.draw do
   get '/contact_us', to: 'pages#contact_us'
   get '/媒體報導', to: 'pages#press', as: :press
   get '/about', to: 'pages#about'
-  get '/team', to: 'pages#team'
+  get '/teams', to: 'pages#teams'
 end

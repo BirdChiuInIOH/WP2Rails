@@ -1,32 +1,32 @@
 module DataLoader
-  def load_press_data
-    load_data_from_yaml('press.yml')
+  def load_press
+    load_yaml_file('press')
   end
 
   def load_talks_filter
-    load_data_from_yaml('talks_filter.yml')
+    load_yaml_file('talks_filter')
   end
 
-  def load_talks_data
-    load_data_from_yaml('talks.yml')
+  def load_talks
+    load_yaml_file('talks')
   end
 
-  def load_team_data
-    load_data_from_yaml('team.yml')
+  def load_teams
+    load_yaml_file('team')
   end
 
   def load_18_colleges
-    load_data_from_yaml('18_colleges.yml')
+    load_yaml_file('18_colleges')
   end
 
   def load_taiwan_schools
-    load_data_from_yaml('taiwan_schools.yml')
+    load_yaml_file('taiwan_schools')
   end
 
   private
 
-    def load_data_from_yaml(filename)
-      data = YAML.load(File.read(Rails.root.join('app', 'datas', filename)))
+    def load_yaml_file(filename)
+      data = YAML.load(File.read(Rails.root.join('app', 'datas', "#{filename}.yml")))
 
       if data.is_a? Array
         data.map(&:with_indifferent_access)
