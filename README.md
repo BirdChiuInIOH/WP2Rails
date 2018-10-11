@@ -63,7 +63,7 @@
 * [ ] [在申請香港的大學前，你必須思考的 5 件事](https://ioh.tw/ioharticles-香港讀大學-申請香港的大學/)
 * [x] [團隊介紹](https://ioh.tw/team/)
 * [ ] [紀錄片](https://ioh.tw/志氣：為人才而戰/)
-* [ ] [贊助IOH](https://ioh.tw/贊助我們/)
+* [x] [贊助IOH](https://ioh.tw/贊助我們/)
 * [ ] [參與 IOH：成為講者/團隊](https://ioh.tw/joinioh/)
 * [x] [聯絡我們](https://ioh.tw/contactus/)
 * [x] [媒體報導](https://ioh.tw/媒體報導/)
