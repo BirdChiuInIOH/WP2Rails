@@ -3,28 +3,28 @@
     .col-md-3.nav-talks
       form data-target="talks-filter"
         ul.nav.flex-column
-          - @talks_filter&.each do |filter_items|
+          - @talks_filter&.each do |filter_titles|
             li.nav-item
               / Schools, Majors, Degrees
-              a.nav-link.nav-link-head.collapsed data-toggle="collapse" href="##{filter_items[:value]}" aria-controls="schools" aria-expanded="false" aria-label="Toggle Schools" role="button" = filter_items[:title]
-              .collapse data-collapsible="true" id="#{filter_items[:value]}"
+              a.nav-link.nav-link-head.collapsed data-toggle="collapse" href="##{filter_titles[:value]}" aria-controls="schools" aria-expanded="false" aria-label="Toggle Schools" role="button" = filter_titles[:title]
+              .collapse data-collapsible="true" id="#{filter_titles[:value]}"
                 ul.nav.flex-column
-                  - filter_items[:filter_items]&.each do |filter_items_deep|
+                  - filter_titles[:filter_items]&.each do |filter_categories|
                       li.nav-item
-                        - if filter_items_deep[:filter_items].present?
-                          a.nav-link.collapsed.pl-2.pr-0 data-toggle="collapse" href="##{filter_items_deep[:value]}" = filter_items_deep[:title]
-                          .collapse data-collapsible="true" id="#{filter_items_deep[:value]}"
+                        - if filter_categories[:filter_items].present?
+                          a.nav-link.collapsed.pl-2.pr-0 data-toggle="collapse" href="##{filter_categories[:value]}" = filter_categories[:title]
+                          .collapse data-collapsible="true" id="#{filter_categories[:value]}"
                             ul.nav.flex-column.mr-4
-                              - filter_items_deep[:filter_items]&.each do |filter_items_deep_deep|
+                              - filter_categories[:filter_items]&.each do |filter_option|
                                 li.nav-item
                                   .form-group.custom-control.custom-checkbox.ml-3.my-5px
-                                    input.custom-control-input type="checkbox" id="#{filter_items_deep_deep[:value]}"
-                                    label.custom-control-label for="#{filter_items_deep_deep[:value]}" = filter_items_deep_deep[:title]
+                                    input.custom-control-input type="checkbox" id="#{filter_option[:value]}"
+                                    label.custom-control-label for="#{filter_option[:value]}" = filter_option[:title]
                         / If there is no deeper options, show checkbox
                         - else
                           .form-group.custom-control.custom-checkbox.ml-3.my-5px
-                            input.custom-control-input type="checkbox" id="#{filter_items_deep[:value]}"
-                            label.custom-control-label for="#{filter_items_deep[:value]}" = filter_items_deep[:title]
+                            input.custom-control-input type="checkbox" id="#{filter_categories[:value]}"
+                            label.custom-control-label for="#{filter_categories[:value]}" = filter_categories[:title]
       div.mb-md-0.my-3
         button.btn.btn-sm.btn-danger.mr-2 type="submit" style="min-width: 70px;" Submit
         button.btn.btn-sm.btn-outline-secondary type="reset" data-reset="talks-filter" style="min-width: 70px;" Reset
