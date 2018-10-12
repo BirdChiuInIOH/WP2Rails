@@ -5,18 +5,5 @@ div(class="container")
     = link_to 'UK', '#', class: 'text-sm-center nav-item nav-link nav-pills-item'
     = link_to 'AUSTRALIA', '#', class: 'text-sm-center nav-item nav-link nav-pills-item'
     = link_to 'TAIWAN', '#', class: 'text-sm-center nav-item nav-link nav-pills-item'
-  div(class="swiper-container")
-    div(class="swiper-wrapper")
-      - @talks.each do |talk|
-        div(class="swiper-slide")
-          = link_to talk[:url] do
-            div(class="card")
-              div(class="card-body")
-                = image_tag talk[:avatar_url], class: 'card-img img-fluid rounded-circle mb-3'
-                ul(class="card-list-group list-unstyled")
-                  li = talk[:name]
-                  li = talk[:education]
-                  li = talk[:major]
-                p(class="card-text") = talk[:advice]
-    div(class="swiper-pagination")
+  = render 'how_to_apply_slider', talks: @talks
 

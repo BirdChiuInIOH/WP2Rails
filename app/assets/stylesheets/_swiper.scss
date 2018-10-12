@@ -11,6 +11,11 @@ $swiper-card-height: 435px;
     background: #fff;
     display: flex;
     justify-content: center;
+    width: 22%;
+
+    @include media-breakpoint-down(xs) {
+      width: 80%;
+    }
   }
 
   a {
@@ -28,6 +33,7 @@ $swiper-card-height: 435px;
 
   .card {
     height: $swiper-card-height;
+    overflow: hidden;
 
     .card-body {
       padding: 1rem;
@@ -43,6 +49,8 @@ $swiper-card-height: 435px;
       color: #b2b2b3;
       font-size: 14px;
       line-height: 1.5;
+      max-height: 4rem;
+      overflow: hidden;
     }
 
     .card-text {
