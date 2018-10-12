@@ -1,5 +1,4 @@
 .nav-pills-ioh {
-  margin: 40px 0;
 
   a {
     color: color(major);
@@ -18,7 +17,7 @@
     }
   }
 
-  .nav-pills-item-bg {
+  .nav-pills-item-active {
     border: 1px solid color(major);
     background-color: color(major);
     color: white;

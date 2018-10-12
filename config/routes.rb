@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   get '/贊助我們', to: 'pages#sponsor', as: :sponsor
   get '/overseas', to: 'pages#overseas'
   get '/ioh現場講座', to: 'pages#events', as: :events
+  get '/how_to_apply/usa', to: 'pages#how_to_apply_usa'
 end

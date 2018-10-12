@@ -1,4 +1,4 @@
-div(class="container")
+div(class="container mb-4")
   nav(class="navbar navbar-expand-lg bg-solidgray navbar-ioh pt-0")
     button(type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation")
       span(class="navbar-toggler-icon")
@@ -19,7 +19,7 @@ div(class="container")
             a(class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") 海外留學
             div(class="dropdown-menu")
               = link_to '海外各校系總覽', '#', class: 'dropdown-item'
-              = link_to '海外升學指南', '#', class: 'dropdown-item'
+              = link_to '海外升學指南', how_to_apply_usa_path, class: 'dropdown-item'
           li(class="nav-item")
             = link_to '最新文章', news_path, class: 'nav-link'
           li(class="nav-item dropdown")

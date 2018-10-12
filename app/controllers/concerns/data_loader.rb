@@ -12,7 +12,7 @@ module DataLoader
   end
 
   def load_teams
-    load_yaml_file('team')
+    load_yaml_file('teams')
   end
 
   def load_18_colleges

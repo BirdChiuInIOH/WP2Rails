@@ -39,8 +39,8 @@ div(class="container my-3")
                 = image_tag talk[:avatar_url], class: 'img-fluid'
               h4(class="head-danger") = link_to talk[:name], talks_show_path
               ul(class="list-inline d-inline m-0 school")
-                li = link_to talk[:state], talk[:state_url]
-                li = link_to talk[:education], talk[:education_url]
-                li = link_to talk[:major], talk[:major_url]
-                p(class="introduce pb-4 pb-md-60px") = talk[:introduce]
+                li = link_to talk[:state], talk[:state_url], class: 'link-major-underline'
+                li = link_to talk[:education], talk[:education_url], class: 'link-major-underline'
+                li = link_to talk[:major], talk[:major_url], class: 'link-major-underline'
+                p(class="introduce pb-4 pb-md-60px my-10px p-0") = talk[:introduce]
       = render 'shared/pagination'

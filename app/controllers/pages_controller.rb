@@ -2,7 +2,7 @@ class PagesController < ApplicationController
     include DataLoader
 
     before_action :set_talks, only: [
-      :index, :talks, :talks_show, :overseas, :press, :events, :about
+      :index, :talks, :talks_show, :overseas, :press, :events, :about, :how_to_apply_usa
     ]
 
     # https://ioh.tw/
@@ -14,6 +14,10 @@ class PagesController < ApplicationController
     end
 
     def talks_show
+    end
+
+    def how_to_apply_usa
+      @talks = @talks.reject{ |talk| talk[:advice].blank? }
     end
 
     # https://ioh.tw/升大學全攻略/

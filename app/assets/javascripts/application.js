@@ -27,4 +27,14 @@ $(document).on('turbolinks:load', function() {
       talksFilterForm[0].reset();
     }
   });
+
+  // For Swiper
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    }
+  });
 });
