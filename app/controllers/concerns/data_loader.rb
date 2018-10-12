@@ -34,7 +34,7 @@ module DataLoader
   private
 
     def load_yaml_file(filename)
-      data = YAML.load(File.read(Rails.root.join('app', 'datas', "#{filename}.yml")))
+      data = YAML.load(ERB.new(File.read(Rails.root.join('app', 'datas', "#{filename}.yml"))).result)
 
       if data.is_a? Array
         data.map(&:with_indifferent_access)

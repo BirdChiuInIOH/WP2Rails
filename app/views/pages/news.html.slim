@@ -7,7 +7,7 @@ div(class="container block-news py-3")
         div(class="post")
           div(class="head")
             h2 = link_to news[:title], news[:content_url], class: 'link-major-underline'
-            div Posted on #{news[:date]} at #{news[:time]}.
+            div Posted on #{news[:posted_at].strftime('%Y 年 %m 月 %d 日 at %T')}.
             p Written by #{link_to news[:name], news[:name_url], class: 'link-major-underline'}
             div(class="content")
               p #{news[:content]} … #{link_to 'Continued', news[:content_url], class: 'link-major-underline'}

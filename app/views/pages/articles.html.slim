@@ -3,8 +3,8 @@ div(class="container block-articles py-3")
     div(class="col-md-8 col-12")
       header
         h1 在申請香港的大學前，你必須思考的 5 件事
-        h4 Posted on 2018 年 09 月 22 日 at 19:55:07.
-        h4 Written by #{link_to '陳 冠蓉', '#', class: 'link-major-underline'}
+        p(class="mb-0") Posted on #{Time.parse('2018/09/22 19:55:07').strftime('%Y 年 %m 月 %d 日 at %T')}.
+        p(class="mb-0") Written by #{link_to '陳 冠蓉', '#', class: 'link-major-underline'}
         = render 'shared/share_social_media'
       = image_tag 'https://storage.googleapis.com/ioh-assets/uploads/production/asset/asset//asset/extra_dd05c113-3500-48c1-bdfc-5910cee8af47.jpg', class: 'img-fluid'
       p(class="mt-10px mb-0" style="color: #999999;") Photo Credits: 江宣蓉
