@@ -106,6 +106,15 @@ $magazine-minor: #e50012;
         color: white;
       }
     }
+
+    .magazine-info-keywords {
+      width: 50%;
+      border-left: 4px solid $magazine-minor;
+      border-right: 4px solid $magazine-minor;
+      padding: 1rem;
+      color: $magazine-minor;
+      background: white;
+    }
   }
 
   $custom-gutter-width: 10px; // 將欄距改成 10px
