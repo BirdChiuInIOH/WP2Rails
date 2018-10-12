@@ -10,8 +10,8 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
   body
-    = render "/shared/header"
-    = render "/shared/navbar"
+    = render 'shared/header'
+    = render 'shared/navbar'
     main
       = yield
-    = render "/shared/footer"
+    = render 'shared/footer'

@@ -1,9 +1,9 @@
-.container.my-3
-  .row
-  = render '/shared/banners'
-  = render '/shared/navbar-share'
-  h1.my-4 style="font-size: 1.5em; font-weight: bold;" 學測指南
-  .img-link-item.my-4
+div(class="container my-3")
+  div(class="row")
+  = render 'shared/banners'
+  = render 'shared/navbar-share'
+  h1(class="my-4 font-weight-bold") 學測指南
+  div(class="img-link-item my-4")
     = link_to '#' do
       = image_tag 'https://storage.googleapis.com/ioh-assets/IOH官網專欄文字_考試準備相關170124LH-01-4.png', class: 'img-fluid'
     = link_to '#' do

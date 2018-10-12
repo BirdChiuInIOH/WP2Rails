@@ -12,30 +12,12 @@
       p {
         margin-bottom: 10px;
       }
-      
+
       h2 {
         margin-bottom: 10px;
         font-size: 32px;
         font-weight: bold;
-        
-        a {
-          color: color(major);
-
-          &:hover {
-            color: red;
-            text-decoration: underline;
-          }
-        }
       }
-    }
-  }
-
-  .continued {
-    color: color(major);
-    
-    &:hover {
-      color: red;
-      text-decoration: underline;
     }
   }
 }

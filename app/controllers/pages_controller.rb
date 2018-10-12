@@ -1,23 +1,23 @@
 class PagesController < ApplicationController
     include DataLoader
 
+    before_action :set_talks, only: [
+      :index, :talks, :talks_show, :overseas, :press, :events, :about
+    ]
+
     # https://ioh.tw/
     def index
-      @talks = load_talks
     end
 
     def talks
       @talks_filter = load_talks_filter
-      @talks = load_talks
     end
 
     def talks_show
-      @talks = load_talks
     end
 
     # https://ioh.tw/升大學全攻略/
     def overseas
-      @talks = load_talks
     end
 
     def guides
@@ -106,7 +106,6 @@ class PagesController < ApplicationController
 
     def press
       @press = load_press
-      @talks = load_talks
     end
 
     def teams
@@ -114,10 +113,14 @@ class PagesController < ApplicationController
     end
 
     def events
-      @talks = load_talks
     end
 
     def about
+    end
+
+  private
+
+    def set_talks
       @talks = load_talks
     end
 end

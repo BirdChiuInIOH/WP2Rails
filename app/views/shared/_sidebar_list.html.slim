@@ -1,90 +1,56 @@
-.block-sidebar-list
-  form.mb-4 class="form-inline"
-    .form-group.mb-2
-      input type="text" class="form-control form-control-sm" style="width: 230px;"
-    input.ml-1 type="submit" value="搜尋" class="mb-2"
+div(class="block-sidebar-list")
+  form(class="form-inline mb-4")
+    div(class="form-group mb-2")
+      input(type="text" class="form-control form-control-sm" style="width: 230px;")
+    input(class="ml-1" type="submit" value="搜尋" class="mb-2")
   section
-    h3  近期文章
+    h3 近期文章
     ul
       - @news.first(5).each do |news|
         li
-          = link_to news[:title], news[:content_url]
+          = link_to news[:title], news[:content_url], class: 'link-major-underline'
   section
-    h3  近期迴響
+    h3 近期迴響
   section
-    h3  彙整
+    h3 彙整
     ul
-      li
-        = link_to '2018 年 九月', '#'
-      li
-        = link_to '2018 年 八月', '#'
-      li
-        = link_to '2018 年 七月', '#'
-      li
-        = link_to '2018 年 六月', '#'
-      li
-        = link_to '2018 年 五月', '#'
-      li
-        = link_to '2018 年 四月', '#'
-      li
-        = link_to '2018 年 三月', '#'
-      li
-        = link_to '2018 年 二月', '#'
-      li
-        = link_to '2018 年 一月', '#'
-      li
-        = link_to '2017 年 十二月', '#'
-      li
-        = link_to '2017 年 十一月', '#'
-      li
-        = link_to '2017 年 十月', '#'
-      li
-        = link_to '2017 年 九月', '#'
-      li
-        = link_to '2017 年 八月', '#'
-      li
-        = link_to '2017 年 七月', '#'
+      li = link_to '2018 年 九月', '#', class: 'link-major-underline'
+      li = link_to '2018 年 八月', '#', class: 'link-major-underline'
+      li = link_to '2018 年 七月', '#', class: 'link-major-underline'
+      li = link_to '2018 年 六月', '#', class: 'link-major-underline'
+      li = link_to '2018 年 五月', '#', class: 'link-major-underline'
+      li = link_to '2018 年 四月', '#', class: 'link-major-underline'
+      li = link_to '2018 年 三月', '#', class: 'link-major-underline'
+      li = link_to '2018 年 二月', '#', class: 'link-major-underline'
+      li = link_to '2018 年 一月', '#', class: 'link-major-underline'
+      li = link_to '2017 年 十二月', '#', class: 'link-major-underline'
+      li = link_to '2017 年 十一月', '#', class: 'link-major-underline'
+      li = link_to '2017 年 十月', '#', class: 'link-major-underline'
+      li = link_to '2017 年 九月', '#', class: 'link-major-underline'
+      li = link_to '2017 年 八月', '#', class: 'link-major-underline'
+      li = link_to '2017 年 七月', '#', class: 'link-major-underline'
   section
-    h3  分類
+    h3 分類
     ul
-      li
-        = link_to 'IOH 實習生', '#'
-      li
-        = link_to 'IOH 專欄文章', '#'
-      li
-        = link_to 'IOH 專訪文章', '#'
-      li
-        = link_to 'IOH 活動公告', '#'
-      li
-        = link_to 'IOH 講座影片', '#'
-      li
-        = link_to '大學新鮮人特輯', '#'
-      li
-        = link_to '學測申請', '#'
-      li
-        = link_to '影劇評論', '#'
-      li
-        = link_to '志願選填', '#'
-      li
-        = link_to '指考準備', '#'
-      li
-        = link_to '教授專訪', '#'
-      li
-        = link_to '未分類', '#'
-      li
-        = link_to '破解科系迷思', '#'
-      li
-        = link_to '那些學長姐走過的路', '#'
-      li
-        = link_to '高職升學', '#'
+      li = link_to 'IOH 實習生', '#', class: 'link-major-underline'
+      li = link_to 'IOH 專欄文章', '#', class: 'link-major-underline'
+      li = link_to 'IOH 專訪文章', '#', class: 'link-major-underline'
+      li = link_to 'IOH 活動公告', '#', class: 'link-major-underline'
+      li = link_to 'IOH 講座影片', '#', class: 'link-major-underline'
+      li = link_to '大學新鮮人特輯', '#', class: 'link-major-underline'
+      li = link_to '學測申請', '#', class: 'link-major-underline'
+      li = link_to '影劇評論', '#', class: 'link-major-underline'
+      li = link_to '志願選填', '#', class: 'link-major-underline'
+      li = link_to '指考準備', '#', class: 'link-major-underline'
+      li = link_to '教授專訪', '#', class: 'link-major-underline'
+      li = link_to '未分類', '#', class: 'link-major-underline'
+      li = link_to '破解科系迷思', '#', class: 'link-major-underline'
+      li = link_to '那些學長姐走過的路', '#', class: 'link-major-underline'
+      li = link_to '高職升學', '#', class: 'link-major-underline'
   section
-    h3  其他
+    h3 其他
     ul
-      li
-        = link_to '登入', '#'
-      li
-        = link_to '文章 RSS 訂閱', '#'
-      li
-        = link_to '迴響 RSS 訂閱', '#'
-      li
-        = link_to 'WordPress 台灣正體中文', '#'
+      li = link_to '登入', '#', class: 'link-major-underline'
+      li = link_to '文章 RSS 訂閱', '#', class: 'link-major-underline'
+      li = link_to '迴響 RSS 訂閱', '#', class: 'link-major-underline'
+      li = link_to 'WordPress 台灣正體中文', '#', class: 'link-major-underline'

@@ -1,19 +1,9 @@
 footer {
   margin-top: 20px;
   padding: 16px 16px 0 16px;
-  
+
   .list-footer-item {
     padding: 0;
     list-style: none;
-    font-size: 14px;
-
-    a {
-      color: black;
-      text-decoration: none;
-
-      &:hover {
-        color: color(major);
-      }
-    }
   }
 }

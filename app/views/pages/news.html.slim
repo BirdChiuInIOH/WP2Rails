@@ -1,17 +1,16 @@
-.container.block-news.py-3
-  .row
-    .col-md-8.col-12
-      = render "/shared/banners"
-      h1  最新文章/消息
+div(class="container block-news py-3")
+  div(class="row")
+    div(class="col-md-8 col-12")
+      = render 'shared/banners'
+      h1 最新文章/消息
       - @news.each do |news|
-        .post
-          .head
-            h2
-              = link_to news[:title], news[:content_url]
-            a  Posted on #{ news[:date] } at #{news[:time]}.
-            p  Written by #{ link_to news[:name], news[:name_url], class: 'continued' }
-            .content
-              p  #{news[:content]} … #{ link_to 'Continued', news[:content_url], class: 'continued' }
+        div(class="post")
+          div(class="head")
+            h2 = link_to news[:title], news[:content_url], class: 'link-major-underline'
+            div Posted on #{news[:date]} at #{news[:time]}.
+            p Written by #{link_to news[:name], news[:name_url], class: 'link-major-underline'}
+            div(class="content")
+              p #{news[:content]} … #{link_to 'Continued', news[:content_url], class: 'link-major-underline'}
 
-    .col-md-4.col-12
-      =render "/shared/sidebar_list"
+    div(class="col-md-4 col-12")
+      = render 'shared/sidebar_list'

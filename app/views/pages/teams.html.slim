@@ -1,100 +1,100 @@
-.container.my-3.block-team
+div(class="container my-3 block-team")
   - @teams[:executive_team].in_groups_of(6, false) do |executive_group|
-    .row.mt-10px
+    div(class="row mt-10px")
       - executive_group.each do |data|
         = render 'team_avatar', data: data
 
-  .row.mt-3
-    .col
-      h6.avatar-title 編輯報導組 Editorial Team
+  div(class="row mt-3")
+    div(class="col")
+      h6(class="text-minor mb-10px") 編輯報導組 Editorial Team
   - @teams[:editorial_team].in_groups_of(6, false) do |editorial_group|
-    .row.mt-10px
+    div(class="row mt-10px")
       - editorial_group.each do |data|
         = render 'team_avatar', data: data
 
-  .row.mt-3
-    .col
-      h6.avatar-title 行銷公關組 Marketing Team
+  div(class="row mt-3")
+    div(class="col")
+      h6(class="text-minor mb-10px") 行銷公關組 Marketing Team
   - @teams[:marketing_team].in_groups_of(6, false) do |marketing_group|
-    .row.mt-10px
+    div(class="row mt-10px")
       - marketing_group.each do |data|
         = render 'team_avatar', data: data
 
-  .row.mt-3
-    .col
-      h6.avatar-title 活動組 Event Team
+  div(class="row mt-3")
+    div(class="col")
+      h6(class="text-minor mb-10px") 活動組 Event Team
   - @teams[:event_team].in_groups_of(6, false) do |event_group|
-    .row.mt-10px
+    div(class="row mt-10px")
       - event_group.each do |data|
         = render 'team_avatar', data: data
 
-  .row.mt-3
-    .col
-      h6.avatar-title 產品管理組 Product Team
+  div(class="row mt-3")
+    div(class="col")
+      h6(class="text-minor mb-10px") 產品管理組 Product Team
   - @teams[:product_team].in_groups_of(6, false) do |product_group|
-    .row.mt-10px
+    div(class="row mt-10px")
       - product_group.each do |data|
         = render 'team_avatar', data: data
 
-  .row.mt-3
-    .col
-      h6.avatar-title 創意內容組 Creative Content
+  div(class="row mt-3")
+    div(class="col")
+      h6(class="text-minor mb-10px") 創意內容組 Creative Content
   - @teams[:creative_content].in_groups_of(6, false) do |creative_group|
-    .row.mt-10px
+    div(class="row mt-10px")
       - creative_group.each do |data|
         = render 'team_avatar', data: data
 
-  .row.mt-3
-    .col
-      h6.avatar-title 網站工程組 IT Team
+  div(class="row mt-3")
+    div(class="col")
+      h6(class="text-minor mb-10px") 網站工程組 IT Team
   - @teams[:it_team].in_groups_of(6, false) do |it_group|
-    .row.mt-10px
+    div(class="row mt-10px")
       - it_group.each do |data|
         = render 'team_avatar', data: data
 
-  .row.mt-3
-    .col
-      h6.avatar-title 服務體驗組 Service Team
+  div(class="row mt-3")
+    div(class="col")
+      h6(class="text-minor mb-10px") 服務體驗組 Service Team
   - @teams[:service_team].in_groups_of(6, false) do |service_group|
-    .row.mt-10px
+    div(class="row mt-10px")
       - service_group.each do |data|
         = render 'team_avatar', data: data
 
-  .row.mt-3
-    .col
-      h6.avatar-title IOH 大家庭 The IOH Big Family
-  .row
-    .col = image_tag 'https://ioh.tw/assets/Team-PageGroup第89屆2.jpg', class: 'img-fluid'
-  .row.my-10px
-    .col
-      h6.avatar-title 第八、九屆實習生大合照（地點：師大分部）
+  div(class="row mt-3")
+    div(class="col")
+      h6(class="text-minor mb-10px") IOH 大家庭 The IOH Big Family
+  div(class="row")
+    div(class="col") = image_tag 'https://ioh.tw/assets/Team-PageGroup第89屆2.jpg', class: 'img-fluid'
+  div(class="row my-10px")
+    div(class="col")
+      h6(class="text-minor mb-10px") 第八、九屆實習生大合照（地點：師大分部）
 
-  .row.mt-3
-    .col = image_tag 'https://ioh.tw/assets/Team-PageGroup-第678屆-HIGH-RES.jpg', class: 'img-fluid'
-  .row.my-10px
-    .col
-      h6.avatar-title 第六、七、八屆實習生大合照（地點：師大分部）
+  div(class="row mt-3")
+    div(class="col") = image_tag 'https://ioh.tw/assets/Team-PageGroup-第678屆-HIGH-RES.jpg', class: 'img-fluid'
+  div(class="row my-10px")
+    div(class="col")
+      h6(class="text-minor mb-10px") 第六、七、八屆實習生大合照（地點：師大分部）
 
-  .row.mt-3
-    .col = image_tag 'https://ioh.tw/assets/Team-PageGroup-第56屆-HIGH-RES-e1489135119663.jpg', class: 'img-fluid'
-  .row.my-10px
-    .col
-      h6.avatar-title 第五、六屆實習生大合照（地點：師大分部）
+  div(class="row mt-3")
+    div(class="col") = image_tag 'https://ioh.tw/assets/Team-PageGroup-第56屆-HIGH-RES-e1489135119663.jpg', class: 'img-fluid'
+  div(class="row my-10px")
+    div(class="col")
+      h6(class="text-minor mb-10px") 第五、六屆實習生大合照（地點：師大分部）
 
-  .row.mt-3
-    .col = image_tag 'https://ioh.tw/assets/Team-PageGroup-第45屆-LOW-RES-e1464324020798.jpg', class: 'img-fluid'
-  .row.my-10px
-    .col
-      h6.avatar-title 第四、五屆實習生大合照（地點：師大分部）
+  div(class="row mt-3")
+    div(class="col") = image_tag 'https://ioh.tw/assets/Team-PageGroup-第45屆-LOW-RES-e1464324020798.jpg', class: 'img-fluid'
+  div(class="row my-10px")
+    div(class="col")
+      h6(class="text-minor mb-10px") 第四、五屆實習生大合照（地點：師大分部）
 
-  .row.mt-3
-    .col = image_tag 'https://ioh.tw/assets/Team-PageGroup-第34屆-LOW-RES-e1464244435331.jpg', class: 'img-fluid'
-  .row.my-10px
-    .col
-      h6.avatar-title 第三、四屆實習生大合照（地點：國立暨南大學校園）
+  div(class="row mt-3")
+    div(class="col") = image_tag 'https://ioh.tw/assets/Team-PageGroup-第34屆-LOW-RES-e1464244435331.jpg', class: 'img-fluid'
+  div(class="row my-10px")
+    div(class="col")
+      h6(class="text-minor mb-10px") 第三、四屆實習生大合照（地點：國立暨南大學校園）
 
-  .row.mt-3
-    .col = image_tag 'https://ioh.tw/assets/Team-PageGroup-第123屆.jpg', class: 'img-fluid'
-  .row.my-10px
-    .col
-      h6.avatar-title 第一、二、三屆實習生大合照（地點：國立師大附中校門口）
+  div(class="row mt-3")
+    div(class="col") = image_tag 'https://ioh.tw/assets/Team-PageGroup-第123屆.jpg', class: 'img-fluid'
+  div(class="row my-10px")
+    div(class="col")
+      h6(class="text-minor mb-10px") 第一、二、三屆實習生大合照（地點：國立師大附中校門口）

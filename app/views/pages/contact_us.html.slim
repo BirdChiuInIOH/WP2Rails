@@ -1,7 +1,8 @@
-.container.my-3
-  = render '/shared/banners'
-  h1.my-10px style="font-size: 1.5em;" 聯絡我們
+div(class="container my-3")
+  = render 'shared/banners'
+
+  h1(class="my-10px") 聯絡我們
   = image_tag 'https://ioh.tw/assets/161012WEBSITEFB-Fan-Page-Cover-final-revise-01.png', class: 'img-fluid'
-  h3.my-10px style="font-size: 1.2em;" 聯絡我們
-  p.mb-10px 任何關於 IOH 平台的問題、合作洽詢，請聯繫 Anny 潘小姐，我們會儘快回覆您，謝謝。
-  p.mb-10px ioh@ioh.tw
+  h4(class="my-10px") 聯絡我們
+  p(class="mb-10px") 任何關於 IOH 平台的問題、合作洽詢，請聯繫 Anny 潘小姐，我們會儘快回覆您，謝謝。
+  p(class="mb-10px") ioh@ioh.tw

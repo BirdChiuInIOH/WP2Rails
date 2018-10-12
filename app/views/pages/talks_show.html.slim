@@ -1,26 +1,26 @@
-.container.block-talks-show.my-3
-  .row
-    .col-md-3
-      section.mb-4
-        h4.mb-3 關於講者
+div(class="container block-talks-show my-3")
+  div(class="row")
+    div(class="col-md-3")
+      section(class="mb-4")
+        h4(class="mb-3") 關於講者
         = image_tag 'https://ioh.tw/assets/03-香港教育大學英語教育系彭于榛Barbie-PengProfile.jpg', class: 'img-fluid mb-3'
         p Barbie Peng 彭于榛，就讀於香港教育大學英語教育系，預計於 2020 年畢業。
         p 2015 年畢業於台南女中，以學測成績申請的方式進入香港教育大學英語教育系。從小就對英文的喜愛，讓她決定也要讓更多人喜歡這個科目，於是選擇步上這條培訓未來教師的路。
-      section.mb-4
-        h4.mb-3 感謝
+      section(class="mb-4")
+        h4(class="mb-3") 感謝
         p 感謝 HPX 社群創辦人 蔡明哲先生 以此講座鼓勵後輩：「面對多變的未來，記得要保持好奇與勇氣，這會讓你獲得更多的樂趣！」
         p 講座由 IOH 幫手#{link_to '李欣怡', 'javascript:;', class: 'link-major'}、#{link_to '李孟蓉', 'javascript:;', class: 'link-major'}協助
         p 責任編輯：#{link_to '林立麗', 'javascript:;', class: 'link-major'}
       = link_to 'https://www.facebook.com/innovationopenhouse/', target: '_blank' do
         = image_tag 'https://ioh.tw/assets/[Design][官網與粉專連結按鈕][160909]%20-%202-03.png', class: 'img-fluid'
-    .col-md-9
-      h1.mb-3 Barbie Peng 彭于榛
+    div(class="col-md-9")
+      h1(class="mb-3") Barbie Peng 彭于榛
       = image_tag 'https://storage.googleapis.com/ioh-assets/uploads/production/asset/asset//asset/extra_3f269cfb-9264-4c4c-a8d0-a2fe544b4f6f.jpg', class: 'img-fluid'
-      = render "shared/ioh_banner"
-      = render "shared/share_social_media"
-      article.py-3
-        h3.mb-3 PART 1：關於就讀香港教育大學英語教育學系的經驗分享
-        .youtube-rwd-container.mb-3
+      = render 'shared/ioh_banner'
+      = render 'shared/share_social_media'
+      article(class="py-3")
+        h3(class="mb-3") PART 1：關於就讀香港教育大學英語教育學系的經驗分享
+        div(class="youtube-rwd-container mb-3")
           iframe allow=("autoplay; encrypted-media") allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/cZOsS76Qqdw" width="560"
         div
           h5 我想成為能啟發人心的英文老師
@@ -50,8 +50,8 @@
         div
           h5 獨自在異鄉讀書，試著凡事都往好處想
           p 由於出國讀書後，日常大小事都會變成要自行打理，故于榛認為具有獨立性格的人較適合出國讀書，再來就是要真的對該科系有興趣，因為大學課程遠比高中來得專精很多，如果不喜歡本科系所學，將會讀得很辛苦。關於要如何適應香港環境，她覺得除了自己多努力學習語言來融入當地交友圈之外，就是要學著正向思考，試著將衝擊、挫敗視為能讓自己成長的機會，還有最重要的就是，莫忘自己赴港求學的初衷，它會是支持著你走得更長遠的動力。
-        h3.my-3 PART 2：關於考取香港教育大學英語教育學系的準備分享
-        .youtube-rwd-container.mb-3
+        h3(class="my-3") PART 2：關於考取香港教育大學英語教育學系的準備分享
+        div(class="youtube-rwd-container mb-3")
           iframe allow=("autoplay; encrypted-media") allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/486mwL5X-zw" width="560"
         div
           h5 香港教育大學英語教育學系申請時程與門檻
@@ -65,7 +65,7 @@
         div
           h5 錄取後還有什麼該注意的事？
           p 于榛提醒學弟妹不要獲得錄取後就開始大玩特玩，可以趁這段期間加強自己的英文能力，如此更能適應往後的全英文教學，再者就是去申請簽證，因為跑流程也需要時間，另外也能參加留港台灣學生會營隊 Pre-O，可以更了解赴港讀書的行前準備，還能結交到當地的學長姐。
-        h3.my-3 PART 3：針對觀眾的提問進行答覆
+        h3(class="my-3") PART 3：針對觀眾的提問進行答覆
         div
           p 還有更多校系經驗問題想詢問嗎？歡迎點開下方連結到 IOH 臉書社團：大學科系與升學經驗交流平台 發問喔！
           p
@@ -75,5 +75,5 @@
           = link_to '更多香港教育大學同學的分享影片', 'https://ioh.tw/talks/香港教育大學英語教育學系-王思云-tiffany-wang-ov-study-bde-hk/', target: '_blank', class: 'd-block mb-3 link-major'
           = link_to '更多英語教育系同學的分享影片', 'https://ioh.tw/?qmt[topic][]=512', target: '_blank', class: 'd-block mb-3 link-major'
           = link_to '前往海外各校系學群總覽', 'https://ioh.tw/study-abroad-experience-sharing/', target: '_blank', class: 'd-block mb-3 link-major'
-      = render "shared/show_more_talks", talks: @talks
-      = render "shared/share_social_media"
+      = render 'shared/show_more_talks', talks: @talks
+      = render 'shared/share_social_media'

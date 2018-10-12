@@ -1,17 +1,13 @@
-.container
-  .row.bg-darker.no-gutters.my-3
-    .col-6.col-md-3
+div(class="container")
+  div(class="row bg-darker no-gutters my-3")
+    div(class="col-6 col-md-3")
       = link_to '/', class: 'link-brand' do
-        = image_tag 'https://ioh.tw/assets/IOH-T-shirt-logo-180213_white1-01.png', class: 'mx-100', width: 70
-    .col
-      .header-nav-links.d-none.d-sm-flex.justify-content-center
+        = image_tag 'https://ioh.tw/assets/IOH-T-shirt-logo-180213_white1-01.png', width: 70, class: 'mx-100'
+    div(class="col")
+      div(class="header-nav-links d-none d-sm-flex justify-content-center")
         | 熱門關鍵字：
-        ul.list-inline.d-inline.m-0
-          li.list-inline-item
-            = link_to '學測倒數', reciprocal_path
-          li.list-inline-item
-            = link_to '大學生必看', '#'
-          li.list-inline-item
-            = link_to '大學選課', '#'
-          li.list-inline-item
-            = link_to '讀書技巧', '#'
+        ul(class="list-inline d-inline m-0")
+          li(class="list-inline-item") = link_to '學測倒數', reciprocal_path
+          li(class="list-inline-item") = link_to '大學生必看', '#'
+          li(class="list-inline-item") = link_to '大學選課', '#'
+          li(class="list-inline-item") = link_to '讀書技巧', '#'

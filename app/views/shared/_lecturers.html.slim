@@ -1,13 +1,12 @@
-p.my-1.font-weight-bold style="font-size: 16px;"  觀看更多
-.block-lecturers
-  .lecturers
-    ul.m-0.p-0
+p(class="my-1 font-weight-bold" style="font-size: 16px;") 觀看更多
+div(class="block-lecturers")
+  div(class="lecturers")
+    ul(class="m-0 p-0")
       - @lecturers.each do |lecturer|
-        li.list-inline
-          .lecturer
+        li(class="list-inline")
+          div(class="lecturer")
             = link_to lecturer[:url]
               = image_tag lecturer[:avatar_url]
-              .info
-                p  = lecturer[:education]
-                p  = lecturer[:name]
-          
+              div(class="info")
+                p = lecturer[:education]
+                p = lecturer[:name]
