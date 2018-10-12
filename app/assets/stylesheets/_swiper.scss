@@ -11,16 +11,11 @@ $swiper-card-height: 435px;
     background: #fff;
     display: flex;
     justify-content: center;
-    width: 22%;
-
-    @include media-breakpoint-down(xs) {
-      width: 80%;
-    }
   }
 
   a {
     text-decoration: none;
-    color: color(dark);
+    color: color(dark) !important;
   }
 
   .swiper-pagination-bullet {

@@ -30,11 +30,16 @@ $(document).on('turbolinks:load', function() {
 
   // For Swiper
   var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 'auto',
-    initialSlide: 1,
-    centeredSlides: true,
-    autoplay: true,
     spaceBetween: 15,
+    slidesPerView: 5,
+    autoplay: true,
+    loop: true,
+    breakpoints: {
+      480: {
+        centeredSlides: true,
+        slidesPerView: 2
+      }
+    },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
