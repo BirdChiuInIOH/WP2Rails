@@ -1,0 +1,77 @@
+$magazine-major: #c30d23;
+
+.magazine {
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1;
+
+  section {
+    position: relative;
+  }
+
+  a {
+    color: $magazine-major;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .magazine-country-name {
+    position: absolute;
+    font-weight: 700;
+    color: #fff;
+    font-size: 10rem;
+    top: -20px;
+    right: -10px;
+    line-height: 1;
+  }
+
+  .magazine-menu {
+    color: $magazine-major;
+    text-shadow: 2px -3px 20px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+
+    .magazine-menu-page-number {
+      font-size: 6rem;
+    }
+
+    .magazine-menu-page-title {
+      font-size: 2rem;
+    }
+
+    .magazine-menu-page-subtitle-list {
+      font-size: 13px;
+      padding-left: 0;
+      list-style: none;
+
+      li {
+        margin-bottom: 10px;
+      }
+    }
+
+    .magazine-menu-btn {
+      background-color: $magazine-major;
+      color: white;
+      padding: 3px 1rem;
+      text-align: center;
+      border-radius: 0;
+      font-size: 13px;
+    }
+  } // /.magazine-menu
+
+  .magazine-country-map {
+  }
+
+  $custom-gutter-width: 10px; // 將欄距改成 10px
+  .custom-gutters-10px {
+    .row {
+      margin-left: -($custom-gutter-width / 2);
+      margin-right: -($custom-gutter-width / 2);
+    }
+
+    .col {
+      padding-left: $custom-gutter-width / 2;
+      padding-right: $custom-gutter-width / 2;
+    }
+  }
+}

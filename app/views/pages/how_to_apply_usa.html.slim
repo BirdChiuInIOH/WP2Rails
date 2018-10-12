@@ -1,4 +1,4 @@
-div(class="container")
+div(class="container magazine")
   nav(class="nav nav-justified nav-pills-ioh flex-column flex-sm-row mb-4")
     = link_to 'USA', '#', class: 'text-sm-center nav-item nav-link nav-pills-item'
     = link_to 'CANADA', '#', class: 'text-sm-center nav-item nav-link nav-pills-item-active'
@@ -7,3 +7,87 @@ div(class="container")
     = link_to 'TAIWAN', '#', class: 'text-sm-center nav-item nav-link nav-pills-item'
   = render 'how_to_apply_slider', talks: @talks
 
+  section(class="bg-gray-400" style="padding: 140px 94px 65px")
+    span(class="magazine-country-name") USA
+    div(class="row")
+      div(class="col-md-3")
+        div(class="magazine-menu")
+          div(class="magazine-menu-page-number mb-4") 01
+          div(class="magazine-menu-page-title mb-4") Country
+          ul(class="magazine-menu-page-subtitle-list list-unstyled mb-5")
+            li = link_to 'Country Profile', '#usa-country-countryprofile'
+            li = link_to 'Currency', '#currency'
+            li = link_to 'Transportation', '#transportation'
+            li = link_to 'Entertainment', '#entertainment'
+          = link_to '觀看所有「美洲」講座', 'https://ioh.tw/school/america/', class: 'btn magazine-menu-btn'
+
+      div(class="col-md-9")
+        div(class="magazine-country-map")
+          div(class="row custom-gutters-10px d-none d-md-flex mb-5")
+            div(class="col")
+              = image_tag 'https://i2.wp.com/ioh.tw/assets/usa-flag.png', class: 'img-fluid'
+            div(class="col")
+              = image_tag 'https://i2.wp.com/ioh.tw/assets/usa-map.png', class: 'img-fluid'
+          div(class="row custom-gutters-10px d-none d-md-flex")
+            div(class="col")
+              = image_tag 'https://i2.wp.com/ioh.tw/assets/usa-seattle.png', class: 'img-fluid'
+            div(class="col")
+              = image_tag 'https://i2.wp.com/ioh.tw/assets/usa-san-francisco.png', class: 'img-fluid'
+            div(class="col")
+              = image_tag 'https://i2.wp.com/ioh.tw/assets/usa-los-angeles.png', class: 'img-fluid'
+            div(class="col")
+              = image_tag 'https://i2.wp.com/ioh.tw/assets/usa-chicago.png', class: 'img-fluid'
+            div(class="col")
+              = image_tag 'https://i2.wp.com/ioh.tw/assets/usa-boston.png', class: 'img-fluid'
+            div(class="col")
+              = image_tag 'https://i2.wp.com/ioh.tw/assets/usa-new-york.png', class: 'img-fluid'
+
+  section(style="padding: 94px; min-height: 400px;")
+    div(class="row")
+      div(class="col-md-3")
+        div(class="magazine-menu")
+          div(class="magazine-menu-page-number mb-4") 02
+          div(class="magazine-menu-page-title mb-4") School
+          ul(class="magazine-menu-page-subtitle-list list-unstyled mb-5")
+            li = link_to 'How to choose', '#how-to-choose'
+      div(class="col-md-9")
+
+  section(class="bg-gray-400" style="padding: 94px; min-height: 400px;")
+    div(class="row")
+      div(class="col-md-3")
+        div(class="magazine-menu")
+          div(class="magazine-menu-page-number mb-4") 03
+          div(class="magazine-menu-page-title mb-4") Exam
+          ul(class="magazine-menu-page-subtitle-list list-unstyled mb-5")
+            li = link_to 'TOEFL', '#tofel'
+            li = link_to 'ACT', '#act'
+            li = link_to 'SAT', '#sat'
+            li = link_to 'SAT Subject Test', '#sat-subject-test'
+      div(class="col-md-9")
+
+  section(style="padding: 94px; min-height: 400px;")
+    div(class="row")
+      div(class="col-md-3")
+        div(class="magazine-menu")
+          div(class="magazine-menu-page-number mb-4") 04
+          div(class="magazine-menu-page-title mb-4") Schedule
+          ul(class="magazine-menu-page-subtitle-list list-unstyled mb-5")
+            li = link_to 'Timeline', '#timeline'
+            li = link_to 'Finanace', '#finance'
+            li = link_to 'Application System', '#application-system'
+      div(class="col-md-9")
+
+  section(class="bg-gray-400" style="padding: 94px; min-height: 400px;")
+    div(class="row")
+      div(class="col-md-3")
+        div(class="magazine-menu")
+          div(class="magazine-menu-page-number mb-4") 05
+          div(class="magazine-menu-page-title mb-4") Preparation
+          ul(class="magazine-menu-page-subtitle-list list-unstyled mb-5")
+            li = link_to 'Visa', '#visa'
+            li = link_to 'Health Care', '#health-care'
+            li = link_to 'Airplane', '#airplane'
+            li = link_to 'Military Service', '#military-service'
+            li = link_to 'Malls', '#malls'
+            li = link_to 'Mobile Services', '#mobile-service'
+      div(class="col-md-9")
