@@ -42,17 +42,98 @@ div(class="container magazine")
             div(class="col")
               = image_tag 'https://i2.wp.com/ioh.tw/assets/usa-new-york.png', class: 'img-fluid'
         div(class="magazine-info mb-4")
-          h4(class="magazine-info-title") Country Profile
-          ul(class="magazine-info-list")
-            li 人口：約 322,369,319 人（2016）
-            li 首都：華盛頓特區（Washington D.C）
-            li 最大都市：紐約（New York）
-            li 語言：以英文為主
-            li 電壓：120 V
-            li 插座：跟台灣一樣
-            li 駕駛：靠右行駛
-            li 國際電話區號：+1
-            li 人均 GDP：57,220 美元（2016）
+          div(class="mb-4")
+            h4(class="magazine-info-title mb-3") Country Profile
+            ul(class="magazine-info-list")
+              li 人口：約 322,369,319 人（2016）
+              li 首都：華盛頓特區（Washington D.C）
+              li 最大都市：紐約（New York）
+              li 語言：以英文為主
+              li 電壓：120 V
+              li 插座：跟台灣一樣
+              li 駕駛：靠右行駛
+              li 國際電話區號：+1
+              li 人均 GDP：57,220 美元（2016）
+
+          div(class="mb-4")
+            h4(class="magazine-info-title mb-3") Currency
+            ul(class="ml-4")
+              li 貨幣符號：USD / $，分成分（Cents）跟元（Dollar），100 Cents = 1 Dollar
+              li 紙鈔跟銅板：
+              ul(class="pl-4")
+                li 紙鈔 - 1 元、10 元、20 元、50 元、100 元
+                li 銅板 - 1 分（Cent）、5 分（Dime）、10 分（Nickel）、25 分（Quarter）、1 元（Dollar）
+              li
+                | 匯率：1:31（as of August 2016）
+                = link_to '即時匯率查詢', 'http://www.findrate.tw/USD/', target: '_blank', class: 'magazine-info-btn'
+            = image_tag 'https://i2.wp.com/ioh.tw/assets/usa-money.png', class: 'img-fluid'
+
+          div(class="mb-4")
+            h4(class="magazine-info-title mb-3") Transportation
+            h5(class="magazine-info-subtitle mb-3") 市區交通
+            ul(class="list-unstyled")
+              li(class="d-flex align-items-center mb-3")
+                div(class="pr-3 mr-3 border-right border-dark")
+                  = image_tag 'https://i2.wp.com/ioh.tw/assets/icon-car.png', width: 37
+                p(class="flex-grow-1 mb-0") 開車 - 美國最主要的交通工具還是汽車。大部分人還是以汽車通勤上班，因此美國的公路很發達。在台灣考駕照可先換國際駕照後至美國使用。
+
+              li(class="d-flex align-items-center mb-3")
+                div(class="pr-3 mr-3 border-right border-dark")
+                  = image_tag 'https://i2.wp.com/ioh.tw/assets/icon-mrt.png', width: 37
+                p(class="flex-grow-1 mb-0") 捷運 - 以兩地區為例：New York City Subway（幾乎涵蓋所有地區）、Bay Area Rapid Transit, BART（通往舊金山灣區附近各處，班距約 10 ~ 15 分鐘）。
+
+              li(class="d-flex align-items-center mb-3")
+                div(class="pr-3 mr-3 border-right border-dark")
+                  = image_tag 'https://i2.wp.com/ioh.tw/assets/icon-bus.png', width: 37
+                p(class="flex-grow-1 mb-0")
+                  | 公車 - 大部分城市都有自己的公車系統。
+                  = link_to '可參考以下網址', 'https://en.wikipedia.org/wiki/List_of_bus_transit_systems_in_the_United_States', target: '_blank', class: 'magazine-info-btn'
+
+              li(class="d-flex align-items-center mb-3")
+                div(class="pr-3 mr-3 border-right border-dark")
+                  = image_tag 'https://i2.wp.com/ioh.tw/assets/icon-bike.png', width: 37
+                p(class="flex-grow-1 mb-0") 自行車 - 許多城市皆有自己的租借系統，建議前往該城市前可以先查詢該城市的自行車共享系統 （Bike Sharing Systems）。
+
+              li(class="d-flex align-items-center mb-3")
+                div(class="pr-3 mr-3 border-right border-dark")
+                  = image_tag 'https://i2.wp.com/ioh.tw/assets/icon-car-share.png', width: 37
+                p(class="flex-grow-1 mb-0")
+                  | 汽車共享（Car Share） - 城市內短程的汽車租借，適合租借一到兩個小時。但需要在 A 點借 A 點還車，可參考
+                  = link_to 'Zipcar', 'https://www.zipcar.com/', target: '_blank', class: 'magazine-info-btn'
+
+            h5(class="magazine-info-subtitle mb-3") 城市間交通
+            ul(class="list-unstyled")
+              li(class="d-flex align-items-center mb-3")
+                div(class="pr-3 mr-3 border-right border-dark")
+                  = image_tag 'https://i2.wp.com/ioh.tw/assets/icon-plane.png', width: 37
+                p(class="flex-grow-1 mb-0") 飛機 - 國內線頗為方便。若兩地車程超過三個小時，且兩地皆有航班，則可以選擇國內線航班。
+
+              li(class="d-flex align-items-center mb-3")
+                div(class="pr-3 mr-3 border-right border-dark")
+                  = image_tag 'https://i2.wp.com/ioh.tw/assets/icon-car.png', width: 37
+                p(class="flex-grow-1 mb-0") 開車 - 美國城際、州際的公路皆十分發達，可以透過開車前往各地。由於公路路網較複雜，因此也建議開車上路前務必先查詢好路線。
+
+              li(class="d-flex align-items-center mb-3")
+                div(class="pr-3 mr-3 border-right border-dark")
+                  = image_tag 'https://i2.wp.com/ioh.tw/assets/icon-car-share.png', width: 37
+                p(class="flex-grow-1 mb-0") 租車（Car Rental） - 可以 A 點借、B 點還，適合在長程旅途使用。有多家公司可以參考。
+
+          div(class="mb-4")
+            h4(class="magazine-info-title mb-3") Entertainment
+            = image_tag 'https://i2.wp.com/ioh.tw/assets/usa-football.png', class: 'w-100 mb-2'
+            div(class="row no-gutters")
+              div(class="col")
+                = image_tag 'https://i2.wp.com/ioh.tw/assets/usa-basketball.png', class: 'img-fluid'
+              div(class="col")
+                = image_tag 'https://i2.wp.com/ioh.tw/assets/usa-baseball.png', class: 'img-fluid'
+
+          div(class="magazine-info-keywords")
+            h4(class="magazine-info-title mb-3") 可查詢關鍵字
+            ul
+              li 國家相關：Lonely Planet USA
+              li 交通：Transportation of 「填入城市」/ carshare
+              li 娛樂、休閒：MLB / NBA / NFL / Hiking trails in USA / Camping spots in USA / National Parks in USA
+
 
   section(style="padding: 94px; min-height: 400px;")
     div(class="row")
@@ -169,8 +250,7 @@ div(class="container magazine")
             li 成績核發時間：大約 28 天
             li 考試方式：每科考試一小時
             li 評分方式：各科皆是 200~800 分
-        div(class="magazine-info mb-4")
-        div(class="magazine-info mb-4")
+        / 關鍵字待補
 
   section(style="padding: 94px; min-height: 400px;")
     div(class="row")
