@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get '/媒體報導', to: 'pages#press', as: :press
   get '/about', to: 'pages#about'
   get '/news', to: 'pages#news'
-  get '/申請香港的大學', to: 'pages#post_link'
+  get '/申請香港的大學', to: 'pages#articles'
   get '/teams', to: 'pages#teams'
   get '/贊助我們', to: 'pages#sponsor', as: :sponsor
   get '/overseas', to: 'pages#overseas'

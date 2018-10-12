@@ -33,7 +33,7 @@ class PagesController < ApplicationController
       @news = load_news
     end
 
-    def post_link
+    def articles
       @news = load_news
       @lecturers = load_lecturers
     end

@@ -1,0 +1,64 @@
+.block-articles {
+  header {
+    margin-bottom: 16px;
+    
+    h1,
+    h2 {
+      font-size: 20px;
+      line-height: 40px;
+      font-weight: bold;
+    }
+    
+    h4 {
+      font-size: 14px;
+      font-weight: normal;
+      margin: 0;
+    }
+  }
+  
+  article {
+    section {
+      padding: 0 0 10px;
+    }
+
+    blockquote {
+      border-left: 5px solid #eee;
+      padding: 0 0 0 15px;
+      margin: 0 0 20px;
+      color: #808080;
+      font-weight: bold;
+    }
+
+    h2,
+    h3,
+    p {
+      margin: 10px 0;
+      font-size: 18px;
+      line-height: 40px;
+    }
+
+    h2 {
+      color: #993300;
+    }
+
+    h2,
+    h3 {
+      font-weight: bold;
+    }
+  }
+
+  .author {
+    img {
+      float: left;
+    }
+  }
+
+  .link-style {
+    color: color(major);
+    
+    &:hover {
+      color: red;
+      text-decoration: underline;
+    }
+  }
+}
