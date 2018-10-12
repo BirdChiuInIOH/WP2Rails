@@ -18,6 +18,9 @@ class PagesController < ApplicationController
 
     def how_to_apply_usa
       @talks = @talks.reject{ |talk| talk[:advice].blank? }
+
+      apply_schedules = load_apply_schedules
+      @usa_apply_schedules = apply_schedules.select { |schedule| schedule[:country] == 'usa' }.sort { |a, b| a[:index] <=> b[:index]}
     end
 
     # https://ioh.tw/升大學全攻略/

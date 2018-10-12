@@ -31,6 +31,10 @@ module DataLoader
     load_yaml_file('news')
   end
 
+  def load_apply_schedules
+    load_yaml_file('apply_schedules')
+  end
+
   private
 
     def load_yaml_file(filename)

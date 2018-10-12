@@ -270,6 +270,32 @@ div(class="container magazine")
             li = link_to 'Finanace', '#finance'
             li = link_to 'Application System', '#application-system'
       div(class="col-md-9")
+        div(class="timeline" id="timeline")
+          div(class="timeline-body")
+            - @usa_apply_schedules.each_with_index do |schedule, index|
+              / If no content add `timeline-block-empty`
+              - direction_class = index % 2 == 0 ? '' : 'timeline-block-inverse'
+              - empty_or_not_class = schedule[:content].present? ? '' : 'timeline-block-empty'
+              div(class="timeline-block #{direction_class} #{empty_or_not_class}")
+                input(type="checkbox" name="toggler-cb" id="#{Date::ABBR_MONTHNAMES[schedule[:month]].downcase}-#{index}" class="timeline-toggler")
+                span(class="timeline-point")
+                div(class="timeline-block-head")
+                  div(class="timeline-block-head-month") = Date::ABBR_MONTHNAMES[schedule[:month]].upcase
+                  div(class="timeline-block-head-content")
+                    p
+                      - schedule[:head].each do |line_content|
+                        = line_content
+                        br
+                div(class="timeline-block-body")
+                  div(class="timeline-block-body-inner")
+                    = schedule[:content]&.html_safe
+                  - if schedule[:is_support_read_more]
+                    div(class="time-block-body-actions")
+                      label(for="#{Date::ABBR_MONTHNAMES[schedule[:month]].downcase}-#{index}") Read More
+        div(id="finance")
+
+        div(id="application_system")
+
 
   section(class="bg-gray-400" style="padding: 94px; min-height: 400px;")
     div(class="row")
