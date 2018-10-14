@@ -1,0 +1,94 @@
+.overlay-container {
+  position: relative;
+  line-height: 1;
+  cursor: pointer;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .overlay-title{
+    font-size: 13px;
+    font-weight: bold;
+  }
+
+  .overlay-text {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .overlay-dark {
+    background-color: rgba(0, 0, 0, 0.6);
+
+    .overlay-title,
+    .overlay-text {
+      color: white;
+    }
+  }
+
+  .overlay-visible {
+    color: white;
+    opacity: 1;
+  }
+
+  .overlay-thumbnail {
+    padding: 0 5px;
+    background-clip: content-box;
+  }
+
+  .overlay-city {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 8px 8px 8px 15px;
+    opacity: 1;
+
+    .overlay-city-title {
+      color: white;
+      font-weight: bold;
+      font-size: 36px;
+      letter-spacing: 2px;
+    }
+
+    hr {
+      margin: 10px 0;
+      border-top: 1px solid #eee;
+    }
+
+    .overlay-city-subtitle {
+      color: white;
+      font-size: 13px;
+      font-weight: 100;
+
+      .overlay-city-subtitle-temperature {
+        font-size: 27px;
+        min-width: 7rem;
+      }
+    }
+
+    .overlay-city-text {
+      font-weight: 100;
+      color: white;
+      font-size: 12px;
+      text-align: right;
+      line-height: 1.5;
+    }
+  }
+
+  &.overlay-active,
+  &.overlay-hover:hover {
+    > .overlay {
+      opacity: 1;
+      transition: opacity 0.3s;
+    }
+
+    > .overlay-visible {
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+  }
+}

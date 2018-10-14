@@ -21,6 +21,7 @@ class PagesController < ApplicationController
 
       apply_schedules = load_apply_schedules
       @usa_apply_schedules = apply_schedules.select { |schedule| schedule[:country] == 'usa' }.sort { |a, b| a[:index] <=> b[:index]}
+      @usa_cities = load_how_to_apply[:usa][:country_map]
     end
 
     # https://ioh.tw/升大學全攻略/

@@ -22,25 +22,31 @@ div(class="container magazine")
           = link_to '觀看所有「美洲」講座', 'https://ioh.tw/school/america/', class: 'btn magazine-menu-btn'
 
       div(class="col-md-9")
-        div(class="magazine-country-map mb-4")
-          div(class="row custom-gutters-10px d-none d-md-flex mb-5")
+        div(class="custom-gutters-10px mb-4")
+          div(class="row d-none d-md-flex mb-5")
             div(class="col")
-              = image_tag 'https://i2.wp.com/ioh.tw/assets/usa-flag.png', class: 'img-fluid'
+              div(class="overlay-container" data-target="current-city")
+                = image_tag 'https://i2.wp.com/ioh.tw/assets/usa-flag.png', class: 'img-fluid'
+                div(class="overlay")
+                  = render 'how_to_apply_overlay_city', usa_cities: @usa_cities
             div(class="col")
-              = image_tag 'https://i2.wp.com/ioh.tw/assets/usa-map.png', class: 'img-fluid'
-          div(class="row custom-gutters-10px d-none d-md-flex")
-            div(class="col")
-              = image_tag 'https://i2.wp.com/ioh.tw/assets/usa-seattle.png', class: 'img-fluid'
-            div(class="col")
-              = image_tag 'https://i2.wp.com/ioh.tw/assets/usa-san-francisco.png', class: 'img-fluid'
-            div(class="col")
-              = image_tag 'https://i2.wp.com/ioh.tw/assets/usa-los-angeles.png', class: 'img-fluid'
-            div(class="col")
-              = image_tag 'https://i2.wp.com/ioh.tw/assets/usa-chicago.png', class: 'img-fluid'
-            div(class="col")
-              = image_tag 'https://i2.wp.com/ioh.tw/assets/usa-boston.png', class: 'img-fluid'
-            div(class="col")
-              = image_tag 'https://i2.wp.com/ioh.tw/assets/usa-new-york.png', class: 'img-fluid'
+              div(class="magazine-country-map")
+                = image_tag 'https://i2.wp.com/ioh.tw/assets/usa-map.png', class: 'img-fluid'
+                - @usa_cities.each do |city|
+                  div(
+                    class="magazine-country-map-marker"
+                    style="left: #{city[:map_left]}px; top: #{city[:map_top]}px;"
+                    data-target="city-map-marker"
+                    data-city-map-marker="#{city[:name]}"
+                  ) = city[:name]
+
+          div(class="row d-none d-md-flex")
+            - @usa_cities.each do |city|
+              div(class="col overlay-container overlay-hover" data-target="city-thumbnail" data-city-thumbnail="#{city[:name]}")
+                = image_tag city[:image_url], class: 'img-fluid'
+                div(class="overlay overlay-dark overlay-thumbnail d-flex align-items-center justify-content-center")
+                  div(class="overlay-title") = city[:name]
+
         div(class="magazine-info mb-4")
           div(class="mb-4")
             h4(class="magazine-info-title mb-3") Country Profile
@@ -120,12 +126,24 @@ div(class="container magazine")
 
           div(class="mb-4")
             h4(class="magazine-info-title mb-3") Entertainment
-            = image_tag 'https://i2.wp.com/ioh.tw/assets/usa-football.png', class: 'w-100 mb-2'
+            div(class="overlay-container overlay-hover mb-2")
+              = image_tag 'https://i2.wp.com/ioh.tw/assets/usa-football.png', class: 'w-100'
+              div(class="overlay overlay-visible d-flex align-items-end font-weight-bold p-3" style="font-size: 76px;") FOOTBALL
+              div(class="overlay overlay-dark p-4")
+                p(class="overlay-text") 美式足球是美國特有的運動，也是美國收視率最高的比賽之一。不僅大學美式足球很受歡迎，每年二月的 NFL 美式足球聯盟決賽 — 超級盃（Super Bowl）更是讓全世界矚目。
             div(class="row no-gutters")
-              div(class="col")
-                = image_tag 'https://i2.wp.com/ioh.tw/assets/usa-basketball.png', class: 'img-fluid'
-              div(class="col")
-                = image_tag 'https://i2.wp.com/ioh.tw/assets/usa-baseball.png', class: 'img-fluid'
+              div(class="col mr-5px")
+                div(class="overlay-container overlay-hover")
+                  = image_tag 'https://i2.wp.com/ioh.tw/assets/usa-basketball.png', class: 'w-100'
+                  div(class="overlay overlay-visible d-flex align-items-end font-weight-bold p-3" style="font-size: 44px;") BASKETBALL
+                  div(class="overlay overlay-dark p-4")
+                    p(class="overlay-text") 籃球是美國最多人參與的運動之一。美國的 NBA（National Basketball Association），也是各國籃球選手公認的最高殿堂。美國大學籃球非常發達，每年三月進行決賽時被成為「瘋狂三月」（March Madness）。
+              div(class="col ml-5px")
+                div(class="overlay-container overlay-hover")
+                  = image_tag 'https://i2.wp.com/ioh.tw/assets/usa-baseball.png', class: 'w-100'
+                  div(class="overlay overlay-visible d-flex align-items-end font-weight-bold p-3" style="font-size: 44px;") BASEBALL
+                  div(class="overlay overlay-dark p-4")
+                    p(class="overlay-text") 棒球被譽為是美國國球（National Pastime），在美國的大聯盟（Major League Baseball）也被認為是全球棒球的最高殿堂。另外，美國各地的學校和社區棒球隊也相當發達。
 
           div(class="magazine-info-keywords")
             h4(class="magazine-info-title mb-3") 可查詢關鍵字

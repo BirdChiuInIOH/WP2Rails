@@ -1,0 +1,22 @@
+- usa_cities.each do |city|
+  div(class="overlay-container" data-city="#{city[:name]}" style="display: none;")
+    = image_tag city[:image_url], class: 'img-fluid'
+    div(class="overlay overlay-city text-right")
+      div(class="overlay-city-title") = city[:name]
+      hr
+      div(class="overlay-city-subtitle")
+        div(class="d-flex justify-content-end align-items-center mb-10px")
+          div(class="mr-2")
+            div JANUARY
+            div
+              span Avg.
+              = image_tag 'https://i2.wp.com/ioh.tw/assets/snow.png', width: 13
+          div(class="overlay-city-subtitle-temperature") = "#{city[:january_temperature]} ˚C"
+        div(class="d-flex justify-content-end align-items-center mb-10px")
+          div(class="mr-2")
+            div JULY
+            div
+              span Avg.
+              = image_tag 'https://i2.wp.com/ioh.tw/assets/icon/sun.png', width: 13
+          div(class="overlay-city-subtitle-temperature") = "#{city[:july_temperature]} ˚C"
+      p(class="overlay-city-text") = city[:description]

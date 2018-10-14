@@ -1,0 +1,50 @@
+usa:
+  country_map:
+  - name: Seattle
+    image_url: https://i2.wp.com/ioh.tw/assets/usa-seattle.png
+    january_temperature: 4.8
+    july_temperature: 18.9
+    description: "位在美國西北部華盛頓州，是航太與網路產業重鎮屬於溫帶海洋性氣候，受西風影響全年多雨，又稱「雨城」"
+    map_left: 40
+    map_top: 10
+  - name: San Francisco
+    image_url: https://i2.wp.com/ioh.tw/assets/usa-san-francisco.png
+    january_temperature: 10.9
+    july_temperature: 17.1
+    description: 位在加州北部灣區，鄰近矽谷，谷歌、蘋果皆於此設立總部屬於涼夏型地中海氣候，降雨少但常起霧
+    map_left: 0
+    map_top: 60
+  - name: Los Angeles
+    image_url: https://i2.wp.com/ioh.tw/assets/usa-los-angeles.png
+    january_temperature: 14.2
+    july_temperature: 23.5
+    description: 位在美國西南方加州，著名景點有好萊塢、迪士尼樂園等屬於溫帶地中海型氣候，終年乾燥少雨
+    map_left: 15
+    map_top: 90
+  - name: Chicago
+    image_url: https://i2.wp.com/ioh.tw/assets/usa-chicago.png
+    january_temperature: -4
+    july_temperature: 24.3
+    description: 國中部第一大城，鄰近五大湖，是美國重要的轉運城市屬於溫帶大陸性氣候，四季分明
+    map_left: 170
+    map_top: 45
+  - name: Boston
+    image_url: https://i2.wp.com/ioh.tw/assets/usa-boston.png
+    january_temperature: -1.7
+    july_temperature: 23
+    description: 位在美國東北部麻州，歷史悠久，匯聚哈佛和 MIT 等知名學校屬於大陸性氣候，夏季相對炎熱潮濕，冬天會下大雪
+    map_left: 245
+    map_top: 30
+  - name: New York
+    image_url: https://i2.wp.com/ioh.tw/assets/usa-new-york.png
+    january_temperature: 0.3
+    july_temperature: 27.4
+    description: '"座落在美國東北部，是全球第一大城，人口將近 8,000 萬屬於溫帶大陸型氣候，冬天會下雪"'
+    map_left: 227
+    map_top: 58
+canada:
+  country_map: []
+uk:
+  country_map: []
+australia:
+  country_map: []
