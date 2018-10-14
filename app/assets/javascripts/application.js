@@ -49,13 +49,15 @@ $(document).on('turbolinks:load', function() {
   // For how-to-apply country map
   let isCountrySelected = false;
   if ($('[data-target="city-thumbnail"').length) {
-    $('[data-target="city-thumbnail"').on('click', function(e) {
+
+    $('[data-target="city-thumbnail"]').off('click mouseenter mouseleave');
+    $('[data-target="city-thumbnail"]').on('click', function(e) {
       resetSelectedCity();
       selectCity(e.currentTarget.dataset.cityThumbnail);
       isCountrySelected = true;
     });
 
-    $('[data-target="city-thumbnail"').hover(
+    $('[data-target="city-thumbnail"]').hover(
       function(e) {
         isCountrySelected = false;
         resetSelectedCity();
@@ -71,13 +73,15 @@ $(document).on('turbolinks:load', function() {
   }
 
   if($('[data-target="city-map-marker"]').length) {
-    $('[data-target="city-map-marker"').on('click', function(e) {
+
+    $('[data-target="city-map-marker"]').off('click mouseenter mouseleave');
+    $('[data-target="city-map-marker"]').on('click', function(e) {
       resetSelectedCity();
       selectCity(e.currentTarget.dataset.cityMapMarker);
       isCountrySelected = true;
     });
 
-    $('[data-target="city-map-marker"').hover(
+    $('[data-target="city-map-marker"]').hover(
       function(e) {
         isCountrySelected = false;
         resetSelectedCity();
@@ -94,14 +98,14 @@ $(document).on('turbolinks:load', function() {
 
   function selectCity(city) {
     $(`[data-city="${city}"]`).addClass('d-block');
-    $('[data-target="current-city"').addClass('overlay-active');
+    $('[data-target="current-city"]').addClass('overlay-active');
     $(`[data-city-thumbnail="${city}"]`).addClass('overlay-active');
     $(`[data-city-map-marker="${city}"]`).addClass('active');
   }
 
   function resetSelectedCity(city) {
     $('[data-city]').removeClass('d-block');
-    $('[data-target="current-city"').removeClass('overlay-active');
+    $('[data-target="current-city"]').removeClass('overlay-active');
     $(`[data-city-thumbnail]`).removeClass('overlay-active');
     $(`[data-city-map-marker]`).removeClass('active');
   }

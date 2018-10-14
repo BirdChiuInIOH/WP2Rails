@@ -7,10 +7,10 @@ div(class="container magazine")
     = link_to 'TAIWAN', '#', class: 'text-sm-center nav-item nav-link nav-pills-item'
   = render 'how_to_apply_slider', talks: @talks
 
-  section(class="bg-gray-400" style="padding: 140px 94px 65px")
+  section(class="bg-gray-400" style="padding-top: 140px;")
     span(class="magazine-country-name") USA
     div(class="row")
-      div(class="col-md-3")
+      div(class="col-md-3 mb-5 mb-md-0")
         div(class="magazine-menu")
           div(class="magazine-menu-page-number mb-4") 01
           div(class="magazine-menu-page-title mb-4") Country
@@ -23,13 +23,13 @@ div(class="container magazine")
 
       div(class="col-md-9")
         div(class="custom-gutters-10px mb-4")
-          div(class="row d-none d-md-flex mb-5")
+          div(class="row mb-5")
             div(class="col")
               div(class="overlay-container" data-target="current-city")
                 = image_tag 'https://i2.wp.com/ioh.tw/assets/usa-flag.png', class: 'img-fluid'
                 div(class="overlay")
                   = render 'how_to_apply_overlay_city', usa_cities: @usa_cities
-            div(class="col")
+            div(class="col d-none d-md-flex")
               div(class="magazine-country-map")
                 = image_tag 'https://i2.wp.com/ioh.tw/assets/usa-map.png', class: 'img-fluid'
                 - @usa_cities.each do |city|
@@ -63,7 +63,7 @@ div(class="container magazine")
 
           div(class="mb-4")
             h4(class="magazine-info-title mb-3") Currency
-            ul(class="ml-4")
+            ul(class="pl-4")
               li 貨幣符號：USD / $，分成分（Cents）跟元（Dollar），100 Cents = 1 Dollar
               li 紙鈔跟銅板：
               ul(class="pl-4")
@@ -128,20 +128,20 @@ div(class="container magazine")
             h4(class="magazine-info-title mb-3") Entertainment
             div(class="overlay-container overlay-hover mb-2")
               = image_tag 'https://i2.wp.com/ioh.tw/assets/usa-football.png', class: 'w-100'
-              div(class="overlay overlay-visible d-flex align-items-end font-weight-bold p-3" style="font-size: 76px;") FOOTBALL
+              div(class="overlay overlay-visible overlay-title-lg d-flex align-items-end font-weight-bold p-3") FOOTBALL
               div(class="overlay overlay-dark p-4")
                 p(class="overlay-text") 美式足球是美國特有的運動，也是美國收視率最高的比賽之一。不僅大學美式足球很受歡迎，每年二月的 NFL 美式足球聯盟決賽 — 超級盃（Super Bowl）更是讓全世界矚目。
             div(class="row no-gutters")
-              div(class="col mr-5px")
+              div(class="col-12 col-md mb-md-0 mb-2 mr-5px")
                 div(class="overlay-container overlay-hover")
                   = image_tag 'https://i2.wp.com/ioh.tw/assets/usa-basketball.png', class: 'w-100'
-                  div(class="overlay overlay-visible d-flex align-items-end font-weight-bold p-3" style="font-size: 44px;") BASKETBALL
+                  div(class="overlay overlay-visible overlay-title-md d-flex align-items-end font-weight-bold p-3") BASKETBALL
                   div(class="overlay overlay-dark p-4")
                     p(class="overlay-text") 籃球是美國最多人參與的運動之一。美國的 NBA（National Basketball Association），也是各國籃球選手公認的最高殿堂。美國大學籃球非常發達，每年三月進行決賽時被成為「瘋狂三月」（March Madness）。
-              div(class="col ml-5px")
+              div(class="col-12 col-md ml-5px")
                 div(class="overlay-container overlay-hover")
                   = image_tag 'https://i2.wp.com/ioh.tw/assets/usa-baseball.png', class: 'w-100'
-                  div(class="overlay overlay-visible d-flex align-items-end font-weight-bold p-3" style="font-size: 44px;") BASEBALL
+                  div(class="overlay overlay-visible overlay-title-md d-flex align-items-end font-weight-bold p-3") BASEBALL
                   div(class="overlay overlay-dark p-4")
                     p(class="overlay-text") 棒球被譽為是美國國球（National Pastime），在美國的大聯盟（Major League Baseball）也被認為是全球棒球的最高殿堂。另外，美國各地的學校和社區棒球隊也相當發達。
 
@@ -163,7 +163,7 @@ div(class="container magazine")
             li = link_to 'How to choose', '#how-to-choose'
       div(class="col-md-9")
 
-  section(class="bg-gray-400" style="padding: 94px; min-height: 400px;")
+  section(class="bg-gray-400")
     div(class="row")
       div(class="col-md-3")
         div(class="magazine-menu")
@@ -346,9 +346,7 @@ div(class="container magazine")
             div(class="magazine-info-subtitle") 獨立系統
             p 可以到各個學校的網站做線上申請，每個學校都有各自的線上申請系統。
 
-
-
-  section(class="bg-gray-400" style="padding: 94px; min-height: 400px;")
+  section(class="bg-gray-400")
     div(class="row")
       div(class="col-md-3")
         div(class="magazine-menu")
@@ -362,3 +360,20 @@ div(class="container magazine")
             li = link_to 'Malls', '#malls'
             li = link_to 'Mobile Services', '#mobile-service'
       div(class="col-md-9")
+        div(class="magazine-info mb-4")
+          div(class="mb-4")
+            h4(class="magazine-info-title") Visa
+            h5(class="magazine-info-subtitle") 簽證介紹
+            p 一般學生前往美國就讀會申請 F - 1 學生簽證。 F - 1 學生簽證效期為五年。持有該學生簽證只能在下列條件下工作：校內工作、為獎學金的工作。
+            h5(class="magazine-info-subtitle") 簽證費用
+            p $ 160 美金，約 $ 5,078 新台幣
+            h5(class="magazine-info-subtitle") 簽證地點
+            p 線上填寫資料後需要前往 AIT 美國在台協會面談
+            h5(class="magazine-info-subtitle") 簽證所需文件
+            ul
+              li  護照（目前護照及所有舊護照)
+              li 照片（5 cm x 5 cm）
+              li 學校機構透過 SEVIS 系統製發的 I - 20 表（若學生未滿 18 歲，父母或法定監護人也必須在 I - 20 簽名）
+              li 學術文件證明。有用文件包括列有分數的學校成績單（最好是正本）、公開考試證書（高級 A 程度等）、標準測試成績（SAT、TOEFL 等）以及文憑
+              li 財力證明：證明你或你的資助人有足夠的經費支付你就讀期間所需的學費及生活費
+              li 固定住所證明：證明在美國以外有一個固定住所，並且無意放棄該住所，同時要能證明會在學業結束後離開美國

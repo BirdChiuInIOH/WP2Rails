@@ -13,9 +13,25 @@
     transition: opacity 0.3s;
   }
 
-  .overlay-title{
+  .overlay-title {
     font-size: 13px;
     font-weight: bold;
+  }
+
+  .overlay-title-lg {
+    font-size: 76px;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 38px;
+    }
+  }
+
+  .overlay-title-md {
+    font-size: 44px;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 38px;
+    }
   }
 
   .overlay-text {
