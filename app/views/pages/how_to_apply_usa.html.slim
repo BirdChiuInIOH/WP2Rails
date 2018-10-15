@@ -405,15 +405,108 @@ div(class="container magazine")
             h4(class="magazine-info-title") Visa
             h5(class="magazine-info-subtitle") 簽證介紹
             p 一般學生前往美國就讀會申請 F - 1 學生簽證。 F - 1 學生簽證效期為五年。持有該學生簽證只能在下列條件下工作：校內工作、為獎學金的工作。
+
             h5(class="magazine-info-subtitle") 簽證費用
             p $ 160 美金，約 $ 5,078 新台幣
+
             h5(class="magazine-info-subtitle") 簽證地點
             p 線上填寫資料後需要前往 AIT 美國在台協會面談
+
             h5(class="magazine-info-subtitle") 簽證所需文件
-            ul
-              li  護照（目前護照及所有舊護照)
+            ul(class="pl-4")
+              li 護照（目前護照及所有舊護照)
               li 照片（5 cm x 5 cm）
               li 學校機構透過 SEVIS 系統製發的 I - 20 表（若學生未滿 18 歲，父母或法定監護人也必須在 I - 20 簽名）
               li 學術文件證明。有用文件包括列有分數的學校成績單（最好是正本）、公開考試證書（高級 A 程度等）、標準測試成績（SAT、TOEFL 等）以及文憑
               li 財力證明：證明你或你的資助人有足夠的經費支付你就讀期間所需的學費及生活費
               li 固定住所證明：證明在美國以外有一個固定住所，並且無意放棄該住所，同時要能證明會在學業結束後離開美國
+
+            h5(class="magazine-info-subtitle") 簽證申請流程
+            ul(class="simple-timeline")
+              li 選擇簽證種類
+              li 線上填寫 DS - 160 表格：透過線上系統填寫個人資料
+              li 建立個人檔案並支付簽證費用：填妥 DS - 160 申請表後就可以在線上系統建立個人檔案、選擇護照遞送方式、繳付費用、以及預約面談時間
+              li 前往 AIT 美國在台協會面談：需備齊各項文件前往面談，面談主要是要確認申請者
+              li 領取簽證：會透過快遞將護照、簽證寄還
+            div(class="magazine-info-keywords my-5")
+              h4(class="magazine-info-title mb-3") 可參考網站
+              = link_to '美國在台協會 學生簽證', 'https://www.ait.org.tw/zh/student-visa-applicants.html', target: '_blank', class: 'd-inline-block magazine-info-btn mr-1 mb-1'
+              = link_to '申請美國學生簽證介紹', 'http://www.ustraveldocs.com/tw_zh/tw-niv-typefandm.asp', target: '_blank', class: 'd-inline-block magazine-info-btn mr-1 mb-1'
+              = link_to '美國國務院學生簽證介紹（英文）', 'https://travel.state.gov/content/visas/en/study-exchange/student.html', target: '_blank', class: 'd-inline-block magazine-info-btn mr-1 mb-1'
+
+            h4(class="magazine-info-title") Health Care
+            p 一般會跟著學校買保險，因此每個學校可能會互相有一些不同，建議可以先查詢各校的 Student Health Insurance。
+
+            h4(class="magazine-info-title") Airplane
+            ul(class="list-unstyled")
+              li(class="d-flex align-items-center mb-3")
+                div(class="pr-3 mr-1")
+                  = image_tag 'https://i2.wp.com/ioh.tw/assets/icon-skyscanner.png', width: 45
+                div(class="d-flex flex-column justify-content-center align-items-start")
+                  p(class="font-weight-bold mb-0") Skyscanner
+                  p(class="mb-0") 可以比較票價的 app
+
+              li(class="d-flex align-items-center mb-3")
+                div(class="pr-3 mr-1")
+                  = image_tag 'https://i2.wp.com/ioh.tw/assets/icon-sta.png', width: 45
+                div(class="d-flex flex-column justify-content-center align-items-start")
+                  p(class="font-weight-bold mb-0") Sta Travel
+                  p(class="mb-0") 提供許多學生優惠
+
+            h4(class="magazine-info-title") Military Service
+            p
+              | 可查詢
+              = link_to '役男出境辦法', 'https://www.immigration.gov.tw/ct_cert.asp?xItem=1088317&ctNode=32594', target: '_blank', class: 'magazine-info-btn mx-1'
+            p 役齡前指 18 歲當年 12 月 31 日以前。達到役齡後出國讀書者，得檢附經驗證之在學證明，及護照正本向內政部移民署各縣市服務站申請再出國；其在國內停留期間，每次不得逾三個月。就讀最高年齡如下，高中以上大學以下學歷至 24 歲，研究所碩士班至 27 歲，博士班至 30 歲，均計算至當年 12 月 31 日止。其順延博士班就讀最高年齡，以 33 歲為限，以上均計算至當年 12 月 31 日止。
+
+            h4(class="magazine-info-title") Malls
+            p 超市、賣場：超市、賣場是在國外生活不可或缺的一環，以下介紹兩間美國常見的商場以及一間較具規模的連鎖華人超市。
+            ul(class="list-unstyled")
+              li(class="d-flex align-items-center mb-3")
+                div(class="pr-3 mr-1")
+                  = image_tag 'https://i2.wp.com/ioh.tw/assets/icon-walmart.png', width: 45
+                div(class="d-flex flex-column justify-content-center align-items-start")
+                  p(class="font-weight-bold mb-0") Walmart
+                  p(class="mb-0") Walmart 為美國最大的零售商，幾乎所有商品都可以在這裡找到
+
+              li(class="d-flex align-items-center mb-3")
+                div(class="pr-3 mr-1")
+                  = image_tag 'https://i2.wp.com/ioh.tw/assets/icon-costco.png', width: 45
+                div(class="d-flex flex-column justify-content-center align-items-start")
+                  p(class="font-weight-bold mb-0") Costco
+                  p(class="mb-0") Costco 偏向批發式商場，商品較大量但也比較划算。日用品、食品、熟食等等都可以在這裡找到。Costco 採取會員制，每年年費 $ 55 美元
+
+              li(class="d-flex align-items-center mb-3")
+                div(class="pr-3 mr-1")
+                  = image_tag 'https://i2.wp.com/ioh.tw/assets/icon-99.png', width: 45
+                div(class="d-flex flex-column justify-content-center align-items-start")
+                  p(class="font-weight-bold mb-0") 大華 99 超市
+                  p(class="mb-0") 在大華 99 超級市場可以找到各種亞洲食材，包含很多台灣的食品都可以在這裡找到。這裡也有熟食區販賣亞洲料理。營運據點主要在東西岸與德州等亞洲人較多的社區
+
+            h4(class="magazine-info-title") Mobile Services
+            ul(class="list-unstyled")
+              li(class="d-flex align-items-center mb-3")
+                div(class="pr-3 mr-1")
+                  = image_tag 'https://i2.wp.com/ioh.tw/assets/icon-version.png', width: 45
+                div(class="d-flex flex-column justify-content-center align-items-start")
+                  p(class="font-weight-bold mb-0") Verizon
+                  p(class="mb-0") Verizon 是美國訊號覆蓋率最高的一間電信公司
+
+              li(class="d-flex align-items-center mb-3")
+                div(class="pr-3 mr-1")
+                  = image_tag 'https://i2.wp.com/ioh.tw/assets/icon-sprint.png', width: 45
+                div(class="d-flex flex-column justify-content-center align-items-start")
+                  p(class="font-weight-bold mb-0") Sprint
+                  p(class="mb-0") 系統 CDMA 和大多手機並不通用，類似台灣亞太電信
+
+              li(class="d-flex align-items-center mb-3")
+                div(class="pr-3 mr-1")
+                  = image_tag 'https://i2.wp.com/ioh.tw/assets/icon-at.png', width: 45
+                div(class="d-flex flex-column justify-content-center align-items-start")
+                  p(class="font-weight-bold mb-0") AT&T
+                  p(class="mb-0") 覆蓋率居次、但訊號好，缺點是費率稍微高一些
+
+            div(class="magazine-info-keywords")
+              h4(class="magazine-info-title mb-3") 可查詢關鍵字
+              ul(class="magazine-info-list mb-0")
+                li 簽證 -- Student Visa of USA
