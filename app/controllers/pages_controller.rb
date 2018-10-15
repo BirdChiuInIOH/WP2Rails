@@ -9,13 +9,16 @@ class PagesController < ApplicationController
     def index
     end
 
+    # https://ioh.tw/talks/)
     def talks
       @talks_filter = load_talks_filter
     end
 
+    # https://ioh.tw/talks/香港教育大學英語教育系-彭于榛-barbie-peng-ov-study-bde-hk/
     def talks_show
     end
 
+    # https://ioh.tw/howtoapply-usa
     def how_to_apply_usa
       @talks = @talks.reject{ |talk| talk[:advice].blank? }
 
@@ -28,6 +31,7 @@ class PagesController < ApplicationController
     def overseas
     end
 
+    # https://ioh.tw/升大學全攻略
     def guides
       @lecturers = load_lecturers
     end
@@ -41,6 +45,7 @@ class PagesController < ApplicationController
       @news = load_news
     end
 
+    # https://ioh.tw/ioharticles-香港讀大學-申請香港的大學
     def articles
       @news = load_news
       @lecturers = load_lecturers
@@ -112,17 +117,21 @@ class PagesController < ApplicationController
       # end
     end
 
+    # https://ioh.tw/%E5%AA%92%E9%AB%94%E5%A0%B1%E5%B0%8E/
     def press
       @press = load_press
     end
 
+    # https://ioh.tw/team/
     def teams
       @teams = load_teams
     end
 
+    # https://ioh.tw/ioh現場講座
     def events
     end
 
+    # https://ioh.tw/about
     def about
     end
 
