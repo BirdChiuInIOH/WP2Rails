@@ -49,7 +49,6 @@ $(document).on('turbolinks:load', function() {
   // For how-to-apply country map
   let isCountrySelected = false;
   if ($('[data-target="city-thumbnail"').length) {
-
     $('[data-target="city-thumbnail"]').off('click mouseenter mouseleave');
     $('[data-target="city-thumbnail"]').on('click', function(e) {
       resetSelectedCity();
@@ -72,8 +71,7 @@ $(document).on('turbolinks:load', function() {
     );
   }
 
-  if($('[data-target="city-map-marker"]').length) {
-
+  if ($('[data-target="city-map-marker"]').length) {
     $('[data-target="city-map-marker"]').off('click mouseenter mouseleave');
     $('[data-target="city-map-marker"]').on('click', function(e) {
       resetSelectedCity();
@@ -108,6 +106,51 @@ $(document).on('turbolinks:load', function() {
     $('[data-target="current-city"]').removeClass('overlay-active');
     $(`[data-city-thumbnail]`).removeClass('overlay-active');
     $(`[data-city-map-marker]`).removeClass('active');
+  } // End of how-to-apply country map
+
+  // For go-top button
+  goTopButton();
+
+  function goTopButton() {
+    let requestAnimationFrame =
+      window.requestAnimationFrame ||
+      window.mozRequestAnimationFrame ||
+      window.webkitRequestAnimationFrame ||
+      window.msRequestAnimationFrame;
+
+    const goTopButton = document.querySelector('[data-action="gotop"]');
+    const windowViewPortHeight = window.innerHeight; // browser viewport height
+    let isRequestingAnimationFrame = false;
+
+    if (!goTopButton) {
+      return;
+    }
+
+    goTopButton.addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    window.addEventListener('scroll', function() {
+      if (!isRequestingAnimationFrame) {
+        requestAnimationFrame(filterGoTopButtonVisibility);
+        isRequestingAnimationFrame = true;
+      }
+    });
+
+    function filterGoTopButtonVisibility(timestamp) {
+      let windowPageYOffset =
+        window.pageYOffset || document.documentElement.scrollTop;
+      if (windowPageYOffset > windowViewPortHeight) {
+        goTopButton.classList.add('show');
+        isRequestingAnimationFrame = false;
+      } else {
+        goTopButton.classList.remove('show');
+        requestAnimationFrame(filterGoTopButtonVisibility);
+      }
+    }
   }
-  // End of how-to-apply country map
+  // End of go-top button
 });

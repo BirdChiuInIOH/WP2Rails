@@ -1,0 +1,29 @@
+
+.btn-gotop {
+  position: fixed;
+  width: 45px;
+  height: 45px;
+  bottom: 60px;
+  right: 90px;
+  background-color: transparent;
+  opacity: 0;
+  cursor: default !important;
+  pointer-events: none;
+  transition: opacity 0.3s;
+
+  @include media-breakpoint-down(xs) {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &.show {
+    cursor: pointer !important;
+    pointer-events: auto;
+    opacity: 1;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+}
