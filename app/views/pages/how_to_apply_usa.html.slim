@@ -13,19 +13,19 @@ div(class="container magazine")
       div(class="col-md-3 mb-5 mb-md-0")
         div(class="magazine-menu")
           div(class="magazine-menu-page-number mb-4") 01
-          div(class="magazine-menu-page-title mb-4") Country
-          ul(class="magazine-menu-page-subtitle-list list-unstyled mb-5")
-            li = link_to 'Country Profile', '#usa-country-countryprofile'
-            li = link_to 'Currency', '#currency'
-            li = link_to 'Transportation', '#transportation'
-            li = link_to 'Entertainment', '#entertainment'
+          div(class="magazine-menu-title mb-4") Country
+          ul(class="magazine-menu-list mb-5")
+            li = link_to 'Country Profile', '#country-profile', 'data-turbolinks': false
+            li = link_to 'Currency', '#currency', 'data-turbolinks': false
+            li = link_to 'Transportation', '#transportation', 'data-turbolinks': false
+            li = link_to 'Entertainment', '#entertainment', 'data-turbolinks': false
           = link_to '觀看所有「美洲」講座', 'https://ioh.tw/school/america/', class: 'btn magazine-menu-btn'
 
       div(class="col-md-9")
-        div(class="custom-gutters-10px mb-4")
+        div(class="custom-gutters-10px mb-5")
           div(class="row mb-5")
             div(class="col")
-              div(class="overlay-container" data-target="current-city")
+              div(class="overlay-container" data-target="current-city" style="cursor: default;")
                 = image_tag 'https://i2.wp.com/ioh.tw/assets/usa-flag.png', class: 'img-fluid'
                 div(class="overlay")
                   = render 'how_to_apply_overlay_city', usa_cities: @usa_cities
@@ -48,9 +48,9 @@ div(class="container magazine")
                   div(class="overlay-title") = city[:name]
 
         div(class="magazine-info mb-4")
-          div(class="mb-4")
-            h4(class="magazine-info-title mb-3") Country Profile
-            ul(class="magazine-info-list")
+          div(class="mb-5")
+            h4(id="country-profile" class="magazine-info-title mb-3") Country Profile
+            ul(class="magazine-info-list list-unstyled")
               li 人口：約 322,369,319 人（2016）
               li 首都：華盛頓特區（Washington D.C）
               li 最大都市：紐約（New York）
@@ -61,21 +61,20 @@ div(class="container magazine")
               li 國際電話區號：+1
               li 人均 GDP：57,220 美元（2016）
 
-          div(class="mb-4")
-            h4(class="magazine-info-title mb-3") Currency
-            ul(class="pl-4")
+          div(class="mb-5")
+            h4(id="currency" class="magazine-info-title mb-3") Currency
+            ul(class="magazine-info-list")
               li 貨幣符號：USD / $，分成分（Cents）跟元（Dollar），100 Cents = 1 Dollar
               li 紙鈔跟銅板：
-              ul(class="pl-4")
+              ul(class="magazine-info-list")
                 li 紙鈔 - 1 元、10 元、20 元、50 元、100 元
                 li 銅板 - 1 分（Cent）、5 分（Dime）、10 分（Nickel）、25 分（Quarter）、1 元（Dollar）
               li
                 | 匯率：1:31（as of August 2016）
-                = link_to '即時匯率查詢', 'http://www.findrate.tw/USD/', target: '_blank', class: 'magazine-info-btn'
+                = link_to '即時匯率查詢', 'http://www.findrate.tw/USD/', target: '_blank', class: 'magazine-info-btn mx-1'
             = image_tag 'https://i2.wp.com/ioh.tw/assets/usa-money.png', class: 'img-fluid'
-
-          div(class="mb-4")
-            h4(class="magazine-info-title mb-3") Transportation
+          div(class="mb-5")
+            h4(id="transportation" class="magazine-info-title mb-3") Transportation
             h5(class="magazine-info-subtitle mb-3") 市區交通
             ul(class="list-unstyled")
               li(class="d-flex align-items-center mb-3")
@@ -93,7 +92,7 @@ div(class="container magazine")
                   = image_tag 'https://i2.wp.com/ioh.tw/assets/icon-bus.png', width: 37
                 p(class="flex-grow-1 mb-0")
                   | 公車 - 大部分城市都有自己的公車系統。
-                  = link_to '可參考以下網址', 'https://en.wikipedia.org/wiki/List_of_bus_transit_systems_in_the_United_States', target: '_blank', class: 'magazine-info-btn'
+                  = link_to '可參考以下網址', 'https://en.wikipedia.org/wiki/List_of_bus_transit_systems_in_the_United_States', target: '_blank', class: 'magazine-info-btn mx-1'
 
               li(class="d-flex align-items-center mb-3")
                 div(class="pr-3 mr-3 border-right border-dark")
@@ -105,7 +104,7 @@ div(class="container magazine")
                   = image_tag 'https://i2.wp.com/ioh.tw/assets/icon-car-share.png', width: 37
                 p(class="flex-grow-1 mb-0")
                   | 汽車共享（Car Share） - 城市內短程的汽車租借，適合租借一到兩個小時。但需要在 A 點借 A 點還車，可參考
-                  = link_to 'Zipcar', 'https://www.zipcar.com/', target: '_blank', class: 'magazine-info-btn'
+                  = link_to 'Zipcar', 'https://www.zipcar.com/', target: '_blank', class: 'magazine-info-btn mx-1'
 
             h5(class="magazine-info-subtitle mb-3") 城市間交通
             ul(class="list-unstyled")
@@ -124,8 +123,8 @@ div(class="container magazine")
                   = image_tag 'https://i2.wp.com/ioh.tw/assets/icon-car-share.png', width: 37
                 p(class="flex-grow-1 mb-0") 租車（Car Rental） - 可以 A 點借、B 點還，適合在長程旅途使用。有多家公司可以參考。
 
-          div(class="mb-4")
-            h4(class="magazine-info-title mb-3") Entertainment
+          div(class="mb-5")
+            h4(id="entertainment" class="magazine-info-title mb-3") Entertainment
             div(class="overlay-container overlay-hover mb-2")
               = image_tag 'https://i2.wp.com/ioh.tw/assets/usa-football.png', class: 'w-100'
               div(class="overlay overlay-visible overlay-title-lg d-flex align-items-end font-weight-bold p-3") FOOTBALL
@@ -145,28 +144,28 @@ div(class="container magazine")
                   div(class="overlay overlay-dark p-4")
                     p(class="overlay-text") 棒球被譽為是美國國球（National Pastime），在美國的大聯盟（Major League Baseball）也被認為是全球棒球的最高殿堂。另外，美國各地的學校和社區棒球隊也相當發達。
 
-          div(class="magazine-info-keywords")
+          div(class="magazine-info-keywords my-5")
             h4(class="magazine-info-title mb-3") 可查詢關鍵字
-            ul(class="magazine-info-list mb-0")
+            ul(class="magazine-info-list list-unstyled mb-0")
               li 國家相關：Lonely Planet USA
               li 交通：Transportation of 「填入城市」/ carshare
               li 娛樂、休閒：MLB / NBA / NFL / Hiking trails in USA / Camping spots in USA / National Parks in USA
 
-
-  section(style="padding: 94px; min-height: 400px;")
+  section
     div(class="row")
       div(class="col-md-3")
         div(class="magazine-menu")
           div(class="magazine-menu-page-number mb-4") 02
-          div(class="magazine-menu-page-title mb-4") School
-          ul(class="magazine-menu-page-subtitle-list list-unstyled mb-5")
-            li = link_to 'How to choose', '#how-to-choose'
+          div(class="magazine-menu-title mb-4") School
+          ul(class="magazine-menu-list mb-5")
+            li = link_to 'How to choose', '#how-to-choose', 'data-turbolinks': false
       div(class="col-md-9")
         div(class="magazine-info mb-4")
-          h4(class="magazine-info-title") How to choose
+          h4(id="how-to-choose" class="magazine-info-title") How to choose
           div
             p 以下為選學校的因素，每個人著重的點不太一樣，但可以從這幾個點下去選學校。
-            p(class="font-weight-bold") 學校種類
+
+            h5(class="magazine-info-subtitle") 學校種類
             p 文理學院（Liberal Arts College）： <br>
               文理學院特徵是以本科大學部教育為主，一般來說學校規模會比較小。文理學院目的是培養能力全面的領導型人才而不是具體專業人才，因此注重自由思想和全面教育。另外，美國的文理學院主要為私立的。
             p 大學（University College）： <br>
@@ -176,29 +175,34 @@ div(class="container magazine")
             p 私立學校（Private School）：  <br>
               學費較貴而且無論州內或州外學生皆相同，但是獎學金方面資源較多。同時，因為錄取學生較少的關係，小班制課程比較多，教學品質比較好。在教學研究資源方面，也會比公立學校好。
             p 社區學院（Community College）： <br>
-              一般而言，社區學院主要是為學生提供大學前兩年的學習課程與教育基礎，使往後能繼續銜接四年制的大學。社區學院通常僅需填寫申請表後並提供銀行存款證明和在校成績即可申請。大多數社區學院學生取得副學士學位（Associate's Degree）後可再申請任何公私立大學，甚至透過轉學協議直接進入同州的大學就讀。#{ link_to '美國兩年制大學介紹', 'http://www.usacademics-tw.com/info/collegetw.php', target: '_blank', class: 'magazine-info-btn'}
-          div(class="magazine-info-keywords" style="margin:65px 0; background-color: #dbdcdc;")
+              一般而言，社區學院主要是為學生提供大學前兩年的學習課程與教育基礎，使往後能繼續銜接四年制的大學。社區學院通常僅需填寫申請表後並提供銀行存款證明和在校成績即可申請。大多數社區學院學生取得副學士學位（Associate's Degree）後可再申請任何公私立大學，甚至透過轉學協議直接進入同州的大學就讀。#{ link_to '美國兩年制大學介紹', 'http://www.usacademics-tw.com/info/collegetw.php', target: '_blank', class: 'magazine-info-btn mx-1'}
+          div(class="magazine-info-keywords my-5" style="background-color: #dbdcdc;")
             h4(class="magazine-info-title mb-3") 可查詢關鍵字
-            ul(class="magazine-info-list mb-0")
+            ul(class="magazine-info-list list-unstyled mb-0")
               li 想要比較學校的差異性，可在搜尋欄直接打：
               li 學校名稱 vs 學校名稱
-          p(class="font-weight-bold") 學校排名
-          p 在選學校時，許多人都會把排名當作很重要的考量點，通常大家會以世界排名或科系排名為基準。至於是選學校整體世界排名還是科系排名就因人而異了。大家可以到 #{ link_to 'QS', 'https://www.topuniversities.com/university-rankings/world-university-rankings/2015#sorting=rank+region=+country=+faculty=+stars=false+search=', target: '_blank', class: 'magazine-info-btn'} 、 #{ link_to 'Times Higher Education', 'https://www.timeshighereducation.com/world-university-rankings/2016/world-ranking#!/page/0/length/25/sort_by/rank_label/sort_order/asc/cols/rank_only', target: '_blank', class: 'magazine-info-btn'}，或 #{ link_to 'US News', 'http://colleges.usnews.rankingsandreviews.com/best-colleges', target: '_blank', class: 'magazine-info-btn'} 上找排名。
-          p(class="font-weight-bold") 學校位置環境
+
+          h5(class="magazine-info-subtitle") 學校排名
+          p 在選學校時，許多人都會把排名當作很重要的考量點，通常大家會以世界排名或科系排名為基準。至於是選學校整體世界排名還是科系排名就因人而異了。大家可以到 #{ link_to 'QS', 'https://www.topuniversities.com/university-rankings/world-university-rankings/2015#sorting=rank+region=+country=+faculty=+stars=false+search=', target: '_blank', class: 'magazine-info-btn mx-1'} 、 #{ link_to 'Times Higher Education', 'https://www.timeshighereducation.com/world-university-rankings/2016/world-ranking#!/page/0/length/25/sort_by/rank_label/sort_order/asc/cols/rank_only', target: '_blank', class: 'magazine-info-btn mx-1'}，或 #{ link_to 'US News', 'http://colleges.usnews.rankingsandreviews.com/best-colleges', target: '_blank', class: 'magazine-info-btn mx-1'} 上找排名。
+
+          h5(class="magazine-info-subtitle") 學校位置環境
           p 學校環境也是很多人的考量點之一，有些人喜歡在繁華城市讀書，有些人則喜歡清幽小鎮。如果對於生活機能特別看重，就會建議選擇大城市的學校。除此之外，有些人也會因畢業後留在當地工作的可能來選學校，像是選擇國家首都的學校。
-          p(class="font-weight-bold") 學校課程內容
+
+          h5(class="magazine-info-subtitle") 學校課程內容
           p 在選學校時，學校課程內容非常重要，選擇喜歡的課程遠比學校排名來的重要，因此大家在比較學校時，可以將每間學校的課程內容做表格列出來比較。另外也可以先思考自己會喜歡什麼樣的課程，例如：有沒有產學合作、實習機會，想要走學術還是實務。
-          p(class="font-weight-bold") 交換學生機會
+
+          h5(class="magazine-info-subtitle") 交換學生機會
           p 由於現在越來越強調國際化，因此到姐妹校交換越來越盛行，交換學生機會也是大家考量的重要因素。可以到學校網站搜尋姐妹校數量，地區分布等等。另外也可以了解學費是付自己學校的學費還是付當地學校的學費。有沒有機會到自己喜歡的科系交換也是可以考量的點。
-          p(class="font-weight-bold") 費用
+
+          h5(class="magazine-info-subtitle") 費用
           p 美國的大學有公私立大學之分，一般而言，私立大學的學費是公立大學學費的 1.5 到 2 倍。相對的，私立大學對於學費補助和獎學金也比較大方。此外，美國的公立大學多為州立，會對於州內學生有更低的學費，該州身分的學生學費會是州外學生和國際生的三分之一左右。
-          ul.pl-4
-            li  總花費：一年總花費（學費加生活費）大約 $ 40,000 到 $ 70,000 美金（$ 1,240,000 新台幣到 $ 2,170,000 新台幣）
-            li  學費：公立大學大約 $ 30,000 美金（約 $ 930,000新台幣）。私立大學大約 $ 50,000 美金（約 $ 1,550,000 新台幣）
-            li  生活費多少錢 : 一年大約 $ 10,000 到 $ 20,000 美金（約 $ 310,000 到 $ 620,000 新台幣）
-          div(class="magazine-info-keywords" style="margin-top:65px; background-color: #dbdcdc;")
+          ul(class="magazine-info-list")
+            li 總花費：一年總花費（學費加生活費）大約 $ 40,000 到 $ 70,000 美金（$ 1,240,000 新台幣到 $ 2,170,000 新台幣）
+            li 學費：公立大學大約 $ 30,000 美金（約 $ 930,000新台幣）。私立大學大約 $ 50,000 美金（約 $ 1,550,000 新台幣）
+            li 生活費多少錢 : 一年大約 $ 10,000 到 $ 20,000 美金（約 $ 310,000 到 $ 620,000 新台幣）
+          div(class="magazine-info-keywords my-5" style="background-color: #dbdcdc;")
             h4(class="magazine-info-title mb-3") 可查詢關鍵字
-            ul(class="magazine-info-list m-0")
+            ul(class="magazine-info-list list-unstyled m-0")
               li(class="mb-5px") 學校種類相關：Liberal College / Public School V.S. Private School / Community College
               li(class="mb-5px") 考量因素：「填入學校」＋Location / Curriculum / Program / Exchange Opportunities / Tuition
 
@@ -208,27 +212,27 @@ div(class="container magazine")
       div(class="col-md-3")
         div(class="magazine-menu")
           div(class="magazine-menu-page-number mb-4") 03
-          div(class="magazine-menu-page-title mb-4") Exam
-          ul(class="magazine-menu-page-subtitle-list list-unstyled mb-5")
-            li = link_to 'TOEFL', '#tofel'
-            li = link_to 'ACT', '#act'
-            li = link_to 'SAT', '#sat'
-            li = link_to 'SAT Subject Test', '#sat-subject-test'
+          div(class="magazine-menu-title mb-4") Exam
+          ul(class="magazine-menu-list list-unstyled mb-5")
+            li = link_to 'TOEFL', '#toefl', 'data-turbolinks': false
+            li = link_to 'ACT', '#act', 'data-turbolinks': false
+            li = link_to 'SAT', '#sat', 'data-turbolinks': false
+            li = link_to 'SAT Subject Test', '#sat-subject-test', 'data-turbolinks': false
       div(class="col-md-9")
         div(class="magazine-info mb-4")
-          div(class="mb-4")
+          div(class="mb-5")
             = link_to 'https://www.ets.org/toefl/ibt/test_day/expect/' do
               = image_tag 'https://i2.wp.com/ioh.tw/assets/icon-toefl.png', class: 'img-fluid'
-            h4(class="magazine-info-title") TOEFL
+            h4(id="toefl" class="magazine-info-title") TOEFL
             p 托福為大多數要出國同學必經的考試。托福的考試主要是要測驗一個人在英語環境中生活和讀書的能力，因此考題大多出自生活情境或大學課程。托福考試的科目分為「聽、說、讀、寫」。由於考試需求大，因此幾乎每一週都有舉辦。
-            ul(class="magazine-info-list")
+            ul(class="magazine-info-list list-unstyled")
               li 考試日期：幾乎每週六都有地方舉辦
               li 考試導向：測驗在英文的教學與生活環境的能力，強調實用性
               li 考試價格：$ 170 美金，約 $ 5,000 ~ $ 5,200 新台幣
               li 成績核發時間：約一週至三週
               li
                 | 考試方式：
-                ul(class="pl-4")
+                ul(class="magazine-info-list")
                   li 讀 60 ~ 80 分鐘：閱讀文章
                   li 聽 60 ~ 90 分鐘：有文章、並要聆聽課程
                   li 休息 10 分鐘
@@ -238,24 +242,24 @@ div(class="container magazine")
               li 特色：因為是機考，因此寫得快的人會先寫完，能夠自己掌握速度
             div(class="youtube-rwd-container")
               iframe(width="560" height="315" src="//youtube.com/embed/drt2XTd4VtM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="true")
-          div(class="mb-4")
+          div(class="mb-5")
             = link_to 'http://www.act.org/content/act/en/products-and-services/the-act.html' do
               = image_tag 'https://i2.wp.com/ioh.tw/assets/icon-act.png', class: 'img-fluid'
-            h4(class="magazine-info-title") ACT
+            h4(id="act" class="magazine-info-title") ACT
             p ACT 是目前最多美國高中生選擇的升學考試。ACT 和台灣的升學考試不同的地方在於它考驗的是學生的思考、理解能力等，並非課本中的內容與知識。ACT 分為英文、數學、閱讀及科學四個科目。其特色是題數較多，如果要全部作答的話，須留意作答速度。
-            ul(class="magazine-info-list")
+            ul(class="magazine-info-list list-unstyled")
               li 考試日期：學期當中，一年六次
               li 考試導向：並非要考取專業知識能力，而是基本閱讀、理解能力
               li
                 | 考試價格：
-                ul(class="pl-4")
+                ul(class="magazine-info-list")
                   li 一般：$ 38 美金， 約 $ 1,205 新台幣
                   li 加寫作 $ 54.5 美金，約 $ 1,728 新台幣
                   li 國際要加 $ 40 美金，約 $ 2,996 新台幣
               li 成績核發時間：選擇題部分約兩週、寫作部分約三週
               li
                 | 考試方式：
-                ul(class="pl-4")
+                ul(class="magazine-info-list")
                   li 英文（45 分鐘）：修正文法錯誤
                   li 數學（60 分鐘）
                   li 閱讀（35 分鐘）：文章理解、單字
@@ -265,30 +269,30 @@ div(class="container magazine")
               li 考試特色：題目較多，每題作答時間較短
             div(class="youtube-rwd-container")
               iframe(width="560" height="315" src="//youtube.com/embed/RupuPQv-t5I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="true")
-          div(class="mb-4")
+          div(class="mb-5")
             = link_to 'https://collegereadiness.collegeboard.org/sat' do
               = image_tag 'https://i2.wp.com/ioh.tw/assets/icon-sat.png', class: 'img-fluid'
-            h4(class="magazine-info-title") SAT
+            h4(id="sat" class="magazine-info-title") SAT
             p SAT 是許多美國高中生選擇的升學考試。和台灣升學考試不同的是，SAT 考驗的是學生的思考、理解能力等，而並非課本中的內容與知識。SAT 的科目分為閱讀、寫作以及數學。特色是單字較平常用語更困難一些，可能需要特別準備。
-            ul(class="magazine-info-list")
+            ul(class="magazine-info-list list-unstyled")
               li 考試日期：學期當中，一年七次
               li 考試導向：並非要考取專業知識能力，而是基本的閱讀、數學、寫作能力
               li
                 | 考試價格：
-                ul(class="pl-4")
+                ul(class="magazine-info-list")
                   li 美國國內：$ 52.5 美金，約 $ 1,665 新台幣
                   li 國際：$ 101.5 美金，約 $ 3,218 新台幣
               li 成績核發時間：大約 28 天
               li
                 | 考試方式：
-                ul(class="pl-4")
+                ul(class="magazine-info-list")
                   li 閱讀（Reading）包含 24 題（作答時間為 25 分鐘）、19 題（作答時間為 20 分鐘）一套題
                   li 寫作（Writing）包含 35 題 （作答時間為 25 分鐘）與 14 題（作答時間為 10 分鐘），共兩套題
                   li 數學（Math）包含 18 題（作答時間為 25 分鐘）、 20 題（作答時間為 25 分鐘）與 16 題（作答時間為 20 分鐘），共三套題
                   li 作文（Essay）為 25 分鐘
               li
                 | 評分方式：
-                ul(class="pl-4")
+                ul(class="magazine-info-list")
                   li 閱讀加寫作：200 ~ 800
                   li 數學：200 ~ 800
                   li 作文：2 ~ 8
@@ -297,10 +301,10 @@ div(class="container magazine")
                 iframe(width="560" height="315" src="//youtube.com/embed/UfqoFAsuNko" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="true")
               div(class="youtube-rwd-container")
                 iframe(width="560" height="315" src="//youtube.com/embed/-MxeuJ3gz0A" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="true")
-          div(class="mb-4")
-            h4(class="magazine-info-title") SAT Subject Test
+          div(class="mb-5")
+            h4(id="sat-subject-test" class="magazine-info-title") SAT Subject Test
             p SAT Subject Test 是依據每個學生強項所選擇的科目考試，概念有點類似台灣的指定考試。SAT Subject Test 依學校要求是非必要的，但學生可以考試顯示出自己在某個科目的能力。每個學生通常最多選擇三個科目考試。
-            ul(class="magazine-info-list")
+            ul(class="magazine-info-list list-unstyled")
               li 考試日期：學期當中，一年七次
               li 考試導向：考驗專業知識能力，共有 20 個科目
               li 考試價格：
@@ -309,9 +313,9 @@ div(class="container magazine")
               li 成績核發時間：大約 28 天
               li 考試方式：每科考試一小時
               li 評分方式：各科皆是 200~800 分
-          div(class="magazine-info-keywords")
+          div(class="magazine-info-keywords my-5")
             h4(class="magazine-info-title mb-3") 可查詢關鍵字
-            ul(class="magazine-info-list mb-0")
+            ul(class="magazine-info-list list-unstyled mb-0")
               li 托福：TOEFL
               li SAT：SAT
               li SAT Subject test：SAT Subject test
@@ -319,17 +323,17 @@ div(class="container magazine")
 
   section
     div(class="row")
-      div(class="col-12 col-md-3")
+      div(class="col-md-3 mb-5 mb-md-0")
         div(class="magazine-menu")
           div(class="magazine-menu-page-number mb-4") 04
-          div(class="magazine-menu-page-title mb-4") Schedule
-          ul(class="magazine-menu-page-subtitle-list list-unstyled mb-5")
-            li = link_to 'Timeline', '#timeline'
-            li = link_to 'Finanace', '#finance'
-            li = link_to 'Application System', '#application-system'
-      div(class="col-12 col-md-9")
+          div(class="magazine-menu-title mb-4") Schedule
+          ul(class="magazine-menu-list list-unstyled mb-5")
+            li = link_to 'Timeline', '#timeline', 'data-turbolinks': false
+            li = link_to 'Finanace', '#finance', 'data-turbolinks': false
+            li = link_to 'Application System', '#application-system', 'data-turbolinks': false
+      div(class="col-md-9")
         div(class="magazine-info")
-          div(class="timeline" id="timeline")
+          div(id="timeline" class="timeline mb-5" )
             div(class="timeline-body")
               - @usa_apply_schedules.each_with_index do |schedule, index|
                 / If no content add `timeline-block-empty`
@@ -351,25 +355,24 @@ div(class="container magazine")
                     - if schedule[:is_support_read_more]
                       div(class="time-block-body-actions")
                         label(for="#{Date::ABBR_MONTHNAMES[schedule[:month]].downcase}-#{index}") Read More
-          div(id="finance")
-            div(class="magazine-info-title") Finance
-            div(class="magazine-info-subtitle") 獎學金（Scholarships）
+          div(id="finance" class="mb-5")
+            h4(class="magazine-info-title mb-3") Finance
+            h5(class="magazine-info-subtitle mb-3") 獎學金（Scholarships）
             p 獎學金分成校內與校外的兩種。校內獎學金有些在申請過程中即可開始申請，建議申請該學校時可以一併研究該校的獎學金制度。有些校內獎學金制度會搭配校內的特殊課程。校外的獎學金一般分成公家機關或者私人機構兩種來源。
-            div(class="magazine-info-subtitle") 經濟資助（Financial Aid）
+            h5(class="magazine-info-subtitle mb-3") 經濟資助（Financial Aid）
             p
-              經濟資助因不同學校而異。在這方面，私立學校一般會比公立學校來得大方。通常在申請學校時，可以在申請系統裡提出要申請經濟資助。有些學校會有自己的經濟資助的申請平台，有超過 300 所學校則在
+              | 經濟資助因不同學校而異。在這方面，私立學校一般會比公立學校來得大方。通常在申請學校時，可以在申請系統裡提出要申請經濟資助。有些學校會有自己的經濟資助的申請平台，有超過 300 所學校則在
               a(class="magazine-info-btn mx-1 d-inline-block" href="#") CSS / Financial aid PROFILE
               | 可以申請。
-            div(class="magazine-info-subtitle") 在校內工讀（Work）
+            h5(class="magazine-info-subtitle mb-3") 在校內工讀（Work）
             p 國際學生持學生簽證是無法在校外工作的，但校內會提供工讀機會。但每間學校規定不同，建議在申請大學時可以研究一下各校工讀機會與規定。
-            div(class="magazine-info-subtitle") 學生貸款（Student Loans）
+            h5(class="magazine-info-subtitle mb-3") 學生貸款（Student Loans）
             p
               | 需要一位美國籍的聯合簽署人。 iefa :
               a(class="magazine-info-btn mx-1 d-inline-block" href="#") International Student Loan
               a(class="magazine-info-btn mx-1 d-inline-block" href="#") International Student Loans
-
-          div(id="application_system" class="mt-5")
-            div(class="magazine-info-title") Application System
+          div(id="application-system" class="mb-5")
+            h4(class="magazine-info-title mb-3") Application System
             a(class="magazine-info-btn mx-1 my-3 d-inline-block" href="#") The Common Application
             p 此平台上面有將近 700 所美國、加拿大等地的大學（美國為主）。透過此平台可填寫申請資料，提交各校申請所需要撰寫的文章，同時上傳學校成績單和推薦信。以下介紹申請方法：
             ul(class="simple-timeline")
@@ -383,37 +386,40 @@ div(class="container magazine")
               li 付款、送出申請
             a(class="magazine-info-btn mx-1 my-3 d-inline-block" href="#") My UC Application
             p 10 所 UC （加州大學）的申請表為同一份，每一間申請費為 60 塊美金。此系統不需要預先上傳成績單，只要填寫表單回報成績，但是錄取後會再要求寄送成績單驗證。另外此系統一般而言是不需要推薦信的，但某些學校會個別要求提供。
-            div(class="magazine-info-subtitle") 獨立系統
+            h5(class="magazine-info-subtitle mb-3") 獨立系統
             p 可以到各個學校的網站做線上申請，每個學校都有各自的線上申請系統。
+          div(class="magazine-info-keywords my-5" style="background-color: #dbdcdc;")
+            h4(class="magazine-info-title mb-3") 可查詢關鍵字
+            = link_to 'College application checklist', 'https://www.khanacademy.org/college-careers-more/college-admissions/applying-to-college/college-application-process/a/college-application-checklist', target: '_blank', class: 'd-inline-block magazine-info-btn mr-1 mb-1'
 
   section(class="bg-gray-400")
     div(class="row")
       div(class="col-md-3")
         div(class="magazine-menu")
           div(class="magazine-menu-page-number mb-4") 05
-          div(class="magazine-menu-page-title mb-4") Preparation
-          ul(class="magazine-menu-page-subtitle-list list-unstyled mb-5")
-            li = link_to 'Visa', '#visa'
-            li = link_to 'Health Care', '#health-care'
-            li = link_to 'Airplane', '#airplane'
-            li = link_to 'Military Service', '#military-service'
-            li = link_to 'Malls', '#malls'
-            li = link_to 'Mobile Services', '#mobile-service'
+          div(class="magazine-menu-title mb-4") Preparation
+          ul(class="magazine-menu-list list-unstyled mb-5")
+            li = link_to 'Visa', '#visa', 'data-turbolinks': false
+            li = link_to 'Health Care', '#health-care', 'data-turbolinks': false
+            li = link_to 'Airplane', '#airplane', 'data-turbolinks': false
+            li = link_to 'Military Service', '#military-service', 'data-turbolinks': false
+            li = link_to 'Malls', '#malls', 'data-turbolinks': false
+            li = link_to 'Mobile Services', '#mobile-service', 'data-turbolinks': false
       div(class="col-md-9")
         div(class="magazine-info mb-4")
-          div(class="mb-4")
-            h4(class="magazine-info-title") Visa
-            h5(class="magazine-info-subtitle") 簽證介紹
+          div(class="mb-5")
+            h4(id="visa" class="magazine-info-title mb-3") Visa
+            h5(class="magazine-info-subtitle mb-3") 簽證介紹
             p 一般學生前往美國就讀會申請 F - 1 學生簽證。 F - 1 學生簽證效期為五年。持有該學生簽證只能在下列條件下工作：校內工作、為獎學金的工作。
 
-            h5(class="magazine-info-subtitle") 簽證費用
+            h5(class="magazine-info-subtitle mb-3") 簽證費用
             p $ 160 美金，約 $ 5,078 新台幣
 
-            h5(class="magazine-info-subtitle") 簽證地點
+            h5(class="magazine-info-subtitle mb-3") 簽證地點
             p 線上填寫資料後需要前往 AIT 美國在台協會面談
 
-            h5(class="magazine-info-subtitle") 簽證所需文件
-            ul(class="pl-4")
+            h5(class="magazine-info-subtitle mb-3") 簽證所需文件
+            ul(class="magazine-info-list")
               li 護照（目前護照及所有舊護照)
               li 照片（5 cm x 5 cm）
               li 學校機構透過 SEVIS 系統製發的 I - 20 表（若學生未滿 18 歲，父母或法定監護人也必須在 I - 20 簽名）
@@ -421,7 +427,7 @@ div(class="container magazine")
               li 財力證明：證明你或你的資助人有足夠的經費支付你就讀期間所需的學費及生活費
               li 固定住所證明：證明在美國以外有一個固定住所，並且無意放棄該住所，同時要能證明會在學業結束後離開美國
 
-            h5(class="magazine-info-subtitle") 簽證申請流程
+            h5(class="magazine-info-subtitle mb-3") 簽證申請流程
             ul(class="simple-timeline")
               li 選擇簽證種類
               li 線上填寫 DS - 160 表格：透過線上系統填寫個人資料
@@ -433,12 +439,13 @@ div(class="container magazine")
               = link_to '美國在台協會 學生簽證', 'https://www.ait.org.tw/zh/student-visa-applicants.html', target: '_blank', class: 'd-inline-block magazine-info-btn mr-1 mb-1'
               = link_to '申請美國學生簽證介紹', 'http://www.ustraveldocs.com/tw_zh/tw-niv-typefandm.asp', target: '_blank', class: 'd-inline-block magazine-info-btn mr-1 mb-1'
               = link_to '美國國務院學生簽證介紹（英文）', 'https://travel.state.gov/content/visas/en/study-exchange/student.html', target: '_blank', class: 'd-inline-block magazine-info-btn mr-1 mb-1'
-
-            h4(class="magazine-info-title") Health Care
+          div(class="mb-5")
+            h4(id="health-care" class="magazine-info-title mb-3") Health Care
             p 一般會跟著學校買保險，因此每個學校可能會互相有一些不同，建議可以先查詢各校的 Student Health Insurance。
 
-            h4(class="magazine-info-title") Airplane
-            ul(class="list-unstyled")
+          div(class="mb-5")
+            h4(id="airplane" class="magazine-info-title mb-3") Airplane
+            ul(class="magazine-info-list list-unstyled")
               li(class="d-flex align-items-center mb-3")
                 div(class="pr-3 mr-1")
                   = image_tag 'https://i2.wp.com/ioh.tw/assets/icon-skyscanner.png', width: 45
@@ -453,13 +460,15 @@ div(class="container magazine")
                   p(class="font-weight-bold mb-0") Sta Travel
                   p(class="mb-0") 提供許多學生優惠
 
-            h4(class="magazine-info-title") Military Service
+          div(class="mb-5")
+            h4(id="military-service" class="magazine-info-title mb-3") Military Service
             p
               | 可查詢
               = link_to '役男出境辦法', 'https://www.immigration.gov.tw/ct_cert.asp?xItem=1088317&ctNode=32594', target: '_blank', class: 'magazine-info-btn mx-1'
             p 役齡前指 18 歲當年 12 月 31 日以前。達到役齡後出國讀書者，得檢附經驗證之在學證明，及護照正本向內政部移民署各縣市服務站申請再出國；其在國內停留期間，每次不得逾三個月。就讀最高年齡如下，高中以上大學以下學歷至 24 歲，研究所碩士班至 27 歲，博士班至 30 歲，均計算至當年 12 月 31 日止。其順延博士班就讀最高年齡，以 33 歲為限，以上均計算至當年 12 月 31 日止。
 
-            h4(class="magazine-info-title") Malls
+          div(class="mb-5")
+            h4(id="malls" class="magazine-info-title mb-3") Malls
             p 超市、賣場：超市、賣場是在國外生活不可或缺的一環，以下介紹兩間美國常見的商場以及一間較具規模的連鎖華人超市。
             ul(class="list-unstyled")
               li(class="d-flex align-items-center mb-3")
@@ -483,7 +492,8 @@ div(class="container magazine")
                   p(class="font-weight-bold mb-0") 大華 99 超市
                   p(class="mb-0") 在大華 99 超級市場可以找到各種亞洲食材，包含很多台灣的食品都可以在這裡找到。這裡也有熟食區販賣亞洲料理。營運據點主要在東西岸與德州等亞洲人較多的社區
 
-            h4(class="magazine-info-title") Mobile Services
+          div(class="mb-5")
+            h4(id="mobile-service" class="magazine-info-title mb-3") Mobile Services
             ul(class="list-unstyled")
               li(class="d-flex align-items-center mb-3")
                 div(class="pr-3 mr-1")
@@ -506,7 +516,7 @@ div(class="container magazine")
                   p(class="font-weight-bold mb-0") AT&T
                   p(class="mb-0") 覆蓋率居次、但訊號好，缺點是費率稍微高一些
 
-            div(class="magazine-info-keywords")
+            div(class="magazine-info-keywords my-5")
               h4(class="magazine-info-title mb-3") 可查詢關鍵字
-              ul(class="magazine-info-list mb-0")
+              ul(class="magazine-info-list list-unstyled mb-0")
                 li 簽證 -- Student Visa of USA

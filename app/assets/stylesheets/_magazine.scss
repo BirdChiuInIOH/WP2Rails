@@ -41,11 +41,11 @@ $magazine-minor: #e50012;
       font-size: 6rem;
     }
 
-    .magazine-menu-page-title {
+    .magazine-menu-title {
       font-size: 2rem;
     }
 
-    .magazine-menu-page-subtitle-list {
+    .magazine-menu-list {
       font-size: 13px;
       padding-left: 0;
       list-style: none;
@@ -91,9 +91,14 @@ $magazine-minor: #e50012;
     }
 
     .magazine-info-list {
-      line-height: 2;
-      padding-left: 0;
-      list-style: none;
+      line-height: 1.5;
+      padding-left: 1.5rem;
+
+      &.list-unstyled {
+        line-height: 2;
+        padding-left: 0;
+        list-style: none;
+      }
 
       li ul {
         list-style-type: disc;

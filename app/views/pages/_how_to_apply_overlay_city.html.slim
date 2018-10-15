@@ -1,5 +1,5 @@
 - usa_cities.each do |city|
-  div(class="overlay-container" data-city="#{city[:name]}" style="display: none;")
+  div(class="overlay-container" data-city="#{city[:name]}" style="display: none; cursor: default;")
     = image_tag city[:image_url], class: 'img-fluid'
     div(class="overlay overlay-city text-right")
       div(class="overlay-city-title") = city[:name]
