@@ -354,7 +354,9 @@ div(class="container magazine")
                       = schedule[:content]&.html_safe
                     - if schedule[:is_support_read_more]
                       div(class="time-block-body-actions")
-                        label(for="#{Date::ABBR_MONTHNAMES[schedule[:month]].downcase}-#{index}") Read More
+                        label(for="#{Date::ABBR_MONTHNAMES[schedule[:month]].downcase}-#{index}" class="timeline-label-toggle")
+                          span(class="label-open") Close
+                          span(class="label-close") Read More
           div(id="finance" class="mb-5")
             h4(class="magazine-info-title mb-3") Finance
             h5(class="magazine-info-subtitle mb-3") 獎學金（Scholarships）

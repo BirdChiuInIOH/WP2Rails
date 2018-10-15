@@ -156,6 +156,15 @@ $content-height: 120px;
       }
     }
 
+    .timeline-label-toggle {
+      .label-open {
+        display: none;
+      }
+      .label-close {
+        display: inline;
+      }
+    }
+
     .timeline-toggler {
       display: none;
 
@@ -165,6 +174,15 @@ $content-height: 120px;
             max-height: 999px;
           }
           max-height: 999px;
+
+          .timeline-label-toggle {
+            .label-open {
+              display: inline;
+            }
+            .label-close {
+              display: none;
+            }
+          }
         }
 
         &~ .timeline-point {
