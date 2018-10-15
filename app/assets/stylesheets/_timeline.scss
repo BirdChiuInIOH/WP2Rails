@@ -19,6 +19,34 @@ $content-height: 120px;
     background-color: $timeline-main-color;
   }
 
+  @include media-breakpoint-down(md) {
+    &:before {
+      left: 0;
+    }
+
+    .timeline-block {
+      flex-direction: column;
+      align-items: flex-end;
+
+      .timeline-point {
+        left: -9px !important;
+      }
+
+      &:after {
+        display: none;
+      }
+
+      .timeline-block-head {
+        order: 1 !important;
+      }
+
+      .timeline-block-body {
+        order: 2 !important;
+      }
+
+    }
+  }
+
   .timeline-block {
     position: relative;
     margin-bottom: 15px;
