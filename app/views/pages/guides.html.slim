@@ -3,12 +3,13 @@ div(class="container")
     div(class="col-12")
       p(class="my-3 font-weight-bold text-center" style="font-size: 25px; color: #434242;") 「升大學全攻略」
     div(class="col-12 justify-content-center d-flex")
-      = image_tag 'https://ioh.tw/assets/ioh_logo.png', class: 'img-fluid img-thumbnail'
-    div(class="col-12 d-block" style="background-color: #ffffff")
-      p 為 IOH 高中生升學統整專區，範圍從學測、指考以及備審面試的學長姐準備文章，
-      p 到大學教授升學經驗談，以及全台校系經驗分享。
+      = image_tag 'by_guides.png', class: 'img-fluid'
+    div(class="col-12 d-block text-center bg-white" style="font-size: 12px;line-height: 2;")
+      p(class="m-0") 為 IOH 高中生升學統整專區，
+      p(class="m-0") 範圍從學測、指考以及備審面試的學長姐準備文章，
+      p(class="m-0") 到大學教授升學經驗談，以及全台校系經驗分享。
     div(class="col-12")
-      nav(class="nav nav-justified nav-pills-ioh d-md-none my-10px")
+      nav(class="nav nav-justified nav-pills-ioh d-md-none my-4")
         li(class="nav-item") = link_to '考試準備', '#', class: 'nav-link border-mobile'
         li(class="nav-item") = link_to '備審面試', '#', class: 'nav-link border-mobile'
         li(class="nav-item") = link_to '教授分享', '#', class: 'nav-link border-mobile'
@@ -31,4 +32,4 @@ div(class="container")
       = link_to '#' do
         = image_tag 'https://storage.googleapis.com/ioh-assets//考試準備連結banner170206LH-10-300x300.png', class: 'img-fluid'
 
-  = render 'shared/lecturers'
+    = render 'shared/lecturers'

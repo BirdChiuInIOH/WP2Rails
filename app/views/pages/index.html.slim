@@ -32,6 +32,33 @@ div(class="container")
                 li = link_to talk[:education], talk[:education_url], class: 'link-major-inverse'
                 li = link_to talk[:major], talk[:major_url], class: 'link-major-inverse'
 
+  p(class="font-weight-bold d-md-none mb-2 text-center" style="color: #434242;") 精選文章
+  - @news.first(1).each do |news|
+    div(class="row no-gutters d-md-none block-index-featured-article")
+      div(class="col-12")
+        div(class="bg-white")
+          = link_to '#' do
+            = image_tag news[:img_url], class: 'img-fluid'
+          div
+            ul(class="list-unstyled p-2")
+              li 近年有越來越多台灣高中生選擇赴香港就讀大學，
+              li(class="mb-3") 然而，許多人是在不了解真正清楚現況就貿然做了決定。
+              li 若你正有著赴港求學的想法，這篇文章正好能提供你一些基礎知識...
+
+  - @news.first(2).each do |news|
+    div(class="row no-gutters d-md-none mb-3 block-index-list-article")
+      div(class="col-6")
+        = link_to '#' do
+          = image_tag news[:img_url], class: 'img-fluid'
+      div(class="col-6")
+        div(class="bg-white h-100")
+          ul(class="list-unstyled p-2 m-0")
+              li = news[:title]
+
+  div(class="block-index-more-news text-right")
+    = link_to '更多文章+', '#'
+  // mobile
+
   h5(class="my-4 font-weight-bold d-none d-md-block") 推薦講座
   - @talks.in_groups_of(4, false) do |group|
     div(class="row d-none d-md-flex")

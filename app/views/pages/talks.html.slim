@@ -1,6 +1,7 @@
 div(class="container my-3")
   div(class="row")
     div(class="col-md-3 nav-talks d-md-none")
+      = render 'shared/banners'
       form(data-target="talks-filter")
         ul(class="nav flex-column")
           - @talks_filter&.each do |filter_titles|
@@ -64,18 +65,18 @@ div(class="container my-3")
         button(class="btn btn-sm btn-outline-secondary" type="reset" data-reset="talks-filter" style="min-width: 70px;") Reset
     
     div(class="col-md-9 d-md-none ")
-      p(class="font-weight-bold d-md-none mb-2 text-center" style="color: #434242;") IOH 編輯團隊推薦
       - @talks.in_groups_of(3, false) do |group|
-        div(class="row my-4")
+        div(class="row no-gutters d-md-none my-4")
           - group.each do |talk|
-            div(class="col-4 px-0 bg-mobile")
-              = link_to '#' do
-                = image_tag talk[:avatar_url], class: 'img-fluid',  style: "border-top: 2px solid #ca2026"
-              div
-                ul(class="list-inline d-inline m-0")
-                  li = link_to talk[:name], talk[:url]
-                  li = link_to talk[:education], talk[:education_url]
-                  li = link_to talk[:major], talk[:major_url]
+            div(class="col-4")
+              div(class="h-100 mx-1 bg-white block-index-teammember")
+                = link_to '#' do
+                  = image_tag talk[:avatar_url], class: 'img-fluid'
+                div
+                  ul(class="list-unstyled p-2")
+                    li = link_to talk[:name], talk[:url], class: 'link-major-inverse'
+                    li = link_to talk[:education], talk[:education_url], class: 'link-major-inverse'
+                    li = link_to talk[:major], talk[:major_url], class: 'link-major-inverse'
 
     div(class="col-md-9 d-none d-md-block")
       = render 'shared/banners'

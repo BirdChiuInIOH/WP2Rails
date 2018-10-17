@@ -9,3 +9,33 @@
     }
   }
 }
+
+.block-index-featured-article {
+  li {
+    font-size: 10px;
+    line-height: 1.2;
+    color: #625e61;
+    font-weight: bold;
+  }
+}
+
+.block-index-list-article {
+  img {
+    min-height: 97px;
+  }
+
+  li {
+    font-size: 12px;
+    line-height: 1.7;
+    color: #625e61;
+    font-weight: bold;
+  }
+}
+
+.block-index-more-news {
+  a {
+    font-size: 12px;
+    color: #95989a;
+    font-weight: bold;
+  }
+}

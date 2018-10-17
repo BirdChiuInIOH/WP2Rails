@@ -7,6 +7,7 @@ class PagesController < ApplicationController
 
     # https://ioh.tw/
     def index
+      @news = load_news
     end
 
     # https://ioh.tw/talks/)
