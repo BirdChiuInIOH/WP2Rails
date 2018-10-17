@@ -6,4 +6,42 @@ footer {
     padding: 0;
     list-style: none;
   }
+
+  @include media-breakpoint-down(md) {
+    margin: 0;
+    padding: 0;
+
+    .container {
+      padding: 0;
+    }
+
+    .footer-mobile {
+      text-align: center;
+      color: #525252;
+      margin-bottom: 60px;
+
+      .logo-mobile {
+        display: flex;
+        width: 90px;
+        height: 90px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: #ffffff;
+      }
+
+      img {
+        width: 70px;
+        height: 52px;
+        background-color: #ffffff;
+        display: flex;
+      }
+
+      p {
+        font-weight: bold;
+        line-height: 17px;
+        margin-bottom: 10px;
+      }
+    }
+  }
 }

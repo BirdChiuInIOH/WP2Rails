@@ -1,0 +1,7 @@
+.carousel-mobile {
+  @include media-breakpoint-down(md) {
+    .container {
+      padding: 0;
+    }
+  }
+}

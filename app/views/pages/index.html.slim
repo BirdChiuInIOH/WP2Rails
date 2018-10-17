@@ -1,20 +1,40 @@
+= render 'shared/carousel'
 div(class="container")
-  = render 'shared/carousel'
-  h3(class="text-center font-weight-bold" style="color: #c33838;") 由下方選擇瀏覽方式
+  h3(class="text-center font-weight-bold d-md-none" style="color: #ca2026;font-size: 16px;") 立即選擇你的探索方式 !
+  h3(class="text-center font-weight-bold d-none d-md-block" style="color: #c33838;") 由下方選擇瀏覽方式
 
-  nav(class="nav nav-justified nav-pills-ioh flex-column flex-sm-row my-40px")
-    = link_to '工作講座總覽', '#', class: 'text-sm-center nav-item nav-link nav-pills-item'
-    = link_to '全台校系總覽', '#', class: 'text-sm-center nav-item nav-link nav-pills-item-active'
-    = link_to '領域瀏覽', '#', class: 'text-sm-center nav-item nav-link nav-pills-item'
-    = link_to '學校瀏覽', '#', class: 'text-sm-center nav-item nav-link nav-pills-item'
+  nav(class="nav nav-justified nav-pills-ioh d-md-none my-10px")
+    li(class="nav-item") = link_to '工作職涯', '#', class: 'nav-link border-mobile'
+    li(class="nav-item") = link_to '全台校系', '#', class: 'nav-link border-mobile'
+    li(class="nav-item") = link_to '學群領域', '#', class: 'nav-link border-mobile'
+    li(class="nav-item") = link_to '精選文章', '#', class: 'nav-link border-mobile'
+
+  nav(class="nav nav-justified nav-pills-ioh flex-column flex-sm-row my-40px d-none d-md-flex")
+    li(class="nav-item") = link_to '工作講座總覽', '#', class: 'nav-link nav-pills-item'
+    li(class="nav-item") = link_to '全台校系總覽', '#', class: 'nav-link nav-pills-item-active'
+    li(class="nav-item") = link_to '領域瀏覽', '#', class: 'nav-link nav-pills-item'
+    li(class="nav-item") = link_to '學校瀏覽', '#', class: 'nav-link nav-pills-item'
 
   hr
 
-  h5(class="my-4 font-weight-bold") 推薦講座
-  - @talks.in_groups_of(4, false) do |group|
-    div(class="row")
+  p(class="font-weight-bold d-md-none mb-2 text-center" style="color: #434242;") IOH 編輯團隊推薦
+  - @talks.in_groups_of(3, false) do |group|
+    div(class="row d-md-none my-4")
       - group.each do |talk|
-        div(class="col-md-3 col-12")
+        div(class="col-4 px-0 bg-mobile")
+          = link_to '#' do
+            = image_tag talk[:avatar_url], class: 'img-fluid',  style: "border-top: 2px solid #ca2026"
+          div
+            ul(class="list-inline d-inline m-0")
+              li = link_to talk[:name], talk[:url]
+              li = link_to talk[:education], talk[:education_url]
+              li = link_to talk[:major], talk[:major_url]
+  
+  h5(class="my-4 font-weight-bold d-none d-md-block") 推薦講座
+  - @talks.in_groups_of(4, false) do |group|
+    div(class="row d-none d-md-flex")
+      - group.each do |talk|
+        div(class="col-md-3")
           = link_to '#' do
             = image_tag talk[:avatar_url], class: 'img-fluid'
           h4(class="head-danger") = link_to talk[:name], talk[:url]

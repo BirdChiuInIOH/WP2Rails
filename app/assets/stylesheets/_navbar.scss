@@ -44,6 +44,28 @@
     .navbar-toggler-icon {
       padding-top: 0;
     }
+
+    .modal-body {
+      .close {
+        font-size: 40px;
+        color: #ca2026;
+        font-weight: 100;
+        opacity: unset;
+      }
+    }
+
+    .nav-item-head {
+      font-size: 20px;
+      color: #ca2026;
+      font-weight: bold;
+    }
+
+    .nav-item-footer {
+      font-style: 14px;
+      color: #525252;
+      font-weight: bold;
+      line-height: normal;
+    }
   }// /mobile
 }
 
@@ -140,6 +162,14 @@
       color: #cf0007;
       padding-left: 0;
       padding-bottom: 0;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 18px;
+        color: #434242;
+        font-weight: bold;
+        padding: 0 10px;
+        line-height: 34px;
+      }
     }
 
     // Triangle
