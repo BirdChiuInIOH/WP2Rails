@@ -50,9 +50,9 @@
 * [x] [講座內頁/關於講者](https://ioh.tw/talks/香港教育大學英語教育系-彭于榛-barbie-peng-ov-study-bde-hk/)
 * [x] [升大學全攻略](https://ioh.tw/升大學全攻略/)
 * [x] [最新文章列表/消息](https://ioh.tw/news/)
-* [x]] [專欄內頁](https://ioh.tw/ioharticles-香港讀大學-申請香港的大學/)
+* [x] [專欄內頁](https://ioh.tw/ioharticles-香港讀大學-申請香港的大學/)
 * [x] [港澳僑外陸生專區](https://ioh.tw/overseas1/)
-* [ ] [美國升學指南/海外留學-海外各校系總攬](https://ioh.tw/howtoapply-usa/)
+* [x] [美國升學指南/海外留學-海外各校系總攬](https://ioh.tw/howtoapply-usa/)
 
 ### Sabis
 

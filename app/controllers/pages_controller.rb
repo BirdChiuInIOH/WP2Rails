@@ -27,7 +27,7 @@ class PagesController < ApplicationController
       @usa_cities = load_how_to_apply[:usa][:country_map]
     end
 
-    # https://ioh.tw/升大學全攻略/
+    # https://ioh.tw/overseas1
     def overseas
     end
 
@@ -85,36 +85,6 @@ class PagesController < ApplicationController
 
       # 依照地區瀏覽
       @areas = ['台北', '新北', '桃園', '新竹苗栗', '台中南投', '彰化雲嘉', '台南', '高屏', '基宜花東', '外島']
-      # @taipei_schools = @schools.select{|school| school[:area] == '台北'}.map do |school|
-      #   school.merge(id: SecureRandom.uuid)
-      # end
-      # @new_taipei_schools = @schools.select{|school| school[:area] == '新北'}.map do |school|
-      #   school.merge(id: SecureRandom.uuid)
-      # end
-      # @taoyuan_taipei_schools = @schools.select{|school| school[:area] == '桃園'}.map do |school|
-      #   school.merge(id: SecureRandom.uuid)
-      # end
-      # @xinzu_miaoli_schools = @schools.select{|school| school[:area] == '新竹苗栗'}.map do |school|
-      #   school.merge(id: SecureRandom.uuid)
-      # end
-      # @taizhong_nanto_schools = @schools.select{|school| school[:area] == '台中南投'}.map do |school|
-      #   school.merge(id: SecureRandom.uuid)
-      # end
-      # @zhanghua_yunjia_schools = @schools.select{|school| school[:area] == '彰化雲嘉'}.map do |school|
-      #   school.merge(id: SecureRandom.uuid)
-      # end
-      # @tainan_schools = @schools.select{|school| school[:area] == '台南'}.map do |school|
-      #   school.merge(id: SecureRandom.uuid)
-      # end
-      # @gaopin_schools = @schools.select{|school| school[:area] == '高屏'}.map do |school|
-      #   school.merge(id: SecureRandom.uuid)
-      # end
-      # @jilong_huadong_schools = @schools.select{|school| school[:area] == '基宜花東'}.map do |school|
-      #   school.merge(id: SecureRandom.uuid)
-      # end
-      # @other_schools = @schools.select{|school| school[:area] == '外島'}.map do |school|
-      #   school.merge(id: SecureRandom.uuid)
-      # end
     end
 
     # https://ioh.tw/%E5%AA%92%E9%AB%94%E5%A0%B1%E5%B0%8E/

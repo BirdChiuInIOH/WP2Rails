@@ -1,0 +1,23 @@
+.carousel-mobile {
+  .carousel-item {
+    max-width: 100%;
+    min-height: 210px;
+
+    img {
+      object-fit: cover;
+      object-position: 50% 50%;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .carousel-item {
+      img {
+        height: 200px;
+      }
+    }
+
+    .container {
+      padding: 0;
+    }
+  }
+}

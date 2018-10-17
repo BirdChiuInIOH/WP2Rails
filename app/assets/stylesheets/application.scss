@@ -14,6 +14,8 @@
 @import 'timeline';
 @import 'overlay';
 @import 'button';
+@import 'carousel';
+@import 'block/index';
 @import 'block/lecturers';
 @import 'block/teams';
 @import 'block/talks';
@@ -21,7 +23,6 @@
 @import 'block/sidebar_list';
 @import 'block/events';
 @import 'block/articles';
-@import 'block/carousel';
 
 html {
   font-size: 14px;
