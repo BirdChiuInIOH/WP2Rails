@@ -23,6 +23,14 @@
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
 }
 
+.bg-mobile-gray {
+  background-color: #434242;
+}
+
+.bg-mobile-red {
+  background-color: #ca2026;
+}
+
 
 /**
  * Link
@@ -111,6 +119,47 @@
   }
 }
 
+.btn-onoffswitch {
+  box-sizing: content-box;
+  background-color: #95989a;
+  color: white;
+  width: 80px;
+  font-weight: bold;
+  font-size: 12px;
+  border-color: transparent;
+  border-radius: 0;
+  border: 0;
+  padding: 4px 0;
+
+  &:active {
+    background-color: #ca2026;
+  }
+
+  &:hover {
+    background-color: #ca2026;
+  }
+}
+
+.btn-news-mobile {
+  box-sizing: content-box;
+  background-color: white;
+  color: #434242;
+  width: 83px;
+  height: 30px;
+  font-weight: bold;
+  border-radius: 0;
+  border: 1px solid #707070;
+  padding: 4px 0;
+}
+
+.btn-white-school-mobile {
+  box-sizing: content-box;
+  border: 1px solid #95989a;
+  background-color: white;
+  border-radius: 0;
+  color: #525252;
+}
+
 /**
  * head
  */
@@ -145,6 +194,20 @@
   font-weight: 700;
   align-items: center;
   min-width: 170px;
+
+  @include media-breakpoint-down(md) {
+    background-color: #ca2026;
+    display: inline-flex;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 0;
+    height: 28px;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    align-items: center;
+    min-width: 143px;
+  }
 }
 
 /**
@@ -231,6 +294,6 @@
  * border
  */
  .border-mobile {
-   border: 3px solid #ca2026;
+   border: 2px solid #625e61;
    background-color: #ffffff;
  }

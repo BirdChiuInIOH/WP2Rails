@@ -41,3 +41,19 @@
     }
   }
 }
+
+.nav-talk-show-list {
+  font-weight: bold;
+  font-size: 12px;
+  li {
+    border-right: 1px solid white;
+
+    &:last-child {
+      border: none;
+    }
+    a {
+      color: white;
+      padding: 3px;
+    }
+  }
+}

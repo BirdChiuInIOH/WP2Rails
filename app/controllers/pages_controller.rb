@@ -2,7 +2,7 @@ class PagesController < ApplicationController
     include DataLoader
 
     before_action :set_talks, only: [
-      :index, :talks, :talks_show, :overseas, :press, :events, :about, :how_to_apply_usa
+      :index, :talks, :talks_show, :talks_experience, :talks_how_to_apply, :overseas, :press, :events, :about, :how_to_apply_usa, :guides
     ]
 
     # https://ioh.tw/
@@ -17,6 +17,12 @@ class PagesController < ApplicationController
 
     # https://ioh.tw/talks/香港教育大學英語教育系-彭于榛-barbie-peng-ov-study-bde-hk/
     def talks_show
+    end
+
+    def talks_experience
+    end
+
+    def talks_how_to_apply
     end
 
     # https://ioh.tw/howtoapply-usa
@@ -35,6 +41,7 @@ class PagesController < ApplicationController
     # https://ioh.tw/升大學全攻略
     def guides
       @lecturers = load_lecturers
+      @news = load_news
     end
 
     # https://ioh.tw/升大學全攻略-考試準備-學測指南/?src=navigate_180921_1

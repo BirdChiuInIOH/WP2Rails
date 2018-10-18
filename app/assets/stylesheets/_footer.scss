@@ -20,6 +20,10 @@ footer {
       color: #525252;
       margin: 60px 0;
 
+      .block-footer-image {
+        position: relative;
+      }
+
       .logo-mobile {
         display: flex;
         width: 90px;
@@ -28,19 +32,37 @@ footer {
         align-items: center;
         border-radius: 50%;
         background-color: #ffffff;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 8px;
+
+        img {
+          width: 70px;
+          height: 52px;
+          background-color: #ffffff
+        }
       }
 
-      img {
-        width: 70px;
-        height: 52px;
-        background-color: #ffffff;
-        display: flex;
+      .block-footer-slogan {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        
+        p {
+          font-weight: bold;
+          color: white;
+          font-style: 16px;
+          text-align: center;
+          margin-bottom: 9px;
+        }
       }
 
-      p {
-        font-weight: bold;
-        line-height: 17px;
-        margin-bottom: 10px;
+      .block-footer-by {
+        font-size: 8px;
+        background-color: #ca2026;
+        color: white;
       }
     }
   }

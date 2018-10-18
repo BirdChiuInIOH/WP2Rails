@@ -1,9 +1,9 @@
 = render 'shared/carousel'
 div(class="container")
-  h3(class="text-center font-weight-bold d-md-none" style="color: #ca2026;font-size: 16px;") 立即選擇你的探索方式 !
+  h3(class="text-center font-weight-bold d-none" style="color: #ca2026;font-size: 16px;") 立即選擇你的探索方式 !
   h3(class="text-center font-weight-bold d-none d-md-block" style="color: #c33838;") 由下方選擇瀏覽方式
 
-  nav(class="nav nav-justified nav-pills-ioh d-md-none my-10px")
+  nav(class="nav nav-justified nav-pills-ioh d-none my-10px")
     li(class="nav-item") = link_to '工作職涯', '#', class: 'nav-link border-mobile'
     li(class="nav-item") = link_to '全台校系', '#', class: 'nav-link border-mobile'
     li(class="nav-item") = link_to '學群領域', '#', class: 'nav-link border-mobile'
@@ -15,24 +15,54 @@ div(class="container")
     li(class="nav-item") = link_to '領域瀏覽', '#', class: 'nav-link nav-pills-item'
     li(class="nav-item") = link_to '學校瀏覽', '#', class: 'nav-link nav-pills-item'
 
-  hr
-
   / Mobile only
-  p(class="font-weight-bold d-md-none mb-2 text-center" style="color: #434242;") IOH 編輯團隊推薦
-  - @talks.in_groups_of(3, false) do |group|
-    div(class="row no-gutters d-md-none my-4")
-      - group.each do |talk|
-        div(class="col-4")
-          div(class="h-100 mx-1 bg-white block-index-teammember")
-            = link_to '#' do
-              = image_tag talk[:avatar_url], class: 'img-fluid'
-            div
-              ul(class="list-unstyled p-2")
-                li = link_to talk[:name], talk[:url], class: 'link-major-inverse'
-                li = link_to talk[:education], talk[:education_url], class: 'link-major-inverse'
-                li = link_to talk[:major], talk[:major_url], class: 'link-major-inverse'
+  p(class="d-md-none my-30px block-index-header") Explore Your Future
+  - @talks.first(3).each do |talk|
+    div(class="row no-gutters d-md-none mb-3")
+      div(class="col-4")
+        div(class="block-index-teammember-photo")
+          = link_to '/talks/香港教育大學英語教育系-彭于榛-barbie-peng-ov-study-bde-hk' do
+            = image_tag talk[:avatar_url], class: 'img-fluid'
+      div(class='col-8')
+        div(class='block-index-teammember h-100')
+          p 每個人都不是最了解自己的人，透過相處、對話，你才會知道自
+          ul(class="list-unstyled m-0")
+            li
+              = link_to talk[:education], talk[:education_url]
+              = link_to talk[:major], talk[:major_url]
+            li = link_to talk[:name], talk[:url]
 
-  p(class="font-weight-bold d-md-none mb-2 text-center" style="color: #434242;") 精選文章
+  p(class="d-md-none my-30px block-index-header") 特色學校
+  div(class="block-index-feature-school d-md-none")
+    div(class="row no-gutters")
+      div(class="col-6 p-0")
+        = image_tag 'https://storage.googleapis.com/cw-com-tw/article/201805/article-5aee98be02bb0.jpg', class: 'w-100'
+        div(class="feature-school-header")
+          = link_to '國立台灣XX大學', '#'
+      div(class="col-6 p-0")
+        = image_tag 'https://storage.googleapis.com/cw-com-tw/article/201805/article-5aee98be02bb0.jpg', class: 'w-100'
+        div(class="feature-school-header")
+          = link_to '國立台灣XX大學', '#'
+    div(class="row no-gutters")
+      div(class="col-6 p-0")
+        = image_tag 'https://storage.googleapis.com/cw-com-tw/article/201805/article-5aee98be02bb0.jpg', class: 'w-100'
+        div(class="feature-school-header")
+          = link_to '國立台灣XX大學', '#'
+      div(class="col-6 p-0")
+        = image_tag 'https://storage.googleapis.com/cw-com-tw/article/201805/article-5aee98be02bb0.jpg', class: 'w-100'
+        div(class="feature-school-header")
+          = link_to '國立台灣XX大學', '#'
+    div(class="row no-gutters")
+      div(class="col-6 p-0")
+        = image_tag 'https://storage.googleapis.com/cw-com-tw/article/201805/article-5aee98be02bb0.jpg', class: 'w-100'
+        div(class="feature-school-header")
+          = link_to '國立台灣XX大學', '#'
+      div(class="col-6 p-0")
+        = image_tag 'https://storage.googleapis.com/cw-com-tw/article/201805/article-5aee98be02bb0.jpg', class: 'w-100'
+        div(class="feature-school-header")
+          = link_to '國立台灣XX大學', '#'
+
+  p(class="d-md-none my-30px block-index-header") Hot Topics
   - @news.first(1).each do |news|
     div(class="row no-gutters d-md-none block-index-featured-article")
       div(class="col-12")
@@ -45,7 +75,7 @@ div(class="container")
               li(class="mb-3") 然而，許多人是在不了解真正清楚現況就貿然做了決定。
               li 若你正有著赴港求學的想法，這篇文章正好能提供你一些基礎知識...
 
-  - @news.first(2).each do |news|
+  - @news.first(3).each do |news|
     div(class="row no-gutters d-md-none mb-3 block-index-list-article")
       div(class="col-6")
         = link_to '#' do
@@ -56,7 +86,7 @@ div(class="container")
               li = news[:title]
 
   div(class="block-index-more-news text-right")
-    = link_to '更多文章+', '#'
+    = link_to '更多文章>>', '#'
   // mobile
 
   h5(class="my-4 font-weight-bold d-none d-md-block") 推薦講座

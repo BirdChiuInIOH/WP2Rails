@@ -1,20 +1,15 @@
 footer
   div(class="container")
     div(class="footer-mobile d-md-none")
-      div(class="row no-gutters px-5 py-3 justify-content-center")
+      div(class="block-footer-image")
+        = image_tag 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDfM5K1IAAttZ8w3FDmGqMFaiQfhgTZP-KlJDY_3wC6QLopFEu', class: 'w-100 h-100'
         div(class="logo-mobile")
-          = link_to '#' do
-            = image_tag 'https://ioh.tw/assets/ioh_logo.png', class: 'img-fluid'
-      p "當每個人都說起故事，我們可以改變世界。"
-      div(class="col" style="font-size: 8px")
+          = image_tag 'https://ioh.tw/assets/ioh_logo.png', class: 'img-fluid'
+        div(class='block-footer-slogan')
+          p "當每個人都說起故事，我們可以改變世界。"
+      div(class="block-footer-by")
         | © 2018 IOH 開放個人經驗平台
 
-      
-      
-      
-      
-      
-      
     div(class="row no-gutters bg-lightgray px-5 py-4 d-none d-md-flex")
       div(class="col-12")
         div(class="row")

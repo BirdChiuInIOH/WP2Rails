@@ -1,0 +1,133 @@
+- title: 文章分類
+  value: article_sort
+  filter_items:
+  - title: America 美洲
+    value: america
+    filter_items:
+    - title: All American Universities 美洲所有大學
+      value: all_american_universities
+    - title: Academy of Art University (AAU) 舊金山藝術大學
+      value: AAU
+    - title: Boston University 波士頓大學
+      value: boston_university
+    - title: Brandeis University 布蘭迪斯大學
+      value: brandeis_university
+    - title: Carnegie Mellon University (CMU) 卡內基美隆大學
+      value: CMU
+    - title: College for Creative Studies 創意研究學院
+      value: college_for_creative_studies
+    - title: Columbia College Chicago 美國芝加哥哥倫比亞學院
+      value: columbia_college_chicago
+    - title: Cornell University 康乃爾大學
+      value: cornell_university
+    - title: Denver University 丹佛大學
+      value: denver_university
+    - title: DePaul University 帝博大學
+      value: depaul_university
+    - title: Draper University 崔普大學
+      value: draper_university
+    - title: Duke University 杜克大學
+      value: duke_university
+    - title: Georgia Institute of Technology 喬治亞理工學院
+      value: georgia_institute_of_technology
+    - title: Harvard University 哈佛大學
+      value: harvard_university
+    - title: Indiana University-Purdue University Indianapolis 印第安納大學與普渡大學印第安納波利斯聯合分校
+      value: indiana_university_purdue_university_indianapolis
+    - title: Massachusetts Institute of Technology (MIT) 麻省理工學院
+      value: MIT
+    - title: Memorial University of Newfoundland 紐芬蘭大學
+      value: memorial_university_of_newfoundland
+    - title: New York University (NYU) 紐約大學
+      value: NYU
+    - title: Northern Illinois University 北伊利諾大學
+      value: northern_illinois_university
+    - title: Northwestern University 西北大學
+      value: northwestern_university
+    - title: Parsons The New School of Design 帕森設計學院
+      value: parsons_the_new_school_of_design
+    - title: Pennsylvania State University 賓州州立大學
+      value: pennsylvania_state_university
+    - title: Princeton University 普林斯頓大學
+      value: princeton_university
+    - title: Rhode Island School of Design (RISD) 羅德島設計學院
+      value: RISD
+    - title: Santa Clara University 聖塔克拉拉大學
+      value: santa_clara_university
+    # ...
+  - title: Asia 亞洲
+    value: Asia
+    filter_items:
+    - title: All Asian Universities 亞洲所有大學
+      value: all_asian_university
+    - title: University of Malaya 馬來亞大學
+      value: university_of_malaya
+    - title: 中國西北農林科技大學
+      value: 中國西北農林科技大學
+    - title: 北京中醫藥大學
+      value: 北京中醫藥大學
+    - title: 日本早稻田大學
+      value: 日本早稻田大學
+    - title: 日本明治學院大學
+      value: 日本明治學院大學
+    - title: 日本東北大學
+      value: 日本東北大學
+    - title: 澳門大學
+      value: 澳門大學
+    - title: 華中師範大學
+      value: 華中師範大學
+    - title: 香港中文大學
+      value: 香港中文大學
+    - title: 香港城市大學
+      value: 香港城市大學
+    - title: 香港大學
+      value: 香港大學
+    - title: 香港教育大學
+      value: 香港教育大學
+    - title: 香港理工大學
+      value: 香港理工大學
+  - title: Europe 歐洲
+    value: Europe
+    filter_items:
+    - title: All European Universities 歐洲所有大學
+      value: all_european_universities
+    - title: BarcelonaTech 西班牙加泰隆尼亞理工大學
+      value: barcelonaTech
+    - title: Bournemouth University 伯恩茅斯大學
+      value: bournemouth_university
+    - title: Chemnitz University of Technology 德國開姆尼茨工業大學
+      value: chemnitz_university_of_technology
+    - title: Delft University of Technology 荷蘭台夫特科技大學
+      value: delft_university_of_technology
+  - title: Oceania 大洋洲
+    value: Oceania
+    filter_items:
+    - title: All Oceania Universities 大洋洲所有大學
+      value: all_oceania_universities
+    - title: The University of Newcastle 澳洲新堡大學
+      value: the_university_of_newcastle
+    - title: University of Tasmania 澳洲塔斯馬尼亞大學
+      value: university_of_tasmania
+  - title: Taiwan 臺灣
+    value: Taiwan
+    filter_items:
+    - title: All Taiwanese Universities 台灣所有大學
+      value: all_taiwanese_universities
+    - title: University Entrance Committee for Overseas Chinese Students 海外聯合招生委員會
+      value: university_entrance_committee_for_overseas_chinese_students
+    - title: 世新大學
+      value: 世新大學
+    - title: 中原大學
+      value: 中原大學
+    - title: 中國文化大學
+      value: 中國文化大學
+    - title: 中國科技大學
+      value: 中國科技大學
+    - title: 中國醫藥大學
+      value: 中國醫藥大學
+    - title: 中央大學
+      value: 中央大學
+    - title: 中央大學附屬中壢高級中學
+      value: 中央大學附屬中壢高級中學
+    - title: 中央警察大學
+      value: 中央警察大學

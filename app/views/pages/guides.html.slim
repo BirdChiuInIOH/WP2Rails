@@ -1,21 +1,61 @@
 div(class="container")
-  div(class="row no-gutters d-md-none d-flex")
+  div(class="row no-gutters d-md-none d-flex mb-4")
     div(class="col-12")
       p(class="my-3 font-weight-bold text-center" style="font-size: 25px; color: #434242;") 「升大學全攻略」
     div(class="col-12 justify-content-center d-flex")
       = image_tag 'by_guides.png', class: 'img-fluid'
     div(class="col-12 d-block text-center bg-white" style="font-size: 12px;line-height: 2;")
-      p(class="m-0") 為 IOH 高中生升學統整專區，
-      p(class="m-0") 範圍從學測、指考以及備審面試的學長姐準備文章，
-      p(class="m-0") 到大學教授升學經驗談，以及全台校系經驗分享。
-    div(class="col-12")
-      nav(class="nav nav-justified nav-pills-ioh d-md-none my-4")
+      div(class="block-guides-quote")
+        p(class="m-0") 為 IOH 高中生升學統整專區，
+        p(class="m-0") 範圍從學測、指考以及備審面試的學長姐準備文章，
+        p(class="m-0") 到大學教授升學經驗談，以及全台校系經驗分享。
+    div(class="col-12 d-none")
+      nav(class="nav nav-justified nav-pills-ioh my-4")
         li(class="nav-item") = link_to '考試準備', '#', class: 'nav-link border-mobile'
         li(class="nav-item") = link_to '備審面試', '#', class: 'nav-link border-mobile'
         li(class="nav-item") = link_to '教授分享', '#', class: 'nav-link border-mobile'
         li(class="nav-item") = link_to '校系分享', '#', class: 'nav-link border-mobile'
   
-  
+  / Mobile only
+  p(class="block-index-header d-md-none my-30px") 精選文章
+  - @news.first(1).each do |news|
+    div(class="row no-gutters d-md-none block-index-featured-article")
+      div(class="col-12")
+        div(class="bg-white")
+          = link_to '#' do
+            = image_tag news[:img_url], class: 'img-fluid'
+          div
+            ul(class="list-unstyled p-2")
+              li 近年有越來越多台灣高中生選擇赴香港就讀大學，
+              li(class="mb-3") 然而，許多人是在不了解真正清楚現況就貿然做了決定。
+              li 若你正有著赴港求學的想法，這篇文章正好能提供你一些基礎知識...
+
+  - @news.first(2).each do |news|
+    div(class="row no-gutters d-md-none mb-3 block-index-list-article")
+      div(class="col-6")
+        = link_to '#' do
+          = image_tag news[:img_url], class: 'img-fluid'
+      div(class="col-6")
+        div(class="bg-white h-100")
+          ul(class="list-unstyled p-2 m-0")
+              li = news[:title]
+
+  div(class="block-index-more-news text-right d-md-none mb-5")
+    = link_to '更多文章+', '#'
+
+  p(class="font-weight-bold d-none mb-2 text-center" style="color: #434242;") IOH 編輯團隊推薦
+  div(class="row no-gutters d-none my-4")
+    - @talks.first(3).each do |talk|
+      div(class="col-4")
+        div(class="h-100 mx-1 bg-white block-index-teammember")
+          = link_to '/talks/香港教育大學英語教育系-彭于榛-barbie-peng-ov-study-bde-hk' do
+            = image_tag talk[:avatar_url], class: 'img-fluid'
+          div
+            ul(class="list-unstyled p-2")
+              li = link_to talk[:name], talk[:url], class: 'link-major-inverse'
+              li = link_to talk[:education], talk[:education_url], class: 'link-major-inverse'
+              li = link_to talk[:major], talk[:major_url], class: 'link-major-inverse'
+  // mobile
   
   div(class="row no-gutters d-none d-md-flex")
     p(class="my-5 font-weight-bold" style="font-size: 16.5px;") 「升大學全攻略」為 IOH 高中生升學統整專區，範圍從學測、指考以及備審面試的學長姐準備文章，到大學教授升學經驗談，以及全台校系經驗分享。

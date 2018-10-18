@@ -1,18 +1,1 @@
-.row {
-  &.row-narrow {
 
-    [class^=col-] {
-      padding-right: 7px;
-      padding-left: 7px;
-
-      &:first-child {
-        padding-left: 15px;
-      }
-
-      &:last-child {
-        padding-right: 15px;
-      }
-    }
-
-  }
-}

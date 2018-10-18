@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root 'pages#index'
   get '/talks', to: 'pages#talks'
   get '/talks/香港教育大學英語教育系-彭于榛-barbie-peng-ov-study-bde-hk', to: 'pages#talks_show', as: :talks_show
+  get '/talks_experience', to: 'pages#talks_experience'
+  get '/talks_how_to_apply', to: 'pages#talks_how_to_apply'
   get '/guides', to: 'pages#guides'
   get '/reciprocal', to: 'pages#reciprocal'
   get '/台灣各校系學群總覽', to: 'pages#taiwan_departments', as: :taiwan_departments

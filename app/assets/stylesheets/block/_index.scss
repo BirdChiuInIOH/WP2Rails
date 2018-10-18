@@ -1,16 +1,74 @@
+.block-index-teammember-photo {
+  img {
+    min-height: 110px;
+  }
+}
+
 .block-index-teammember {
-  ul {
-    li {
-      font-size: 8px;
+  text-align: center;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: white;
+  p {
+    line-height: 1;
+    font-size: 14px;
+    font-weight: bold;
+    color: #434242;
+    padding: 17px 10px;
+    margin: 0;
+
+    &::before {
+      content: "“";
+      max-height: 30px;
+      position: absolute;
+      font-size: 45px;
+      color: #ca2026;
+      top: -10px;
+      left: 0;
     }
 
-    li:first-child {
-      font-size: 10px;
+    &::after {
+      content: "”";
+      max-height: 30px;
+      position: absolute;
+      font-size: 45px;
+      color: #ca2026;
+      bottom: 38px;
+      right: 0px;
+    }
+  }
+
+  li {
+    line-height: 1;
+    a {
+      font-size: 12px;
+      color: #95989a;
+      font-weight: bold;
     }
   }
 }
 
 .block-index-featured-article {
+  a {
+    font-size: 100px;
+    color: #ca2026;
+    font-weight: bold;
+    &::before {
+      content: "“";
+      max-height: 50px;
+      position: absolute;
+      top: -50px;
+      left: 0;
+    }
+
+    &::after {
+      content: "”";
+      max-height: 50px;
+      position: absolute;
+      bottom: 85px;
+      right: 0;
+    }
+  }
+  
   li {
     font-size: 10px;
     line-height: 1.2;
@@ -37,5 +95,38 @@
     font-size: 12px;
     color: #95989a;
     font-weight: bold;
+  }
+}
+
+.block-index-header {
+  display: table;
+  margin: 0 auto;
+  color: #434242;
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 3px solid #ca2026;
+}
+
+.block-index-feature-school {
+  position: relative;
+
+  img {
+    -webkit-filter: blur(1px);
+    filter: blur(1px);
+  }
+
+  .feature-school-header {
+    position: absolute;
+    width: 100%;
+    bottom: 3px;
+    text-align: center;
+
+    a {
+      text-align: left;
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 7px;
+    }
   }
 }

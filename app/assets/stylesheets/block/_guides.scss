@@ -1,0 +1,23 @@
+.block-guides-quote {
+  &::before {
+    content: "“";
+    font-size: 60px;
+    font-weight: bold;
+    color: #ca2026;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  }
+  
+  &::after {
+    content: "”";
+    font-size: 60px;
+    font-weight: bold;
+    color: #ca2026;
+    position: absolute;
+    right: 0;
+    top: 25px;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  }
+}

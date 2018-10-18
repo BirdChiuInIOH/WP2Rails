@@ -153,4 +153,24 @@ $(document).on('turbolinks:load', function() {
     }
   }
   // End of go-top button
+
+  // var coll = document.getElementsByClassName("onoffswitch");
+  // $('.onoffswitch').off('click');
+  $('.onoffswitch-label').on('click', function(e) {
+    console.log('click')
+    $(this).parent('.onoffswitch').toggleClass('active');
+    $(this).parent('.onoffswitch').next('.onoffswitch-content').toggle();
+  })
+
+  $('.btn-news-sort').on('click', function (e) {
+    console.log('click')
+    $(this).parent('.dropdown-news-sort').toggleClass('active');
+    $(this).parent('.dropdown-news-sort').next('.dropdown-news-sort-content').toggle();
+  })
+
+  $('.btn-schools-sort').on('click', function (e) {
+    console.log('click')
+    $(this).parent('.dropdown-schools-sort').toggleClass('active');
+    $(this).parent('.dropdown-schools-sort').next('.dropdown-schools-sort-content').toggle();
+  })
 });

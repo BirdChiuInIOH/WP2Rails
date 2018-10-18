@@ -1,104 +1,235 @@
 div(class="container")
-  = render 'shared/banners'
-  h3(style="margin: 10px 0;") 臺灣各校系學群總覽
-  div(class="row row-narrow")
-    div(class="col-12 col-md-4")
-      = link_to '#by-18-colleges' do
-        = image_tag 'taiwan_schools_tabs/by_18_colleges.png', alt: '依 18 學群瀏覽', class: 'img-fluid'
-    div(class="col-12 col-md-4")
-      = link_to '#by-schools' do
-        = image_tag 'taiwan_schools_tabs/by_schools.png', alt: '依學校校名瀏覽', class: 'img-fluid'
-    div(class="col-12 col-md-4")
-      = link_to '#by-areas' do
-        = image_tag 'taiwan_schools_tabs/by_areas.png', alt: '依學校地區瀏覽', class: 'img-fluid'
-  div(class="row")
-    div(class="col-12 mt-3 mb-5")
-      div(class="bg-gray-100 py-3")
-        div(class="row")
-          div(class="col-12")
-            h4(id="by-18-colleges")
-              div(class="head-pills") 依 18 學群瀏覽
-            div(class="row no-gutters")
-              div(class="col-10 offset-2" id="accordion-by-18-colleges")
-                - @colleges.in_groups_of(5, false).each do |colleges_group|
-                  div(class="college-tabs")
-                    - colleges_group.each do |college|
-                      button(
-                        type="button"
-                        class="btn btn-sm btn-white-outline-major"
-                        style="width: 100px; margin: 0 12px 12px 0;"
-                        data-toggle="collapse"
-                        data-target="#collapse-#{college[:id]}"
-                      ) = college[:name]
-                  div(class="college-tab-contents")
-                    - colleges_group.each do |college|
-                      div(
-                        id="collapse-#{college[:id]}"
-                        class="collapse"
-                        data-parent="#accordion-by-18-colleges"
-                      )
-                        - college[:departments].in_groups_of(5, false).each do |departments_group|
-                          div(class="d-flex pr-3")
-                            - departments_group.each do |department|
-                              = link_to department[:name], '#', class: 'link-major-inverse my-3 pr-3 d-inline-block', style: 'flex: 0 0 20%;'
-                        div(class="mb-3")
+  div(class="row no-gutters d-md-none d-flex mb-4")
+    div(class="col-12")
+      p(class="my-3 font-weight-bold text-center" style="font-size: 25px; color: #434242;") 「升大學全攻略」
+    div(class="col-12 justify-content-center d-flex")
+      = image_tag 'by_guides.png', class: 'img-fluid'
+    div(class="col-12 d-block text-center")
+      div(class="taiwan-departments-quote")
+        p(class="m-0") 這不只是為了學歷而做的選擇，
+        p(class="m-0") 而是為了圓夢探所人生的過程。
 
-        div(class="row mt-4")
-          div(class="col-12" id="accordion-group-1")
-            h4(id="by-schools")
-              div(class="head-pills") 依學校校名瀏覽
-            / 國立大學
-            div(class="row no-gutters")
-              div(class="col-2")
-                h6(class="text-danger px-3 pl-3") 國立大學
-              div(class="col-10")
-                - @public_schools.in_groups_of(5, false).each do |schools_group|
-                  = render 'school_links_with_collapses', group: schools_group, group_id: 1
-            / 私立大學
-            div(class="row no-gutters mt-5")
-              div(class="col-2")
-                h6(class="text-danger px-3 pl-3") 私立大學
-              div(class="col-10" id="accordion-by-schools")
-                - @private_schools.in_groups_of(5, false).each do |schools_group|
-                  = render 'school_links_with_collapses', group: schools_group, group_id: 1
-            / 公立科技大學
-            div(class="row no-gutters mt-5")
-              div(class="col-2")
-                h6(class="text-danger px-3 pl-3") 公立科技大學
-              div(class="col-10" id="accordion-by-schools")
-                - @public_technology_schools.in_groups_of(5, false).each do |schools_group|
-                  = render 'school_links_with_collapses', group: schools_group, group_id: 1
-            / 私立科技大學
-            div(class="row no-gutters mt-5")
-              div(class="col-2")
-                h6(class="text-danger px-3 pl-3") 私立科技大學
-              div(class="col-10" id="accordion-by-schools")
-                - @private_technology_schools.in_groups_of(5, false).each do |schools_group|
-                  = render 'school_links_with_collapses', group: schools_group, group_id: 1
-            / 軍警院校
-            div(class="row no-gutters mt-5")
-              div(class="col-2")
-                h6(class="text-danger px-3 pl-3") 軍警院校
-              div(class="col-10" id="accordion-by-schools")
-                - @military_schools.in_groups_of(5, false).each do |schools_group|
-                  = render 'school_links_with_collapses', group: schools_group, group_id: 1
-            / 技術學院
-            div(class="row no-gutters mt-5")
-              div(class="col-2")
-                h6(class="text-danger px-3 pl-3") 技術學院
-              div(class="col-10" id="accordion-by-schools")
-                - @technology_academy_schools.in_groups_of(5, false).each do |schools_group|
-                  = render 'school_links_with_collapses', group: schools_group, group_id: 1
-        div(class="row mt-4")
-          div(class="col-12" id="accordion-group-2")
-            h4(id="by-areas")
-              div(class="head-pills") 依學校地區瀏覽
-            / 依學校地區瀏覽
-            - @areas.each do |area|
+    div(class="row no-gutters")
+      div(class="col-12 col-md-4 mb-1")
+        = link_to '#by-18-colleges' do
+          = image_tag 'taiwan_schools_tabs/by_18_colleges.png', alt: '依 18 學群瀏覽', class: 'img-fluid'
+      div(class="col-12 col-md-4 mb-1")
+        = link_to '#by-schools' do
+          = image_tag 'taiwan_schools_tabs/by_schools.png', alt: '依學校校名瀏覽', class: 'img-fluid'
+      div(class="col-12 col-md-4 mb-1")
+        = link_to '#by-areas' do
+          = image_tag 'taiwan_schools_tabs/by_areas.png', alt: '依學校地區瀏覽', class: 'img-fluid'
+    div(class="row")
+      div(class="col-12 mt-3 mb-5")
+        div(class="")
+          div(class="")
+            div(class="")
+              h4(id="by-18-colleges")
+                div(class="head-pills") 依 18 學群瀏覽
+              - @colleges.in_groups_of(3, false).each do |colleges_group|
+                div(class="row no-gutters")
+                  - colleges_group.each do |college|
+                    div(class="col-4" id="accordion-by-18-colleges")
+                      div(class="college-tabs")
+                        div(class="by_eighteen_photo" type="button" data-toggle="collapse" data-target="#collapse-#{college[:id]}")
+                          = image_tag college[:photo_url], class: 'img-fluid'
+                          div(class="by_eighteen")
+                            a #{college[:name]}
+                  div(class="col-12" id="accordion-by-18-colleges")
+                    div(class="college-tab-contents")
+                      - colleges_group.each do |college|
+                        div(
+                          id="collapse-#{college[:id]}"
+                          class="collapse"
+                          data-parent="#accordion-by-18-colleges"
+                        )
+                          - college[:departments].in_groups_of(5, false).each do |departments_group|
+                            div(class="d-flex pr-3")
+                              - departments_group.each do |department|
+                                = link_to department[:name], '#', class: 'link-major-inverse my-3 pr-3 d-inline-block', style: 'flex: 0 0 20%;'
+                          div(class="mb-3")
+
+          div(class="row mt-4")
+            div(class="col-12" id="accordion-group-1")
+              h4(id="by-schools")
+                div(class="head-pills") 依學校校名瀏覽
+              / 國立大學
+              div(class="")
+                div(class="dropdown-schools-sort")
+                  button(class="btn-schools-sort text-left w-100") 國立大學
+                div(class="dropdown-schools-sort-content")
+                  - @public_schools.in_groups_of(3, false).each do |schools_group|
+                    div(class="row no-gutters")
+                      = render 'mobile_school_links_with_collapses', group: schools_group, group_id: 1
+                        div(class="col-4")
+              / 私立大學
+              div(class="")
+                div(class="dropdown-schools-sort")
+                  button(class="btn-schools-sort text-left w-100") 私立大學
+                div(class="dropdown-schools-sort-content")
+                  - @private_schools.in_groups_of(3, false).each do |schools_group|
+                    div(class="row no-gutters")
+                      = render 'mobile_school_links_with_collapses', group: schools_group, group_id: 1
+                        div(class="col-4" id="accordion-by-schools")
+              / 公立科技大學
+              div(class="")
+                div(class="dropdown-schools-sort")
+                  button(class="btn-schools-sort text-left w-100") 公立科技大學
+                div(class="dropdown-schools-sort-content")
+                  - @public_technology_schools.in_groups_of(3, false).each do |schools_group|
+                    div(class="row no-gutters")
+                      = render 'mobile_school_links_with_collapses', group: schools_group, group_id: 1
+                        div(class="col-4" id="accordion-by-schools")
+              / 私立科技大學
+              div(class="")
+                div(class="dropdown-schools-sort")
+                  button(class="btn-schools-sort text-left w-100") 私立科技大學
+                div(class="dropdown-schools-sort-content")
+                  - @private_technology_schools.in_groups_of(3, false).each do |schools_group|
+                    div(class="row no-gutters")
+                      = render 'mobile_school_links_with_collapses', group: schools_group, group_id: 1
+                        div(class="col-4" id="accordion-by-schools")
+              / 軍警院校
+              div(class="")
+                div(class="dropdown-schools-sort")
+                  button(class="btn-schools-sort text-left w-100") 軍警院校
+                div(class="dropdown-schools-sort-content")
+                  - @military_schools.in_groups_of(3, false).each do |schools_group|
+                    div(class="row no-gutters")
+                      = render 'mobile_school_links_with_collapses', group: schools_group, group_id: 1
+                        div(class="col-4" id="accordion-by-schools")
+              / 技術學院
+              div(class="")
+                div(class="dropdown-schools-sort")
+                  button(class="btn-schools-sort text-left w-100") 技術學院
+                div(class="dropdown-schools-sort-content")
+                   - @technology_academy_schools.in_groups_of(3, false).each do |schools_group|
+                    div(class="row no-gutters")
+                      = render 'mobile_school_links_with_collapses', group: schools_group, group_id: 1
+                        div(class="col-4" id="accordion-by-schools")
+          div(class="row mt-4")
+            div(class="col-12" id="accordion-group-2")
+              h4(id="by-areas")
+                div(class="head-pills") 依學校地區瀏覽
+              / 依學校地區瀏覽
+              - @areas.each do |area|
+                div(class="row no-gutters mt-5")
+                  div(class="col-2")
+                    h6(class="text-danger px-3 pl-3") = area
+                  div(class="col-10")
+                    - schools = @schools.select { |school| school[:area] == area }.map{ |school| school.merge(id: SecureRandom.uuid) }
+                    - schools.in_groups_of(5, false).each do |schools_group|
+                      = render 'school_links_with_collapses', group: schools_group, group_id: 2
+
+
+
+
+
+
+
+
+
+  div(class="d-none d-md-block")
+    = render 'shared/banners'
+    h3(style="margin: 10px 0;") 臺灣各校系學群總覽
+    div(class="row row-narrow")
+      div(class="col-12 col-md-4")
+        = link_to '#by-18-colleges' do
+          = image_tag 'taiwan_schools_tabs/by_18_colleges.png', alt: '依 18 學群瀏覽', class: 'img-fluid'
+      div(class="col-12 col-md-4")
+        = link_to '#by-schools' do
+          = image_tag 'taiwan_schools_tabs/by_schools.png', alt: '依學校校名瀏覽', class: 'img-fluid'
+      div(class="col-12 col-md-4")
+        = link_to '#by-areas' do
+          = image_tag 'taiwan_schools_tabs/by_areas.png', alt: '依學校地區瀏覽', class: 'img-fluid'
+    div(class="row")
+      div(class="col-12 mt-3 mb-5")
+        div(class="bg-gray-100 py-3")
+          div(class="row")
+            div(class="col-12")
+              h4(id="by-18-colleges")
+                div(class="head-pills") 依 18 學群瀏覽
+              div(class="row no-gutters")
+                div(class="col-10 offset-2" id="accordion-by-18-colleges")
+                  - @colleges.in_groups_of(5, false).each do |colleges_group|
+                    div(class="college-tabs")
+                      - colleges_group.each do |college|
+                        button(
+                          type="button"
+                          class="btn btn-sm btn-white-outline-major"
+                          style="width: 100px; margin: 0 12px 12px 0;"
+                          data-toggle="collapse"
+                          data-target="#collapse-#{college[:id]}"
+                        ) = college[:name]
+                    div(class="college-tab-contents")
+                      - colleges_group.each do |college|
+                        div(
+                          id="collapse-#{college[:id]}"
+                          class="collapse"
+                          data-parent="#accordion-by-18-colleges"
+                        )
+                          - college[:departments].in_groups_of(5, false).each do |departments_group|
+                            div(class="d-flex pr-3")
+                              - departments_group.each do |department|
+                                = link_to department[:name], '#', class: 'link-major-inverse my-3 pr-3 d-inline-block', style: 'flex: 0 0 20%;'
+                          div(class="mb-3")
+
+          div(class="row mt-4")
+            div(class="col-12" id="accordion-group-1")
+              h4(id="by-schools")
+                div(class="head-pills") 依學校校名瀏覽
+              / 國立大學
+              div(class="row no-gutters")
+                div(class="col-2")
+                  h6(class="text-danger px-3 pl-3") 國立大學
+                div(class="col-10")
+                  - @public_schools.in_groups_of(5, false).each do |schools_group|
+                    = render 'school_links_with_collapses', group: schools_group, group_id: 1
+              / 私立大學
               div(class="row no-gutters mt-5")
                 div(class="col-2")
-                  h6(class="text-danger px-3 pl-3") = area
-                div(class="col-10")
-                  - schools = @schools.select { |school| school[:area] == area }.map{ |school| school.merge(id: SecureRandom.uuid) }
-                  - schools.in_groups_of(5, false).each do |schools_group|
-                    = render 'school_links_with_collapses', group: schools_group, group_id: 2
+                  h6(class="text-danger px-3 pl-3") 私立大學
+                div(class="col-10" id="accordion-by-schools")
+                  - @private_schools.in_groups_of(5, false).each do |schools_group|
+                    = render 'school_links_with_collapses', group: schools_group, group_id: 1
+              / 公立科技大學
+              div(class="row no-gutters mt-5")
+                div(class="col-2")
+                  h6(class="text-danger px-3 pl-3") 公立科技大學
+                div(class="col-10" id="accordion-by-schools")
+                  - @public_technology_schools.in_groups_of(5, false).each do |schools_group|
+                    = render 'school_links_with_collapses', group: schools_group, group_id: 1
+              / 私立科技大學
+              div(class="row no-gutters mt-5")
+                div(class="col-2")
+                  h6(class="text-danger px-3 pl-3") 私立科技大學
+                div(class="col-10" id="accordion-by-schools")
+                  - @private_technology_schools.in_groups_of(5, false).each do |schools_group|
+                    = render 'school_links_with_collapses', group: schools_group, group_id: 1
+              / 軍警院校
+              div(class="row no-gutters mt-5")
+                div(class="col-2")
+                  h6(class="text-danger px-3 pl-3") 軍警院校
+                div(class="col-10" id="accordion-by-schools")
+                  - @military_schools.in_groups_of(5, false).each do |schools_group|
+                    = render 'school_links_with_collapses', group: schools_group, group_id: 1
+              / 技術學院
+              div(class="row no-gutters mt-5")
+                div(class="col-2")
+                  h6(class="text-danger px-3 pl-3") 技術學院
+                div(class="col-10" id="accordion-by-schools")
+                  - @technology_academy_schools.in_groups_of(5, false).each do |schools_group|
+                    = render 'school_links_with_collapses', group: schools_group, group_id: 1
+          div(class="row mt-4")
+            div(class="col-12" id="accordion-group-2")
+              h4(id="by-areas")
+                div(class="head-pills") 依學校地區瀏覽
+              / 依學校地區瀏覽
+              - @areas.each do |area|
+                div(class="row no-gutters mt-5")
+                  div(class="col-2")
+                    h6(class="text-danger px-3 pl-3") = area
+                  div(class="col-10")
+                    - schools = @schools.select { |school| school[:area] == area }.map{ |school| school.merge(id: SecureRandom.uuid) }
+                    - schools.in_groups_of(5, false).each do |schools_group|
+                      = render 'school_links_with_collapses', group: schools_group, group_id: 2

@@ -1,0 +1,44 @@
+div(class="college-tabs")
+  - group.each do |school|
+    ruby:
+      font_size =
+        if school[:name].size > 8
+          10
+        elsif school[:name].size > 6
+          12
+        else
+          14
+        end
+    / 無任何資料的學校 -> alert
+    - if school[:colleges].any?
+      button(
+        type="button"
+        class="btn btn-white-school-mobile"
+        style="width: 116px; margin: 0; font-size: #{font_size}px;"
+        data-toggle="collapse"
+        data-target="#collapse-#{group_id}-#{school[:id]}"
+      ) = school[:name]
+    - else
+      button(
+        type="button"
+        class="btn btn-white-school-mobile"
+        style="width: auto; margin: 0; font-size: #{font_size}px;"
+        onclick="alert('IOH 目前還沒有該學校同學來分享，建議你可以寫信給大學教務處招生組或校長，請他們邀請學生上 IOH 分享喔！')"
+      ) = school[:name]
+div(class="college-tab-contents")
+  - group.each do |school|
+    div(
+      id="collapse-#{group_id}-#{school[:id]}"
+      class="collapse"
+      data-parent="#accordion-group-#{group_id}"
+    )
+      div
+        div
+          = link_to '全部科系列表', '#', class: 'link-major-inverse'
+        div
+          - school[:colleges].each do |college|
+            div
+              h6(class="head-sm-major" style="margin-top: 30px;") = college[:name]
+              - college[:departments].each do |department|
+                = link_to department[:name], '#', class: 'link-major-inverse my-2 pr-5'
+      div(class="mb-3")

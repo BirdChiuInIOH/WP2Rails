@@ -6,21 +6,22 @@
     }
 
     .navbar-submenu {
-      width: 100%;
-      padding-bottom: 15px;
+      background-color: white;
+      line-height: 2;
+
+      li {
+        border-left: solid 0.5px #95989a;
+        border-right: solid 0.5px #95989a;
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+      }
 
       a {
-        font-size: 16px;
+        font-size: 12px;
         font-weight: bold;
-        color: white;
+        color: #625e61;
         padding: 5px;
         border-radius: 3px;
         text-decoration: none;
-
-        &.active {
-          color: #434242;
-          background-color: white;
-        }
       }
     }
 
@@ -64,7 +65,7 @@
       font-style: 14px;
       color: #525252;
       font-weight: bold;
-      line-height: normal;
+      line-height: 10px;
     }
   }// /mobile
 }

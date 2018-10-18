@@ -1,0 +1,41 @@
+.taiwan-departments-quote {
+  margin: 17px 0 23px;
+
+  p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #434242;
+  }
+}
+
+.by_eighteen_photo {
+  img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+
+    &:hover {
+      -webkit-filter: saturate(1);
+      filter: saturate(1);
+    }
+  }
+  
+  .by_eighteen {
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+  }
+}
+
+.btn-schools-sort {
+  background-color: #625e61;
+  font-size: 18px;
+  color: white;
+  border: none;
+  font-weight: bold;
+  padding: 2px 6px;
+  margin: 5px 0;
+}
