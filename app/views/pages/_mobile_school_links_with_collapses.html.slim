@@ -1,4 +1,4 @@
-div(class="college-tabs")
+div(class="college-tabs d-flex")
   - group.each do |school|
     ruby:
       font_size =
@@ -14,7 +14,7 @@ div(class="college-tabs")
       button(
         type="button"
         class="btn btn-white-school-mobile"
-        style="width: 116px; margin: 0; font-size: #{font_size}px;"
+        style="width: 115px; margin: 8px 5px 8px 0px; font-size: #{font_size}px;"
         data-toggle="collapse"
         data-target="#collapse-#{group_id}-#{school[:id]}"
       ) = school[:name]
@@ -22,7 +22,7 @@ div(class="college-tabs")
       button(
         type="button"
         class="btn btn-white-school-mobile"
-        style="width: auto; margin: 0; font-size: #{font_size}px;"
+        style="width: 115px; margin: 8px 5px 8px 0; font-size: #{font_size}px;"
         onclick="alert('IOH 目前還沒有該學校同學來分享，建議你可以寫信給大學教務處招生組或校長，請他們邀請學生上 IOH 分享喔！')"
       ) = school[:name]
 div(class="college-tab-contents")

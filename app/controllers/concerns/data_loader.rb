@@ -39,6 +39,10 @@ module DataLoader
     load_yaml_file('how_to_apply')
   end
 
+  def load_areas
+    load_yaml_file('areas')
+  end
+
   private
 
     def load_yaml_file(filename)

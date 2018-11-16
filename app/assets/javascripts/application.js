@@ -173,4 +173,10 @@ $(document).on('turbolinks:load', function() {
     $(this).parent('.dropdown-schools-sort').toggleClass('active');
     $(this).parent('.dropdown-schools-sort').next('.dropdown-schools-sort-content').toggle();
   })
+
+  $('.by-areas-photo').on('click', function (e) {
+    console.log('click')
+    $(this).parent('.areas-sort').toggleClass('active');
+    $(this).parent('.areas-sort').next('.areas-sort-content').toggle();
+  })
 });

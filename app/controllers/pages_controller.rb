@@ -92,7 +92,8 @@ class PagesController < ApplicationController
 
 
       # 依照地區瀏覽
-      @areas = ['台北', '新北', '桃園', '新竹苗栗', '台中南投', '彰化雲嘉', '台南', '高屏', '基宜花東', '外島']
+      # @areas = ['台北', '新北', '桃園', '新竹苗栗', '台中南投', '彰化雲嘉', '台南', '高屏', '基宜花東', '外島']
+      @areas = load_areas
     end
 
     # https://ioh.tw/%E5%AA%92%E9%AB%94%E5%A0%B1%E5%B0%8E/
