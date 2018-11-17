@@ -63,7 +63,7 @@ div(class="navbar-wrapper-ioh")
         li(class="nav-item") = link_to '科系迷思', '#', class: 'nav-link'
         li(class="nav-item") = link_to '專欄採訪', '#', class: 'nav-link'
       - elsif action_name == 'talks_show' || 'talks_experience'
-        li(class="nav-item") = link_to '講者經歷', talks_show_path, class: 'nav-link'
+        li(class="nav-item") = link_to '講者經歷', talks_show_path, class: 'nav-link nav-link-active'
         li(class="nav-item") = link_to '求學經驗', talks_experience_path, class: 'nav-link'
         li(class="nav-item") = link_to '如何申請', talks_how_to_apply_path, class: 'nav-link'
         li(class="nav-item") = link_to '觀眾提問', '#', class: 'nav-link'
