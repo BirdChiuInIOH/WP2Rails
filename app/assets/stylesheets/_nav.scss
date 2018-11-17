@@ -57,3 +57,51 @@
     }
   }
 }
+
+.nav-pills-light {
+  background-color: white;
+  font-size: 12px;
+  font-weight: 500;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .2);
+
+  .nav-item {
+    border-top: 1px solid #95989a;
+    border-right: 1px solid #95989a;
+
+    &:first-child {
+      border-left: 1px solid #95989a;
+    }
+
+    .nav-link {
+      color: #625e61;
+
+      &.nav-link-active {
+        &:after {
+          content: '';
+          display: block;
+          height: 2px;
+          margin: 0 auto;
+          background-color: #ca2026;
+        }
+      }
+    }
+  }
+}
+
+.nav-sticky-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #434242;
+  z-index: 9999;
+
+  .nav-link {
+    color: white;
+    font-size: 12px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

@@ -125,7 +125,6 @@ $(document).on('turbolinks:load', function() {
     if (!goTopButton) {
       return;
     }
-
     goTopButton.addEventListener('click', function() {
       window.scrollTo({
         top: 0,
@@ -152,10 +151,16 @@ $(document).on('turbolinks:load', function() {
       }
     }
   }
+
+  $('[data-action=mobile-gotop]').on('click', function() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  })
   // End of go-top button
 
-  // var coll = document.getElementsByClassName("onoffswitch");
-  // $('.onoffswitch').off('click');
+  $('.onoffswitch').off('click');
   $('.onoffswitch-label').on('click', function(e) {
     console.log('click')
     $(this).parent('.onoffswitch').toggleClass('active');

@@ -47,9 +47,11 @@ div(class="navbar-wrapper-ioh")
             div(class="form-group mx-100 mb-2")
               input(type="text" class="form-ioh" placeholder="Search IOH 開放個人經驗平台")
             button(type="button" class="btn btn-lightgray mb-2 ml-1") Search
-    nav(class="nav nav-justified navbar-submenu d-flex d-md-none")
+
+    / Only show on mobile
+    nav(class="nav nav-justified nav-pills-light d-flex d-md-none")
       - if action_name == 'index'
-        li(class="nav-item") = link_to '校系總覽', taiwan_departments_path, class: 'nav-link'
+        li(class="nav-item") = link_to '校系總覽', taiwan_departments_path, class: 'nav-link nav-link-active'
         li(class="nav-item") = link_to '升學攻略', guides_path, class: 'nav-link'
         li(class="nav-item") = link_to '主題文章', news_path, class: 'nav-link'
         li(class="nav-item") = link_to '工作職涯', '#', class: 'nav-link'
@@ -67,6 +69,7 @@ div(class="navbar-wrapper-ioh")
         li(class="nav-item") = link_to '求學經驗', talks_experience_path, class: 'nav-link'
         li(class="nav-item") = link_to '如何申請', talks_how_to_apply_path, class: 'nav-link'
         li(class="nav-item") = link_to '觀眾提問', '#', class: 'nav-link'
+
   / Mobile popup menu
   div(class="modal fade" id="navbar-mobile" tabindex="-1" role="dialog")
     div(class="modal-dialog modal-dialog-centered")

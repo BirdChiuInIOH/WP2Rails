@@ -1,7 +1,17 @@
+/ Desktop button
 button(
   type="button"
-  class="btn btn-gotop d-inline-flex align-items-center justify-content-center"
+  class="btn btn-gotop d-none d-md-inline-flex align-items-center justify-content-center"
   data-action="gotop"
 )
   = image_tag 'https://i2.wp.com/ioh.tw/assets/howtoapply-top-button.png'
 
+/ Mobile button
+div(style="margin-bottom: 50px; text-align: center;")
+  button(
+    type="button"
+    class="btn btn-gotop-light d-inline-flex d-md-none"
+    data-action="mobile-gotop"
+  )
+    div(class="icon-angle-arrow-up")
+    span 回到頂端

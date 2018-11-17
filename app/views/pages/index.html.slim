@@ -16,23 +16,30 @@ div(class="container")
     li(class="nav-item") = link_to '學校瀏覽', '#', class: 'nav-link nav-pills-item'
 
   / Mobile only
+  nav(class="nav nav-justified nav-sticky-footer d-flex d-md-none")
+    li(class="nav-item") = link_to '台灣求學', '#', class: 'nav-link'
+    li(class="nav-item") = link_to '海外留學', '#', class: 'nav-link'
+    li(class="nav-item") = link_to '主題文章', '#', class: 'nav-link'
+    li(class="nav-item") = link_to '工作職涯', '#', class: 'nav-link'
+
   p(class="d-md-none my-30px block-index-header") Explore Your Future
   - @talks.first(3).each do |talk|
     div(class="row no-gutters d-md-none mb-3")
-      div(class="col-4")
-        div(class="block-index-teammember-photo")
-          = link_to '/talks/香港教育大學英語教育系-彭于榛-barbie-peng-ov-study-bde-hk' do
-            = image_tag talk[:avatar_url], class: 'img-fluid'
-      div(class='col-8')
-        div(class='block-index-teammember h-100')
-          p 每個人都不是最了解自己的人，透過相處、對話，你才會知道自
-          ul(class="list-unstyled m-0")
-            li
-              = link_to talk[:education], talk[:education_url]
-              = link_to talk[:major], talk[:major_url]
-            li = link_to talk[:name], talk[:url]
+      div(class="col-12")
+        div(class="block-index-list-explore")
+          div(class="block-index-list-explore-avatar")
+            = link_to '/talks/香港教育大學英語教育系-彭于榛-barbie-peng-ov-study-bde-hk' do
+              = image_tag talk[:avatar_url], class: 'img-fluid'
+          div(class="block-index-list-explore-body")
+            p 每個人都不是最了解自己的人，透過相處、對話，你才會知道自
+            ul(class="list-unstyled m-0")
+              li
+                = link_to talk[:education], talk[:education_url]
+                = link_to talk[:major], talk[:major_url]
+              li = link_to talk[:name], talk[:url]
 
   p(class="d-md-none my-30px block-index-header") 特色學校
+
   div(class="block-index-feature-school d-md-none")
     div(class="row no-gutters")
       div(class="col-6 p-0")
@@ -63,17 +70,21 @@ div(class="container")
           = link_to '國立台灣XX大學', '#'
 
   p(class="d-md-none my-30px block-index-header") Hot Topics
+
   - @news.first(1).each do |news|
-    div(class="row no-gutters d-md-none block-index-featured-article")
+    div(class="row no-gutters d-md-none")
       div(class="col-12")
-        div(class="bg-white")
-          = link_to '#' do
-            = image_tag news[:img_url], class: 'img-fluid'
+        div(class="block-index-head-news-card")
+          div(class="block-index-head-news-card-head")
+            = link_to '#' do
+              = image_tag news[:img_url], class: 'img-fluid'
           div
             ul(class="list-unstyled p-2")
               li 近年有越來越多台灣高中生選擇赴香港就讀大學，
               li(class="mb-3") 然而，許多人是在不了解真正清楚現況就貿然做了決定。
               li 若你正有著赴港求學的想法，這篇文章正好能提供你一些基礎知識...
+          div(class="block-index-head-news-card-actions")
+            a(href="#" class="") read >>
 
   - @news.first(3).each do |news|
     div(class="row no-gutters d-md-none mb-3 block-index-list-article")
@@ -87,7 +98,7 @@ div(class="container")
 
   div(class="block-index-more-news text-right")
     = link_to '更多文章>>', '#'
-  // mobile
+  / /Mobile only
 
   h5(class="my-4 font-weight-bold d-none d-md-block") 推薦講座
   - @talks.in_groups_of(4, false) do |group|
