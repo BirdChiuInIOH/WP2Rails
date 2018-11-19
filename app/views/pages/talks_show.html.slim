@@ -1,9 +1,15 @@
-div(class="mobile-talk-show")
+div(class="block-mobile-talk-show")
   div(class="container")
+    / mobile only
     div(class="row no-gutters d-md-none")
       div(class="col")
-        = image_tag 'https://storage.googleapis.com/ioh-assets/uploads/production/asset/asset//asset/extra_3f269cfb-9264-4c4c-a8d0-a2fe544b4f6f.jpg', class: 'img-fluid'
-        div(class="talk-goal")
+        div(class="block-talk-banner")
+          div(class="block-talk-banner-body")
+            = image_tag 'https://ioh.tw/assets/03-香港教育大學英語教育系彭于榛Barbie-PengProfile.jpg', class: 'img-fluid'
+          div(class="block-talk-banner-title")
+            p(class="m-0 font-weight-bold" style="color: white; font-size: 20px;") 彭于榛
+            p(class="m-0 font-weight-bold" style="color: white; font-size: 16px;") 香港教育大學 英語教育學系
+        div(class="block-talk-goal")
           p 想成為能啟發人心的英文老師
         section(class="mb-4 px-5")
           h4 關於講者
@@ -20,9 +26,9 @@ div(class="mobile-talk-show")
           p 感謝 HPX 社群創辦人 蔡明哲先生 以此講座鼓勵後輩：「面對多變的未來，記得要保持好奇與勇氣，這會讓你獲得更多的樂趣！」
           p 講座由 IOH 幫手#{link_to '李欣怡', 'javascript:;', class: 'link-major'}、#{link_to '李孟蓉', 'javascript:;', class: 'link-major'}協助
           p 責任編輯：#{link_to '林立麗', 'javascript:;', class: 'link-major'}
-        div(class="talks_more_share px-5 text-center")
+        div(class="block-talks-more-share px-5 text-center")
           h3(class="mb-4") 喜歡他/她的故事嗎 ?
-          div(class="mobile-talk-show-list")
+          div(class="block-mobile-talk-show-list")
             ul(class="list-unstyled")
               li = link_to '想看【XX大學】的求學講座', 'https://ioh.tw/talks/香港教育大學英語教育學系-王思云-tiffany-wang-ov-study-bde-hk/', target: '_blank', class: 'd-block'
               li = link_to '想看【XX系】的求學講座', 'https://ioh.tw/?qmt[topic][]=512', target: '_blank', class: 'd-block'
@@ -30,35 +36,12 @@ div(class="mobile-talk-show")
               li = link_to '了解更多招生資訊【XX大學】', '#', class: 'd-block'
 
           p(class="d-md-none my-30px font-weight-bold" style="font-size: 14px;") Explore More
-          - @talks.first(1).each do |talk|
-            div(class="row no-gutters d-md-none mb-3")
-              div(class="col-4")
-                div(class="block-index-teammember-photo")
-                  = link_to '/talks/香港教育大學英語教育系-彭于榛-barbie-peng-ov-study-bde-hk' do
-                    = image_tag talk[:avatar_url], class: 'img-fluid'
-              div(class='col-8')
-                div(class='block-index-teammember h-100')
-                  p 每個人都不是最了解自己的人，透過相處、對話，你才會知道自
-                  ul(class="list-unstyled m-0")
-                    li
-                      = link_to talk[:education], talk[:education_url]
-                      = link_to talk[:major], talk[:major_url]
-                    li = link_to talk[:name], talk[:url]
-          div(class="row no-gutters d-md-none my-4")
-            - @talks.first(3).each do |talk|
-              div(class="col-4")
-                div(class="h-100 mx-1 bg-white block-index-teammember")
-                  = link_to '/talks/香港教育大學英語教育系-彭于榛-barbie-peng-ov-study-bde-hk' do
-                    = image_tag talk[:avatar_url], class: 'img-fluid'
-                  div
-                    ul(class="list-unstyled p-2")
-                      li = link_to talk[:name], talk[:url], class: 'link-major-inverse'
-                      li = link_to talk[:education], talk[:education_url], class: 'link-major-inverse'
-                      li = link_to talk[:major], talk[:major_url], class: 'link-major-inverse'
+          = render 'shared/explore_your_future'
+          
           div
             p(class='font-weight-bold') 想詢問學長姐更多校系經驗
             h4 #{link_to '請到 IOH 臉書社突發問吧！GO~', 'http://bit.ly/ioh_fb_group_161031', target: '_blank', style: 'color: #ca2026';}
-
+    // mobile end
 
     div(class="block-talks-show d-none d-md-flex")
       div(class="row")

@@ -1,4 +1,4 @@
-.mobile-talk-show {
+.block-mobile-talk-show {
   .talk-show-card {
     background-image: url('http://www.cmlab.csie.ntu.edu.tw/~chenhsiu/photos/ntu/IMGP0604.JPG');
     object-fit: contain;
@@ -20,7 +20,12 @@
       font-size: 16px;
     }
   }
+
   @include media-breakpoint-down(sm) {
+    .container {
+      padding: 0;
+    }
+
     section {
       p {
         font-size: 14px;
@@ -56,12 +61,43 @@
     }
   }
 
-  .talk-show-card-body {
-    opacity: 0.85;
+  .block-talk-banner {
+    background-image: url('https://www.nthu.edu.tw//public/images/img15.jpg');
+    background-size: 100% 100%;
+    height: 106px;
+    display: flex;
+    text-align: right;
+
+    .block-talk-banner-body {
+      display: flex;
+      margin: 10px 70px 13px 6px;
+
+      img {
+        border: 2.5px solid white;
+        width: 78px;
+        height: 78px;
+      }
+    }
+
+    .block-talk-banner-title {
+      margin: auto;
+
+      p {
+        font-weight: bold;
+        margin: 0;
+        color: white;
+        font-size: 20;
+
+        &:last-child {
+          font-size: 16px;
+        }
+      }
+    }
   }
 
-  .talk-goal {
+  .block-talk-goal {
     position: relative;
+    
     p {
       line-height: 40px;
       background-color: #ca2026;
@@ -90,19 +126,90 @@
     }
   }
 
-  .talk-show-card-info {
-    background-color: white;
-    padding: 17px 14px 5px;
-
+  .block-talk-arrow {
+    position: relative;
+    
     p {
-      color: #434242;
-      font-size: 14px;
+      line-height: 40px;
+      background-color: #ca2026;
+      font-size: 16px;
+      color: white;
+      font-weight: bold;
+      text-align: center;
     }
   }
 
-  .talks_more_share {
+  .block-talks-more-share {
     background-color: white;
     padding: 17px 0;
+
+    .block-mobile-talk-show-list {
+      li {
+        border: 3px solid #ca2026;
+        background-color: #ca2026;
+        margin-bottom: 9px;
+        padding: 7px;
+        font-size: 12px;
+        text-align: center;
+        font-weight: bold;
+        a {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  .block-talk-show-card {
+    background-image: url('http://www.cmlab.csie.ntu.edu.tw/~chenhsiu/photos/ntu/IMGP0604.JPG');
+    background-size: 100% 100%;
+    min-height: 529px;
+    height: auto;
+    
+    .block-talk-show-card-avatar {
+      text-align: center;
+      img {
+        background-color: white;
+        padding: 4px;
+        width: 133px;
+        height: 133px;
+      }
+
+      p {
+        font-size: 16px;
+        color: white;
+        font-weight: bold;
+        margin: 5px 0 0 0;
+
+        &:last-child {
+          font-size: 14px;
+          margin-top: 0;
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .block-talk-show-card-body {
+      opacity: 0.85;
+    }
+
+    .block-talk-show-card-info {
+      background-color: white;
+      padding: 17px 14px 5px;
+      font-weight: bold;
+      line-height: 1.7;
+      
+      p {
+        color: #434242;
+
+        &:last-child {
+          font-size: 12px;
+        }
+
+        &:first-child {
+          font-size: 16px;
+        }
+      }
+    }
   }
 
   .block-talks-show {
@@ -111,43 +218,6 @@
     p {
       color: #666666;
       line-height: 1.8;
-    }
-  }
-
-  .mobile-talk-show-nav {
-    li {
-      margin-bottom: 5px;
-      padding: 2.5px;
-
-      a {
-        color: #434242;
-        font-weight: bold;
-        font-size: 12px;
-        padding: 4px 0;
-        line-height: 2;
-      }
-    }
-  }
-
-  .mobile-talk-show-list {
-    li {
-      border: 3px solid #ca2026;
-      background-color: #ca2026;
-      margin-bottom: 9px;
-      padding: 7px;
-      font-size: 12px;
-      text-align: center;
-      font-weight: bold;
-
-      a {
-        color: #ffffff;
-      }
-    }
-  }
-
-  @include media-breakpoint-down(md) {
-    .container {
-      padding: 0;
     }
   }
 } // /.block-talks-show

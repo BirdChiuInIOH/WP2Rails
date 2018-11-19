@@ -92,7 +92,6 @@ class PagesController < ApplicationController
 
 
       # 依照地區瀏覽
-      # @areas = ['台北', '新北', '桃園', '新竹苗栗', '台中南投', '彰化雲嘉', '台南', '高屏', '基宜花東', '外島']
       @areas = load_areas
     end
 

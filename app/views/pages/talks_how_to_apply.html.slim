@@ -1,5 +1,6 @@
-div(class="mobile-talk-show")
+div(class="block-mobile-talk-show")
   div(class="container")
+    / mobile only
     div(class="row no-gutters d-md-none")
       div(class="col")
         div(class="youtube-rwd-container mb-3")
@@ -55,9 +56,9 @@ div(class="mobile-talk-show")
           p 在全球化時代，單一能力已不足以面對國際競爭，東吳持續開辦特色學程、華語教學中心及巨量資料分析研究中心等，並締結全球 236 所姊妹校，提供海外交流機會讓學生拓展國際視野，在 2015 年本校掌握趨勢，瞄準未來，跨學院合作，成立全國第一也是唯一的「巨量資料管理學院」，分別招收 90 位大學部學生與 20 位碩士在職專班學生，建立產學合作關係、落實學用合一、完整職場接軌的生涯發展機制，使本校發展成為巨量資訊人才的培育重鎮。
           h4 生涯職涯無縫接軌 鏈結校友發展
           p 以「探索」、「聚焦」、「行動」、「接軌」四階段為「經」；活動規劃、方案設計為「緯」，貫穿大學四年生涯規劃，以建構學生系統化的職涯發展歷程為理念出發，依循透過測驗（CVHS、UCAN）導引其發展方向，增進東吳學子軟實力，鏈結企業、校友力量而編織就業網絡。年輕校友海外就業計畫，幫助年輕校友快速累積職場經驗，並媒合海外企業就業機會，舉辦職前培訓課程，厚植年輕校友的職場競爭力。
-        div(class="talks_more_share px-5 text-center")
+        div(class="block-talks-more-share px-5 text-center")
           h3(class="mb-4") 喜歡他/她的故事嗎 ?
-          div(class="mobile-talk-show-list")
+          div(class="block-mobile-talk-show-list")
             ul(class="list-unstyled")
               li = link_to '想看【XX大學】的求學講座', 'https://ioh.tw/talks/香港教育大學英語教育學系-王思云-tiffany-wang-ov-study-bde-hk/', target: '_blank', class: 'd-block'
               li = link_to '想看【XX系】的求學講座', 'https://ioh.tw/?qmt[topic][]=512', target: '_blank', class: 'd-block'
@@ -65,35 +66,11 @@ div(class="mobile-talk-show")
               li = link_to '了解更多招生資訊【XX大學】', '#', class: 'd-block'
 
           p(class="d-md-none my-30px font-weight-bold" style="font-size: 14px;") Explore More
-          - @talks.first(1).each do |talk|
-            div(class="row no-gutters d-md-none mb-3")
-              div(class="col-4")
-                div(class="block-index-teammember-photo")
-                  = link_to '/talks/香港教育大學英語教育系-彭于榛-barbie-peng-ov-study-bde-hk' do
-                    = image_tag talk[:avatar_url], class: 'img-fluid'
-              div(class='col-8')
-                div(class='block-index-teammember h-100')
-                  p 每個人都不是最了解自己的人，透過相處、對話，你才會知道自
-                  ul(class="list-unstyled m-0")
-                    li
-                      = link_to talk[:education], talk[:education_url]
-                      = link_to talk[:major], talk[:major_url]
-                    li = link_to talk[:name], talk[:url]
-          div(class="row no-gutters d-md-none my-4")
-            - @talks.first(3).each do |talk|
-              div(class="col-4")
-                div(class="h-100 mx-1 bg-white block-index-teammember")
-                  = link_to '/talks/香港教育大學英語教育系-彭于榛-barbie-peng-ov-study-bde-hk' do
-                    = image_tag talk[:avatar_url], class: 'img-fluid'
-                  div
-                    ul(class="list-unstyled p-2")
-                      li = link_to talk[:name], talk[:url], class: 'link-major-inverse'
-                      li = link_to talk[:education], talk[:education_url], class: 'link-major-inverse'
-                      li = link_to talk[:major], talk[:major_url], class: 'link-major-inverse'
+          = render 'shared/explore_your_future'
           div
             p(class='font-weight-bold') 想詢問學長姐更多校系經驗
             h4 #{link_to '請到 IOH 臉書社突發問吧！GO~', 'http://bit.ly/ioh_fb_group_161031', target: '_blank', style: 'color: #ca2026';}
-
+    // mobile end
 
     div(class="block-talks-show d-none d-md-flex")  
       div(class="row")
