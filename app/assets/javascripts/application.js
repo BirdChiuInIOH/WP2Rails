@@ -22,9 +22,10 @@
 $(document).on('turbolinks:load', function() {
   // Reset talks filter form
   $('[data-reset="talks-filter"]').on('click', function() {
-    const talksFilterForm = $('[data-target="talks-filter"]');
+    const talksFilterForm = $('[data-target="talks-filter"] input:checkbox');
+
     if (talksFilterForm) {
-      talksFilterForm[0].reset();
+      talksFilterForm.removeAttr('checked');
     }
   });
 

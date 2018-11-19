@@ -128,13 +128,13 @@
 }
 
 .nav-talks {
-
   .nav-link {
     color: color(dark);
     font-weight: 600;
     line-height: 20px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     &.nav-link-head {
       color: color(major);
@@ -153,19 +153,30 @@
       }
     }
 
+    &.nav-link-filter {
+      background-color: #625e61;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 34px;
+      padding: 0 10px;
+
+      &:focus, &:hover, &::after {
+        color: white;
+      }
+    }
+
     // Triangle
     &:after {
-      content: '';
-      display: inline-flex;
-      align-items: center;
-      width: 0;
-      height: 0;
-      margin-left: 0.3em;
-      border-top: 4px solid transparent;
-      border-right: 0;
-      border-bottom: 4px solid transparent;
-      border-left: 9px solid;
+      font-family: 'Font Awesome 5 Free';
+      content: "\f054";
+      font-weight: 800;
+      transform: rotate(0deg);
       transition: transform 0.4s;
+
+      @include media-breakpoint-down(sm) {
+        color: #ca2026;
+      }
     }
 
     &:not(.collapsed) {

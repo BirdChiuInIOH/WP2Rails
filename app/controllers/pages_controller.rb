@@ -10,7 +10,7 @@ class PagesController < ApplicationController
       @news = load_news
     end
 
-    # https://ioh.tw/talks/)
+    # https://ioh.tw/talks/
     def talks
       @talks_filter = load_talks_filter
     end

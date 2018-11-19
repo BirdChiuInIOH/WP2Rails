@@ -3,7 +3,7 @@
     background-image: url('http://www.cmlab.csie.ntu.edu.tw/~chenhsiu/photos/ntu/IMGP0604.JPG');
     object-fit: contain;
     height: 500px;
-    
+
     .talk-show-card-avatar {
       text-align: center;
       img {
@@ -113,10 +113,10 @@
       line-height: 1.8;
     }
   }
-  
+
   .mobile-talk-show-nav {
     li {
-      margin-bottom: 5px;      
+      margin-bottom: 5px;
       padding: 2.5px;
 
       a {
@@ -193,9 +193,28 @@ $custom-gutter-width: 10px; // 將欄距改成 10px
   } // /a
 } // /.block-show-more-talks
 
+.block-talks {
+  @include media-breakpoint-down(sm) {
+    &.container {
+        padding-left: $custom-gutter-width / 2;
+        padding-right: $custom-gutter-width / 2;
+    }
+
+    .row {
+      margin-left: -($custom-gutter-width / 2);
+      margin-right: -($custom-gutter-width / 2);
+    }
+
+    [class*="col-md"] {
+      padding-left: $custom-gutter-width / 2;
+      padding-right: $custom-gutter-width / 2;
+    }
+  }
+}
+
 .onofflabel {
   position: relative;
-  
+
   > label {
     line-height: 34px;
     padding-left: 10px;
@@ -286,5 +305,5 @@ $custom-gutter-width: 10px; // 將欄距改成 10px
 }
 
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
-  right: 0px; 
+  right: 0px;
 }

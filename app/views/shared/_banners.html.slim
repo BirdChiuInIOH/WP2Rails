@@ -1,2 +1,4 @@
 = link_to '#' do
-  = image_tag 'https://i2.wp.com/ioh.tw/assets/DesignCampaign聽聽教授怎麼說-Banner161216-05.jpg', class: 'img-fluid'
+  picture
+    source(media="(max-width: 540px)" srcset="#{asset_path 'talks/banner.jpg'}")
+    = image_tag 'https://i2.wp.com/ioh.tw/assets/DesignCampaign聽聽教授怎麼說-Banner161216-05.jpg', class: 'img-fluid'
