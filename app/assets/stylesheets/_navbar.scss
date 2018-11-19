@@ -47,11 +47,10 @@
       font-weight: bold;
       line-height: 10px;
     }
-  }// /mobile
+  } // /mobile
 }
 
 .navbar-ioh {
-
   a {
     color: gray;
 
@@ -161,7 +160,9 @@
       line-height: 34px;
       padding: 0 10px;
 
-      &:focus, &:hover, &::after {
+      &:focus,
+      &:hover,
+      &::after {
         color: white;
       }
     }
@@ -169,7 +170,7 @@
     // Triangle
     &:after {
       font-family: 'Font Awesome 5 Free';
-      content: "\f054";
+      content: '\f054';
       font-weight: 800;
       transform: rotate(0deg);
       transition: transform 0.4s;
@@ -180,7 +181,6 @@
     }
 
     &:not(.collapsed) {
-
       &:after {
         transform: rotate(90deg);
       }

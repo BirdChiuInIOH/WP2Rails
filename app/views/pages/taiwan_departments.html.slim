@@ -1,10 +1,10 @@
 / Mobile
 / Sticky menu
 nav(class="nav nav-justified nav-sticky-footer nav-sticky-footer-light d-flex d-md-none")
-  li(class="nav-item") = link_to '校系總覽', '#', class: 'nav-link'
-  li(class="nav-item") = link_to '升學攻略', '#', class: 'nav-link'
-  li(class="nav-item") = link_to '主題文章', '#', class: 'nav-link'
-  li(class="nav-item") = link_to '工作職涯', '#', class: 'nav-link'
+  li(class="nav-item") = link_to raw('校系<br />總覽'), '#', class: 'nav-link'
+  li(class="nav-item") = link_to raw('升學<br />攻略'), '#', class: 'nav-link'
+  li(class="nav-item") = link_to raw('主題<br />文章'), '#', class: 'nav-link'
+  li(class="nav-item") = link_to raw('工作<br />職涯'), '#', class: 'nav-link'
 
 div(class="block-taiwan-departments d-block d-md-none px-2")
   p(class="my-3 font-weight-bold text-center" style="font-size: 25px; color: #434242;") 「全臺校系總覽」
@@ -59,15 +59,15 @@ div(class="block-taiwan-departments d-block d-md-none px-2")
             div(class="head-pills") 依學校校名瀏覽
           / 國立大學
           div
-            div(class="block-schools-dropdown open" data-toggle="collapse" data-target="#collapse-public-schools")
+            div(class="block-schools-dropdown collapsed collapsed" data-toggle="collapse" data-target="#collapse-public-schools")
               | 國立大學
               i(class="fas fa-chevron-right")
-            div(class="collapse show collpase-schools-mobile" id="collapse-public-schools")
+            div(class="collapse collpase-schools-mobile" id="collapse-public-schools")
               - @public_schools.in_groups_of(3, false).each do |schools_group|
                 = render 'mobile_school_links_with_collapses', group: schools_group, group_id: 1
           / 私立大學
           div
-            div(class="block-schools-dropdown" data-toggle="collapse" data-target="#collapse-private-schools")
+            div(class="block-schools-dropdown collapsed" data-toggle="collapse" data-target="#collapse-private-schools")
               | 私立大學
               i(class="fas fa-chevron-right")
             div(class="collapse collpase-schools-mobile" id="collapse-private-schools")
@@ -75,7 +75,7 @@ div(class="block-taiwan-departments d-block d-md-none px-2")
                 = render 'mobile_school_links_with_collapses', group: schools_group, group_id: 1
           / 公立科技大學
           div
-            div(class="block-schools-dropdown" data-toggle="collapse" data-target="#collapse-public-technology-schools")
+            div(class="block-schools-dropdown collapsed" data-toggle="collapse" data-target="#collapse-public-technology-schools")
               | 公立科技大學
               i(class="fas fa-chevron-right")
             div(class="collapse collpase-schools-mobile" id="collapse-public-technology-schools")
@@ -83,7 +83,7 @@ div(class="block-taiwan-departments d-block d-md-none px-2")
                 = render 'mobile_school_links_with_collapses', group: schools_group, group_id: 1
           / 私立科技大學
           div
-            div(class="block-schools-dropdown" data-toggle="collapse" data-target="#collapse-private-technology-schools")
+            div(class="block-schools-dropdown collapsed" data-toggle="collapse" data-target="#collapse-private-technology-schools")
               | 私立科技大學
               i(class="fas fa-chevron-right")
             div(class="collapse collpase-schools-mobile" id="collapse-private-technology-schools")
@@ -91,7 +91,7 @@ div(class="block-taiwan-departments d-block d-md-none px-2")
                 = render 'mobile_school_links_with_collapses', group: schools_group, group_id: 1
           / 軍警院校
           div
-            div(class="block-schools-dropdown" data-toggle="collapse" data-target="#collapse-military-schools")
+            div(class="block-schools-dropdown collapsed" data-toggle="collapse" data-target="#collapse-military-schools")
               | 軍警院校
               i(class="fas fa-chevron-right")
             div(class="collapse collpase-schools-mobile" id="collapse-military-schools")
@@ -99,7 +99,7 @@ div(class="block-taiwan-departments d-block d-md-none px-2")
                 = render 'mobile_school_links_with_collapses', group: schools_group, group_id: 1
           / / 技術學院
           div
-            div(class="block-schools-dropdown" data-toggle="collapse" data-target="#collapse-technology-academy-schools")
+            div(class="block-schools-dropdown collapsed" data-toggle="collapse" data-target="#collapse-technology-academy-schools")
               | 技術學院
               i(class="fas fa-chevron-right")
             div(class="collapse collpase-schools-mobile" id="collapse-technology-academy-schools")
@@ -112,7 +112,7 @@ div(class="block-taiwan-departments d-block d-md-none px-2")
             div(class="head-pills") 依學校地區瀏覽
           - @areas.each do |area|
             div
-              div(class="block-area-dropdown", style="background-image: url(#{area[:url]})" data-toggle="collapse" data-target="#collapse-#{area[:local]}")
+              div(class="block-area-dropdown collapsed", style="background-image: url(#{area[:url]})" data-toggle="collapse" data-target="#collapse-#{area[:local]}")
                 span = area[:local]
                 i(class="fas fa-chevron-right")
               div(class="collapse collpase-area-mobile" id="collapse-#{area[:local]}")
