@@ -1,6 +1,7 @@
 / Mobile
 div(class="block-mobile-talk-show")
   div(class="container")
+    / mobile only
     div(class="row no-gutters d-md-none")
       div(class="col")
         div(class="youtube-rwd-container mb-3")
@@ -57,19 +58,7 @@ div(class="block-mobile-talk-show")
           h4 生涯職涯無縫接軌 鏈結校友發展
           p 以「探索」、「聚焦」、「行動」、「接軌」四階段為「經」；活動規劃、方案設計為「緯」，貫穿大學四年生涯規劃，以建構學生系統化的職涯發展歷程為理念出發，依循透過測驗（CVHS、UCAN）導引其發展方向，增進東吳學子軟實力，鏈結企業、校友力量而編織就業網絡。年輕校友海外就業計畫，幫助年輕校友快速累積職場經驗，並媒合海外企業就業機會，舉辦職前培訓課程，厚植年輕校友的職場競爭力。
         div(class="block-talks-more-share px-5 text-center")
-          h3(class="mb-4") 喜歡他/她的故事嗎 ?
-          div(class="block-mobile-talk-show-list")
-            ul(class="list-unstyled")
-              li = link_to '想看【XX大學】的求學講座', 'https://ioh.tw/talks/香港教育大學英語教育學系-王思云-tiffany-wang-ov-study-bde-hk/', target: '_blank', class: 'd-block'
-              li = link_to '想看【XX系】的求學講座', 'https://ioh.tw/?qmt[topic][]=512', target: '_blank', class: 'd-block'
-              li = link_to '想看海外各科系的求學講座總覽', 'https://ioh.tw/study-abroad-experience-sharing/', target: '_blank', class: 'd-block'
-              li = link_to '了解更多招生資訊【XX大學】', '#', class: 'd-block'
-
-          p(class="d-md-none my-30px font-weight-bold" style="font-size: 14px;") Explore More
-          = render 'shared/explore_your_future'
-          div
-            p(class='font-weight-bold') 想詢問學長姐更多校系經驗
-            h4 #{link_to '請到 IOH 臉書社突發問吧！GO~', 'http://bit.ly/ioh_fb_group_161031', target: '_blank', style: 'color: #ca2026';}
+          = render 'shared/ask_questions'
 / /Mobile
 
 div(class="container block-talks-show d-none d-md-block my-3")

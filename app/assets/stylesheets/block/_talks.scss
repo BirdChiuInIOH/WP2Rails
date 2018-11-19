@@ -1,26 +1,4 @@
 .block-mobile-talk-show {
-  .talk-show-card {
-    background-image: url('http://www.cmlab.csie.ntu.edu.tw/~chenhsiu/photos/ntu/IMGP0604.JPG');
-    object-fit: contain;
-    height: 500px;
-
-    .talk-show-card-avatar {
-      text-align: center;
-      img {
-        background-color: white;
-        padding: 4px;
-        width: 133px;
-        height: 133px;
-      }
-    }
-
-    p {
-      color: white;
-      font-weight: bold;
-      font-size: 16px;
-    }
-  }
-
   @include media-breakpoint-down(sm) {
     .container {
       padding: 0;
@@ -130,11 +108,11 @@
     position: relative;
     
     p {
-      line-height: 40px;
+      height: 22px;
       background-color: #ca2026;
-      font-size: 16px;
-      color: white;
+      font-size: 20px;
       font-weight: bold;
+      color: white;
       text-align: center;
     }
   }
@@ -160,10 +138,11 @@
   }
 
   .block-talk-show-card {
-    background-image: url('http://www.cmlab.csie.ntu.edu.tw/~chenhsiu/photos/ntu/IMGP0604.JPG');
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/8c/%E6%96%B0%E7%94%9F%E6%95%99%E5%AD%B8%E9%A4%A8%EF%BC%88%E5%9C%8B%E7%AB%8B%E8%87%BA%E7%81%A3%E5%A4%A7%E5%AD%B8%EF%BC%89.JPG');
     background-size: 100% 100%;
     min-height: 529px;
     height: auto;
+    padding: 17px 12px 11px;
     
     .block-talk-show-card-avatar {
       text-align: center;

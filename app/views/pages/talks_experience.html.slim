@@ -4,14 +4,15 @@
 
 div(class="block-mobile-talk-show")
   div(class="container")
+    / mobile only
     div(class="row no-gutters d-md-none")
       div(class="col")
-        div(class="block-talk-show-card py-3")
-          div(class="block-talk-show-card-avatar px-3")
+        div(class="block-talk-show-card")
+          div(class="block-talk-show-card-avatar")
             = image_tag 'https://ioh.tw/assets/03-香港教育大學英語教育系彭于榛Barbie-PengProfile.jpg', class: 'img-fluid'
             p 彭于榛
             p 香港教育大學 英語教育學系
-          div(class="block-talk-show-card-body px-3")
+          div(class="block-talk-show-card-body")
             div(class="block-talk-goal")
               p(class="m-0") 想成為能啟發人心的英文老師
             div(class="block-talk-show-card-info")
@@ -19,7 +20,8 @@ div(class="block-mobile-talk-show")
               p 到香港留學近幾年漸漸成為新潮流，因為相較去歐美留學便宜、且近許多。講座中將介紹我在香港教育大學就讀的點點滴滴，在港讀書與台灣的差別，以及我的科系介紹。此外，我也將分享我認為適合來香港讀書的人的特質，以提供更多思考空間及資訊給未來想到香港讀書的人。
               p(class="m-0 text-center") 觀看講座
             div(class="block-talk-arrow")
-              p(class="m-0") V
+              p(class="m-0") 
+                i(class="fas fa-angle-down")
 
         div(class="youtube-rwd-container mb-3")
           iframe allow=("autoplay; encrypted-media") allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/cZOsS76Qqdw" width="560"
@@ -60,7 +62,6 @@ div(class="block-mobile-talk-show")
             li(class="nav-item") = link_to '相同大學講座', '#', class: 'nav-link'
             li(class="nav-item") = link_to '相同科系講座', '#', class: 'nav-link'
             li(class="nav-item") = link_to '相同領域講座', '#', class: 'nav-link'
-
         section(class="px-5")
           div
             h4 我想成為能啟發人心的英文老師
@@ -129,20 +130,8 @@ div(class="block-mobile-talk-show")
           h4 生涯職涯無縫接軌 鏈結校友發展
           p 以「探索」、「聚焦」、「行動」、「接軌」四階段為「經」；活動規劃、方案設計為「緯」，貫穿大學四年生涯規劃，以建構學生系統化的職涯發展歷程為理念出發，依循透過測驗（CVHS、UCAN）導引其發展方向，增進東吳學子軟實力，鏈結企業、校友力量而編織就業網絡。年輕校友海外就業計畫，幫助年輕校友快速累積職場經驗，並媒合海外企業就業機會，舉辦職前培訓課程，厚植年輕校友的職場競爭力。
         div(class="block-talks-more-share px-5 text-center")
-          h3(class="mb-4") 喜歡他/她的故事嗎 ?
-          div(class="block-mobile-talk-show-list")
-            ul(class="list-unstyled")
-              li = link_to '想看【XX大學】的求學講座', 'https://ioh.tw/talks/香港教育大學英語教育學系-王思云-tiffany-wang-ov-study-bde-hk/', target: '_blank', class: 'd-block'
-              li = link_to '想看【XX系】的求學講座', 'https://ioh.tw/?qmt[topic][]=512', target: '_blank', class: 'd-block'
-              li = link_to '想看海外各科系的求學講座總覽', 'https://ioh.tw/study-abroad-experience-sharing/', target: '_blank', class: 'd-block'
-              li = link_to '了解更多招生資訊【XX大學】', '#', class: 'd-block'
-
-          p(class="d-md-none my-30px font-weight-bold" style="font-size: 14px;") Explore More
-          = render 'shared/explore_your_future'
-          div
-            p(class='font-weight-bold') 想詢問學長姐更多校系經驗
-            h4 #{link_to '請到 IOH 臉書社突發問吧！GO~', 'http://bit.ly/ioh_fb_group_161031', target: '_blank', style: 'color: #ca2026';}
-/ /Mobile
+          = render 'shared/ask_questions'
+    // mobile end
 
 div(class="container block-talks-show d-none d-md-block my-3")
   div(class="row")
