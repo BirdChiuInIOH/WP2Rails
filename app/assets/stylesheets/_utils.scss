@@ -153,13 +153,14 @@
 }
 
 .btn-white-school-mobile {
-  box-sizing: content-box;
   border: 1px solid #95989a;
   background-color: white;
   border-radius: 0;
   color: #525252;
-  padding: 0;
-  height: 27px;
+  height: 28px;
+  padding: 5px;
+  line-height: 0;
+  width: 100%;
 }
 
 /**

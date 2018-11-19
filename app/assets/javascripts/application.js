@@ -173,15 +173,31 @@ $(document).on('turbolinks:load', function() {
     $(this).parent('.dropdown-news-sort').next('.dropdown-news-sort-content').toggle();
   })
 
-  $('.btn-schools-sort').on('click', function (e) {
-    console.log('click')
-    $(this).parent('.dropdown-schools-sort').toggleClass('active');
-    $(this).parent('.dropdown-schools-sort').next('.dropdown-schools-sort-content').toggle();
-  })
+  // 全臺校系總覽 Mobile - 依學校校名瀏覽
+  $('.collpase-schools-mobile').on('show.bs.collapse', function() {
+    $(this).prev('.block-schools-dropdown').addClass('open');
+  });
+  $('.collpase-schools-mobile').on('hidden.bs.collapse', function () {
+    $(this).prev('.block-schools-dropdown').removeClass('open');
+  });
 
-  $('.by-areas-photo').on('click', function (e) {
-    console.log('click')
-    $(this).parent('.areas-sort').toggleClass('active');
-    $(this).parent('.areas-sort').next('.areas-sort-content').toggle();
-  })
+  // 全臺校系總覽 Mobile - 依學校地區瀏覽
+  $('.collpase-area-mobile').on('show.bs.collapse', function () {
+    $(this).prev('.block-area-dropdown').addClass('open');
+  });
+  $('.collpase-area-mobile').on('hidden.bs.collapse', function () {
+    $(this).prev('.block-area-dropdown').removeClass('open');
+  });
+
+  // 全臺校系總覽 Mobile - 依 18 學群瀏覽
+  $('.block-eighteen-dropdown').on('click', function () {
+    var isOpen = $(this).hasClass('open');
+    $('.block-eighteen-dropdown').removeClass('open');
+    if (isOpen) {
+      $(this).removeClass('open');
+    } else {
+      $(this).addClass('open');
+    }
+  });
+
 });
