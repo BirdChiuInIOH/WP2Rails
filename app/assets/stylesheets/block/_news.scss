@@ -1,33 +1,30 @@
-.block-news-mobile {
-  .container {
-    @include media-breakpoint-down(sm) {
-      margin-top: 19px;
-      padding: 0 6px;
-    }
+.block-news {
+  h1 {
+    margin: 10px 0;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 40px;
   }
 
-  .block-news {
-    h1 {
-      margin: 10px 0;
-      font-size: 22px;
-      font-weight: bold;
-      line-height: 40px;
-    }
+  .post {
+    .head {
+      p {
+        margin-bottom: 10px;
+      }
 
-    .post {
-      .head {
-
-        p {
-          margin-bottom: 10px;
-        }
-
-        h2 {
-          margin-bottom: 10px;
-          font-size: 32px;
-          font-weight: bold;
-        }
+      h2 {
+        margin-bottom: 10px;
+        font-size: 32px;
+        font-weight: bold;
       }
     }
+  }
+}
+
+.block-news-mobile {
+  &.container {
+    margin-top: 19px;
+    padding: 0 6px;
   }
 
   .block-news-category-dropdown {
@@ -56,48 +53,29 @@
 
   .block-news-category-links {
     display: grid;
-    grid-template-columns: 1fr 10px 1fr 10px 1fr 10px 1fr;
-    // grid-template-rows: 30px;
-    margin-bottom: 10px;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, minmax(auto, 1fr));
+    grid-auto-rows: 1fr;
   }
 
-  .block-news-category-link-1,
-  .block-news-category-link-2,
-  .block-news-category-link-3,
-  .block-news-category-link-4 {
+  .block-news-category-link {
     background-color: white;
     overflow: hidden;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #625e61;
+    padding: 3px;
 
     a {
-      border: 2px solid #625e61;
-      display: block;
-      width: 100%;
-      height: 100%;
-      padding: 5px;
+      text-align: center;
       color: black;
       font-size: 14px;
       font-weight: bold;
-      text-align: center;
 
       &:hover {
         text-decoration: none;
       }
     }
-  }
-
-  .block-news-category-link-1 {
-    grid-column-start: 1;
-  }
-
-  .block-news-category-link-2 {
-    grid-column-start: 3;
-  }
-
-  .block-news-category-link-3 {
-    grid-column-start: 5;
-  }
-
-  .block-news-category-link-4 {
-    grid-column-start: 7;
   }
 }

@@ -2,114 +2,113 @@
 / Sticky menu
 = render 'shared/m_nav_sticky_footer_light'
 
-div(class="block-news-mobile")
-  div(class="container")
-    div(class="d-md-none")
-      div(class="block-news-category-dropdown" data-toggle="collapse" href="#news-category-links")
-        | 文章分類
-        i(class="fas fa-chevron-right")
+div(class="block-news-mobile container d-md-none")
+  / 文章分類
+  div(class="block-news-category-dropdown" data-toggle="collapse" href="#news-category-links")
+    | 文章分類
+    i(class="fas fa-chevron-right")
 
-      div(id="news-category-links" class="collapse show")
-        div(class="block-news-category-links")
-          div(class="block-news-category-link-1")
-            = link_to 'IOH 實習', '#'
-          div(class="block-news-category-link-2")
-            = link_to '專欄文章', '#'
-          div(class="block-news-category-link-3")
-            = link_to '專訪文章', '#'
-          div(class="block-news-category-link-4")
-            = link_to '活動公告', '#'
-        div(class="block-news-category-links")
-          div(class="block-news-category-link-1")
-            = link_to '講座影片', '#'
-          div(class="block-news-category-link-2")
-            = link_to '大學新鮮人特輯', '#', style: 'font-size: 10px;'
-          div(class="block-news-category-link-3")
-            = link_to '學測申請', '#'
-          div(class="block-news-category-link-4")
-            = link_to '影劇評論', '#'
-        div(class="block-news-category-links")
-          div(class="block-news-category-link-1")
-            = link_to '志願選填', '#'
-          div(class="block-news-category-link-2")
-            = link_to '指考準備', '#'
-          div(class="block-news-category-link-3")
-            = link_to '教授專訪', '#'
-          div(class="block-news-category-link-4")
-            = link_to '高職升學', '#'
-        div(class="block-news-category-links")
-          div(class="block-news-category-link-1")
-            = link_to '破解科系迷思', '#', style: 'font-size: 12px;'
-          div(class="block-news-category-link-2")
-            = link_to '那些學長姐走過的路', '#', style: 'font-size: 12px;'
-          div(class="block-news-category-link-3")
-            = link_to '其他分類', '#'
+  / 文章分類收合項目
+  div(id="news-category-links" class="collapse show")
+    div(class="block-news-category-links")
+      div(class="block-news-category-link")
+        = link_to 'IOH 實習', '#'
+      div(class="block-news-category-link")
+        = link_to '專欄文章', '#'
+      div(class="block-news-category-link")
+        = link_to '專訪文章', '#'
+      div(class="block-news-category-link")
+        = link_to '活動公告', '#'
+      div(class="block-news-category-link")
+        = link_to '講座影片', '#'
+      div(class="block-news-category-link")
+        = link_to '大學新鮮人特輯', '#', style: 'font-size: 10px;'
+      div(class="block-news-category-link")
+        = link_to '學測申請', '#'
+      div(class="block-news-category-link")
+        = link_to '影劇評論', '#'
+      div(class="block-news-category-link")
+        = link_to '志願選填', '#'
+      div(class="block-news-category-link")
+        = link_to '指考準備', '#'
+      div(class="block-news-category-link")
+        = link_to '教授專訪', '#'
+      div(class="block-news-category-link")
+        = link_to '高職升學', '#'
+      div(class="block-news-category-link")
+        = link_to '破解科系迷思', '#', style: 'font-size: 12px;'
+      div(class="block-news-category-link")
+        = link_to '那些學長姐走過的路', '#', style: 'font-size: 12px;'
+      div(class="block-news-category-link")
+        = link_to '其他分類', '#'
 
-    p(class="d-md-none my-3 font-weight-bold text-center" style="font-size: 25px;") 熱門議題
-    - @news.first(1).each do |news|
-      div(class="row no-gutters d-md-none block-index-featured-article")
-        div(class="col-12")
-          div(class="bg-white")
-            = link_to '#' do
-              = image_tag news[:img_url], class: 'img-fluid'
-            div
-              ul(class="list-unstyled p-2")
-                li 近年有越來越多台灣高中生選擇赴香港就讀大學，
-                li(class="mb-3") 然而，許多人是在不了解真正清楚現況就貿然做了決定。
-                li 若你正有著赴港求學的想法，這篇文章正好能提供你一些基礎知識...
-
-    - @news.first(2).each do |news|
-      div(class="row no-gutters d-md-none mb-3 block-index-list-article")
-        div(class="col-6")
+  / 熱門議題
+  p(class="d-md-none my-3 font-weight-bold text-center" style="font-size: 25px;") 熱門議題
+  - @news.first(1).each do |news|
+    div(class="row no-gutters d-md-none block-index-featured-article")
+      div(class="col-12")
+        div(class="bg-white")
           = link_to '#' do
             = image_tag news[:img_url], class: 'img-fluid'
-        div(class="col-6")
-          div(class="bg-white h-100")
-            ul(class="list-unstyled p-2 m-0")
-                li = news[:title]
+          div
+            ul(class="list-unstyled p-2")
+              li 近年有越來越多台灣高中生選擇赴香港就讀大學，
+              li(class="mb-3") 然而，許多人是在不了解真正清楚現況就貿然做了決定。
+              li 若你正有著赴港求學的想法，這篇文章正好能提供你一些基礎知識...
 
-    div(class="block-index-more-news text-right d-md-none mb-5")
-      = link_to '更多文章+', '#'
+  - @news.first(2).each do |news|
+    div(class="row no-gutters d-md-none mb-3 block-index-list-article")
+      div(class="col-6")
+        = link_to '#' do
+          = image_tag news[:img_url], class: 'img-fluid'
+      div(class="col-6")
+        div(class="bg-white h-100")
+          ul(class="list-unstyled p-2 m-0")
+              li = news[:title]
 
-    p(class="d-md-none my-3 font-weight-bold text-center" style="font-size: 25px;") 文章回顧
-    - @news.first(1).each do |news|
-      div(class="row no-gutters d-md-none block-index-featured-article")
-        div(class="col-12")
-          div(class="bg-white")
-            = link_to '#' do
-              = image_tag news[:img_url], class: 'img-fluid'
-            div
-              ul(class="list-unstyled p-2")
-                li 近年有越來越多台灣高中生選擇赴香港就讀大學，
-                li(class="mb-3") 然而，許多人是在不了解真正清楚現況就貿然做了決定。
-                li 若你正有著赴港求學的想法，這篇文章正好能提供你一些基礎知識...
+  div(class="block-index-more-news text-right d-md-none mb-5")
+    = link_to '更多文章+', '#'
 
-    - @news.first(2).each do |news|
-      div(class="row no-gutters d-md-none mb-3 block-index-list-article")
-        div(class="col-6")
+  p(class="d-md-none my-3 font-weight-bold text-center" style="font-size: 25px;") 文章回顧
+  - @news.first(1).each do |news|
+    div(class="row no-gutters d-md-none block-index-featured-article")
+      div(class="col-12")
+        div(class="bg-white")
           = link_to '#' do
             = image_tag news[:img_url], class: 'img-fluid'
-        div(class="col-6")
-          div(class="bg-white h-100")
-            ul(class="list-unstyled p-2 m-0")
-                li = news[:title]
+          div
+            ul(class="list-unstyled p-2")
+              li 近年有越來越多台灣高中生選擇赴香港就讀大學，
+              li(class="mb-3") 然而，許多人是在不了解真正清楚現況就貿然做了決定。
+              li 若你正有著赴港求學的想法，這篇文章正好能提供你一些基礎知識...
 
-    div(class="block-index-more-news text-right d-md-none mb-5")
-      = link_to '更多文章+', '#'
+  - @news.first(2).each do |news|
+    div(class="row no-gutters d-md-none mb-3 block-index-list-article")
+      div(class="col-6")
+        = link_to '#' do
+          = image_tag news[:img_url], class: 'img-fluid'
+      div(class="col-6")
+        div(class="bg-white h-100")
+          ul(class="list-unstyled p-2 m-0")
+              li = news[:title]
+
+  div(class="block-index-more-news text-right d-md-none mb-5")
+    = link_to '更多文章+', '#'
 / /Mobile
 
-div(class="row block-news py-3 d-none d-md-flex")
-  div(class="col-md-8 col-12")
-    = render 'shared/banners'
-    h1 最新文章/消息
-    - @news.each do |news|
-      div(class="post")
-        div(class="head")
-          h2 = link_to news[:title], news[:content_url], class: 'link-major-underline'
-          div Posted on #{news[:posted_at].strftime('%Y 年 %m 月 %d 日 at %T')}.
-          p Written by #{link_to news[:name], news[:name_url], class: 'link-major-underline'}
-          div(class="content")
-            p #{news[:content]} … #{link_to 'Continued', news[:content_url], class: 'link-major-underline'}
+div(class="container block-news d-none d-md-flex")
+  div(class="row py-3")
+    div(class="col-md-8 col-12")
+      = render 'shared/banners'
+      h1 最新文章/消息
+      - @news.each do |news|
+        div(class="post")
+          div(class="head")
+            h2 = link_to news[:title], news[:content_url], class: 'link-major-underline'
+            div Posted on #{news[:posted_at].strftime('%Y 年 %m 月 %d 日 at %T')}.
+            p Written by #{link_to news[:name], news[:name_url], class: 'link-major-underline'}
+            div(class="content")
+              p #{news[:content]} … #{link_to 'Continued', news[:content_url], class: 'link-major-underline'}
 
-  div(class="col-md-4 col-12")
-    = render 'shared/sidebar_list'
+    div(class="col-md-4 col-12")
+      = render 'shared/sidebar_list'
