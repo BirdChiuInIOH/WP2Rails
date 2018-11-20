@@ -2,12 +2,15 @@ class PagesController < ApplicationController
     include DataLoader
 
     before_action :set_talks, only: [
-      :index, :talks, :talks_show, :talks_experience, :talks_how_to_apply, :overseas, :press, :events, :about, :how_to_apply_usa, :guides
+      :index, :talks, :talks_show, :talks_experience, :talks_how_to_apply, :overseas, :press, :events, :about, :how_to_apply_usa, :guides, :search
     ]
 
     # https://ioh.tw/
     def index
       @news = load_news
+    end
+
+    def search
     end
 
     # https://ioh.tw/talks/
