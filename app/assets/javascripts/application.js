@@ -29,6 +29,12 @@ $(document).on('turbolinks:load', function() {
     }
   });
 
+  // For Select2
+  $('[data-target="select2"]').select2({
+    placeholder: '學測倒數 ? 大學生必看 ? 大學選課 ? 讀書技巧 ?',
+    tags: true
+ });
+
   // For Swiper
   var swiper = new Swiper('.swiper-container', {
     spaceBetween: 15,

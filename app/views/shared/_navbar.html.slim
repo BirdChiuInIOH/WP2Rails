@@ -5,12 +5,17 @@ div(class="navbar-wrapper-ioh")
       div(class="d-md-none d-inline-flex align-items-center")
         = link_to '#', class: 'navbar-brand mr-0' do
           i(class="fas fa-user-circle")
-        button(type="button" class="navbar-toggler" data-toggle="modal" data-target="#navbar-mobile" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation")
+        button(type="button" class="navbar-toggler ml-2 px-0" data-toggle="modal" data-target="#navbar-mobile" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation")
           span(class="navbar-toggler-icon")
-      div(class="input-group d-md-none pb-2")
-        input(type="text" class="form-control" placeholder="學測倒數 ? 大學生必看 ? 大學選課 ? 讀書技巧 ?" aria-label="Recipient's username" aria-describedby="basic-addon2")
+      form(class="input-group d-md-none pb-2")
+        select(class="custom-select" data-target="select2")
+          option
+          option(value="1") 學測倒數
+          option(value="2") 大學生必看
+          option(value="3") 大學選課
+          option(value="4") 讀書技巧
         div(class="input-group-append")
-          button(class="btn btn-secondary" type="button")
+          button(class="btn btn-secondary rounded-0" type="submit")
             i(class="fas fa-search")
       div(class="col-12")
         div(class="collapse navbar-collapse" id="navbar")
@@ -83,8 +88,6 @@ div(class="navbar-wrapper-ioh")
                 div(class="block-mobile-talk-show")
                   div(class="block-talks-more-share text-center" style="padding: 16px 36px;")
                     = render 'shared/ask_questions'
-      
-
 
   / Mobile popup menu
   div(class="modal fade" id="navbar-mobile" tabindex="-1" role="dialog")

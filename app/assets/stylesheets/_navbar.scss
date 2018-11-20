@@ -1,3 +1,7 @@
+.navbar-toggler:not(:disabled):not(.disabled) {
+  outline: 0;
+}
+
 .navbar-wrapper-ioh {
   // mobile
   @include media-breakpoint-down(md) {
@@ -8,7 +12,7 @@
     .navbar-ioh {
       background-color: #ca2026;
       border-color: #ca2026;
-      padding: 0 5px;
+      padding: 0 10px;
     }
 
     .navbar-brand {
