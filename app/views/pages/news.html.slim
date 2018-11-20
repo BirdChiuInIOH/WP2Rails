@@ -1,51 +1,49 @@
+/ Mobile
+/ Sticky menu
+= render 'shared/m_nav_sticky_footer_light'
+
 div(class="block-news-mobile")
   div(class="container")
     div(class="d-md-none")
-      div(class="dropdown-news-sort")
-        button(class="btn btn-news-sort text-left w-100" style="font-size: 18px;") 文章分類
+      div(class="block-news-category-dropdown" data-toggle="collapse" href="#news-category-links")
+        | 文章分類
+        i(class="fas fa-chevron-right")
 
-
-      div(class="dropdown-news-sort-content")
-        div(class="row no-gutters py-5px")
-          div(class="col-3")
-            button(class="btn btn-news-mobile" type="button") IOH 實習
-          div(class="col-3")
-            button(class="btn btn-news-mobile" type="button") 專欄文章
-          div(class="col-3")
-            button(class="btn btn-news-mobile" type="button") 專訪文章
-          div(class="col-3")
-            button(class="btn btn-news-mobile" type="button") 活動公告
-        div(class="row no-gutters py-5px")
-          div(class="col-3")
-            button(class="btn btn-news-mobile" type="button") 講座影片
-          div(class="col-3")
-            button(class="btn btn-news-mobile" type="button" style="font-size: 11px;") 大學新鮮人特輯
-          div(class="col-3")
-            button(class="btn btn-news-mobile" type="button") 學測申請
-          div(class="col-3")
-            button(class="btn btn-news-mobile" type="button") 影劇評論
-        div(class="row no-gutters py-5px")
-          div(class="col-3")
-            button(class="btn-news-mobile" type="button") 志願選填
-          div(class="col-3")
-            button(class="btn-news-mobile" type="button") 指考準備
-          div(class="col-3")
-            button(class="btn-news-mobile" type="button") 教授專訪
-          div(class="col-3")
-            button(class="btn-news-mobile" type="button") 高職升學
-        div(class="row no-gutters py-5px")
-          div(class="col-3")
-            button(class="btn-news-mobile" type="button" style="font-size: 11px;") 破解科系迷思
-          div(class="col-3")
-            button(class="btn-news-mobile" type="button" style="font-size: 11px;") 那些學長姐走過的路
-          div(class="col-3")
-            button(class="btn-news-mobile" type="button") 其他分類
-
-
-
-
-
-
+      div(id="news-category-links" class="collapse show")
+        div(class="block-news-category-links")
+          div(class="block-news-category-link-1")
+            = link_to 'IOH 實習', '#'
+          div(class="block-news-category-link-2")
+            = link_to '專欄文章', '#'
+          div(class="block-news-category-link-3")
+            = link_to '專訪文章', '#'
+          div(class="block-news-category-link-4")
+            = link_to '活動公告', '#'
+        div(class="block-news-category-links")
+          div(class="block-news-category-link-1")
+            = link_to '講座影片', '#'
+          div(class="block-news-category-link-2")
+            = link_to '大學新鮮人特輯', '#', style: 'font-size: 10px;'
+          div(class="block-news-category-link-3")
+            = link_to '學測申請', '#'
+          div(class="block-news-category-link-4")
+            = link_to '影劇評論', '#'
+        div(class="block-news-category-links")
+          div(class="block-news-category-link-1")
+            = link_to '志願選填', '#'
+          div(class="block-news-category-link-2")
+            = link_to '指考準備', '#'
+          div(class="block-news-category-link-3")
+            = link_to '教授專訪', '#'
+          div(class="block-news-category-link-4")
+            = link_to '高職升學', '#'
+        div(class="block-news-category-links")
+          div(class="block-news-category-link-1")
+            = link_to '破解科系迷思', '#', style: 'font-size: 12px;'
+          div(class="block-news-category-link-2")
+            = link_to '那些學長姐走過的路', '#', style: 'font-size: 12px;'
+          div(class="block-news-category-link-3")
+            = link_to '其他分類', '#'
 
     p(class="d-md-none my-3 font-weight-bold text-center" style="font-size: 25px;") 熱門議題
     - @news.first(1).each do |news|
@@ -98,27 +96,20 @@ div(class="block-news-mobile")
 
     div(class="block-index-more-news text-right d-md-none mb-5")
       = link_to '更多文章+', '#'
+/ /Mobile
 
+div(class="row block-news py-3 d-none d-md-flex")
+  div(class="col-md-8 col-12")
+    = render 'shared/banners'
+    h1 最新文章/消息
+    - @news.each do |news|
+      div(class="post")
+        div(class="head")
+          h2 = link_to news[:title], news[:content_url], class: 'link-major-underline'
+          div Posted on #{news[:posted_at].strftime('%Y 年 %m 月 %d 日 at %T')}.
+          p Written by #{link_to news[:name], news[:name_url], class: 'link-major-underline'}
+          div(class="content")
+            p #{news[:content]} … #{link_to 'Continued', news[:content_url], class: 'link-major-underline'}
 
-
-
-
-
-
-
-
-    div(class="row block-news py-3 d-none d-md-flex")
-      div(class="col-md-8 col-12")
-        = render 'shared/banners'
-        h1 最新文章/消息
-        - @news.each do |news|
-          div(class="post")
-            div(class="head")
-              h2 = link_to news[:title], news[:content_url], class: 'link-major-underline'
-              div Posted on #{news[:posted_at].strftime('%Y 年 %m 月 %d 日 at %T')}.
-              p Written by #{link_to news[:name], news[:name_url], class: 'link-major-underline'}
-              div(class="content")
-                p #{news[:content]} … #{link_to 'Continued', news[:content_url], class: 'link-major-underline'}
-
-      div(class="col-md-4 col-12")
-        = render 'shared/sidebar_list'
+  div(class="col-md-4 col-12")
+    = render 'shared/sidebar_list'

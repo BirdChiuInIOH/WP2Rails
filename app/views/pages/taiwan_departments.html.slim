@@ -1,10 +1,6 @@
 / Mobile
 / Sticky menu
-nav(class="nav nav-justified nav-sticky-footer nav-sticky-footer-light d-flex d-md-none")
-  li(class="nav-item") = link_to raw('校系<br />總覽'), '#', class: 'nav-link'
-  li(class="nav-item") = link_to raw('升學<br />攻略'), '#', class: 'nav-link'
-  li(class="nav-item") = link_to raw('主題<br />文章'), '#', class: 'nav-link'
-  li(class="nav-item") = link_to raw('工作<br />職涯'), '#', class: 'nav-link'
+= render 'shared/m_nav_sticky_footer_light'
 
 div(class="block-taiwan-departments d-block d-md-none px-2")
   p(class="my-3 font-weight-bold text-center" style="font-size: 25px; color: #434242;") 「全臺校系總覽」

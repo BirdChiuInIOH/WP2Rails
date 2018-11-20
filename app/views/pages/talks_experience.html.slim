@@ -1,4 +1,7 @@
 / Mobile
+/ Sticky menu
+= render 'shared/m_nav_sticky_footer_dark'
+
 div(class="block-mobile-talk-show")
   div(class="container")
     div(class="row no-gutters d-md-none")
@@ -17,12 +20,6 @@ div(class="block-mobile-talk-show")
               p(class="m-0 text-center") 觀看講座
             div(class="block-talk-arrow")
               p(class="m-0") V
-
-        nav(class="nav nav-justified nav-talk-show-list bg-mobile-gray")
-          li(class="nav-item") = link_to '台灣求學', '#', class: 'nav-link'
-          li(class="nav-item") = link_to '海外留學', '#', class: 'nav-link'
-          li(class="nav-item") = link_to '主題文章', '#', class: 'nav-link'
-          li(class="nav-item") = link_to '工作職涯', '#', class: 'nav-link'
 
         div(class="youtube-rwd-container mb-3")
           iframe allow=("autoplay; encrypted-media") allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/cZOsS76Qqdw" width="560"

@@ -1,3 +1,6 @@
+/ Sticky menu
+= render 'shared/m_nav_sticky_footer_dark'
+
 div(class="container")
   div(class="row no-gutters d-md-none d-flex mb-4")
     div(class="col-12")
@@ -15,7 +18,7 @@ div(class="container")
         li(class="nav-item") = link_to '備審面試', '#', class: 'nav-link border-mobile'
         li(class="nav-item") = link_to '教授分享', '#', class: 'nav-link border-mobile'
         li(class="nav-item") = link_to '校系分享', '#', class: 'nav-link border-mobile'
-  
+
   / Mobile only
   p(class="block-index-header d-md-none my-30px") 精選文章
   - @news.first(1).each do |news|
@@ -56,7 +59,7 @@ div(class="container")
               li = link_to talk[:education], talk[:education_url], class: 'link-major-inverse'
               li = link_to talk[:major], talk[:major_url], class: 'link-major-inverse'
   // mobile
-  
+
   div(class="row no-gutters d-none d-md-flex")
     p(class="my-5 font-weight-bold" style="font-size: 16.5px;") 「升大學全攻略」為 IOH 高中生升學統整專區，範圍從學測、指考以及備審面試的學長姐準備文章，到大學教授升學經驗談，以及全台校系經驗分享。
     div(class="col-md-3 col-sm-6 mb-2")

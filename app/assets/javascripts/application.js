@@ -158,7 +158,7 @@ $(document).on('turbolinks:load', function() {
       top: 0,
       behavior: 'smooth'
     });
-  })
+  });
   // End of go-top button
 
   $('.onoffswitch').off('click');
@@ -166,13 +166,7 @@ $(document).on('turbolinks:load', function() {
     console.log('click')
     $(this).parent('.onoffswitch').toggleClass('active');
     $(this).parent('.onoffswitch').next('.onoffswitch-content').toggle();
-  })
-
-  $('.btn-news-sort').on('click', function (e) {
-    console.log('click')
-    $(this).parent('.dropdown-news-sort').toggleClass('active');
-    $(this).parent('.dropdown-news-sort').next('.dropdown-news-sort-content').toggle();
-  })
+  });
 
   // 全臺校系總覽 Mobile - 依 18 學群瀏覽
   $('.block-eighteen-dropdown').on('click', function () {
