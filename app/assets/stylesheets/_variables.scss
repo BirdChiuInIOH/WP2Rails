@@ -1,11 +1,11 @@
 $colors: (
   major: #c33838,
-  dark: #333333,
+  dark: #333333
 );
 
 $theme-colors: (
   minor: red,
-  secondary: #625e61,
+  secondary: #625e61
 );
 
 $pagination-color: #666666;
@@ -24,3 +24,7 @@ $h3-font-size: 1.5rem;
 $h4-font-size: 1.25rem;
 
 $font-family-sans-serif: Helvetica, Arial, sans-serif;
+
+// Bootstrap carousel
+$carousel-control-color: #c33838;
+$carousel-control-opacity: 0.8;

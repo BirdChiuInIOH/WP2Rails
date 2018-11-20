@@ -13,6 +13,7 @@
 * `輔助函式`: SCSS mixin, function 相關輔助方法或
 
 `app/assets/stylesheets/application.scss`。
+
 ```
 ├── _footer.scss  (元件)
 ├── _grid.scss  (元件)
@@ -82,7 +83,6 @@
 * [x] [港澳僑外陸生專區](localhost:3000/overseas)
 * [x] [IOH 現場講座](localhost:3000/ioh現場講座)
 * [x] [海外升學指南](localhost:3000/how_to_apply/usa)
-
 
 ### Mobile
 

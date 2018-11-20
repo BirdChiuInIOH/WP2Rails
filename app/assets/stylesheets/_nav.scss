@@ -62,7 +62,7 @@
   background-color: white;
   font-size: 12px;
   font-weight: 500;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, .2);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 
   .nav-item {
     border-top: 1px solid #95989a;
@@ -111,9 +111,9 @@
   }
 }
 
-
 .nav-sticky-footer-dark {
   background-color: #434242;
+  height: 31px;
 
   .nav-link {
     color: white;
@@ -155,8 +155,6 @@
     &:last-child {
       margin-right: 0;
     }
-
-
 
     .nav-link {
       text-align: center;

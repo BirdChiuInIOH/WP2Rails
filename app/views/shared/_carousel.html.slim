@@ -1,24 +1,24 @@
-div(class="carousel-mobile")
-  div(class="container")
-    div(class="carousel slide d-md-none" id="carousel" data-ride="carousel")
-      div(class="carousel-inner mb-10px")
-        div(class="carousel-item active")
-          = image_tag 'https://www.ntu.edu.tw/spotlight/2016/738_20160201_1.jpg', class: 'd-block w-100'
-        div(class="carousel-item")
-          = image_tag 'https://www.ntu.edu.tw/spotlight/2016/738_20160201_1.jpg', class: 'd-block w-100'
-        a(class="carousel-control-prev" href="#carousel" role="button" data-slide="prev")
-          span(class="carousel-control-prev-icon" aria-hidden="true")
-        a(class="carousel-control-next" href="#carousel" role="button" data-slide="next")
-          span(class="carousel-control-next-icon" aria-hidden="true")
+div(class="container carousel-wrapper")
+  / mobile
+  div(class="carousel slide d-md-none" id="mobile-carousel" data-ride="mobile-carousel")
+    div(class="carousel-inner")
+      div(class="carousel-item active")
+        = image_tag 'https://www.ntu.edu.tw/spotlight/2016/738_20160201_1.jpg', class: 'd-block w-100'
+      div(class="carousel-item")
+        = image_tag 'https://www.ntu.edu.tw/spotlight/2016/738_20160201_1.jpg', class: 'd-block w-100'
+    a(class="carousel-control-prev" href="#mobile-carousel" role="button" data-slide="prev")
+      span(class="carousel-control-prev-icon" aria-hidden="true")
+    a(class="carousel-control-next" href="#mobile-carousel" role="button" data-slide="next")
+      span(class="carousel-control-next-icon" aria-hidden="true")
 
-
-    div(class="carousel slide d-none d-md-block" id="carousel" data-ride="carousel")
-      div(class="carousel-inner mt-5 mb-5")
-        div(class="carousel-item active")
-          = image_tag 'https://storage.googleapis.com/ioh-assets/uploads/production/asset/asset//asset/extra_29c0fc9c-6224-4d3f-af2b-54a22e4f2d2a.jpg', class: 'd-block w-100', class: 'd-block w-100'
-        div(class="carousel-item")
-          = image_tag 'https://storage.googleapis.com/ioh-assets/uploads/production/asset/asset//asset/extra_29c0fc9c-6224-4d3f-af2b-54a22e4f2d2a.jpg', class: 'd-block w-100'
-        a(class="carousel-control-prev" href="#carousel" role="button" data-slide="prev")
-          span(class="carousel-control-prev-icon" aria-hidden="true")
-        a(class="carousel-control-next" href="#carousel" role="button" data-slide="next")
-          span(class="carousel-control-next-icon" aria-hidden="true")
+  / desktop
+  div(class="carousel slide d-none d-md-block" id="carousel" data-ride="carousel")
+    div(class="carousel-inner mt-5 mb-5")
+      div(class="carousel-item active")
+        = image_tag 'https://storage.googleapis.com/ioh-assets/uploads/production/asset/asset//asset/extra_29c0fc9c-6224-4d3f-af2b-54a22e4f2d2a.jpg', class: 'd-block w-100', class: 'd-block w-100'
+      div(class="carousel-item")
+        = image_tag 'https://storage.googleapis.com/ioh-assets/uploads/production/asset/asset//asset/extra_29c0fc9c-6224-4d3f-af2b-54a22e4f2d2a.jpg', class: 'd-block w-100'
+    a(class="carousel-control-prev" href="#carousel" role="button" data-slide="prev")
+      span(class="carousel-control-prev-icon" aria-hidden="true")
+    a(class="carousel-control-next" href="#carousel" role="button" data-slide="next")
+      span(class="carousel-control-next-icon" aria-hidden="true")
