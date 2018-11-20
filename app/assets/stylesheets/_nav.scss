@@ -114,9 +114,16 @@
 .nav-sticky-footer-dark {
   background-color: #434242;
   height: 31px;
+  padding: 6px 0;
+
+  .nav-item + .nav-item {
+    border-left: 1px solid #95989a;
+  }
 
   .nav-link {
     color: white;
+    font-weight: bold;
+    text-align: center;
   }
 }
 
