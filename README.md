@@ -61,3 +61,37 @@
 * [x] [聯絡我們](https://ioh.tw/contactus/)
 * [x] [媒體報導](https://ioh.tw/媒體報導/)
 * [x] [IOH現場講座](https://ioh.tw/ioh現場講座/)
+
+# Routes
+
+### Desktop
+
+* [x] [首頁](localhost:3000)
+* [x] [講座列表](localhost:3000/talks)
+* [x] [講座內頁](localhost:3000/talks/香港教育大學英語教育系-彭于榛-barbie-peng-ov-study-bde-hk)
+* [x] [升大學全攻略](localhost:3000/guides)
+* [x] [升大學全攻略-考試準備-學測指南](localhost:3000/reciprocal)
+* [x] [台灣各校系學群總覽](localhost:3000/台灣各校系學群總覽)
+* [X] [聯絡我們](localhost:3000/contact_us)
+* [X] [媒體報導](localhost:3000/媒體報導)
+* [x] [IOH 創辦初衷](localhost:3000/about)
+* [x] [最新文章/消息](localhost:3000/news)
+* [x] [單篇文章](localhost:3000/申請香港的大學)
+* [x] [團隊成員](localhost:3000/teams)
+* [x] [贊助我們](localhost:3000/贊助我們)
+* [x] [港澳僑外陸生專區](localhost:3000/overseas)
+* [x] [IOH 現場講座](localhost:3000/ioh現場講座)
+* [x] [海外升學指南](localhost:3000/how_to_apply/usa)
+
+
+### Mobile
+
+* [x] [首頁](localhost:3000)
+* [x] [搜尋結果](localhost:3000/search)
+* [x] [講座總覽 - 講座列表 - A](localhost:3000/talks)
+* [x] [講座總覽 - 台灣各校系學群總覽](localhost:3000/台灣各校系學群總覽)
+* [x] [講座內頁 – 講者經歷](localhost:3000/talks/香港教育大學英語教育系-彭于榛-barbie-peng-ov-study-bde-hk)
+* [x] [講座內頁 – 求學經驗](localhost:3000/talks_experience)
+* [x] [講座內頁 - 如何申請](localhost:3000/talks_how_to_apply)
+* [x] [文章 - 升大學攻略](localhost:3000/guides)
+* [x] [文章 - 最新文章](localhost:3000/news)

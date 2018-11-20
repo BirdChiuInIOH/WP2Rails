@@ -57,7 +57,7 @@ class PagesController < ApplicationController
     end
 
     # https://ioh.tw/ioharticles-香港讀大學-申請香港的大學
-    def articles
+    def post
       @news = load_news
       @lecturers = load_lecturers
     end
