@@ -27,36 +27,43 @@ div(class="block-mobile-talk-show")
           iframe allow=("autoplay; encrypted-media") allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/cZOsS76Qqdw" width="560"
 
         div(class="px-3")
-          div(class="bg-white onofflabel mb-4")
-            label(class="font-weight-bold m-0" style="color: #434242") 講座章節開關
-            div(class="onoffswitch")
-              input(type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch", hidden)
-              label(class="onoffswitch-label" for="myonoffswitch")
-                span(class="onoffswitch-inner")
-                span(class="onoffswitch-switch")
+          div(class="block-onoffswitch-category")
+            div(class="block-onoffswitch-category-label")
+              | 講座章節開關
+              div(class="onoffswitch" data-toggle="collapse" href="#onoffswitch-category-links")
+                input(type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch", hidden)
+                label(class="onoffswitch-label" for="myonoffswitch")
+                  span(class="onoffswitch-inner")
+                  span(class="onoffswitch-switch")
 
-            div(class="onoffswitch-content text-center")
-              div(class="row no-gutters py-5px")
-                div(class="col d-flex justify-content-between")
-                  button(class="btn btn-onoffswitch" type="button") 自我介紹
-                  button(class="btn btn-onoffswitch" type="button") 產業介紹
-                  button(class="btn btn-onoffswitch" type="button") 公司簡介
-                  button(class="btn btn-onoffswitch" type="button") GMA
-              div(class="row no-gutters py-5px")
-                div(class="col d-flex justify-content-between")
-                  button(class="btn btn-onoffswitch" type="button") 部門簡介
-                  button(class="btn btn-onoffswitch" type="button") 職位工作
-                  button(class="btn btn-onoffswitch" type="button") 工作行程
-                  button(class="btn btn-onoffswitch" type="button") 成就挫折
-              div(class="row no-gutters py-5px")
-                div(class="col d-flex justify-content-between")
-                  button(class="btn btn-onoffswitch" type="button") 誰是接班人
-                  button(class="btn btn-onoffswitch" type="button") 職涯發展
-                  button(class="btn btn-onoffswitch" type="button") 學校到職場
-                  button(class="btn btn-onoffswitch" type="button") 經驗
-              div(class="row no-gutters py-5px")
-                div(class="col d-flex justify-content-between")
-                  button(class="btn btn-onoffswitch" type="button") 心得收穫
+            div(id="onoffswitch-category-links" class="collapse show")
+              div(class="block-onoffswitch-content")
+                div(class="block-onoffswitch-category-link")
+                  = link_to '自我介紹', '#'
+                div(class="block-onoffswitch-category-link")
+                  = link_to '產業介紹', '#'
+                div(class="block-onoffswitch-category-link")
+                  = link_to '公司簡介', '#'
+                div(class="block-onoffswitch-category-link")
+                  = link_to 'GMA', '#'
+                div(class="block-onoffswitch-category-link")              
+                  = link_to '部門簡介', '#'
+                div(class="block-onoffswitch-category-link")
+                  = link_to '職位工作', '#'
+                div(class="block-onoffswitch-category-link")
+                  = link_to '工作行程', '#'
+                div(class="block-onoffswitch-category-link")
+                  = link_to '成就挫折', '#'
+                div(class="block-onoffswitch-category-link")              
+                  = link_to '誰是接班人', '#'
+                div(class="block-onoffswitch-category-link")
+                  = link_to '職涯發展', '#'
+                div(class="block-onoffswitch-category-link")
+                  = link_to '學校到職場', '#'
+                div(class="block-onoffswitch-category-link")
+                  = link_to '經驗', '#'
+                div(class="block-onoffswitch-category-link")              
+                  = link_to '心得收穫', '#'
 
           nav(class="nav nav-justified nav-talk-show-list bg-mobile-red")
             li(class="nav-item") = link_to '相同大學講座', '#', class: 'nav-link'

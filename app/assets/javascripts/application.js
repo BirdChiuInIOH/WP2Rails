@@ -167,13 +167,6 @@ $(document).on('turbolinks:load', function() {
   });
   // End of go-top button
 
-  $('.onoffswitch').off('click');
-  $('.onoffswitch-label').on('click', function(e) {
-    console.log('click')
-    $(this).parent('.onoffswitch').toggleClass('active');
-    $(this).parent('.onoffswitch').next('.onoffswitch-content').toggle();
-  });
-
   // 全臺校系總覽 Mobile - 依 18 學群瀏覽
   $('.block-eighteen-dropdown').on('click', function () {
     var isOpen = $(this).hasClass('open');
