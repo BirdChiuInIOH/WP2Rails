@@ -45,4 +45,8 @@ body {
 
 main {
   flex: 1;
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 150px;
+  }
 }
