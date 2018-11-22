@@ -319,3 +319,11 @@
 .text-unselect {
   user-select: none;
 }
+
+/**
+ * Position
+ */
+.sticky-top {
+  position: sticky;
+  top: 0px;
+}

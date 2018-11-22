@@ -1,5 +1,9 @@
 .header {
   // desktop
+  position: sticky;
+  top: 0;
+  z-index: 2;
+
   > .row {
     margin: 15px 0;
   }
