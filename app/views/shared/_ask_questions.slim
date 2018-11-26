@@ -1,14 +1,22 @@
 h3(class="mb-4") 喜歡他/她的故事嗎 ?
 div(class="block-mobile-talk-show-list")
   ul(class="list-unstyled")
-    li = link_to '想看【XX大學】的求學講座', 'https://ioh.tw/talks/香港教育大學英語教育學系-王思云-tiffany-wang-ov-study-bde-hk/', target: '_blank', class: 'd-block'
-    li = link_to '想看【XX系】的求學講座', 'https://ioh.tw/?qmt[topic][]=512', target: '_blank', class: 'd-block'
-    li = link_to '想看海外各科系的求學講座總覽', 'https://ioh.tw/study-abroad-experience-sharing/', target: '_blank', class: 'd-block'
-    li = link_to '了解更多招生資訊【XX大學】', '#', class: 'd-block'
+    li = link_to 'https://ioh.tw/talks/香港教育大學英語教育學系-王思云-tiffany-wang-ov-study-bde-hk/', target: '_blank', class: 'd-block' do
+      | 想看【XX大學】的求學講座
+      i(class="float-right fas fa-chevron-right")
+    li = link_to 'https://ioh.tw/?qmt[topic][]=512', target: '_blank', class: 'd-block' do
+      | 想看【XX系】的求學講座
+      i(class="float-right fas fa-chevron-right")
+    li = link_to 'https://ioh.tw/study-abroad-experience-sharing/', target: '_blank', class: 'd-block' do
+      | 想看海外各科系的求學講座總覽
+      i(class="float-right fas fa-chevron-right")
+    li = link_to talks_path, class: 'd-block' do
+      | 了解更多招生資訊【XX大學】
+      i(class="float-right fas fa-chevron-right")
 
 p(class="d-md-none my-30px font-weight-bold" style="font-size: 14px;") Explore More
 = render 'shared/explore_your_future'
 
 div
   p(class='font-weight-bold') 想詢問學長姐更多校系經驗
-  h4 #{link_to '請到 IOH 臉書社突發問吧！GO~', 'http://bit.ly/ioh_fb_group_161031', target: '_blank', style: 'color: #ca2026';}
+  h4 = link_to '請到 IOH 臉書社突發問吧！GO~', 'http://bit.ly/ioh_fb_group_161031', target: '_blank', style: 'color: #ca2026'

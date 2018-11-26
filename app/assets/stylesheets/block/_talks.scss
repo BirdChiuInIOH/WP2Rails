@@ -22,20 +22,18 @@
 
     h4 {
       font-size: 14px;
-      text-decoration: underline;
+      text-decoration: none;
       color: #ca2026;
       margin: 30px 0;
       font-weight: bold;
+      line-height: 1.3;
     }
-  }
 
-  h5 {
-    color: #993300;
-
-    @include media-breakpoint-down(sm) {
+    h5 {
       font-size: 14px;
-      font-weight: bold;
       color: #ca2026;
+      margin: 30px 0;
+      line-height: 2;
     }
   }
 
@@ -75,7 +73,7 @@
 
   .block-talk-goal {
     position: relative;
-    
+
     p {
       line-height: 40px;
       background-color: #ca2026;
@@ -85,7 +83,7 @@
       text-align: center;
 
       &::before {
-        content: "“";
+        content: '“';
         max-height: 30px;
         position: absolute;
         font-size: 60px;
@@ -94,7 +92,7 @@
       }
 
       &::after {
-        content: "”";
+        content: '”';
         max-height: 30px;
         position: absolute;
         font-size: 60px;
@@ -106,7 +104,7 @@
 
   .block-talk-arrow {
     position: relative;
-    
+
     p {
       height: 22px;
       background-color: #ca2026;
@@ -122,6 +120,9 @@
     padding: 17px 0;
 
     .block-mobile-talk-show-list {
+      max-width: 290px;
+      margin: 0 auto;
+
       li {
         border: 3px solid #ca2026;
         background-color: #ca2026;
@@ -130,8 +131,13 @@
         font-size: 12px;
         text-align: center;
         font-weight: bold;
+
         a {
           color: #ffffff;
+        }
+
+        i {
+          line-height: inherit;
         }
       }
     }
@@ -143,7 +149,7 @@
     min-height: 529px;
     height: auto;
     padding: 17px 12px 11px;
-    
+
     .block-talk-show-card-avatar {
       text-align: center;
       img {
@@ -176,7 +182,7 @@
       padding: 17px 14px 5px;
       font-weight: bold;
       line-height: 1.7;
-      
+
       p {
         color: #434242;
 
@@ -190,14 +196,18 @@
       }
     }
   }
+} // /.block-mobile-talks-show
 
-  .block-talks-show {
-    color: color(dark);
+.block-talks-show {
+  color: color(dark);
 
-    p {
-      color: #666666;
-      line-height: 1.8;
-    }
+  h5 {
+    color: #ca2026;
+  }
+
+  p {
+    color: #666666;
+    line-height: 1.8;
   }
 } // /.block-talks-show
 
@@ -245,8 +255,8 @@ $custom-gutter-width: 10px; // 將欄距改成 10px
 .block-talks {
   @include media-breakpoint-down(sm) {
     &.container {
-        padding-left: $custom-gutter-width / 2;
-        padding-right: $custom-gutter-width / 2;
+      padding-left: $custom-gutter-width / 2;
+      padding-right: $custom-gutter-width / 2;
     }
 
     .row {
@@ -254,7 +264,7 @@ $custom-gutter-width: 10px; // 將欄距改成 10px
       margin-right: -($custom-gutter-width / 2);
     }
 
-    [class*="col-md"] {
+    [class*='col-md'] {
       padding-left: $custom-gutter-width / 2;
       padding-right: $custom-gutter-width / 2;
     }
