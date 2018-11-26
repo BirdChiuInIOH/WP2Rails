@@ -47,24 +47,34 @@ div(class="block-news-mobile container d-md-none")
   - @news.first(1).each do |news|
     div(class="row no-gutters d-md-none block-index-featured-article")
       div(class="col-12")
-        div(class="bg-white")
-          = link_to '#' do
-            = image_tag news[:img_url], class: 'img-fluid'
-          div
-            ul(class="list-unstyled p-2")
-              li 近年有越來越多台灣高中生選擇赴香港就讀大學，
-              li(class="mb-3") 然而，許多人是在不了解真正清楚現況就貿然做了決定。
-              li 若你正有著赴港求學的想法，這篇文章正好能提供你一些基礎知識...
+      div(class="block-index-head-news-card")
+          div(class="block-index-head-news-card-head")
+            div(class="block-index-head-news-card-head-tags")
+              span(class="block-index-head-news-card-head-tag") #分類一
+              span(class="block-index-head-news-card-head-tag") #分類二
+              span(class="block-index-head-news-card-head-tag") #分類三
+            div(class="block-index-head-news-card-head-image")
+              = link_to '#' do
+                = image_tag news[:img_url], class: 'img-fluid'
+            div(class="block-index-head-news-card-head-title text-unselect")
+              | 在申請香港的大學前，你必須思考的五件事。
+          div(class="block-index-head-news-card-body")
+            p 近年有越來越多台灣高中生選擇赴香港就讀大學，然而，許多人是在不了解真正清楚現況就貿然做了決定。
+            p 若你正有著赴港求學的想法，這篇文章正好能提供你一些基礎知識...
+          div(class="block-index-head-news-card-actions")
+            a(href="#" class="block-index-head-news-card-actions-link") read >>
 
   - @news.first(2).each do |news|
     div(class="row no-gutters d-md-none mb-3 block-index-list-article")
-      div(class="col-6")
+      div(class="col-6 block-index-list-article-thumbnail")
         = link_to '#' do
           = image_tag news[:img_url], class: 'img-fluid'
+        div(class="block-index-list-article-thumbnail-tags")
+          span 活動消息
       div(class="col-6")
-        div(class="bg-white h-100")
-          ul(class="list-unstyled p-2 m-0")
-              li = news[:title]
+        div(class="bg-white h-100 p-1 d-flex flex-column")
+          p(class="block-index-list-article-summary flex-grow-1") = news[:title]
+          div(class="block-index-list-article-view-counts") 瀏覽數 1234567890
 
   div(class="block-index-more-news text-right d-md-none mb-5")
     = link_to '更多文章+', '#'
@@ -73,24 +83,34 @@ div(class="block-news-mobile container d-md-none")
   - @news.first(1).each do |news|
     div(class="row no-gutters d-md-none block-index-featured-article")
       div(class="col-12")
-        div(class="bg-white")
-          = link_to '#' do
-            = image_tag news[:img_url], class: 'img-fluid'
-          div
-            ul(class="list-unstyled p-2")
-              li 近年有越來越多台灣高中生選擇赴香港就讀大學，
-              li(class="mb-3") 然而，許多人是在不了解真正清楚現況就貿然做了決定。
-              li 若你正有著赴港求學的想法，這篇文章正好能提供你一些基礎知識...
+        div(class="block-index-head-news-card")
+          div(class="block-index-head-news-card-head")
+            div(class="block-index-head-news-card-head-tags")
+              span(class="block-index-head-news-card-head-tag") #分類一
+              span(class="block-index-head-news-card-head-tag") #分類二
+              span(class="block-index-head-news-card-head-tag") #分類三
+            div(class="block-index-head-news-card-head-image")
+              = link_to '#' do
+                = image_tag news[:img_url], class: 'img-fluid'
+            div(class="block-index-head-news-card-head-title text-unselect")
+              | 在申請香港的大學前，你必須思考的五件事。
+          div(class="block-index-head-news-card-body")
+            p 近年有越來越多台灣高中生選擇赴香港就讀大學，然而，許多人是在不了解真正清楚現況就貿然做了決定。
+            p 若你正有著赴港求學的想法，這篇文章正好能提供你一些基礎知識...
+          div(class="block-index-head-news-card-actions")
+            a(href="#" class="block-index-head-news-card-actions-link") read >>
 
   - @news.first(2).each do |news|
     div(class="row no-gutters d-md-none mb-3 block-index-list-article")
-      div(class="col-6")
+      div(class="col-6 block-index-list-article-thumbnail")
         = link_to '#' do
           = image_tag news[:img_url], class: 'img-fluid'
+        div(class="block-index-list-article-thumbnail-tags")
+          span 活動消息
       div(class="col-6")
-        div(class="bg-white h-100")
-          ul(class="list-unstyled p-2 m-0")
-              li = news[:title]
+        div(class="bg-white h-100 p-1 d-flex flex-column")
+            p(class="block-index-list-article-summary flex-grow-1") = news[:title]
+            div(class="block-index-list-article-view-counts") 瀏覽數 1234567890
 
   div(class="block-index-more-news text-right d-md-none mb-5")
     = link_to '更多文章+', '#'

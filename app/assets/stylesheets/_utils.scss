@@ -300,3 +300,25 @@
    border: 2px solid #625e61;
    background-color: #ffffff;
  }
+
+/**
+ * text
+**/
+.text-justify {
+  text-align: justify;
+  text-justify: inter-character;
+  display: block;
+}
+
+.text-justify:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+
+.text-unselect {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

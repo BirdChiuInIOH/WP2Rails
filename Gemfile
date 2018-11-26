@@ -53,6 +53,9 @@ group :development do
 
   # Use Pry as your rails console
   gem 'pry-rails', '~> 0.3.7'
+
+  # Windows Directory Monitor (WDM) is a library which can be used to monitor directories for changes.
+  gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 end
 
 

@@ -1,6 +1,7 @@
 .block-guides-quote {
   &::before {
-    content: "“";
+    content: '“';
+    font-family: sans-serif;
     font-size: 60px;
     font-weight: bold;
     color: #ca2026;
@@ -9,9 +10,10 @@
     bottom: -5px;
     text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   }
-  
+
   &::after {
-    content: "”";
+    content: '”';
+    font-family: sans-serif;
     font-size: 60px;
     font-weight: bold;
     color: #ca2026;

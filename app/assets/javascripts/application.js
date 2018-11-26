@@ -36,7 +36,7 @@ $(document).on('turbolinks:load', function() {
  });
 
   // For Swiper
-  var swiper = new Swiper('.swiper-container', {
+  var howToApplySwiper = new Swiper('[data-swiper-target="how-to-apply"]', {
     spaceBetween: 15,
     slidesPerView: 5,
     autoplay: true,
@@ -52,6 +52,22 @@ $(document).on('turbolinks:load', function() {
       clickable: true
     }
   });
+
+  var indexMobileSwiper = new Swiper('[data-swiper-target="index-mobile"]', {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  var indexDesktopSwiper = new Swiper('[data-swiper-target="index-desktop"]', {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  var exploreYourFutureSwiper = new Swiper('[data-swiper-target="explore-your-future"]');
 
   // For how-to-apply country map
   let isCountrySelected = false;
