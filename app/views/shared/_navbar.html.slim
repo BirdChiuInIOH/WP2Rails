@@ -82,20 +82,12 @@ div(class="navbar-wrapper-ioh fixed-top")
         li(class="nav-item") = link_to '講者經歷', talks_show_path, class: 'nav-link nav-link-active'
         li(class="nav-item") = link_to '求學經驗', talks_experience_path, class: 'nav-link'
         li(class="nav-item") = link_to '如何申請', talks_how_to_apply_path, class: 'nav-link'
-        li(class="nav-item m-0" type="text" data-toggle="modal" data-target="#askQuestions")
+        li(class="nav-item m-0" type="text" data-toggle="modal" data-target="#ask-questions")
           a(class="nav-link" style="cursor: pointer")  觀眾提問
-        div(class="modal fade" id="askQuestions" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true")
-          div(class="modal-dialog modal-dialog-centered" role="document")
-            div(class="modal-content")
-              div(class="modal-body p-0")
-                button(type="button" class="close" data-dismiss="modal" aria-label="Close")
-                  span(aria-hidden="true") &times;
-                div(class="block-mobile-talk-show")
-                  div(class="block-talks-more-share p-2 py-5 text-center" style="padding: 16px 36px;")
-                    = render 'shared/ask_questions'
 
-  / Mobile popup menu
-  div(class="modal fade" id="navbar-mobile" tabindex="-1" role="dialog")
+/ Mobile popup menu
+div(class="navbar-mobile-modal")
+  div(class="modal fade" id="navbar-mobile" tabindex="-1" role="dialog" aria-hidden="true")
     div(class="modal-dialog modal-dialog-centered")
       div(class="modal-content")
         div(class="modal-body")
@@ -126,3 +118,13 @@ div(class="navbar-wrapper-ioh fixed-top")
                 = link_to '贊助我們', '#', class: 'nav-link nav-item-footer'
               li(class="nav-item")
                 = link_to '追蹤我們', '#', class: 'nav-link nav-item-footer'
+
+  div(class="modal fade" id="ask-questions" tabindex="-1" role="dialog" aria-hidden="true")
+    div(class="modal-dialog modal-dialog-centered")
+      div(class="modal-content")
+        div(class="modal-body")
+          button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+            span(aria-hidden="true") &times;
+          div(class="block-mobile-talk-show")
+            div(class="block-talks-more-share p-2 py-5 text-center" style="padding: 16px 36px;")
+              = render 'shared/ask_questions'

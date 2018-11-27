@@ -29,29 +29,30 @@
     .navbar-toggler-icon {
       padding-top: 0;
     }
-
-    .modal-body {
-      .close {
-        font-size: 40px;
-        color: #ca2026;
-        font-weight: 100;
-        opacity: unset;
-      }
-    }
-
-    .nav-item-head {
-      font-size: 20px;
-      color: #ca2026;
-      font-weight: bold;
-    }
-
-    .nav-item-footer {
-      font-style: 14px;
-      color: #525252;
-      font-weight: bold;
-      line-height: 10px;
-    }
   } // /mobile
+}
+
+.navbar-mobile-modal {
+  .modal-body {
+    .close {
+      font-size: 40px;
+      color: #ca2026;
+      opacity: unset;
+    }
+  }
+
+  .nav-item-head {
+    font-size: 20px;
+    color: #ca2026;
+    font-weight: bold;
+  }
+
+  .nav-item-footer {
+    font-style: 14px;
+    color: #525252;
+    font-weight: bold;
+    line-height: 10px;
+  }
 }
 
 .navbar-ioh {
