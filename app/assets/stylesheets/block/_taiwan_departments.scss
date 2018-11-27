@@ -4,7 +4,7 @@
   p {
     font-size: 16px;
     font-weight: bold;
-    color: #434242;
+    color: color(dark-gray);
   }
 }
 
@@ -28,7 +28,7 @@
 
 .block-schools-dropdown {
   cursor: pointer;
-  background-color: #625e61;
+  background-color: color(gray);
   font-size: 18px;
   color: white;
   border: none;
@@ -104,7 +104,7 @@
   .block-onoffswitch-category-label {
     font-size: 14px;
     font-weight: bold;
-    color: #434242;
+    color: color(dark-gray);
     background-color: white;
     padding: 5px 10px;
     display: flex;
@@ -157,15 +157,15 @@
     .onoffswitch-inner:before {
       content: 'ON';
       padding-left: 10px;
-      background-color: #ca2026;
-      color: #ffffff;
+      background-color: color(major);
+      color: white;
     }
 
     .onoffswitch-inner:after {
       content: 'OFF';
       padding-right: 10px;
-      background-color: #95989a;
-      color: #ffffff;
+      background-color: color(light-gray);
+      color: white;
       text-align: right;
     }
 
@@ -174,7 +174,7 @@
       width: 22px;
       height: 22px;
       margin: 2.5px;
-      background: #ffffff;
+      background: white;
       position: absolute;
       top: 0;
       bottom: 0;
@@ -200,7 +200,7 @@
     padding: 0 0 15px;
 
     .block-onoffswitch-category-link {
-      background-color: #95989a;
+      background-color: color(light-gray);
       overflow: hidden;
       display: inline-flex;
       justify-content: center;

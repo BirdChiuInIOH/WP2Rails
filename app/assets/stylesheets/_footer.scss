@@ -31,7 +31,7 @@ footer {
         justify-content: center;
         align-items: center;
         border-radius: 50%;
-        background-color: #ffffff;
+        background-color: white;
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
@@ -40,7 +40,7 @@ footer {
         img {
           width: 70px;
           height: 52px;
-          background-color: #ffffff
+          background-color: white
         }
       }
 
@@ -61,7 +61,7 @@ footer {
 
       .block-footer-by {
         font-size: 8px;
-        background-color: #ca2026;
+        background-color: color(major);
         color: white;
       }
     }

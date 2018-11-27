@@ -1,18 +1,21 @@
 $colors: (
-  major: #c33838,
-  dark: #333333
+  major: #ca2026,
+  dark: #333333,
+  dark-gray: #434242,
+  gray: #625e61,
+  light-gray: #95989a
 );
 
 $theme-colors: (
-  minor: red,
+  minor: #ca2026,
   secondary: #625e61
 );
 
 $pagination-color: #666666;
 $pagination-border-width: 0;
 $pagination-hover-bg: transparent;
-$pagination-hover-color: #c33838;
-$pagination-active-color: #c33838;
+$pagination-hover-color: #ca2026;
+$pagination-active-color: #ca2026;
 $pagination-active-bg: transparent;
 
 $dropdown-link-active-bg: #f8f9fa;
@@ -24,7 +27,3 @@ $h3-font-size: 1.5rem;
 $h4-font-size: 1.25rem;
 
 $font-family-sans-serif: -apple-system, '微軟正黑體', BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-
-// Bootstrap carousel
-$carousel-control-color: #c33838;
-$carousel-control-opacity: 0.8;

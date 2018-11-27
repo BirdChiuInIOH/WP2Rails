@@ -17,7 +17,7 @@
     }
 
     @include media-breakpoint-down(sm) {
-      color: #434242;
+      color: color(dark-gray);
       font-weight: bold;
     }
   }
@@ -65,23 +65,25 @@
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 
   .nav-item {
-    border-top: 1px solid #95989a;
-    border-right: 1px solid #95989a;
+    border-top: 1px solid color(light-gray);
+    border-right: 1px solid color(light-gray);
 
     &:first-child {
-      border-left: 1px solid #95989a;
+      border-left: 1px solid color(light-gray);
     }
 
     .nav-link {
-      color: #625e61;
+      color: color(gray);
 
       &.nav-link-active {
+        display: inline-block;
+
         &:after {
           content: '';
           display: block;
           height: 2px;
           margin: 0 auto;
-          background-color: #ca2026;
+          background-color: color(major);
         }
       }
     }
@@ -112,12 +114,12 @@
 }
 
 .nav-sticky-footer-dark {
-  background-color: #434242;
+  background-color: color(dark-gray);
   height: 31px;
   padding: 6px 0;
 
   .nav-item + .nav-item {
-    border-left: 1px solid #95989a;
+    border-left: 1px solid color(light-gray);
   }
 
   .nav-link {
@@ -134,13 +136,13 @@
   background-color: white;
 
   .nav-item + .nav-item {
-    border-left: 1px solid #95989a;
+    border-left: 1px solid color(light-gray);
   }
 
   .nav-link {
     font-size: 16px;
     font-weight: bold;
-    color: #434242;
+    color: color(dark-gray);
   }
 }
 
@@ -151,7 +153,7 @@
 
   .nav-item {
     flex: 1;
-    background-color: #95989a;
+    background-color: color(light-gray);
     margin: 0 5px;
     border-radius: 0;
 
@@ -173,7 +175,7 @@
       }
 
       &.active {
-        background-color: #ca2026;
+        background-color: color(major);
       }
     }
   }

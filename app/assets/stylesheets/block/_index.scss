@@ -32,7 +32,7 @@
     padding: 20px 10px 5px 10px;
 
     p {
-      color: #434242;
+      color: color(dark-gray);
       font-size: 14px;
       font-weight: bold;
       position: relative;
@@ -43,7 +43,7 @@
         font-family: sans-serif;
         position: absolute;
         font-size: 45px;
-        color: #ca2026;
+        color: color(major);
         top: -40px;
         left: -10px;
       }
@@ -54,7 +54,7 @@
         max-height: 30px;
         position: absolute;
         font-size: 45px;
-        color: #ca2026;
+        color: color(major);
         bottom: -25px;
         right: -10px;
       }
@@ -66,7 +66,7 @@
 
       a {
         font-size: 12px;
-        color: #95989a;
+        color: color(light-gray);
         font-weight: bold;
       }
     }
@@ -83,7 +83,7 @@
     padding: 7px 6px;
 
     p {
-      color: #434242;
+      color: color(dark-gray);
       font-size: 14px;
       font-weight: bold;
 
@@ -92,7 +92,7 @@
         font-family: sans-serif;
         position: absolute;
         font-size: 45px;
-        color: #ca2026;
+        color: color(major);
         top: -20px;
         left: 0;
       }
@@ -103,7 +103,7 @@
         max-height: 30px;
         position: absolute;
         font-size: 45px;
-        color: #ca2026;
+        color: color(major);
         bottom: 38px;
         right: 0px;
       }
@@ -121,7 +121,7 @@
 
       a {
         font-size: 8px;
-        color: #95989a;
+        color: color(light-gray);
         font-weight: bold;
       }
     }
@@ -175,7 +175,7 @@
       position: absolute;
       top: -15px;
       left: 0;
-      color: #ca2026;
+      color: color(major);
       z-index: 1;
       font-family: sans-serif;
     }
@@ -186,7 +186,7 @@
       position: absolute;
       bottom: -70px;
       right: 0;
-      color: #ca2026;
+      color: color(major);
       font-size: 100px;
       font-weight: bold;
       z-index: 1;
@@ -245,7 +245,7 @@
     padding: 10px;
     font-size: 14px;
     font-weight: bold;
-    color: #625e61;
+    color: color(gray);
 
     p + p {
       margin-bottom: 0;
@@ -259,7 +259,7 @@
     .block-index-head-news-card-actions-link {
       font-size: 12px;
       font-weight: bold;
-      color: #95989a;
+      color: color(light-gray);
 
       &:hover {
         text-decoration: none;
@@ -295,28 +295,28 @@
   li {
     font-size: 12px;
     line-height: 1.7;
-    color: #625e61;
+    color: color(gray);
     font-weight: bold;
   }
 
   .block-index-list-article-summary {
     font-size: 14px;
     font-weight: bold;
-    color: #625e61;
+    color: color(gray);
   }
 
   .block-index-list-article-view-counts {
     font-size: 10px;
     font-weight: bold;
     text-align: right;
-    color: #95989a;
+    color: color(light-gray);
   }
 }
 
 .block-index-more-news {
   a {
     font-size: 12px;
-    color: #95989a;
+    color: color(light-gray);
     font-weight: bold;
   }
 }
@@ -324,8 +324,8 @@
 .block-index-header {
   display: table;
   margin: 0 auto;
-  color: #434242;
+  color: color(dark-gray);
   font-size: 20px;
   font-weight: bold;
-  border-bottom: 3px solid #ca2026;
+  border-bottom: 3px solid color(major);
 }

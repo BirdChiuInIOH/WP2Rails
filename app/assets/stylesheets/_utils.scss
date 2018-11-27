@@ -24,11 +24,11 @@
 }
 
 .bg-mobile-gray {
-  background-color: #434242;
+  background-color: color(dark-gray);
 }
 
 .bg-mobile-red {
-  background-color: #ca2026;
+  background-color: color(major);
 }
 
 
@@ -121,7 +121,7 @@
 
 .btn-onoffswitch {
   box-sizing: content-box;
-  background-color: #95989a;
+  background-color: color(light-gray);
   color: white;
   width: 80px;
   font-weight: bold;
@@ -132,18 +132,18 @@
   padding: 4px 0;
 
   &:active {
-    background-color: #ca2026;
+    background-color: color(major);
   }
 
   &:hover {
-    background-color: #ca2026;
+    background-color: color(major);
   }
 }
 
 .btn-news-mobile {
   box-sizing: content-box;
   background-color: white;
-  color: #434242;
+  color: color(dark-gray);
   width: 83px;
   height: 30px;
   font-weight: bold;
@@ -153,7 +153,7 @@
 }
 
 .btn-white-school-mobile {
-  border: 1px solid #95989a;
+  border: 1px solid color(light-gray);
   background-color: white;
   border-radius: 0;
   color: #525252;
@@ -199,7 +199,7 @@
   min-width: 170px;
 
   @include media-breakpoint-down(md) {
-    background-color: #ca2026;
+    background-color: color(major);
     display: inline-flex;
     padding-left: 16px;
     padding-right: 16px;
@@ -297,8 +297,8 @@
  * border
  */
  .border-mobile {
-   border: 2px solid #625e61;
-   background-color: #ffffff;
+   border: 2px solid color(gray);
+   background-color: white;
  }
 
 /**

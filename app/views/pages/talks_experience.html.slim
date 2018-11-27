@@ -8,6 +8,7 @@ div(class="block-mobile-talk-show")
     div(class="row no-gutters d-md-none")
       div(class="col")
         div(class="block-talk-show-card")
+          a(href="#" class="block-talk-show-card-back") < 返回
           div(class="block-talk-show-card-avatar")
             = image_tag 'https://ioh.tw/assets/03-香港教育大學英語教育系彭于榛Barbie-PengProfile.jpg', class: 'img-fluid'
             p 彭于榛
@@ -16,7 +17,7 @@ div(class="block-mobile-talk-show")
             div(class="block-talk-goal")
               p(class="m-0") 想成為能啟發人心的英文老師
             div(class="block-talk-show-card-info")
-              p(class="text-center") 講座簡介
+              h5 講座簡介
               p 到香港留學近幾年漸漸成為新潮流，因為相較去歐美留學便宜、且近許多。講座中將介紹我在香港教育大學就讀的點點滴滴，在港讀書與台灣的差別，以及我的科系介紹。此外，我也將分享我認為適合來香港讀書的人的特質，以提供更多思考空間及資訊給未來想到香港讀書的人。
               p(class="m-0 text-center") 觀看講座
             div(class="block-talk-arrow")
@@ -101,12 +102,12 @@ div(class="block-mobile-talk-show")
 
           div(class="my-30px block-index-header") 東吳大學簡介
           = image_tag 'https://ioh.tw/assets/%E6%9D%B1%E5%90%B3.png', class: 'w-100'
-          p 動靜●皆卓越
-          p 臺北市，臺灣政經人文薈萃之都，一甲子來的溪城風華
-          p 雙溪城中兩校區，六學院，24 學系
-          p 164 個學生社團，236 所姐妹校，15000 餘學子，逾10 萬校友
-          p 穿過百年歷史的長河
-          p 堅持站在時代尖端
+          p(class="mb-0") 動靜●皆卓越
+          p(class="mb-0") 臺北市，臺灣政經人文薈萃之都，一甲子來的溪城風華
+          p(class="mb-0") 雙溪城中兩校區，六學院，24 學系
+          p(class="mb-0") 164 個學生社團，236 所姐妹校，15000 餘學子，逾10 萬校友
+          p(class="mb-0") 穿過百年歷史的長河
+          p(class="mb-0") 堅持站在時代尖端
           p 以嶄新的視野邁向未來
           div(class="row no-gutters mb-4")
             div(class="col-6 p-0")
@@ -121,9 +122,9 @@ div(class="block-mobile-talk-show")
               = image_tag 'https://ioh.tw/assets/06-1.jpg', class: 'w-100'
             div(class="col-6 p-0")
               = image_tag 'https://ioh.tw/assets/%E5%AD%B8%E8%A1%93%E7%A0%94%E7%A9%B61.png', class: 'w-100'
-          p 2014 年 遠見雜誌與 1111 人力銀行調查為「企業最愛綜合型私立大學之冠」
-          p 2015 年 遠見雜誌調查「企業最愛研究所」榮獲私立大學第一，【商管財經】及【人文社會科學】畢業生表現，私立大學第一，全國排名第三
-          p 2015 年 1111 人力銀行與時報周刊調查「企業最愛大學」，【法政學群】畢業生表現，私立大學第一，全國排名第三
+          p(class="mb-0") 2014 年 遠見雜誌與 1111 人力銀行調查為「企業最愛綜合型私立大學之冠」
+          p(class="mb-0") 2015 年 遠見雜誌調查「企業最愛研究所」榮獲私立大學第一，【商管財經】及【人文社會科學】畢業生表現，私立大學第一，全國排名第三
+          p(class="mb-0") 2015 年 1111 人力銀行與時報周刊調查「企業最愛大學」，【法政學群】畢業生表現，私立大學第一，全國排名第三
           p 顯示東吳畢業生在職場表現傑出，無論創新能力、獨立作業、團隊合作與國際視野等表現皆是企業主最愛的優秀人才，逾10萬校友服務社會，深獲各界肯定。
           div(class="row no-gutters mb-4")
             div(class="col-6 p-0")
@@ -140,7 +141,7 @@ div(class="block-mobile-talk-show")
           = render 'shared/ask_questions'
     // mobile end
 
-div(class="container block-talks-show d-none d-md-block my-3")
+div(class="container block-talks-show d-none d-md-block my-5")
   div(class="row")
     div(class="col-md-3")
       section(class="mb-4")
