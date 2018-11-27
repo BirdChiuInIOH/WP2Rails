@@ -29,12 +29,6 @@ $(document).on('turbolinks:load', function() {
     }
   });
 
-  // For Select2
-  $('[data-target="select2"]').select2({
-    placeholder: '學測倒數 ? 大學生必看 ? 大學選課 ? 讀書技巧 ?',
-    tags: true
- });
-
   // For Swiper
   var howToApplySwiper = new Swiper('[data-swiper-target="how-to-apply"]', {
     spaceBetween: 15,
@@ -56,18 +50,20 @@ $(document).on('turbolinks:load', function() {
   var indexMobileSwiper = new Swiper('[data-swiper-target="index-mobile"]', {
     navigation: {
       nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
+      prevEl: '.swiper-button-prev'
+    }
   });
 
   var indexDesktopSwiper = new Swiper('[data-swiper-target="index-desktop"]', {
     navigation: {
       nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
+      prevEl: '.swiper-button-prev'
+    }
   });
 
-  var exploreYourFutureSwiper = new Swiper('[data-swiper-target="explore-your-future"]');
+  var exploreYourFutureSwiper = new Swiper(
+    '[data-swiper-target="explore-your-future"]'
+  );
 
   // For how-to-apply country map
   let isCountrySelected = false;
@@ -184,7 +180,7 @@ $(document).on('turbolinks:load', function() {
   // End of go-top button
 
   // 全臺校系總覽 Mobile - 依 18 學群瀏覽
-  $('.block-eighteen-dropdown').on('click', function () {
+  $('.block-eighteen-dropdown').on('click', function() {
     var isOpen = $(this).hasClass('open');
     $('.block-eighteen-dropdown').removeClass('open');
     if (isOpen) {
