@@ -8,15 +8,15 @@ div(class="navbar-wrapper-ioh")
         button(type="button" class="navbar-toggler ml-2 px-0" data-toggle="modal" data-target="#navbar-mobile" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation")
           span(class="navbar-toggler-icon")
       form(class="input-group d-md-none pb-2")
-        input(type="text" class="form-control rounded-0" placeholder="學測倒數 ? 大學生必看 ? 大學選課 ? 讀書技巧 ?" list="mobile-search-list" name="mobile-search")
+        input(type="text" class="form-control rounded-0 flexdatalist" data-min-length="0" placeholder="學測倒數 ? 大學生必看 ? 大學選課 ? 讀書技巧 ?" list="mobile-search-list" name="mobile-search")
+        datalist(id="mobile-search-list")
+          option(value="學測倒數") 學測倒數
+          option(value="大學生必看") 大學生必看
+          option(value="大學選課") 大學選課
+          option(value="讀書技巧") 讀書技巧
         div(class="input-group-append")
           button(class="btn btn-secondary rounded-0" type="submit")
             i(class="fas fa-search")
-        datalist(id="mobile-search-list" title="請選擇")
-          option(value="學測倒數")
-          option(value="大學生必看")
-          option(value="大學選課")
-          option(value="讀書技巧")
       div(class="col-12")
         div(class="collapse navbar-collapse" id="navbar")
           ul(class="navbar-nav")
