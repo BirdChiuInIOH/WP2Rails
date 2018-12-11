@@ -11,6 +11,9 @@ class PagesController < ApplicationController
     def search
     end
 
+    def search_none
+    end
+
     # https://ioh.tw/talks/
     def talks
       @talks_filter = load_talks_filter

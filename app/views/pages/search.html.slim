@@ -8,16 +8,8 @@ div(class="container d-block d-md-none")
       div(class="my-3")
         div(class="block-search-condition")
           span Search results for
-          span(class="mx-2 text-danger") XXXX
-        ul(class="nav nav-tabs nav-tabs-major" id="search-tab")
-          li(class="nav-item") = link_to '全部', '#tab-all', class: 'nav-link active', data: { toggle: 'tab' }
-          li(class="nav-item") = link_to '講座', '#tab-talk', class: 'nav-link', data: { toggle: 'tab' }
-          li(class="nav-item") = link_to '文章', '#tab-post', class: 'nav-link', data: { toggle: 'tab' }
-          li(class="nav-item") = link_to '???', '#tab-???', class: 'nav-link', data: { toggle: 'tab' }
-        div(class="tab-content")
-          div(class="tab-pane fade show active" id="tab-all" role="tabpanel")
-            = render 'shared/explore_your_future'
-          div(class="tab-pane" id="tab-talk" role="tabpanel")
-          div(class="tab-pane" id="tab-post" role="tabpanel")
-          div(class="tab-pane" id="tab-???" role="tabpanel")
+          span(class="mx-2") XXXX
+        = render 'shared/explore_your_future'
+        div(class="block-search-more text-right")
+          = link_to 'more+', '#'
 / /Mobile

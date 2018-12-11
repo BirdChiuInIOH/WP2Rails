@@ -21,14 +21,33 @@
                         = link_to talk[:major], talk[:major_url]
                       li = link_to talk[:name], talk[:url]
 
+- elsif action_name == 'search_none'
+  div(class="row no-gutters d-md-none mt-4")
+    - @talks.first(12).each do |talk|
+      div(class="col-4 mb-3")
+        div(class="block-index-list-explore-upright h-100 mx-1")
+          = link_to '/talks/香港教育大學英語教育系-彭于榛-barbie-peng-ov-study-bde-hk' do
+            = image_tag talk[:avatar_url], class: 'img-fluid'
+          div(class="block-index-list-explore-upright-tags")
+            span 身分
+            span 國籍
+          div(class="block-index-list-explore-body-upright")
+            ul(class="list-unstyled m-0")
+              li = link_to talk[:name], talk[:url]
+              li = link_to talk[:education], talk[:education_url]
+              li = link_to talk[:major], talk[:major_url]
+
 - elsif action_name == 'talks_show' || 'talks_experience' || 'talks_how_to_apply'
-  - @talks.first(1).each do |talk|
+  - @talks.first(3).each do |talk|
     div(class="row no-gutters d-md-none mb-3")
       div(class="col-12")
         div(class="block-index-list-explore d-flex")
           div(class="block-index-list-explore-avatar")
             = link_to '/talks/香港教育大學英語教育系-彭于榛-barbie-peng-ov-study-bde-hk' do
               = image_tag talk[:avatar_url], class: 'img-fluid'
+            div(class="block-index-list-explore-avatar-tags")
+              span 身分
+              span 國籍
           div(class="block-index-list-explore-body")
             p 每個人都不是最了解自己的人，透過相處、對話，你才會知道自
             ul(class="list-unstyled m-0")
@@ -36,12 +55,15 @@
                 = link_to talk[:education], talk[:education_url], class: 'mr-2'
                 = link_to talk[:major], talk[:major_url]
               li = link_to talk[:name], talk[:url]
-  div(class="row no-gutters d-md-none my-4")
-    - @talks.first(3).each do |talk|
-      div(class="col-4")
-        div(class="h-100 mx-1 bg-white block-index-list-explore-upright")
+  div(class="row no-gutters d-md-none mt-4")
+    - @talks.first(6).each do |talk|
+      div(class="col-4 mb-3")
+        div(class="block-index-list-explore-upright h-100 mx-1")
           = link_to '/talks/香港教育大學英語教育系-彭于榛-barbie-peng-ov-study-bde-hk' do
             = image_tag talk[:avatar_url], class: 'img-fluid'
+          div(class="block-index-list-explore-upright-tags")
+            span 身分
+            span 國籍
           div(class="block-index-list-explore-body-upright")
             ul(class="list-unstyled m-0")
               li = link_to talk[:name], talk[:url]

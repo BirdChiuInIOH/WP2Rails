@@ -19,4 +19,5 @@ Rails.application.routes.draw do
   get '/ioh現場講座', to: 'pages#events', as: :events
   get '/how_to_apply/usa', to: 'pages#how_to_apply_usa'
   get '/search', to: 'pages#search'
+  get '/search_none', to: 'pages#search_none'
 end

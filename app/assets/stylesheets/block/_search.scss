@@ -1,4 +1,50 @@
 .block-search-condition {
   font-size: 16px;
   font-weight: bold;
+  margin: 19px 0 22px ;
+
+  span:last-child {
+    text-decoration: underline;
+    color: color(major);
+  }
+}
+
+.block-search-more {
+  a {
+    font-size: 16px;
+    font-weight: bold;
+    color: color(major);
+  }
+}
+
+.block-search-none-condition {
+  font-weight: bold;
+
+  p {
+    font-size: 10px;
+    color: color(light-gray);
+    text-align: center;
+  }
+
+  li {
+    font-size: 10px;
+    color: color(dark-gray);
+    line-height: 1.6;
+
+    &:first-child {
+      font-size: 16px;
+    }
+  }
+
+  span {
+    color: color(major);
+  }
+
+  h4 {
+    font-size: 12px;
+    color: color(dark-gray);
+    text-align: center;
+    margin: 19px 0;
+    font-weight: 800;
+  }
 }

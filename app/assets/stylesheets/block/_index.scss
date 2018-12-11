@@ -76,6 +76,21 @@
 .block-index-list-explore-upright {
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
   background-color: white;
+  position: relative;
+
+  .block-index-list-explore-upright-tags {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3px;
+  }
 
   .block-index-list-explore-body-upright {
     position: relative;

@@ -1,0 +1,26 @@
+/ Mobile
+/ Sticky menu
+= render 'shared/m_nav_sticky_footer_dark'
+
+div(class="container d-block d-md-none")
+  div(class="row")
+    div(class="col-12")
+      div(class="my-3")
+        div(class="block-search-condition")
+          span Search results for
+          span(class="mx-2") XXXX
+        div(class="block-search-none-condition")
+          div(class="col-12 justify-content-center d-flex")
+            = image_tag 'by_search.png', width: 180, height: 122
+          p 抱歉，目前平台上尚未有相關的資料。
+          div(class="col-12 d-block bg-white py-2")
+            ul(class="list-unstyled m-0")
+              li(class="mb-3") 找不到你想看的<span>大學與科系</span>嗎？你可以......
+              li <span>寫信給大學：</span>
+              li(class="mb-3") 招生組與系主任，<span>請他們學生上IOH</span>分享求學經驗，並通知我們你這樣做了；你也可以邀請你認識的大學生來報名當講者，分享自己的求學故事喔！
+              li 報名講者：
+              li(class="mb-3") 請點選網頁<span>右上方「關於IOH」</span>的<span>「參與IOH成為講者/團隊」</span>
+              li IOH聯絡信箱：ioh@ioh.tw
+          h4 或者，這裏可能有一些你會有興趣的講座...
+        = render 'shared/explore_your_future'
+/ /Mobile
