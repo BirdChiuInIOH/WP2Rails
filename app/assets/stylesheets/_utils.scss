@@ -81,6 +81,15 @@
   }
 }
 
+.link-white {
+  color: white;
+
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
 /**
  * Btn
  */

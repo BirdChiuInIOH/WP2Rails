@@ -117,6 +117,14 @@ class PagesController < ApplicationController
     def about
     end
 
+    # 科系內容模組 - 18 學群資料 + 列表
+    def departments
+    end
+
+    # 科系內容模組 - 手機版列表
+    def m_18_departments_list
+    end
+
   private
 
     def set_talks

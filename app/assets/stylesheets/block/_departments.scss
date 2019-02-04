@@ -1,0 +1,92 @@
+.block-departments {
+  background-color: #f0f0f0;
+
+  &-head {
+    padding: 10px 0;
+    margin-bottom: 20px;
+
+    .link {
+      font-size: 20px;
+      margin-left: 20px;
+    }
+
+    &-brand {
+      opacity: .95;
+      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+      background-color: #283546;
+      color: #fcd50f;
+      width: 470px;
+      height: 110px;
+      padding: 10px 20px;
+      font-size: 15px;
+
+      h1 {
+        color: white;
+        font-size: 48px;
+        font-weight: bold;
+        line-height: 70px;
+      }
+    }
+  }
+
+  &-body {
+    display: flex;
+  }
+
+  &-aside {
+    width: 190px;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    &-sticky-block {
+      width: 158px;
+      height: 158px;
+      background-color: white;
+      position: sticky;
+      top: 160px;
+    }
+
+    .accordion {
+      width: 100%;
+    }
+  }
+
+  &-main {
+    flex: 1 1 auto;
+    padding: 0 20px;
+  }
+
+  &-videos {
+    display: flex;
+  }
+
+  &-video-player {
+    &-tag {
+      width: 110px;
+      background-color: white;
+      color: black;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 5px 15px;
+    }
+  }
+
+  &-thumb-list {
+    margin-left: 20px;
+    padding-top: 20px;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+  &-thumb {
+    width: 160px;
+    height: 110px;
+    background-color: black;
+    backdrop-filter: blur(3px);
+    margin-top: 18px;
+  }
+}

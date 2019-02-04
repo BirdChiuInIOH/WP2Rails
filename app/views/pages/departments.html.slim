@@ -1,0 +1,54 @@
+/ Footer of mobile - sticky menu
+= render 'shared/m_nav_sticky_footer_dark'
+
+/ 手機
+div(class="d-md-none") Mobile
+
+/ 桌機
+div(class="d-none d-md-block")
+  div(class="container")
+    div(class="row")
+      div(class="col-12")
+        div(class="block-departments")
+          div(class="block-departments-head")
+            div = link_to '返回主頁', '#', class: 'link link-white'
+            div(class="block-departments-head-brand")
+              div
+                | 歡迎來到科系比拼擂台!
+                h1 資訊學群
+          div(class="block-departments-body")
+            div(class="block-departments-aside")
+              div(class="block-departments-aside-sticky-block")
+              div(class="accordion")
+                div(class="nav-18-group-trigger" data-toggle="collapse" data-target="#departments-by-18-group") 依 18 學群瀏覽
+                ul(class="nav-18-group collapse show" id="departments-by-18-group")
+                  li = link_to '資訊', '#'
+                  li = link_to '工程', '#'
+                  li = link_to '數理化', '#'
+                  li = link_to '醫藥衛生', '#'
+                  li = link_to '藝術', '#'
+                  li = link_to '生命科學', '#'
+                  li = link_to '生物資源', '#'
+                  li = link_to '地球與環境', '#'
+                  li = link_to '建築與設計', '#'
+                  li = link_to '社會與心理', '#'
+                  li = link_to '大眾傳播', '#'
+                  li = link_to '外語', '#'
+                  li = link_to '文史哲', '#'
+                  li = link_to '管理', '#'
+                  li = link_to '教育', '#'
+                  li = link_to '法政', '#'
+                  li = link_to '遊憩與運動', '#'
+                  li = link_to '財經', '#'
+            div(class="block-departments-main")
+              div(class="block-departments-videos")
+                div(class="block-departments-video-player")
+                  span(class="block-departments-video-player-tag") 正在播放
+                  iframe(width="700" height="393" src="https://www.youtube.com/embed/wmmO4CV0NrQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                div(class="block-departments-thumb-list")
+                  div Explore Next...
+                  div(class="block-departments-thumb")
+                  div(class="block-departments-thumb")
+                  div(class="block-departments-thumb")
+
+

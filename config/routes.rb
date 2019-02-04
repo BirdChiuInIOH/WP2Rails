@@ -20,4 +20,8 @@ Rails.application.routes.draw do
   get '/how_to_apply/usa', to: 'pages#how_to_apply_usa'
   get '/search', to: 'pages#search'
   get '/search_none', to: 'pages#search_none'
+
+  # 2019-02-04
+  get '/departments', to: 'pages#departments'
+  get '/m_18_departments_list', to: 'pages#m_18_departments_list'
 end

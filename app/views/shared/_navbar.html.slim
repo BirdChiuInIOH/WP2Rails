@@ -78,6 +78,12 @@ div(class="navbar-wrapper-ioh")
         li(class="nav-item") = link_to '教授分享', '#', class: 'nav-link'
         li(class="nav-item") = link_to '海外升學', '#', class: 'nav-link'
         li(class="nav-item") = link_to '僑外生專區', '#', class: 'nav-link'
+      - elsif action_name == 'departments' || 'm_18_departments_list'
+        / 學群模組 mobile nav
+        li(class="nav-item") = link_to '校系總覽', taiwan_departments_path, class: 'nav-link'
+        li(class="nav-item") = link_to '升學攻略', guides_path, class: 'nav-link'
+        li(class="nav-item") = link_to '18 學群', m_18_departments_list_path, class: 'nav-link'
+        li(class="nav-item") = link_to '港澳僑外', '#', class: 'nav-link'
       - elsif action_name == 'talks_show' || 'talks_experience'
         li(class="nav-item") = link_to '講者經歷', talks_show_path, class: 'nav-link nav-link-active'
         li(class="nav-item") = link_to '求學經驗', talks_experience_path, class: 'nav-link'

@@ -95,3 +95,9 @@
 * [x] [講座內頁 - 如何申請](localhost:3000/talks_how_to_apply)
 * [x] [文章 - 升大學攻略](localhost:3000/guides)
 * [x] [文章 - 最新文章](localhost:3000/news)
+
+
+## 2019-02 科系模組
+
+* [ ] [科系內容模組(桌機版內容+列表/手機版內容)](localhost:3000/departments)
+* [ ] [科系內容模組(手機版列表)](http://localhost:3000/m_18_departments_list)  - [zepline](https://zpl.io/VYGMdRe)
