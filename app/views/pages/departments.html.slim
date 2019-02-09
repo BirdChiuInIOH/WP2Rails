@@ -9,9 +9,9 @@ div(class="d-none d-md-block")
   div(class="container")
     div(class="row")
       div(class="col-12")
-        div(class="block-departments")
+        div(class="block-departments bg-fight")
           div(class="block-departments-head")
-            div = link_to '返回主頁', '#', class: 'link link-white'
+            div = link_to '返回主頁', '#', class: 'link link-white '
             div(class="block-departments-head-brand")
               div
                 | 歡迎來到科系比拼擂台!
@@ -41,6 +41,7 @@ div(class="d-none d-md-block")
                   li = link_to '遊憩與運動', '#'
                   li = link_to '財經', '#'
             div(class="block-departments-main")
+              / Video + List
               div(class="block-departments-videos")
                 div(class="block-departments-video-player")
                   span(class="block-departments-video-player-tag") 正在播放
@@ -48,7 +49,102 @@ div(class="d-none d-md-block")
                 div(class="block-departments-thumb-list")
                   div Explore Next...
                   div(class="block-departments-thumb")
+                    div(class="block-departments-thumb-content")
+                      div(class="block-departments-thumb-title")
+                        span(class="major") 管理
+                        span(class="vs") VS
+                        span(class="major") 財經
                   div(class="block-departments-thumb")
+                    div(class="block-departments-thumb-content")
+                      div(class="block-departments-thumb-title")
+                        span(class="major") 醫藥
+                        span(class="vs") VS
+                        span(class="major") 衛生
                   div(class="block-departments-thumb")
+                    div(class="block-departments-thumb-content")
+                      div(class="block-departments-thumb-title")
+                        span(class="major text-sm") 文學
+                        span(class="vs text-sm") VS
+                        span(class="major text-sm") 歷史
+                        span(class="vs text-sm") VS
+                        span(class="major text-sm") 哲學
+              / Major Introduce
+              div(class="row my-4")
+                div(class="col-12")
+                  div(class="block-departments-card")
+                    div(class="block-departments-card-head")
+                      div
+                        | 代表科系：
+                        ul
+                          li = link_to 'OOOO 系', '#'
+                          li = link_to 'OOO 系', '#'
+                          li = link_to 'OOOO 系', '#'
+                          li = link_to 'OOO 系', '#'
+                          li = link_to 'OOOOO 系', '#'
+                      div
+                        | 相似學群：
+                        ul
+                          li = link_to 'OOOO 學群', '#'
+                          li = link_to 'OOO 學群', '#'
+                          li = link_to 'OOOO 學群', '#'
+                          li = link_to 'OOO 學群', '#'
+                          li = link_to 'OOOOO 學群', '#'
+                    div(class="block-departments-card-body")
+                      p 資訊學群主要由資訊工程系、資訊管理系、資訊科學系等所組成，主要學習內容在於網站架設、設計電腦程式與系統、電腦軟硬體開發與維護、資安維護等資訊相關專業能力培養。主要由資訊工程系、資訊管理系、資訊科學系等所組成，主要學習內容在於網站架設、設計電腦程式與系統、電腦軟硬體開發與維護、資安維護等資訊相關專業能力培養。
+                    div(class="block-departments-card-footer")
+                      | 學群核心能力 :
+                      span 1. XXXXXXX
+                      span 2. XXXXXXX
+                      span 3. XXXXXXX
+              / Experience + Suggestion + Oversea
+              div(class="block-departments-anchors-nav")
+                ul
+                  li = link_to '學長姊經驗', '#experience'
+                  li = link_to '教授們的建議', '#suggestion'
+                  li = link_to '挑戰海外的勇者', '#oversea'
+              div(class="block-departments-experience")
+                div(id="experience" class="offset-anchor")
+                h1(class="title text-white") 學長姐經驗
+                h4(class="sub-title text-white") 讓你快速探索科系與破解迷思 !
+                div(class="w-100")
+                  div(class="swiper-container" data-swiper-target="fast-experience")
+                    div(class="swiper-wrapper")
+                      / 1
+                      div(class="swiper-slide")
+                        div(class="media")
+                          = image_tag('departments/slide-1.png', class: 'mr-3')
+                          div(class="media-body")
+                            h1 【學測準備】考前大解密，北一女孩教你如何把握考前二十天！
+                            p 也許是想追求國際化的教學環境，或者嚮往更多具潛力的工作機會，近年有越來越多台灣高中生選擇赴香港就讀大學，以建中為例，2017 年僅有 11 人赴港求學，在 2018 年就攀升為 73 位。然而，許多人其實是在不了解真正清楚香港學校現況就貿然做了決定，若你正有著赴港求學的想法，這篇文章正好能提供你一些基礎知識。
+                      / 2
+                      div(class="swiper-slide")
+                        div(class="media")
+                          = image_tag('departments/slide-1.png', class: 'mr-3')
+                          div(class="media-body")
+                            h1 【學測準備】考前大解密，北一女孩教你如何把握考前二十天！
+                            p 也許是想追求國際化的教學環境，或者嚮往更多具潛力的工作機會，近年有越來越多台灣高中生選擇赴香港就讀大學，以建中為例，2017 年僅有 11 人赴港求學，在 2018 年就攀升為 73 位。然而，許多人其實是在不了解真正清楚香港學校現況就貿然做了決定，若你正有著赴港求學的想法，這篇文章正好能提供你一些基礎知識。
+                    div(class="swiper-pagination")
+                    div(class="swiper-button-prev")
+                      i(class="fas fa-angle-left")
+                    div(class="swiper-button-next")
+                      i(class="fas fa-angle-right")
+                / 學長建議列表
+                div
+                  div(class="row")
+                    div(class="col-4")
 
-
+        / Stop background image
+        div(class="block-departments")
+          div(class="block-departments-body")
+            div(class="block-departments-aside")
+            div(class="block-departments-main")
+              div(class="block-departments-suggestion")
+                div(id="suggestion" class="offset-anchor")
+                h1(class="title") 教授們的建議
+                h4(class="sub-title") 你適合這個科系嗎？先了解校系資源差異與選填志願建議 !
+                div 2
+              div(class="block-departments-oversea")
+                div(id="oversea" class="offset-anchor")
+                h1(class="title") 挑戰海外的勇者
+                h4(class="sub-title") 你未來的舞台不只在台灣，搶先了解海外趨勢 !
+                div 3

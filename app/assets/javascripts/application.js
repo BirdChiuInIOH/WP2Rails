@@ -65,6 +65,20 @@ $(document).on('turbolinks:load', function() {
     '[data-swiper-target="explore-your-future"]'
   );
 
+  var fastExperienceSwiper = new Swiper('[data-swiper-target="fast-experience"]', {
+    speed: 600,
+    spaceBetween: 100,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+  });
+
   // For how-to-apply country map
   let isCountrySelected = false;
   if ($('[data-target="city-thumbnail"').length) {
