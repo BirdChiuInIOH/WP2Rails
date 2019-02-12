@@ -123,6 +123,12 @@ class PagesController < ApplicationController
 
     # 科系內容模組 - 手機版列表
     def m_18_departments_list
+      # 依 18 學群瀏覽
+      @colleges = load_18_colleges
+      # Generate id
+      @colleges = @colleges.map do |college|
+        college.merge(id: SecureRandom.uuid)
+      end
     end
 
   private

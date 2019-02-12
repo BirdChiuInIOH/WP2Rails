@@ -1,3 +1,34 @@
+/ Sticky menu
+= render 'shared/m_nav_sticky_footer_dark'
+
 div(class="container")
-  div(class="row")
-    div(class="col-12") List
+  div(class="block-m-18-departments-list bg-fight")
+    div(class="block-btn-back")
+      = link_to '< 返回', '#'
+    div(class="row no-gutters")
+      div(class="col-12 text-center")
+        h3 歡迎來到科系比拼擂台!
+        p 想從哪個學群開始探索？
+        / 依 18 學群瀏覽
+        div( class="row no-gutters" id="accordion-by-18-colleges-mobile")
+          div(class="col-12")
+            h4(id="by-18-colleges-mobile")
+            - @colleges.in_groups_of(3, false).each do |colleges_group|
+              div(class="row no-gutters")
+                - colleges_group.each do |college|
+                    div(class="col-4")
+                      div(class="block-eighteen-dropdown" style="background-image: url(#{college[:photo_url]});" data-toggle="collapse" data-target="#collapse-#{college[:id]}")
+                        = college[:name]
+              div(class="row no-gutters")
+                div(class="col-12")
+                  div(class="college-tab-contents")
+                    - colleges_group.each do |college|
+                      div(
+                        id="collapse-#{college[:id]}"
+                        class="collapse collapse-colleges-mobile mb-3"
+                        data-parent="#accordion-by-18-colleges-mobile"
+                      )
+                        - college[:departments].in_groups_of(5, false).each do |departments_group|
+                          div(class="d-flex")
+                            - departments_group.each do |department|
+                              = link_to department[:name], '#', class: 'link-major-inverse-m-18 p-3 d-inline-block', style: 'flex: 0 0 20%;'

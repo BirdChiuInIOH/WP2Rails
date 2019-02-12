@@ -2,10 +2,199 @@
 = render 'shared/m_nav_sticky_footer_dark'
 
 / 手機
-div(class="d-md-none") Mobile
+div(class="d-lg-none")
+  div(class="mobile-departments")
+    div(class="container")
+      div(class="row no-gutters d-md-none")
+        div(class="col")
+          div(class="mobile-departments-header")
+            a(href="#" class="mobile-departments-btn-back") < 返回
+            div(class="text-center")
+              h2 歡迎來到科系比拼擂台!
+              h1 OOOOOO學群
+            
+            div(class="youtube-rwd-container mb-3")
+              iframe allow=("autoplay; encrypted-media") allowfullscreen="" frameborder="0" height="211" src="https://www.youtube.com/embed/wmmO4CV0NrQ" width="375"
+            
+            div(class="mobile-departments-card")
+              div(class="mobile-departments-card-header")
+                | 學群核心能力 <br />
+                span 1. XXXXXXX 
+                span 2. XXXXXXX 
+                span 3. XXXXXXX 
+              div(class="mobile-departments-card-body")
+                div(style="font-size: 10px")
+                  | 代表科系：
+                  ul
+                    li = link_to 'OOOO 系', '#'
+                    li = link_to 'OOO 系', '#'
+                    li = link_to 'OOOO 系', '#'
+                    li = link_to 'OOO 系', '#'
+                    li = link_to 'OOOOO 系', '#'
+                div(style="font-size: 10px")
+                  | 相似學群：
+                  ul
+                    li = link_to 'OOOO 學群', '#'
+                    li = link_to 'OOO 學群', '#'
+                    li = link_to 'OOOO 學群', '#'
+                    li = link_to 'OOO 學群', '#'
+                    li = link_to 'OOOOO 學群', '#'
+                p 資訊學群主要由資訊工程系、資訊管理系、資訊科學系等所組成，主要學習內容在於網站架設、設計電腦程式與系統、電腦軟硬體開發與維護、資安維護等資訊相關專業能力培養。主要由資訊工程系、資訊管理系、資訊科學系等所組成，主要學習內容在於網站架設、設計電腦程式與系統、電腦軟硬體開發與維護、資安維護等資訊相關專業能力培養。
+              
+      div(class="mobile-departments-list")
+        ul(class="list-unstyled")
+          li = link_to 'https://ioh.tw/talks/香港教育大學英語教育學系-王思云-tiffany-wang-ov-study-bde-hk/', target: '_blank', class: 'd-block' do
+            | 學長姐經驗
+            i(class="float-right fas fa-chevron-right")
+          li = link_to 'https://ioh.tw/?qmt[topic][]=512', target: '_blank', class: 'd-block' do
+            | 教授們的建議
+            i(class="float-right fas fa-chevron-right")
+          li = link_to 'https://ioh.tw/study-abroad-experience-sharing/', target: '_blank', class: 'd-block' do
+            | 挑戰海外的勇者
+            i(class="float-right fas fa-chevron-right")
+
+      div(class="block-departments-banner")
+        = link_to '#' do
+          = image_tag('departments/banner.jpg', class: 'w-100')
+          p(class="banner-title") Banner
+    
+      div(class="px-3")
+        div(class="mb-30px")
+          p(class="block-index-header mb-2") 學長姐經驗
+          h4 讓你快速探索科系與破解迷思 !
+          = render 'shared/explore_your_future'
+
+        div(class="mb-30px")
+          p(class="block-index-header mb-2") 教授們的建議
+          h4 你適合這個科系嗎？先了解校系資源差異與選填志願建議 !
+          = render 'shared/explore_your_future'
+
+        div(class="mb-30px")
+          p(class="block-index-header mb-2") 挑戰海外的勇者
+          h4 你未來的舞台不只在台灣，搶先了解海外趨勢 !
+          = render 'shared/explore_your_future'
+      
+      / Banner
+      div(class="block-departments-banner-slogan")
+        = image_tag('departments/banner.jpg', class: 'w-100')
+        div(class="banner-slogan")
+          p 接下來，看你的發揮了 !
+          p 好好想想...自己未來要成為怎樣的人
+
+      / Video
+      div(class="px-3")
+        div(class="youtube-rwd-container mb-3")
+          iframe allow=("autoplay; encrypted-media") allowfullscreen="" frameborder="0" height="211" src="https://www.youtube.com/embed/wmmO4CV0NrQ" width="350"
+          
+        div(class="block-departments-nav d-block")
+          ul
+            li = link_to 'OOOOO系', '#experience'
+            li = link_to 'OOOOO系', '#suggestion'
+            li = link_to 'OOOOO系', '#oversea'
+            li = link_to 'OOOOO系', '#oversea'
+          ul
+            li = link_to 'OOOOO系', '#experience'
+            li = link_to 'OOOOO系', '#suggestion'
+            li = link_to 'OOOOO系', '#oversea'
+            li = link_to 'OOOOO系', '#oversea'
+
+        div(class="mb-30px")
+          p(class="block-index-header mb-2") OO學類
+          h4
+          = render 'shared/explore_your_future'
+      
+        div(class="block-departments-category")
+          / 學群科系一覽
+          div(class="block-departments-category-dropdown" data-toggle="collapse" href="#departments-category-links")
+            | 該學群科系一覽
+            i(class="fas fa-chevron-right")
+
+          / 學群科系一覽收合項目
+          div(id="departments-category-links" class="collapse show")
+            div(class="block-departments-category-links")
+              div(class="block-departments-category-link")
+                = link_to '人文與資訊學系', '#'
+              div(class="block-departments-category-link")
+                = link_to '新媒體藝術學系', '#'
+              div(class="block-departments-category-link")
+                = link_to '資訊傳播工程學系', '#'
+              div(class="block-departments-category-link")
+                = link_to '資訊傳播學系', '#'
+              div(class="block-departments-category-link")
+                = link_to '運動資訊傳播學系', '#'
+              div(class="block-departments-category-link")
+                = link_to '資訊與圖書館學系', '#'
+              div(class="block-departments-category-link")
+                = link_to '圖書資訊學系', '#'
+              div(class="block-departments-category-link")
+                = link_to '生物產業機電工程學系', '#'
+              div(class="block-departments-category-link")
+                = link_to '生物資訊學系', '#'
+              div(class="block-departments-category-link")
+                = link_to '生物機電工程學系', '#'
+              div(class="block-departments-category-link")
+                = link_to '多媒體動畫藝術學系', '#'
+              div(class="block-departments-category-link")
+                = link_to '動畫遊戲設計學系', '#'
+              div(class="block-departments-category-link")
+                = link_to '創意產業與數位電影學士學位學程', '#'
+              div(class="block-departments-category-link")
+                = link_to '創新設計與管理學士學位學程', '#'
+              div(class="block-departments-category-link")
+                = link_to '媒體設計科技學系', '#'
+              div(class="block-departments-category-link")
+                = link_to '媒體傳達設計學系', '#'
+              div(class="block-departments-category-link")
+                = link_to '資訊模擬與設計學系', '#'
+              div(class="block-departments-category-link")
+                = link_to '數位多媒體設計學系', '#'
+              div(class="block-departments-category-link")
+                = link_to '數位設計學系', '#'
+              div(class="block-departments-category-link")
+                = link_to '數位媒體設計學系', '#'
+              div(class="block-departments-category-link")
+                = link_to '教育科技學系', '#'
+              div(class="block-departments-category-link")
+                = link_to '數位媒體與文教產業學系', '#'
+              div(class="block-departments-category-link")
+                = link_to '數位學習科技學系', '#'
+              div(class="block-departments-category-link")
+                = link_to '數位學習設計與管理學系', '#'
+              div(class="block-departments-category-link")
+                = link_to '資訊工程學系', '#'
+              div(class="block-departments-category-link")
+                = link_to '資訊科學系', '#'
+              div(class="block-departments-category-link")
+                = link_to '資訊科學與工程學系', '#'
+              div(class="block-departments-category-link")
+                = link_to '資訊創新與科技學系', '#'
+              div(class="block-departments-category-link")
+                = link_to '電腦與通訊工程學系', '#'
+              div(class="block-departments-category-link")
+                = link_to '電機資訊學士班', '#'
+              div(class="block-departments-category-link")
+                = link_to '電機資訊學院學士班數位應用學系', '#'
+              div(class="block-departments-category-link")
+                = link_to '資訊科技與管理學系', '#'
+              div(class="block-departments-category-link")
+                = link_to '資訊管理學系', '#'
+              div(class="block-departments-category-link")
+                = link_to '資訊科技與管理學系', '#'
+              div(class="block-departments-category-link")
+                = link_to '資訊管理學系', '#'
+              div(class="block-departments-category-link")
+                = link_to '資訊管理與財務金融學系', '#'
+              div(class="block-departments-category-link")
+                = link_to '資訊應用學系', '#'
+              div(class="block-departments-category-link")
+                = link_to '多媒體與行動商務學系', '#'
+              div(class="block-departments-category-link")
+                = link_to '資訊經營學系', '#'
+              div(class="block-departments-category-link")
+                = link_to '電子商務管理學系', '#'
 
 / 桌機
-div(class="d-none d-md-block")
+div(class="d-none d-lg-block")
   div(class="container")
     div(class="row")
       div(class="col-12")
@@ -43,9 +232,11 @@ div(class="d-none d-md-block")
             div(class="block-departments-main")
               / Video + List
               div(class="block-departments-videos")
-                div(class="block-departments-video-player")
+                div(class="block-departments-video-player" style="width: 700px;")
                   span(class="block-departments-video-player-tag") 正在播放
-                  iframe(width="700" height="393" src="https://www.youtube.com/embed/wmmO4CV0NrQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                  div(class="youtube-rwd-container mb-3")
+                    iframe allow=("autoplay; encrypted-media") allowfullscreen="" frameborder="0" height="393" src="https://www.youtube.com/embed/wmmO4CV0NrQ" width="700"
+                  
                 div(class="block-departments-thumb-list")
                   div Explore Next...
                   div(class="block-departments-thumb")
@@ -130,21 +321,473 @@ div(class="d-none d-md-block")
                       i(class="fas fa-angle-right")
                 / 學長建議列表
                 div
-                  div(class="row")
-                    div(class="col-4")
+                  div(class="row no-gutters")
+                    div(class="col-4 px-2 mb-3")
+                      div(class="block-departments-list d-flex")
+                        div(class="block-departments-list-avatar")
+                          = link_to '#' do
+                            = image_tag 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRIEkS-MYcsOhRgGeKmA03ebH2-XzBdoISWr9U0L93T9nxMM_ixQ', class: 'img-fluid'
+                          div(class="block-departments-list-avatar-tags")
+                            span 身分
+                            span 國籍
+                        div(class="block-departments-list-body")
+                          p 我就是無敵鐵金剛
+                          ul(class="list-unstyled m-0")
+                            li
+                              = link_to 'XXXXXXXX大學 ', '#'
+                              = link_to 'XXXXXXXX 教授', '#'
+                            li = link_to '何明果', '#'
+                    div(class="col-4 px-2 mb-3")
+                      div(class="block-departments-list d-flex")
+                        div(class="block-departments-list-avatar")
+                          = link_to '#' do
+                            = image_tag 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRIEkS-MYcsOhRgGeKmA03ebH2-XzBdoISWr9U0L93T9nxMM_ixQ', class: 'img-fluid'
+                          div(class="block-departments-list-avatar-tags")
+                            span 身分
+                            span 國籍
+                        div(class="block-departments-list-body")
+                          p 我就是無敵鐵金剛
+                          ul(class="list-unstyled m-0")
+                            li
+                              = link_to 'XXXXXXXX大學 ', '#'
+                              = link_to 'XXXXXXXX 教授', '#'
+                            li = link_to '何明果', '#'
+                    div(class="col-4 px-2 mb-3")
+                      div(class="block-departments-list d-flex")
+                        div(class="block-departments-list-avatar")
+                          = link_to '#' do
+                            = image_tag 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRIEkS-MYcsOhRgGeKmA03ebH2-XzBdoISWr9U0L93T9nxMM_ixQ', class: 'img-fluid'
+                          div(class="block-departments-list-avatar-tags")
+                            span 身分
+                            span 國籍
+                        div(class="block-departments-list-body")
+                          p 我就是無敵鐵金剛
+                          ul(class="list-unstyled m-0")
+                            li
+                              = link_to 'XXXXXXXX大學 ', '#'
+                              = link_to 'XXXXXXXX 教授', '#'
+                            li = link_to '何明果', '#'
+                    div(class="col-4 px-2 mb-3")
+                      div(class="block-departments-list d-flex")
+                        div(class="block-departments-list-avatar")
+                          = link_to '#' do
+                            = image_tag 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRIEkS-MYcsOhRgGeKmA03ebH2-XzBdoISWr9U0L93T9nxMM_ixQ', class: 'img-fluid'
+                          div(class="block-departments-list-avatar-tags")
+                            span 身分
+                            span 國籍
+                        div(class="block-departments-list-body")
+                          p 我就是無敵鐵金剛
+                          ul(class="list-unstyled m-0")
+                            li
+                              = link_to 'XXXXXXXX大學 ', '#'
+                              = link_to 'XXXXXXXX 教授', '#'
+                            li = link_to '何明果', '#'
+                    div(class="col-4 px-2 mb-3")
+                      div(class="block-departments-list d-flex")
+                        div(class="block-departments-list-avatar")
+                          = link_to '#' do
+                            = image_tag 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRIEkS-MYcsOhRgGeKmA03ebH2-XzBdoISWr9U0L93T9nxMM_ixQ', class: 'img-fluid'
+                          div(class="block-departments-list-avatar-tags")
+                            span 身分
+                            span 國籍
+                        div(class="block-departments-list-body")
+                          p 我就是無敵鐵金剛
+                          ul(class="list-unstyled m-0")
+                            li
+                              = link_to 'XXXXXXXX大學 ', '#'
+                              = link_to 'XXXXXXXX 教授', '#'
+                            li = link_to '何明果', '#'
+                    div(class="col-4 px-2 mb-3")
+                      div(class="block-departments-list d-flex")
+                        div(class="block-departments-list-avatar")
+                          = link_to '#' do
+                            = image_tag 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRIEkS-MYcsOhRgGeKmA03ebH2-XzBdoISWr9U0L93T9nxMM_ixQ', class: 'img-fluid'
+                          div(class="block-departments-list-avatar-tags")
+                            span 身分
+                            span 國籍
+                        div(class="block-departments-list-body")
+                          p 我就是無敵鐵金剛
+                          ul(class="list-unstyled m-0")
+                            li
+                              = link_to 'XXXXXXXX大學 ', '#'
+                              = link_to 'XXXXXXXX 教授', '#'
+                            li = link_to '何明果', '#'
+                div(class="d-flex justify-content-between")
+                  = link_to '<< prev.', '#', class: 'text-white font-weight-bold', style: 'font-size: 12px'
+                  = link_to 'next >>', '#', class: 'text-white font-weight-bold', style: 'font-size: 12px'
 
         / Stop background image
         div(class="block-departments")
           div(class="block-departments-body")
             div(class="block-departments-aside")
+              div(class="block-departments-aside-sticky-block-no-bg")
             div(class="block-departments-main")
+              
+              / Banner
+              div(class="block-departments-banner")
+                = link_to '#' do
+                  = image_tag('departments/banner.jpg', class: 'w-100')
+                  p(class="banner-title") 聽聽教授怎麼說 ? <br /> <span style="font-size: 40px">備審、面試、校系 經驗大哉問</span>
+              
               div(class="block-departments-suggestion")
                 div(id="suggestion" class="offset-anchor")
                 h1(class="title") 教授們的建議
                 h4(class="sub-title") 你適合這個科系嗎？先了解校系資源差異與選填志願建議 !
-                div 2
+                div(class="row no-gutters")
+                  div(class="col-4 px-2 mb-3")
+                      div(class="block-departments-list d-flex")
+                        div(class="block-departments-list-avatar")
+                          = link_to '#' do
+                            = image_tag 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRIEkS-MYcsOhRgGeKmA03ebH2-XzBdoISWr9U0L93T9nxMM_ixQ', class: 'img-fluid'
+                          div(class="block-departments-list-avatar-tags")
+                            span 身分
+                            span 國籍
+                        div(class="block-departments-list-body")
+                          p 我就是無敵鐵金剛
+                          ul(class="list-unstyled m-0")
+                            li
+                              = link_to 'XXXXXXXX大學 ', '#'
+                              = link_to 'XXXXXXXX 教授', '#'
+                            li = link_to '何明果', '#'
+                  div(class="col-4 px-2 mb-3")
+                      div(class="block-departments-list d-flex")
+                        div(class="block-departments-list-avatar")
+                          = link_to '#' do
+                            = image_tag 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRIEkS-MYcsOhRgGeKmA03ebH2-XzBdoISWr9U0L93T9nxMM_ixQ', class: 'img-fluid'
+                          div(class="block-departments-list-avatar-tags")
+                            span 身分
+                            span 國籍
+                        div(class="block-departments-list-body")
+                          p 我就是無敵鐵金剛
+                          ul(class="list-unstyled m-0")
+                            li
+                              = link_to 'XXXXXXXX大學 ', '#'
+                              = link_to 'XXXXXXXX 教授', '#'
+                            li = link_to '何明果', '#'
+                  div(class="col-4 px-2 mb-3")
+                      div(class="block-departments-list d-flex")
+                        div(class="block-departments-list-avatar")
+                          = link_to '#' do
+                            = image_tag 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRIEkS-MYcsOhRgGeKmA03ebH2-XzBdoISWr9U0L93T9nxMM_ixQ', class: 'img-fluid'
+                          div(class="block-departments-list-avatar-tags")
+                            span 身分
+                            span 國籍
+                        div(class="block-departments-list-body")
+                          p 我就是無敵鐵金剛
+                          ul(class="list-unstyled m-0")
+                            li
+                              = link_to 'XXXXXXXX大學 ', '#'
+                              = link_to 'XXXXXXXX 教授', '#'
+                            li = link_to '何明果', '#'
+                  div(class="col-4 px-2 mb-3")
+                      div(class="block-departments-list d-flex")
+                        div(class="block-departments-list-avatar")
+                          = link_to '#' do
+                            = image_tag 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRIEkS-MYcsOhRgGeKmA03ebH2-XzBdoISWr9U0L93T9nxMM_ixQ', class: 'img-fluid'
+                          div(class="block-departments-list-avatar-tags")
+                            span 身分
+                            span 國籍
+                        div(class="block-departments-list-body")
+                          p 我就是無敵鐵金剛
+                          ul(class="list-unstyled m-0")
+                            li
+                              = link_to 'XXXXXXXX大學 ', '#'
+                              = link_to 'XXXXXXXX 教授', '#'
+                            li = link_to '何明果', '#'
+                  div(class="col-4 px-2 mb-3")
+                      div(class="block-departments-list d-flex")
+                        div(class="block-departments-list-avatar")
+                          = link_to '#' do
+                            = image_tag 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRIEkS-MYcsOhRgGeKmA03ebH2-XzBdoISWr9U0L93T9nxMM_ixQ', class: 'img-fluid'
+                          div(class="block-departments-list-avatar-tags")
+                            span 身分
+                            span 國籍
+                        div(class="block-departments-list-body")
+                          p 我就是無敵鐵金剛
+                          ul(class="list-unstyled m-0")
+                            li
+                              = link_to 'XXXXXXXX大學 ', '#'
+                              = link_to 'XXXXXXXX 教授', '#'
+                            li = link_to '何明果', '#'
+                  div(class="col-4 px-2 mb-3")
+                      div(class="block-departments-list d-flex")
+                        div(class="block-departments-list-avatar")
+                          = link_to '#' do
+                            = image_tag 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRIEkS-MYcsOhRgGeKmA03ebH2-XzBdoISWr9U0L93T9nxMM_ixQ', class: 'img-fluid'
+                          div(class="block-departments-list-avatar-tags")
+                            span 身分
+                            span 國籍
+                        div(class="block-departments-list-body")
+                          p 我就是無敵鐵金剛
+                          ul(class="list-unstyled m-0")
+                            li
+                              = link_to 'XXXXXXXX大學 ', '#'
+                              = link_to 'XXXXXXXX 教授', '#'
+                            li = link_to '何明果', '#'
+                div(class="block-index-more-news text-right")
+                  = link_to '更多講座 >>', '#'
+              
               div(class="block-departments-oversea")
                 div(id="oversea" class="offset-anchor")
                 h1(class="title") 挑戰海外的勇者
                 h4(class="sub-title") 你未來的舞台不只在台灣，搶先了解海外趨勢 !
-                div 3
+                div(class="row no-gutters")
+                  div(class="col-4 px-2 mb-3")
+                    div(class="block-departments-list d-flex")
+                      div(class="block-departments-list-avatar")
+                        = link_to '#' do
+                          = image_tag 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRIEkS-MYcsOhRgGeKmA03ebH2-XzBdoISWr9U0L93T9nxMM_ixQ', class: 'img-fluid'
+                        div(class="block-departments-list-avatar-tags")
+                          span 身分
+                          span 國籍
+                      div(class="block-departments-list-body")
+                        p 我就是無敵鐵金剛
+                        ul(class="list-unstyled m-0")
+                          li
+                            = link_to 'XXXXXXXX大學 ', '#'
+                            = link_to 'XXXXXXXX 教授', '#'
+                          li = link_to '何明果', '#'
+                  div(class="col-4 px-2 mb-3")
+                    div(class="block-departments-list d-flex")
+                      div(class="block-departments-list-avatar")
+                        = link_to '#' do
+                          = image_tag 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRIEkS-MYcsOhRgGeKmA03ebH2-XzBdoISWr9U0L93T9nxMM_ixQ', class: 'img-fluid'
+                        div(class="block-departments-list-avatar-tags")
+                          span 身分
+                          span 國籍
+                      div(class="block-departments-list-body")
+                        p 我就是無敵鐵金剛
+                        ul(class="list-unstyled m-0")
+                          li
+                            = link_to 'XXXXXXXX大學 ', '#'
+                            = link_to 'XXXXXXXX 教授', '#'
+                          li = link_to '何明果', '#'
+                  div(class="col-4 px-2 mb-3")
+                    div(class="block-departments-list d-flex")
+                      div(class="block-departments-list-avatar")
+                        = link_to '#' do
+                          = image_tag 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRIEkS-MYcsOhRgGeKmA03ebH2-XzBdoISWr9U0L93T9nxMM_ixQ', class: 'img-fluid'
+                        div(class="block-departments-list-avatar-tags")
+                          span 身分
+                          span 國籍
+                      div(class="block-departments-list-body")
+                        p 我就是無敵鐵金剛
+                        ul(class="list-unstyled m-0")
+                          li
+                            = link_to 'XXXXXXXX大學 ', '#'
+                            = link_to 'XXXXXXXX 教授', '#'
+                          li = link_to '何明果', '#'
+                div(class="block-index-more-news text-right")
+                  = link_to '更多講座 >>', '#'
+
+              / Banner
+              div(class="block-departments-banner-slogan")
+                = image_tag('departments/banner.jpg', class: 'w-100')
+                div(class="banner-slogan")
+                  p 我們只能陪伴你到這邊而已。
+                  p(class="mb-30px") 接下來，看你的發揮了 !
+                  p 好好想想...自己未來要成為怎樣的人
+
+              / Video 
+              div(class="block-departments-videos justify-content-center mb-5")
+                div(class="block-departments-video-player")
+                  iframe(width="703" height="423" src="https://www.youtube.com/embed/wmmO4CV0NrQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                  div(class="block-departments-nav" style="width: 703px")
+                    ul
+                      li = link_to 'OOOOO系', '#experience'
+                      li = link_to 'OOOOO系', '#suggestion'
+                      li = link_to 'OOOOO系', '#oversea'
+                      li = link_to 'OOOOO系', '#oversea'
+                    ul
+                      li = link_to 'OOOOO系', '#experience'
+                      li = link_to 'OOOOO系', '#suggestion'
+                      li = link_to 'OOOOO系', '#oversea'
+                      li = link_to 'OOOOO系', '#oversea'
+
+              div(class="block-departments-sort")
+                div(id="sort" class="offset-anchor")
+                h1(class="title") OO學類
+                h4(class="sub-title")
+                div(class="row no-gutters")
+                  div(class="col-4 px-2 mb-3")
+                      div(class="block-departments-list d-flex")
+                        div(class="block-departments-list-avatar")
+                          = link_to '#' do
+                            = image_tag 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRIEkS-MYcsOhRgGeKmA03ebH2-XzBdoISWr9U0L93T9nxMM_ixQ', class: 'img-fluid'
+                          div(class="block-departments-list-avatar-tags")
+                            span 身分
+                            span 國籍
+                        div(class="block-departments-list-body")
+                          p 我就是無敵鐵金剛
+                          ul(class="list-unstyled m-0")
+                            li
+                              = link_to 'XXXXXXXX大學 ', '#'
+                              = link_to 'XXXXXXXX 教授', '#'
+                            li = link_to '何明果', '#'
+                  div(class="col-4 px-2 mb-3")
+                      div(class="block-departments-list d-flex")
+                        div(class="block-departments-list-avatar")
+                          = link_to '#' do
+                            = image_tag 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRIEkS-MYcsOhRgGeKmA03ebH2-XzBdoISWr9U0L93T9nxMM_ixQ', class: 'img-fluid'
+                          div(class="block-departments-list-avatar-tags")
+                            span 身分
+                            span 國籍
+                        div(class="block-departments-list-body")
+                          p 我就是無敵鐵金剛
+                          ul(class="list-unstyled m-0")
+                            li
+                              = link_to 'XXXXXXXX大學 ', '#'
+                              = link_to 'XXXXXXXX 教授', '#'
+                            li = link_to '何明果', '#'
+                  div(class="col-4 px-2 mb-3")
+                      div(class="block-departments-list d-flex")
+                        div(class="block-departments-list-avatar")
+                          = link_to '#' do
+                            = image_tag 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRIEkS-MYcsOhRgGeKmA03ebH2-XzBdoISWr9U0L93T9nxMM_ixQ', class: 'img-fluid'
+                          div(class="block-departments-list-avatar-tags")
+                            span 身分
+                            span 國籍
+                        div(class="block-departments-list-body")
+                          p 我就是無敵鐵金剛
+                          ul(class="list-unstyled m-0")
+                            li
+                              = link_to 'XXXXXXXX大學 ', '#'
+                              = link_to 'XXXXXXXX 教授', '#'
+                            li = link_to '何明果', '#'
+                  div(class="col-4 px-2 mb-3")
+                      div(class="block-departments-list d-flex")
+                        div(class="block-departments-list-avatar")
+                          = link_to '#' do
+                            = image_tag 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRIEkS-MYcsOhRgGeKmA03ebH2-XzBdoISWr9U0L93T9nxMM_ixQ', class: 'img-fluid'
+                          div(class="block-departments-list-avatar-tags")
+                            span 身分
+                            span 國籍
+                        div(class="block-departments-list-body")
+                          p 我就是無敵鐵金剛
+                          ul(class="list-unstyled m-0")
+                            li
+                              = link_to 'XXXXXXXX大學 ', '#'
+                              = link_to 'XXXXXXXX 教授', '#'
+                            li = link_to '何明果', '#'
+                  div(class="col-4 px-2 mb-3")
+                      div(class="block-departments-list d-flex")
+                        div(class="block-departments-list-avatar")
+                          = link_to '#' do
+                            = image_tag 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRIEkS-MYcsOhRgGeKmA03ebH2-XzBdoISWr9U0L93T9nxMM_ixQ', class: 'img-fluid'
+                          div(class="block-departments-list-avatar-tags")
+                            span 身分
+                            span 國籍
+                        div(class="block-departments-list-body")
+                          p 我就是無敵鐵金剛
+                          ul(class="list-unstyled m-0")
+                            li
+                              = link_to 'XXXXXXXX大學 ', '#'
+                              = link_to 'XXXXXXXX 教授', '#'
+                            li = link_to '何明果', '#'
+                  div(class="col-4 px-2 mb-3")
+                      div(class="block-departments-list d-flex")
+                        div(class="block-departments-list-avatar")
+                          = link_to '#' do
+                            = image_tag 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRIEkS-MYcsOhRgGeKmA03ebH2-XzBdoISWr9U0L93T9nxMM_ixQ', class: 'img-fluid'
+                          div(class="block-departments-list-avatar-tags")
+                            span 身分
+                            span 國籍
+                        div(class="block-departments-list-body")
+                          p 我就是無敵鐵金剛
+                          ul(class="list-unstyled m-0")
+                            li
+                              = link_to 'XXXXXXXX大學 ', '#'
+                              = link_to 'XXXXXXXX 教授', '#'
+                            li = link_to '何明果', '#'
+                div(class="block-index-more-news text-right")
+                  = link_to '更多講座 >>', '#'
+
+              div(class="block-departments-category")
+                / 學群科系一覽
+                div(class="block-departments-category-dropdown" data-toggle="collapse" href="#departments-category-links")
+                  | 該學群科系一覽
+                  i(class="fas fa-chevron-right")
+
+                / 學群科系一覽收合項目
+                div(id="departments-category-links" class="collapse show")
+                  div(class="block-departments-category-links")
+                    div(class="block-departments-category-link")
+                      = link_to '人文與資訊學系', '#'
+                    div(class="block-departments-category-link")
+                      = link_to '新媒體藝術學系', '#'
+                    div(class="block-departments-category-link")
+                      = link_to '資訊傳播工程學系', '#'
+                    div(class="block-departments-category-link")
+                      = link_to '資訊傳播學系', '#'
+                    div(class="block-departments-category-link")
+                      = link_to '運動資訊傳播學系', '#'
+                    div(class="block-departments-category-link")
+                      = link_to '資訊與圖書館學系', '#'
+                    div(class="block-departments-category-link")
+                      = link_to '圖書資訊學系', '#'
+                    div(class="block-departments-category-link")
+                      = link_to '生物產業機電工程學系', '#'
+                    div(class="block-departments-category-link")
+                      = link_to '生物資訊學系', '#'
+                    div(class="block-departments-category-link")
+                      = link_to '生物機電工程學系', '#'
+                    div(class="block-departments-category-link")
+                      = link_to '多媒體動畫藝術學系', '#'
+                    div(class="block-departments-category-link")
+                      = link_to '動畫遊戲設計學系', '#'
+                    div(class="block-departments-category-link")
+                      = link_to '創意產業與數位電影學士學位學程', '#'
+                    div(class="block-departments-category-link")
+                      = link_to '創新設計與管理學士學位學程', '#'
+                    div(class="block-departments-category-link")
+                      = link_to '媒體設計科技學系', '#'
+                    div(class="block-departments-category-link")
+                      = link_to '媒體傳達設計學系', '#'
+                    div(class="block-departments-category-link")
+                      = link_to '資訊模擬與設計學系', '#'
+                    div(class="block-departments-category-link")
+                      = link_to '數位多媒體設計學系', '#'
+                    div(class="block-departments-category-link")
+                      = link_to '數位設計學系', '#'
+                    div(class="block-departments-category-link")
+                      = link_to '數位媒體設計學系', '#'
+                    div(class="block-departments-category-link")
+                      = link_to '教育科技學系', '#'
+                    div(class="block-departments-category-link")
+                      = link_to '數位媒體與文教產業學系', '#'
+                    div(class="block-departments-category-link")
+                      = link_to '數位學習科技學系', '#'
+                    div(class="block-departments-category-link")
+                      = link_to '數位學習設計與管理學系', '#'
+                    div(class="block-departments-category-link")
+                      = link_to '資訊工程學系', '#'
+                    div(class="block-departments-category-link")
+                      = link_to '資訊科學系', '#'
+                    div(class="block-departments-category-link")
+                      = link_to '資訊科學與工程學系', '#'
+                    div(class="block-departments-category-link")
+                      = link_to '資訊創新與科技學系', '#'
+                    div(class="block-departments-category-link")
+                      = link_to '電腦與通訊工程學系', '#'
+                    div(class="block-departments-category-link")
+                      = link_to '電機資訊學士班', '#'
+                    div(class="block-departments-category-link")
+                      = link_to '電機資訊學院學士班數位應用學系', '#'
+                    div(class="block-departments-category-link")
+                      = link_to '資訊科技與管理學系', '#'
+                    div(class="block-departments-category-link")
+                      = link_to '資訊管理學系', '#'
+                    div(class="block-departments-category-link")
+                      = link_to '資訊科技與管理學系', '#'
+                    div(class="block-departments-category-link")
+                      = link_to '資訊管理學系', '#'
+                    div(class="block-departments-category-link")
+                      = link_to '資訊管理與財務金融學系', '#'
+                    div(class="block-departments-category-link")
+                      = link_to '資訊應用學系', '#'
+                    div(class="block-departments-category-link")
+                      = link_to '多媒體與行動商務學系', '#'
+                    div(class="block-departments-category-link")
+                      = link_to '資訊經營學系', '#'
+                    div(class="block-departments-category-link")
+                      = link_to '電子商務管理學系', '#'

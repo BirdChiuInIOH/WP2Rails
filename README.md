@@ -100,4 +100,4 @@
 ## 2019-02 科系模組
 
 * [ ] [科系內容模組(桌機版內容+列表/手機版內容)](localhost:3000/departments)
-* [ ] [科系內容模組(手機版列表)](http://localhost:3000/m_18_departments_list)  - [zepline](https://zpl.io/VYGMdRe)
+* [x] [科系內容模組(手機版列表)](http://localhost:3000/m_18_departments_list)  - [zepline](https://zpl.io/VYGMdRe)

@@ -37,6 +37,26 @@
               li = link_to talk[:education], talk[:education_url]
               li = link_to talk[:major], talk[:major_url]
 
+/ Mobile `app/views/pages/departments` Mobile排版暫用的資料
+- elsif action_name == 'departments'
+  - @talks.first(3).each do |talk|
+    div(class="row no-gutters d-md-none mb-3")
+      div(class="col-12")
+        div(class="block-index-list-explore d-flex")
+          div(class="block-index-list-explore-avatar")
+            = link_to '/talks/香港教育大學英語教育系-彭于榛-barbie-peng-ov-study-bde-hk' do
+              = image_tag talk[:avatar_url], class: 'img-fluid'
+            div(class="block-index-list-explore-avatar-tags")
+              span 身分
+              span 國籍
+          div(class="block-index-list-explore-body")
+            p 每個人都不是最了解自己的人，透過相處、對話，你才會知道自
+            ul(class="list-unstyled m-0")
+              li
+                = link_to talk[:education], talk[:education_url], class: 'mr-2'
+                = link_to talk[:major], talk[:major_url]
+              li = link_to talk[:name], talk[:url]
+
 - elsif action_name == 'talks_show' || 'talks_experience' || 'talks_how_to_apply'
   - @talks.first(3).each do |talk|
     div(class="row no-gutters d-md-none mb-3")
