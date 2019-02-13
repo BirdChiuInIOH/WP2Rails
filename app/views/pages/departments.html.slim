@@ -53,10 +53,9 @@ div(class="d-lg-none")
             | 挑戰海外的勇者
             i(class="float-right fas fa-chevron-right")
 
+      / 首頁 Banner
       div(class="block-departments-banner")
-        = link_to '#' do
-          = image_tag('departments/banner.jpg', class: 'w-100')
-          p(class="banner-title") Banner
+        = render 'shared/carousel'
     
       div(class="px-3")
         div(class="mb-30px")
@@ -412,9 +411,10 @@ div(class="d-none d-lg-block")
                               = link_to 'XXXXXXXX大學 ', '#'
                               = link_to 'XXXXXXXX 教授', '#'
                             li = link_to '何明果', '#'
-                div(class="d-flex justify-content-between")
-                  = link_to '<< prev.', '#', class: 'text-white font-weight-bold', style: 'font-size: 12px'
-                  = link_to 'next >>', '#', class: 'text-white font-weight-bold', style: 'font-size: 12px'
+                div(class="text-right")
+                  = link_to '更多講座 >>', '#', class: 'text-white font-weight-bold', style: 'font-size: 12px'
+                  / = link_to '<< prev.', '#', class: 'text-white font-weight-bold', style: 'font-size: 12px'
+                  / = link_to 'next >>', '#', class: 'text-white font-weight-bold', style: 'font-size: 12px'
 
         / Stop background image
         div(class="block-departments")
@@ -423,11 +423,9 @@ div(class="d-none d-lg-block")
               div(class="block-departments-aside-sticky-block-no-bg")
             div(class="block-departments-main")
               
-              / Banner
+              / 首頁 Banner
               div(class="block-departments-banner")
-                = link_to '#' do
-                  = image_tag('departments/banner.jpg', class: 'w-100')
-                  p(class="banner-title") 聽聽教授怎麼說 ? <br /> <span style="font-size: 40px">備審、面試、校系 經驗大哉問</span>
+                = render 'shared/carousel'
               
               div(class="block-departments-suggestion")
                 div(id="suggestion" class="offset-anchor")
@@ -525,7 +523,7 @@ div(class="d-none d-lg-block")
                               = link_to 'XXXXXXXX 教授', '#'
                             li = link_to '何明果', '#'
                 div(class="block-index-more-news text-right")
-                  = link_to '更多講座 >>', '#'
+                  = link_to '同學群的教授說 >>', '#'
               
               div(class="block-departments-oversea")
                 div(id="oversea" class="offset-anchor")
@@ -578,7 +576,7 @@ div(class="d-none d-lg-block")
                             = link_to 'XXXXXXXX 教授', '#'
                           li = link_to '何明果', '#'
                 div(class="block-index-more-news text-right")
-                  = link_to '更多講座 >>', '#'
+                  = link_to '所有海外 >>', '#'
 
               / Banner
               div(class="block-departments-banner-slogan")
@@ -791,3 +789,17 @@ div(class="d-none d-lg-block")
                       = link_to '資訊經營學系', '#'
                     div(class="block-departments-category-link")
                       = link_to '電子商務管理學系', '#'
+              div
+                - @talks.in_groups_of(6, false) do |group|
+                  div(class="row d-none d-md-flex")
+                    - group.each do |talk|
+                      div(class="col-lg-4 col-xl-2 mb-3")
+                        div(class="bg-white h-100")
+                          = link_to '#' do
+                            = image_tag talk[:avatar_url], class: 'img-fluid'
+                          h4(class="head-danger") = link_to talk[:name], talk[:url]
+                          ul(class="list-inline d-inline m-0 school")
+                            li = link_to talk[:state], talk[:state_url], class: 'link-major-underline'
+                            li = link_to talk[:education], talk[:education_url], class: 'link-major-underline'
+                            li = link_to talk[:major], talk[:major_url], class: 'link-major-underline'
+                          p(class="introduce my-10px p-0 pb-4 pb-md-60px") = talk[:introduce]

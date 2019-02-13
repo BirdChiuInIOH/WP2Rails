@@ -433,7 +433,7 @@
     background-color: white;
 
     .block-departments-list-avatar {
-      flex: 0 0 110px;
+      flex: 0 0 90px;
       position: relative;
 
       img {
@@ -506,20 +506,7 @@
 
 // Common
 .block-departments-banner {
-  position: relative;
   margin-bottom: 30px;
-  
-  .banner-title {
-    position: absolute;
-    left: 10px;
-    bottom: 10px;
-    font-size: 80px;
-    font-weight: bold;
-    color: white;
-    text-align: left;
-    margin: 0;
-    line-height: 0.8;
-  }
 }
 
 .block-departments-banner-slogan {
